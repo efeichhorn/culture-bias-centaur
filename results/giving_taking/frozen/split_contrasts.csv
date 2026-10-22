@@ -1,0 +1,193 @@
+task,Country,metric,contrast,seed,value
+Giving,China,conditional_ll,centaur_matched_minus_opposite,0,-0.009066390268199756
+Giving,China,conditional_ll,centaur_matched_minus_opposite,1,-0.008607206765029319
+Giving,China,conditional_ll,centaur_matched_minus_opposite,2,-0.008632716652841389
+Giving,China,conditional_ll,centaur_matched_minus_original,0,-0.007790057102594424
+Giving,China,conditional_ll,centaur_matched_minus_original,1,-0.007458424060278358
+Giving,China,conditional_ll,centaur_matched_minus_original,2,-0.00914209864877374
+Giving,China,conditional_ll,centaur_minus_llama_original,0,-0.23481477708170967
+Giving,China,conditional_ll,centaur_minus_llama_original,1,-0.20731477759260666
+Giving,China,conditional_ll,centaur_minus_llama_original,2,-0.20486579700330443
+Giving,China,conditional_ll,histogram_own_minus_centaur_matched,0,0.5920363736550792
+Giving,China,conditional_ll,histogram_own_minus_centaur_matched,1,0.5535178981114467
+Giving,China,conditional_ll,histogram_own_minus_centaur_matched,2,0.581292226309735
+Giving,China,conditional_ll,histogram_own_minus_centaur_original,0,0.5842463165524848
+Giving,China,conditional_ll,histogram_own_minus_centaur_original,1,0.5460594740511684
+Giving,China,conditional_ll,histogram_own_minus_centaur_original,2,0.5721501276609612
+Giving,China,conditional_ll,histogram_own_minus_llama_matched,0,0.3333235837102902
+Giving,China,conditional_ll,histogram_own_minus_llama_matched,1,0.32310867940060173
+Giving,China,conditional_ll,histogram_own_minus_llama_matched,2,0.35055137484851506
+Giving,China,conditional_ll,histogram_own_minus_llama_original,0,0.34943153947077515
+Giving,China,conditional_ll,histogram_own_minus_llama_original,1,0.3387446964585617
+Giving,China,conditional_ll,histogram_own_minus_llama_original,2,0.36728433065765687
+Giving,China,conditional_ll,histogram_own_minus_other,0,0.1915259923676756
+Giving,China,conditional_ll,histogram_own_minus_other,1,0.15194335568441225
+Giving,China,conditional_ll,histogram_own_minus_other,2,0.18821890819214865
+Giving,China,conditional_ll,histogram_own_minus_pooled,0,0.0490426954577851
+Giving,China,conditional_ll,histogram_own_minus_pooled,1,0.02777847423696593
+Giving,China,conditional_ll,histogram_own_minus_pooled,2,0.04310949936961317
+Giving,China,conditional_ll,llama_matched_minus_opposite,0,0.04563069221638721
+Giving,China,conditional_ll,llama_matched_minus_opposite,1,0.040732733421968564
+Giving,China,conditional_ll,llama_matched_minus_opposite,2,0.04478885579796284
+Giving,China,conditional_ll,llama_matched_minus_original,0,0.016107955760484904
+Giving,China,conditional_ll,llama_matched_minus_original,1,0.015636017057959972
+Giving,China,conditional_ll,llama_matched_minus_original,2,0.016732955809141734
+Giving,China,raw_response_ll,centaur_matched_minus_opposite,0,-0.00909745386668614
+Giving,China,raw_response_ll,centaur_matched_minus_opposite,1,-0.008638270363515726
+Giving,China,raw_response_ll,centaur_matched_minus_opposite,2,-0.008663780251327836
+Giving,China,raw_response_ll,centaur_matched_minus_original,0,-0.007825604604215025
+Giving,China,raw_response_ll,centaur_matched_minus_original,1,-0.007493971561898997
+Giving,China,raw_response_ll,centaur_matched_minus_original,2,-0.009177646150394361
+Giving,China,raw_response_ll,centaur_minus_llama_original,0,-0.05454536060897673
+Giving,China,raw_response_ll,centaur_minus_llama_original,1,-0.027045361119873663
+Giving,China,raw_response_ll,centaur_minus_llama_original,2,-0.024596380530571456
+Giving,China,raw_response_ll,histogram_own_minus_centaur_matched,0,0.59285245403615
+Giving,China,raw_response_ll,histogram_own_minus_centaur_matched,1,0.5543339784925174
+Giving,China,raw_response_ll,histogram_own_minus_centaur_matched,2,0.5821083066908057
+Giving,China,raw_response_ll,histogram_own_minus_centaur_original,0,0.5850268494319348
+Giving,China,raw_response_ll,histogram_own_minus_centaur_original,1,0.5468400069306184
+Giving,China,raw_response_ll,histogram_own_minus_centaur_original,2,0.5729306605404113
+Giving,China,raw_response_ll,histogram_own_minus_llama_matched,0,0.4780415623981532
+Giving,China,raw_response_ll,histogram_own_minus_llama_matched,1,0.4678266580884647
+Giving,China,raw_response_ll,histogram_own_minus_llama_matched,2,0.4952693535363781
+Giving,China,raw_response_ll,histogram_own_minus_llama_original,0,0.5304814888229582
+Giving,China,raw_response_ll,histogram_own_minus_llama_original,1,0.5197946458107447
+Giving,China,raw_response_ll,histogram_own_minus_llama_original,2,0.54833428000984
+Giving,China,raw_response_ll,histogram_own_minus_other,0,0.1915259923676756
+Giving,China,raw_response_ll,histogram_own_minus_other,1,0.15194335568441225
+Giving,China,raw_response_ll,histogram_own_minus_other,2,0.18821890819214865
+Giving,China,raw_response_ll,histogram_own_minus_pooled,0,0.0490426954577851
+Giving,China,raw_response_ll,histogram_own_minus_pooled,1,0.02777847423696593
+Giving,China,raw_response_ll,histogram_own_minus_pooled,2,0.04310949936961317
+Giving,China,raw_response_ll,llama_matched_minus_opposite,0,0.046886847846362066
+Giving,China,raw_response_ll,llama_matched_minus_opposite,1,0.04198888905194341
+Giving,China,raw_response_ll,llama_matched_minus_opposite,2,0.04604501142793774
+Giving,China,raw_response_ll,llama_matched_minus_original,0,0.05243992642480499
+Giving,China,raw_response_ll,llama_matched_minus_original,1,0.051967987722280055
+Giving,China,raw_response_ll,llama_matched_minus_original,2,0.05306492647346185
+Giving,United States,conditional_ll,centaur_matched_minus_opposite,0,0.005214347748883345
+Giving,United States,conditional_ll,centaur_matched_minus_opposite,1,0.005826593060425845
+Giving,United States,conditional_ll,centaur_matched_minus_opposite,2,0.007433736574436208
+Giving,United States,conditional_ll,centaur_matched_minus_original,0,-0.0036471389955904684
+Giving,United States,conditional_ll,centaur_matched_minus_original,1,-0.002014484644959298
+Giving,United States,conditional_ll,centaur_matched_minus_original,2,-0.0008920355193969378
+Giving,United States,conditional_ll,centaur_minus_llama_original,0,-0.05996783791694448
+Giving,United States,conditional_ll,centaur_minus_llama_original,1,-0.056166817338482236
+Giving,United States,conditional_ll,centaur_minus_llama_original,2,-0.0986540617498729
+Giving,United States,conditional_ll,histogram_own_minus_centaur_matched,0,0.3912259962996781
+Giving,United States,conditional_ll,histogram_own_minus_centaur_matched,1,0.3880559559935567
+Giving,United States,conditional_ll,histogram_own_minus_centaur_matched,2,0.39550904211082166
+Giving,United States,conditional_ll,histogram_own_minus_centaur_original,0,0.38757885730408764
+Giving,United States,conditional_ll,histogram_own_minus_centaur_original,1,0.38604147134859734
+Giving,United States,conditional_ll,histogram_own_minus_centaur_original,2,0.39461700659142473
+Giving,United States,conditional_ll,histogram_own_minus_llama_matched,0,0.3290852864552903
+Giving,United States,conditional_ll,histogram_own_minus_llama_matched,1,0.32620861300953913
+Giving,United States,conditional_ll,histogram_own_minus_llama_matched,2,0.2956514949721862
+Giving,United States,conditional_ll,histogram_own_minus_llama_original,0,0.32761101938714315
+Giving,United States,conditional_ll,histogram_own_minus_llama_original,1,0.3298746540101151
+Giving,United States,conditional_ll,histogram_own_minus_llama_original,2,0.29596294484155183
+Giving,United States,conditional_ll,histogram_own_minus_other,0,0.25670904100847336
+Giving,United States,conditional_ll,histogram_own_minus_other,1,0.2955945159360384
+Giving,United States,conditional_ll,histogram_own_minus_other,2,0.2356507344082264
+Giving,United States,conditional_ll,histogram_own_minus_pooled,0,0.05593127536112285
+Giving,United States,conditional_ll,histogram_own_minus_pooled,1,0.08172619862241529
+Giving,United States,conditional_ll,histogram_own_minus_pooled,2,0.038140281773440476
+Giving,United States,conditional_ll,llama_matched_minus_opposite,0,-0.014763345034327347
+Giving,United States,conditional_ll,llama_matched_minus_opposite,1,-0.00608987345701383
+Giving,United States,conditional_ll,llama_matched_minus_opposite,2,-0.011357730575542563
+Giving,United States,conditional_ll,llama_matched_minus_original,0,-0.0014742670681471316
+Giving,United States,conditional_ll,llama_matched_minus_original,1,0.0036660410005759946
+Giving,United States,conditional_ll,llama_matched_minus_original,2,0.0003114498693656667
+Giving,United States,raw_response_ll,centaur_matched_minus_opposite,0,0.005245411347369777
+Giving,United States,raw_response_ll,centaur_matched_minus_opposite,1,0.005857656658912236
+Giving,United States,raw_response_ll,centaur_matched_minus_opposite,2,0.007464800172922582
+Giving,United States,raw_response_ll,centaur_matched_minus_original,0,-0.003651622898724591
+Giving,United States,raw_response_ll,centaur_matched_minus_original,1,-0.0020189685480934898
+Giving,United States,raw_response_ll,centaur_matched_minus_original,2,-0.0008965194225310922
+Giving,United States,raw_response_ll,centaur_minus_llama_original,0,0.12030157855578831
+Giving,United States,raw_response_ll,centaur_minus_llama_original,1,0.12410259913425056
+Giving,United States,raw_response_ll,centaur_minus_llama_original,2,0.0816153547228599
+Giving,United States,raw_response_ll,histogram_own_minus_centaur_matched,0,0.39201101308226266
+Giving,United States,raw_response_ll,histogram_own_minus_centaur_matched,1,0.38884097277614127
+Giving,United States,raw_response_ll,histogram_own_minus_centaur_matched,2,0.39629405889340624
+Giving,United States,raw_response_ll,histogram_own_minus_centaur_original,0,0.38835939018353804
+Giving,United States,raw_response_ll,histogram_own_minus_centaur_original,1,0.38682200422804786
+Giving,United States,raw_response_ll,histogram_own_minus_centaur_original,2,0.39539753947087514
+Giving,United States,raw_response_ll,histogram_own_minus_llama_matched,0,0.4750594207731283
+Giving,United States,raw_response_ll,histogram_own_minus_llama_matched,1,0.47218274732737725
+Giving,United States,raw_response_ll,histogram_own_minus_llama_matched,2,0.44162562929002425
+Giving,United States,raw_response_ll,histogram_own_minus_llama_original,0,0.5086609687393264
+Giving,United States,raw_response_ll,histogram_own_minus_llama_original,1,0.5109246033622984
+Giving,United States,raw_response_ll,histogram_own_minus_llama_original,2,0.47701289419373505
+Giving,United States,raw_response_ll,histogram_own_minus_other,0,0.25670904100847336
+Giving,United States,raw_response_ll,histogram_own_minus_other,1,0.2955945159360384
+Giving,United States,raw_response_ll,histogram_own_minus_other,2,0.2356507344082264
+Giving,United States,raw_response_ll,histogram_own_minus_pooled,0,0.05593127536112285
+Giving,United States,raw_response_ll,histogram_own_minus_pooled,1,0.08172619862241529
+Giving,United States,raw_response_ll,histogram_own_minus_pooled,2,0.038140281773440476
+Giving,United States,raw_response_ll,llama_matched_minus_opposite,0,-0.016019500664302286
+Giving,United States,raw_response_ll,llama_matched_minus_opposite,1,-0.007346029086988813
+Giving,United States,raw_response_ll,llama_matched_minus_opposite,2,-0.012613886205517498
+Giving,United States,raw_response_ll,llama_matched_minus_original,0,0.033601547966198034
+Giving,United States,raw_response_ll,llama_matched_minus_original,1,0.038741856034921134
+Giving,United States,raw_response_ll,llama_matched_minus_original,2,0.03538726490371081
+Taking,China,conditional_ll,centaur_matched_minus_opposite,0,0.007863546607349775
+Taking,China,conditional_ll,centaur_matched_minus_opposite,1,0.007863546607349775
+Taking,China,conditional_ll,centaur_matched_minus_opposite,2,0.007863546607349775
+Taking,China,conditional_ll,centaur_matched_minus_original,0,0.01922529148955873
+Taking,China,conditional_ll,centaur_matched_minus_original,1,0.01922529148955873
+Taking,China,conditional_ll,centaur_matched_minus_original,2,0.01922529148955873
+Taking,China,conditional_ll,centaur_minus_llama_original,0,0.060424566966072527
+Taking,China,conditional_ll,centaur_minus_llama_original,1,0.060424566966072527
+Taking,China,conditional_ll,centaur_minus_llama_original,2,0.060424566966072527
+Taking,China,conditional_ll,llama_matched_minus_opposite,0,0.031015388664421058
+Taking,China,conditional_ll,llama_matched_minus_opposite,1,0.031015388664421058
+Taking,China,conditional_ll,llama_matched_minus_opposite,2,0.031015388664421058
+Taking,China,conditional_ll,llama_matched_minus_original,0,0.03903261477480124
+Taking,China,conditional_ll,llama_matched_minus_original,1,0.03903261477480124
+Taking,China,conditional_ll,llama_matched_minus_original,2,0.03903261477480124
+Taking,China,raw_response_ll,centaur_matched_minus_opposite,0,0.007883190344472504
+Taking,China,raw_response_ll,centaur_matched_minus_opposite,1,0.007883190344472504
+Taking,China,raw_response_ll,centaur_matched_minus_opposite,2,0.007883190344472504
+Taking,China,raw_response_ll,centaur_matched_minus_original,0,0.019238247114343705
+Taking,China,raw_response_ll,centaur_matched_minus_original,1,0.019238247114343705
+Taking,China,raw_response_ll,centaur_matched_minus_original,2,0.019238247114343705
+Taking,China,raw_response_ll,centaur_minus_llama_original,0,0.2526503746055678
+Taking,China,raw_response_ll,centaur_minus_llama_original,1,0.2526503746055678
+Taking,China,raw_response_ll,centaur_minus_llama_original,2,0.2526503746055678
+Taking,China,raw_response_ll,llama_matched_minus_opposite,0,0.03379286506285427
+Taking,China,raw_response_ll,llama_matched_minus_opposite,1,0.03379286506285427
+Taking,China,raw_response_ll,llama_matched_minus_opposite,2,0.03379286506285427
+Taking,China,raw_response_ll,llama_matched_minus_original,0,0.06991115783191965
+Taking,China,raw_response_ll,llama_matched_minus_original,1,0.06991115783191965
+Taking,China,raw_response_ll,llama_matched_minus_original,2,0.06991115783191965
+Taking,United States,conditional_ll,centaur_matched_minus_opposite,0,-0.005856385783169426
+Taking,United States,conditional_ll,centaur_matched_minus_opposite,1,-0.005856385783169426
+Taking,United States,conditional_ll,centaur_matched_minus_opposite,2,-0.005856385783169426
+Taking,United States,conditional_ll,centaur_matched_minus_original,0,0.020248828101131988
+Taking,United States,conditional_ll,centaur_matched_minus_original,1,0.020248828101131988
+Taking,United States,conditional_ll,centaur_matched_minus_original,2,0.020248828101131988
+Taking,United States,conditional_ll,centaur_minus_llama_original,0,0.06784443608048353
+Taking,United States,conditional_ll,centaur_minus_llama_original,1,0.06784443608048353
+Taking,United States,conditional_ll,centaur_minus_llama_original,2,0.06784443608048353
+Taking,United States,conditional_ll,llama_matched_minus_opposite,0,-0.023749617061794487
+Taking,United States,conditional_ll,llama_matched_minus_opposite,1,-0.023749617061794487
+Taking,United States,conditional_ll,llama_matched_minus_opposite,2,-0.023749617061794487
+Taking,United States,conditional_ll,llama_matched_minus_original,0,0.018201641842594995
+Taking,United States,conditional_ll,llama_matched_minus_original,1,0.018201641842594995
+Taking,United States,conditional_ll,llama_matched_minus_original,2,0.018201641842594995
+Taking,United States,raw_response_ll,centaur_matched_minus_opposite,0,-0.005876029520292164
+Taking,United States,raw_response_ll,centaur_matched_minus_opposite,1,-0.005876029520292164
+Taking,United States,raw_response_ll,centaur_matched_minus_opposite,2,-0.005876029520292164
+Taking,United States,raw_response_ll,centaur_matched_minus_original,0,0.020242139988794212
+Taking,United States,raw_response_ll,centaur_matched_minus_original,1,0.020242139988794212
+Taking,United States,raw_response_ll,centaur_matched_minus_original,2,0.020242139988794212
+Taking,United States,raw_response_ll,centaur_minus_llama_original,0,0.2600702437199788
+Taking,United States,raw_response_ll,centaur_minus_llama_original,1,0.2600702437199788
+Taking,United States,raw_response_ll,centaur_minus_llama_original,2,0.2600702437199788
+Taking,United States,raw_response_ll,llama_matched_minus_opposite,0,-0.026527093460227698
+Taking,United States,raw_response_ll,llama_matched_minus_opposite,1,-0.026527093460227698
+Taking,United States,raw_response_ll,llama_matched_minus_opposite,2,-0.026527093460227698
+Taking,United States,raw_response_ll,llama_matched_minus_original,0,0.04630270850128017
+Taking,United States,raw_response_ll,llama_matched_minus_original,1,0.04630270850128017
+Taking,United States,raw_response_ll,llama_matched_minus_original,2,0.04630270850128017

@@ -1,0 +1,292 @@
+{
+  "title": "Proposed Centaur culture-bias extension: Cao triads and Anllo explicit lotteries",
+  "date": "2026-10-21",
+  "status": "proposed protocol; no training launched; not preregistered",
+  "purpose": "Replicate frozen population fit, training-population-induced prediction shifts, and their generalization to unseen items; keep prediction shifts distinct from predictive improvement.",
+  "selection_note": "These studies were selected after inspecting published human contrasts and public data. The protocol fixes choices before any new model outcomes; it is not a retrospective preregistration.",
+  "inherited_method": {
+    "reference": "data_cache/dictator_centaur70b_item_holdout_corrected_20260930/protocol.json (parent workspace)",
+    "participant_seeds": [
+      0,
+      1,
+      2
+    ],
+    "seed_interpretation": "Joint participant-sampling/split and adapter-initialization seeds, matching previous design; not three independent datasets.",
+    "balanced_participant_split": "Select equal-size country pools without replacement independently of responses, then floor(0.70*N) train, floor(0.15*N) validation, remainder test.",
+    "item_folds": "Fixed across seeds and conditions; complete item families withheld, including translations, orders, and repeats.",
+    "conditions": [
+      "us",
+      "china",
+      "pooled_equal_budget"
+    ],
+    "pooled_composition": "50% US / 50% China; same total participants and responses as each specialist; subset of corresponding specialist training pools.",
+    "prompt": "Shared country-blind English prompts. No country, ethnicity or demographic labels. Independent item prompts; no other participant answers.",
+    "objective": "Empirical response-distribution soft-target cross-entropy over full-vocabulary log probabilities at the answer position, matching corrected A1. Average loss across all training items per optimizer update.",
+    "model": "Frozen quantized Llama-3.1-70B backbone plus frozen original Centaur adapter plus a new zero-initialized culture adapter.",
+    "hyperparameters": {
+      "quantization": "NF4, double quantization, BF16 compute",
+      "lora_rank": 8,
+      "lora_alpha": 8,
+      "use_rslora": true,
+      "lora_dropout": 0,
+      "learning_rate": 5e-05,
+      "optimizer": "AdamW",
+      "weight_decay": 0.01,
+      "warmup_steps": 3,
+      "optimizer_updates": 25,
+      "gradient_checkpointing": true,
+      "max_sequence_length": 768,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "batching": "One complete training-item set per update. If memory requires microbatches, accumulate the same weighted full-item gradient before stepping.",
+      "checkpoint_rule": "Fixed final 25-update checkpoint is primary. Validation only on training items; no hyperparameter or checkpoint selection using held-out item responses or final test/transfer outcomes."
+    },
+    "option_order": "Construct both A/B orders, map probabilities back to semantic responses, and average orders equally. Each mirrored prompt receives half the original item weight; mirrored prompts do not count as additional human observations.",
+    "tokenization": "Verify A/B are single candidate tokens under the actual answer prefix; no assumed token IDs.",
+    "step_zero_check": "New zero-initialized adapter must match frozen Centaur conditional probabilities within 1e-6."
+  },
+  "datasets": {
+    "cao": {
+      "citation": "Cao et al. 2024, doi:10.1037/xge0001559",
+      "repository_commit": "2361e91188684831b666ead902a502df181a3524",
+      "raw_url": "https://raw.githubusercontent.com/anjiecao/CCRR_writeups/2361e91188684831b666ead902a502df181a3524/data/01_merged_data/exp2/merged_data.csv",
+      "subdata": "Experiment 2, TD taxonomic-thematic triads; 15 critical items only.",
+      "inclusion": "Authors' retained TD participant IDs (295 US,178 China); use processed table only for this membership, not responses or stimulus IDs.",
+      "data_reconstruction": "Read original raw JSON responses and item key; strip surrounding whitespace from both; reconstruct canonical translated item IDs and validate every response against displayed alternatives.",
+      "excluded_from_training": "15 fillers and 2 attention checks. Fillers do not have a well-defined taxonomic/thematic contrast; retain separately for optional specificity/comprehension probes.",
+      "raw_audit": {
+        "critical_responses": 7095,
+        "US_choices": 4425,
+        "CN_choices": 2670,
+        "US_taxonomic": 3266,
+        "CN_taxonomic": 1240,
+        "corrected_means": {
+          "US": 0.7380790960451977,
+          "CN": 0.46441947565543074
+        },
+        "note": "Released derived scores miscode trailing-space hammer/Chinese hammer responses for saw. Processed CSV also has corrupted Chinese item strings and NULs. Participant exclusions do not depend on taxonomic classification."
+      },
+      "split": {
+        "eligible_US": 295,
+        "eligible_China": 178,
+        "balanced_per_country": 178,
+        "train_per_country": 124,
+        "validation_per_country": 26,
+        "test_per_country": 28,
+        "pooled_US": 62,
+        "pooled_China": 62
+      },
+      "item_ids": [
+        "teacup",
+        "teacher",
+        "bowl",
+        "pigeon",
+        "boot",
+        "legs",
+        "goat",
+        "bee",
+        "saw",
+        "dress",
+        "elephant",
+        "notepad",
+        "spoon",
+        "airplane",
+        "ring"
+      ],
+      "item_fold_rule": "Sort the 15 canonical English cue IDs by SHA256('cao-item-fold-v1|'+cue), then consecutive groups of 3 form folds 0..4. No response values enter fold assignment.",
+      "folds": 5,
+      "training_items_per_fold": 12,
+      "heldout_items_per_fold": 3,
+      "observed_responses_per_adapter": 1488,
+      "semantic_response": "category-based choice",
+      "robustness": "Evaluate corrected coding with saw omitted from summaries; label as evaluation sensitivity. Excluding saw from training would require a separately declared refit.",
+      "language": "Human US responses are English and Chinese responses Mandarin. Primary models use common English; frozen and adapted Mandarin evaluations are language sensitivity. Country effects are not identified as culture alone.",
+      "cross_task_claim": false,
+      "heldout_item_folds": [
+        [
+          "dress",
+          "spoon",
+          "bee"
+        ],
+        [
+          "notepad",
+          "airplane",
+          "teacup"
+        ],
+        [
+          "boot",
+          "elephant",
+          "pigeon"
+        ],
+        [
+          "teacher",
+          "saw",
+          "ring"
+        ],
+        [
+          "legs",
+          "bowl",
+          "goat"
+        ]
+      ]
+    },
+    "anllo": {
+      "citation": "Anllo et al. 2024, doi:10.1038/s41562-024-01894-9",
+      "raw_url": "https://osf.io/download/56gyd/",
+      "raw_sha256": "6ad9ef4a88b81dcb8d97863fbd80ba7fd567609dea6812ef91e6ae44582291ca",
+      "participant_key": "Participant.Private.ID",
+      "subdata": "WhichPhase == 3, explicit lotteries, Conditions 5..12; all 8 unordered pairs, 4 repetitions each (2 in each side order).",
+      "primary_inclusion": "Paper's main 561-person sample; do not impose additional strict performance filter for primary analysis. All phases of a person belong to one partition.",
+      "frozen_audit": "All 11 countries, report each country separately. Use identical model prompts; no arbitrary Western/non-Western pooling.",
+      "primary_population_contrast": "US vs China, continuing the existing project contrast, not selected to maximize observed country differences.",
+      "split": {
+        "eligible_US": 50,
+        "eligible_China": 49,
+        "balanced_per_country": 49,
+        "train_per_country": 34,
+        "validation_per_country": 7,
+        "test_per_country": 8,
+        "pooled_US": 17,
+        "pooled_China": 17
+      },
+      "lottery_items": [
+        {
+          "condition": 5,
+          "p_10": 0.75,
+          "p_1": 0.75,
+          "type": "dominance"
+        },
+        {
+          "condition": 6,
+          "p_10": 0.25,
+          "p_1": 0.25,
+          "type": "dominance"
+        },
+        {
+          "condition": 7,
+          "p_10": 0.75,
+          "p_1": 0.25,
+          "type": "dominance"
+        },
+        {
+          "condition": 8,
+          "p_10": 0.25,
+          "p_1": 0.75,
+          "type": "tradeoff"
+        },
+        {
+          "condition": 9,
+          "p_10": 0.25,
+          "p_1": 1,
+          "type": "tradeoff"
+        },
+        {
+          "condition": 10,
+          "p_10": 0.5,
+          "p_1": 1,
+          "type": "tradeoff"
+        },
+        {
+          "condition": 11,
+          "p_10": 0.75,
+          "p_1": 1,
+          "type": "tradeoff"
+        },
+        {
+          "condition": 12,
+          "p_10": 1,
+          "p_1": 1,
+          "type": "dominance"
+        }
+      ],
+      "outcomes": "10 or 0 points for the high-payoff option; 1 or 0 for the low-payoff option.",
+      "heldout_condition_folds": [
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "training_items_per_fold": 6,
+      "heldout_items_per_fold": 2,
+      "observed_responses_per_adapter": 816,
+      "data_reconstruction": "Use raw magnitudes/probabilities and ChoseLorR (-1 left,+1 right). Validate the selected side and map to high-payoff choice. No lottery feedback or histories in independent prompts.",
+      "conversion_caution": "Do not reuse Psych-201 generator unchanged: it introduces lottery outcome feedback absent from the human task. Its exception fallback DOES use distinct left/right labels; do not claim duplicate rendered labels.",
+      "semantic_response": "choice of 10-point option; not risk-taking across all eight items",
+      "reporting": "Tradeoff and dominance items separately; all-item equal-weight conditional log score also reported.",
+      "strict_filter_sensitivity": "Evaluation-only: exclude any person with a wrong lottery response on condition 7 or12 (437 remain overall). Existing training remains unchanged; not a filtered-training robustness claim.",
+      "cross_task_claim": false,
+      "future_transfer": "A separate history-aware analysis could evaluate experience-based transfer after explicit-lottery training. Use held-out participants' real learning histories, shared across adapters, without future answers or explicit hidden probabilities. Do not fabricate feedback or aggregate away histories.",
+      "power_limitation": "Only 8 test people per country per split. Repeat trials are not independent people; estimates remain imprecise and this is supporting evidence."
+    }
+  },
+  "comparisons": {
+    "frozen": [
+      "original Centaur",
+      "base Llama with Centaur adapter disabled"
+    ],
+    "trained": [
+      "US-only",
+      "China-only",
+      "same-budget 50/50 pooled"
+    ],
+    "adjustment": "One scalar semantic log-odds offset fitted per training condition/fold to exactly the same training data, with inherited ridge 0.001. Cao: category choice. Anllo: 10-point choice. Apply after A/B-to-semantic mapping, not as an A-token preference.",
+    "interpretation": "This design does not identify whether Centaur-specific pretraining causes fine-tuning sensitivity; parallel Llama fine-tuning would be an additional experiment."
+  },
+  "endpoints": {
+    "primary_shift": "For identical held-out items: mean semantic probability after US training minus after China training, in percentage points. Also show each adapter minus frozen Centaur and pooled ordering. Average Cao all critical items and Anllo tradeoffs; dominance separately.",
+    "fidelity": "Compare training-induced model differences with human differences, without requiring alignment for a shift to exist.",
+    "prediction": "Participant-averaged conditional log loss over valid A/B choices on held-out participants AND held-out items. Country averages weighted equally. Report own-vs-other and pooled-vs-other contrasts.",
+    "adaptation_vs_adjustment": "Conditional log-score difference between LoRA and the one-parameter semantic adjustment on the same held-out observations.",
+    "diagnostics": [
+      "full-vocabulary response log probability",
+      "valid-choice probability mass",
+      "option-order effect",
+      "item-level effects",
+      "descriptive human entropy/difficulty reference for frozen country gaps"
+    ],
+    "uncertainty": "Paired bootstrap complete participants across conditions, keeping repetitions together; preserve identities across overlapping seed splits. Show joint split/fitting-seed estimates separately. Folds are not independent experiments; few-item conclusions remain conditional on these stimuli."
+  },
+  "execution_scope": {
+    "paper_matrix": {
+      "Cao": 45,
+      "Anllo": 36,
+      "total": 81,
+      "definition": "3 populations x3 joint seeds x5 Cao or4 Anllo item folds"
+    },
+    "pilot_matrix": {
+      "total": 6,
+      "definition": "seed0,fold0 only,3 training populations per dataset; explicitly incomplete item coverage and one-seed pilot"
+    },
+    "scheduling": "Benchmark both actual prompt sets on Viper after data/prompt checks. Previous A1 runtime does not measure these tasks. Prefer complete item coverage of Cao over two datasets with incomplete folds.",
+    "deadline_note": "The full paper matrix is not promised within11hours. No reduction in test independence to meet the deadline.",
+    "not_launched": true
+  },
+  "preflight": [
+    "Freeze raw hashes and versions, retained participant list, canonical item mapping, participant splits, and fold manifest.",
+    "Verify every response maps to a displayed alternative; check raw-vs-derived reconstruction and counts.",
+    "Verify complete-participant and whole-item-family disjointness; keep all Anllo repetitions together.",
+    "Check equal human-data budgets and mirrored-prompt weighting, without upsampling to previous study's response count.",
+    "Inspect English prompts against original human instructions, and Mandarin mappings for Cao.",
+    "Time model load, one complete weighted update, and evaluation; verify zero-adapter equivalence.",
+    "Freeze validation-only selection rules before model test outcomes; keep test and future transfer outcomes out of selection."
+  ]
+}

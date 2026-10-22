@@ -1,0 +1,71 @@
+{
+  "tests": {
+    "passed": 128,
+    "skipped": 3,
+    "note": "Existing tests; GPU-dependent cases skipped without PyTorch. No training run."
+  },
+  "help_and_shell_checks": [
+    {
+      "script": "prepare_cao_culture_extension.py",
+      "exit_code": 0
+    },
+    {
+      "script": "prepare_anllo_culture_extension.py",
+      "exit_code": 0
+    },
+    {
+      "script": "prepare_culture_extension_runs.py",
+      "exit_code": 0
+    },
+    {
+      "script": "culture_extension_centaur70b.py",
+      "exit_code": 0
+    },
+    {
+      "script": "analyze_culture_extensions.py",
+      "exit_code": 0
+    },
+    {
+      "script": "validate_culture_extension_run.py",
+      "exit_code": 0
+    },
+    {
+      "script": "dictator_centaur70b_item_holdout.py",
+      "exit_code": 0
+    },
+    {
+      "script": "dictator_centaur70b_qlora.py",
+      "exit_code": 0
+    },
+    {
+      "script": "analyze_dictator_corrected_adapters.py",
+      "exit_code": 0
+    },
+    {
+      "script": "analyze_dictator_corrected_baselines.py",
+      "exit_code": 0
+    },
+    {
+      "script": "audit_corrected_response_adjustment.py",
+      "exit_code": 0
+    },
+    {
+      "script": "ruggeri_analyze.py",
+      "exit_code": 0
+    },
+    {
+      "script": "reproduce_summary.py",
+      "exit_code": 0
+    },
+    {
+      "script": "slurm/run_culture_extension_20261021.sh",
+      "exit_code": 0
+    },
+    {
+      "script": "slurm/run_dictator_centaur70b_corrected.sh",
+      "exit_code": 0
+    }
+  ],
+  "participant_identifier_columns_in_exported_csvs": false,
+  "summary_reproduction": "passed; 81 verified extension fits and matching frozen references"
+}

@@ -1,0 +1,64 @@
+{
+  "source_primary_csv_sha256": "071d30ced6b923cae8b1953fdb1bb17c0b2403a7896031a578d4ebf76c8d8be9",
+  "source_primary_xlsx_sha256": "db44bc4940b7860c1188f525c167555530222e7311bbe17770f08411a18723d6",
+  "method": "Exact multiset matching of complete 25-allocation + 25-warmth + 25-competence vectors; raw source headers identify constructs.",
+  "samples": [
+    {
+      "sample": "US-G1",
+      "dataset": 1,
+      "nation": 0,
+      "primary_participants": 543,
+      "expected_participants": 543,
+      "matched_all_75_values": 543,
+      "matched_all_75_literal_header_values": 4,
+      "source_url": "https://osf.io/download/6840513aa24576f776a4dd52/",
+      "source_sha256": "512dc57fb5795e80cd5e686d5998da557357e39e66979a1a966f267402fabcc6",
+      "raw_field_layout": "1_dictator..25_dictator; Q1_1..Q25_1; Q1-1_1..Q25-1_1",
+      "matching_preserves_raw_vector_multiplicity": true,
+      "inference": "Released Warmth is allocation percent; Competence is warmth; Token is competence."
+    },
+    {
+      "sample": "CN-G1",
+      "dataset": 1,
+      "nation": 1,
+      "primary_participants": 501,
+      "expected_participants": 501,
+      "matched_all_75_values": 501,
+      "matched_all_75_literal_header_values": 1,
+      "source_url": "https://osf.io/download/fstpb/",
+      "source_sha256": "80a5f640b8dde81be0afb468800bf50e49e8f78ced27e41c20c676b929318144",
+      "raw_field_layout": "1_dictator..25_dictator; Q1_1..Q25_1; Q1-1_1..Q25-1_1",
+      "matching_preserves_raw_vector_multiplicity": true,
+      "inference": "Released Warmth is allocation percent; Competence is warmth; Token is competence."
+    },
+    {
+      "sample": "US-G2",
+      "dataset": 2,
+      "nation": 0,
+      "primary_participants": 828,
+      "expected_participants": 828,
+      "matched_all_75_values": 828,
+      "matched_all_75_literal_header_values": 4,
+      "source_url": "https://osf.io/download/68405140e049b869fd85b4b1/",
+      "source_sha256": "0ba7d7de2d8b397d1a9be1305be19e0de8c2c262a8d4fec1adaf917bbf096297",
+      "raw_field_layout": "1_dictator..25_dictator; Q1_1..Q25_1; Q1-1_1..Q25-1_1",
+      "matching_preserves_raw_vector_multiplicity": true,
+      "inference": "Released Warmth is allocation percent; Competence is warmth; Token is competence."
+    },
+    {
+      "sample": "CN-G2",
+      "dataset": 2,
+      "nation": 1,
+      "primary_participants": 800,
+      "expected_participants": 800,
+      "matched_all_75_values": 800,
+      "matched_all_75_literal_header_values": 1,
+      "source_url": "https://osf.io/download/6840512219d4bd897ba4db2b/",
+      "source_sha256": "dd7734c786f2918a61924ad97f9ebbafe80a1809d05efce7df968da8498705d8",
+      "raw_field_layout": "dictator_1..25 * 5; Q1..25 and Q1x1..25 reordered by hidQ Chinese target labels",
+      "matching_preserves_raw_vector_multiplicity": true,
+      "inference": "Released Warmth is allocation percent; Competence is warmth; Token is competence."
+    }
+  ],
+  "privacy": "Only aggregate matching counts are saved; no raw personal identifiers are retained."
+}

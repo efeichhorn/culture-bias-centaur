@@ -1,0 +1,84 @@
+FROM THE COMMITTED AGGREGATES
+
+python -m pip install -r requirements.txt
+python scripts/reproduce_summary.py
+python -m pytest tests
+
+This rebuilds summary tables in build/results/. It checks 81 verified extension
+fits and matching frozen references. It does not reanalyse individual responses
+or retrain models. Seed ranges are descriptive, not confidence intervals.
+
+FULL REANALYSIS / TRAINING
+
+Raw data, participant splits, model scores and weights stay outside Git.
+Source URLs and model IDs are in data/README.txt. Use each script's --help for
+paths. No training runs during installation.
+
+Cao/Anllo preparation:
+python scripts/prepare_cao_culture_extension.py
+python scripts/prepare_anllo_culture_extension.py
+python scripts/prepare_culture_extension_runs.py
+
+These create ignored data_cache/ files. The 81 conditions are then listed in
+data_cache/culture_extensions_20261021/runs/run_index.json. The trainer accepts
+--run-manifest, --stage and --output-dir. Use baseline with the same numerical
+preparation as training. The collector accepts --repo-root, --run-index,
+--outputs-root, --baseline-root and --analysis-dir.
+
+Giving/Taking source preparation (from this repository root):
+export WANG_WORKSPACE="$PWD"
+mkdir -p data_cache model_results/wang_source_audit_20260930
+curl --fail --location https://osf.io/download/wtmpu/ -o data_cache/dictator_Behavior.xlsx
+curl --fail --location https://osf.io/download/684051ee2434947ecd85b513/ -o data_cache/dictator_GroupNo.xlsx
+python - <<'PYDATA'
+from pathlib import Path
+import hashlib
+import pandas as pd
+expected = {
+    "Behavior": "db44bc4940b7860c1188f525c167555530222e7311bbe17770f08411a18723d6",
+    "GroupNo": "b8c8ebd90552deec41204e81b1917e68d533be6cec3a1e71bdb0137e4d489fea",
+}
+for name, digest in expected.items():
+    path = Path("data_cache") / f"dictator_{name}.xlsx"
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, path
+    pd.read_excel(path).to_csv(path.with_suffix(".csv"), index=False)
+PYDATA
+cp provenance/wang_source_audit/*.json model_results/wang_source_audit_20260930/
+python scripts/repair_wang_behavior_columns.py --workspace "$WANG_WORKSPACE"
+
+The guard checks the original CSV hash and all eight source-audit records.
+The corrected CSV must have SHA256
+65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd.
+Original spreadsheets remain unchanged. To repeat the Giving raw-survey audit:
+python scripts/repair_wang_behavior_columns.py --workspace "$WANG_WORKSPACE" --audit-giving
+Taking's saved report documents its raw-file URLs and matching procedure.
+
+Giving/Taking: run dictator_centaur70b_qlora.py --stage prepare with
+--behavior-path, --group-path, --output-dir and --seed to create each corpus.
+dictator_centaur70b_item_holdout.py handles training and evaluation with the
+resulting --corpus-dir. analyze_dictator_corrected_adapters.py requires
+--behavior-path, --corpus-root, --results-root and --output-dir. Its inputs must
+be the corrected 45-fit run, never the earlier mislabeled-data experiment.
+
+audit_corrected_response_adjustment.py requires --workspace and --output.
+It retains the historical data_cache/ and model_results/ subdirectory layout
+inside that explicitly supplied workspace. It imports only optimizer helpers
+from audit_dictator_response_prior.py, never the legacy analysis entry point.
+
+Ruggeri: install requirements-ruggeri.txt. ruggeri_analyze.py requires
+--test-file, --private-dir, --score-dir and --output-dir. It stores participant
+scores only in the supplied private directory. ruggeri_plot.py can use the
+committed aggregates without private data.
+
+GPU ENVIRONMENT
+
+requirements-training.txt records the observed package versions, but does not
+supply the custom ROCm Torch build. Saved versions are in provenance/. The two
+Slurm runners require HF_HOME, VIPER_PYTHON_OVERLAY and VIPER_TRAIN_CONTAINER.
+For Giving/Taking also set C70_RUN_KIND (smoke/full/base), with optional
+C70_BEHAVIOR_PATH, C70_GROUP_PATH, C70_CORPUS_ROOT and C70_OUTPUT_ROOT.
+Cluster execution must be checked on the target GPU environment.
+
+The export manifest records source hashes and exclusions. Absolute source paths
+in aggregate metadata were replaced by ${WORKSPACE}; this is a provenance label,
+not an environment variable automatically expanded by the analysis scripts.

@@ -1,0 +1,12 @@
+\section{Discussion and Limitations}
+\label{sec:discussion}
+
+Fine-tuning population changes predictions on unseen items. That is the clearest result. Its consequences differ across tasks: population matching generally helps within-task fit, but it does not guarantee improvement over frozen Centaur or faithful transfer. Giving-to-Taking transfer provides a concrete counterexample. The response-adjustment control further shows that changing model weights is not always needed to obtain the predictive benefit.
+
+\textbf{Country is not a causal measure of culture.} Samples also differ in language, recruitment, education, and other characteristics. All model prompts are English; original categorization responses were collected in English and Mandarin. Lower NLL may partly reflect more predictable responses. We therefore study population composition and fit, without attributing their differences to a cultural mechanism or claiming a general Western bias.
+
+\textbf{Inference is limited.} Categorization has 15 items; lotteries have eight, with only eight held-out people per country per split. Repetitions do not add independent people. Three joint seeds provide limited information about fitting variability, and existing allocation intervals condition on fixed stimuli. The new-domain uncertainty estimates are unfinished. The studies were selected after published human contrasts were known, so the work is exploratory.
+
+\textbf{The controls do not settle mechanism.} Base Llama is evaluated frozen; we cannot attribute population sensitivity specifically to Centaur's original fine-tuning. The scalar adjustment is only one calibration control. Large answer-order effects make an order-aware comparison necessary before interpreting gains as learning population-specific item structure. Study publication dates also do not establish absence from base-model pretraining.
+
+\textbf{Next steps are analyses, chiefly using saved predictions.} Before submission we need paired participant uncertainty, item-level comparisons with human differences, a response-predictability reference, the planned coding/inclusion sensitivities, and order-aware calibration controls. Evaluating the saved models with Mandarin categorization prompts would test language sensitivity without another fine-tuning sweep. The retained allocation sample also needs final reconciliation with the source study's participant accounting. Resolving these points takes priority over adding datasets.

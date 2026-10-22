@@ -1,0 +1,721 @@
+{
+  "cao": {
+    "inference_repeat_difference_from_original_baseline": {
+      "p_positive": 0.029792717240471944,
+      "valid_mass": 0.006639161200410415,
+      "logp_a": 0.08835244178771973,
+      "logp_b": 0.09782588481903098
+    },
+    "prepared_matches_training_reference": {
+      "p_positive": 0.0,
+      "valid_mass": 0.0,
+      "logp_a": 0.0,
+      "logp_b": 0.0
+    },
+    "preparation_alone_changes_predictions": {
+      "p_positive": 0.02442895305148801,
+      "valid_mass": 0.0026680082723924414,
+      "logp_a": 0.057576656341552734,
+      "logp_b": 0.07197308540344238
+    },
+    "saved_adapter_reproduces_inline_evaluation": {
+      "p_positive": 0.0,
+      "valid_mass": 0.0,
+      "logp_a": 0.0,
+      "logp_b": 0.0
+    },
+    "restoring_frozen_adapter_recovers_reference": {
+      "p_positive": 0.0,
+      "valid_mass": 0.0,
+      "logp_a": 0.0,
+      "logp_b": 0.0
+    }
+  },
+  "anllo": {
+    "inference_repeat_difference_from_original_baseline": {
+      "p_positive": 0.056719381470971775,
+      "valid_mass": 2.9028994995239366e-05,
+      "logp_a": 0.1627650260925293,
+      "logp_b": 0.08723503351211553
+    },
+    "prepared_matches_training_reference": {
+      "p_positive": 0.0,
+      "valid_mass": 0.0,
+      "logp_a": 0.0,
+      "logp_b": 0.0
+    },
+    "preparation_alone_changes_predictions": {
+      "p_positive": 0.03345550828627719,
+      "valid_mass": 2.859508965435964e-05,
+      "logp_a": 0.05297952890396118,
+      "logp_b": 0.13283812999725364
+    },
+    "saved_adapter_reproduces_inline_evaluation": {
+      "p_positive": 0.0,
+      "valid_mass": 0.0,
+      "logp_a": 0.0,
+      "logp_b": 0.0
+    },
+    "restoring_frozen_adapter_recovers_reference": {
+      "p_positive": 0.0,
+      "valid_mass": 0.0,
+      "logp_a": 0.0,
+      "logp_b": 0.0
+    }
+  },
+  "changed_parameter_dtypes": {
+    "base_model.model.model.embed_tokens.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.0.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.0.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.1.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.1.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.2.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.2.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.3.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.3.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.4.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.4.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.5.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.5.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.6.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.6.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.7.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.7.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.8.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.8.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.9.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.9.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.10.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.10.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.11.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.11.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.12.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.12.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.13.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.13.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.14.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.14.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.15.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.15.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.16.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.16.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.17.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.17.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.18.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.18.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.19.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.19.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.20.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.20.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.21.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.21.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.22.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.22.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.23.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.23.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.24.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.24.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.25.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.25.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.26.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.26.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.27.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.27.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.28.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.28.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.29.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.29.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.30.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.30.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.31.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.31.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.32.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.32.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.33.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.33.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.34.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.34.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.35.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.35.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.36.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.36.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.37.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.37.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.38.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.38.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.39.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.39.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.40.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.40.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.41.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.41.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.42.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.42.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.43.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.43.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.44.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.44.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.45.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.45.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.46.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.46.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.47.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.47.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.48.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.48.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.49.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.49.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.50.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.50.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.51.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.51.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.52.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.52.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.53.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.53.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.54.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.54.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.55.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.55.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.56.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.56.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.57.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.57.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.58.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.58.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.59.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.59.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.60.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.60.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.61.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.61.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.62.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.62.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.63.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.63.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.64.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.64.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.65.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.65.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.66.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.66.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.67.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.67.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.68.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.68.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.69.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.69.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.70.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.70.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.71.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.71.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.72.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.72.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.73.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.73.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.74.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.74.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.75.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.75.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.76.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.76.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.77.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.77.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.78.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.78.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.79.input_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.layers.79.post_attention_layernorm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.model.norm.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ],
+    "base_model.model.lm_head.weight": [
+      "torch.bfloat16",
+      "torch.float32"
+    ]
+  },
+  "result": "Consistent float32 preparation reproduces the training reference. The old bfloat16 baseline also shows repeat-run variation. Saved adapters reproduce inline evaluations; these checked fits need not be repeated."
+}

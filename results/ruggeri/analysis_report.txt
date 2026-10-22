@@ -1,0 +1,50 @@
+RUGGERI H1 COUNTRY AUDIT — 21 OCTOBER 2026
+
+Status: completed for the verified 1,195/1,295 test participants (92.3%), 14,234 responses, all 61 countries represented. Country metadata for 100 participants remain unavailable. Results must be updated when that metadata is supplied.
+
+Question: Does frozen Centaur predict responses from the Western reference countries better?
+Task: Intertemporal monetary choices, including receiving and paying money sooner versus later. This is separate from Giving/Taking. No additional fine-tuning was performed.
+
+Primary result (equal country weights):
+                         Western reference   Other countries
+Frozen Centaur NLL       0.44565             0.42820
+Frozen Llama NLL         0.75713             0.71961
+Countries                25                  36
+Participants             544                 651
+
+Centaur's other-minus-Western NLL contrast is -0.01745 nats, 95% hierarchical bootstrap interval [-0.04329, 0.00769]. Positive would support H1. This audit does not support a Western prediction advantage; it does not demonstrate equivalence.
+Centaur improves over Llama by 0.31148 nats in the Western reference group and 0.29141 elsewhere. The difference in those gains is 0.02008 [−0.00652, 0.04738]. Thus a disproportionately Western gain is also not established by the primary analysis.
+
+Sensitivity results (Centaur other-minus-reference NLL; 95% intervals):
+Participant weighted: -0.02126 [-0.03542, -0.00745]. Conditional on the sampled country mix, unlike the primary hierarchy.
+Include Eastern Europe: -0.01305 [-0.04091, 0.01543].
+Anglophone reference: -0.03100 [-0.06423, -0.00120].
+Countries with >=10 participants: -0.01408 [-0.03649, 0.00829].
+First response only: -0.09248 [-0.16224, -0.02408].
+No prespecified sensitivity supports a Western absolute-fit advantage. Some secondary Centaur-versus-Llama gain contrasts are positive with intervals excluding zero (participant weighting and broader European grouping); these do not establish better absolute Western predictions and depend on estimand/grouping. See results.json for every estimate.
+
+Methods and checks:
+- Protocol and country lists fixed before inspecting losses (protocol.json). These are exploratory analyses, not preregistered hypotheses.
+- Original test JSONL row order was used, never the shuffled Psych201 row order.
+- Joined country metadata on experiment and original participant ID; all 1,195 matched prompt strings identical and marked as original Psych101 test participants.
+- All 15,421 response spans have exactly one target token. Maximum sequence length456, below evaluator limit32768. Both saved arrays contain exactly15,421 finite, nonnegative response losses. File hashes are in coverage.json.
+- Scores averaged first within participants, then within country, then equally over countries. 10,000 bootstrap draws resample countries within group and participants within each selected country; paired draws used for both models.
+- Western reference = UN M49 Northern/Western/Southern Europe plus US, Canada, Australia, New Zealand. This is an operational geographic definition, not a validated cultural classification. Exact list in protocol.json; observed groups in country_results.csv.
+- Country field comes from Psych201 nationality metadata. Do not treat it as an independently verified measure of individual culture.
+- Published predictions condition on preceding observed responses. First-response-only sensitivity removes this history.
+- Saved losses use full-vocabulary response NLL, not normalization over the two options. Absolute scores are not directly comparable to Giving/Taking conditional NLL. The large Centaur-Llama gap may include response-format probability differences.
+- Prompts are the English representation, without country labels. Original surveys were localized; this does not isolate language, cultural causality, item composition, sample characteristics or response entropy.
+- Ruggeri was included in Centaur's original fine-tuning corpus. These are held-out participants in a seen study, not an independent unseen-study replication.
+- Country sample sizes range3–61. Intervals do not establish country representativeness. Country plot is alphabetical, unselected by performance; intervals unadjusted.
+- Missing-metadata participants' average losses: Centaur0.45622, Llama0.73599; matched participants0.43677,0.73879. This descriptive comparison cannot rule out country-dependent missingness.
+
+Interpretation for the paper:
+The US advantage in the allocation tasks does not generalize to this operational Western comparison in intertemporal choice. Present H1 as task-dependent and distinguish absolute population fit from improvement over Llama. Ruggeri supplies a second behavioral domain but cannot establish unseen-study generalization. Additional independent datasets and controls for baseline response predictability remain necessary for broader cultural-bias claims.
+
+Sources:
+https://github.com/marcelbinz/Llama-3.1-Centaur-70B
+https://huggingface.co/datasets/marcelbinz/Psych-101-test
+https://huggingface.co/datasets/marcelbinz/Psych-201-discrete
+https://www.nature.com/articles/s41562-022-01392-w
+
+Reproduction: use build/plot_runtime/bin/python from culture_slides_20261014 to run ../ruggeri_h1_20261021/analyze.py and plot.py. Private source files stay local; aggregate outputs contain no prompts.

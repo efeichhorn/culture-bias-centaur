@@ -1,0 +1,10 @@
+# Install only inside a verified GPU environment. See provenance/*_runtime.json.
+# The original torch 2.10.0+git8514f05 ROCm build is NOT supplied by this file.
+# Install the cluster-compatible torch build separately before these packages.
+-r requirements.txt
+transformers==5.5.4
+accelerate==1.13.0
+peft==0.19.1
+bitsandbytes==0.50.2
+safetensors==0.7.0
+huggingface_hub

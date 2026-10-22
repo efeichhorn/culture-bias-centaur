@@ -1,0 +1,4 @@
+# Preserve aggregate-file bytes for provenance hashes.
+*.csv -text
+*.pdf binary
+*.png binary

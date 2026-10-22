@@ -1,0 +1,23 @@
+{
+  "status": "complete_validated_corrected_allocation_analysis",
+  "behavior_path": "${WORKSPACE}/data_cache/dictator_Behavior_corrected_20260930.csv",
+  "source_behavior_sha256": "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd",
+  "corpus_root": "${WORKSPACE}/data_cache/dictator_centaur70b_corrected_20260930",
+  "results_root": "${WORKSPACE}/model_results/dictator_centaur70b_item_holdout_corrected_20260930",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "expected_optimizer_steps": 25,
+  "bootstrap_seed": 20260930,
+  "bootstrap_resamples": 4000,
+  "baseline": "fresh per-seed frozen Centaur evaluation",
+  "uncertainty": "Shared participant multiplicities across overlapping seed test sets, stratified by Dataset/Nation; five fixed folds are stitched once per seed. Separate participant-only and empirical seed-plus-participant percentile intervals. Three seeds provide limited training-run uncertainty; target groups/folds fixed, not resampled.",
+  "contrasts": {
+    "own_minus_other": "Specialist advantage on each test population",
+    "pooled_minus_other": "Selection penalty: same-size pooled minus other-country-selected adapter on the outside population",
+    "own_minus_pooled": "Specialist advantage over same-size pooled"
+  },
+  "scope": "Corrected allocation responses only; 25 out-of-fold targets per seed. Giving manifest-held-out participants; all separately collected Taking participants."
+}

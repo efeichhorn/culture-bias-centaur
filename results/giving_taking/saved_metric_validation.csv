@@ -1,0 +1,73 @@
+seed,condition,task,Country,metric,absolute_error
+0,us,Giving,United States,raw_response_ll,0.0
+0,us,Giving,United States,conditional_ll,8.881784197001252e-16
+0,us,Giving,China,raw_response_ll,0.0
+0,us,Giving,China,conditional_ll,8.881784197001252e-16
+0,china,Giving,United States,raw_response_ll,4.440892098500626e-16
+0,china,Giving,United States,conditional_ll,8.881784197001252e-16
+0,china,Giving,China,raw_response_ll,0.0
+0,china,Giving,China,conditional_ll,8.881784197001252e-16
+0,pooled,Giving,United States,raw_response_ll,0.0
+0,pooled,Giving,United States,conditional_ll,4.440892098500626e-16
+0,pooled,Giving,China,raw_response_ll,4.440892098500626e-16
+0,pooled,Giving,China,conditional_ll,4.440892098500626e-16
+0,us,Taking,United States,raw_response_ll,4.440892098500626e-16
+0,us,Taking,United States,conditional_ll,4.440892098500626e-16
+0,us,Taking,China,raw_response_ll,4.440892098500626e-16
+0,us,Taking,China,conditional_ll,8.881784197001252e-16
+0,china,Taking,United States,raw_response_ll,0.0
+0,china,Taking,United States,conditional_ll,8.881784197001252e-16
+0,china,Taking,China,raw_response_ll,0.0
+0,china,Taking,China,conditional_ll,8.881784197001252e-16
+0,pooled,Taking,United States,raw_response_ll,4.440892098500626e-16
+0,pooled,Taking,United States,conditional_ll,4.440892098500626e-16
+0,pooled,Taking,China,raw_response_ll,0.0
+0,pooled,Taking,China,conditional_ll,8.881784197001252e-16
+1,us,Giving,United States,raw_response_ll,0.0
+1,us,Giving,United States,conditional_ll,4.440892098500626e-16
+1,us,Giving,China,raw_response_ll,0.0
+1,us,Giving,China,conditional_ll,8.881784197001252e-16
+1,china,Giving,United States,raw_response_ll,0.0
+1,china,Giving,United States,conditional_ll,4.440892098500626e-16
+1,china,Giving,China,raw_response_ll,0.0
+1,china,Giving,China,conditional_ll,8.881784197001252e-16
+1,pooled,Giving,United States,raw_response_ll,0.0
+1,pooled,Giving,United States,conditional_ll,8.881784197001252e-16
+1,pooled,Giving,China,raw_response_ll,0.0
+1,pooled,Giving,China,conditional_ll,8.881784197001252e-16
+1,us,Taking,United States,raw_response_ll,0.0
+1,us,Taking,United States,conditional_ll,1.3322676295501878e-15
+1,us,Taking,China,raw_response_ll,0.0
+1,us,Taking,China,conditional_ll,8.881784197001252e-16
+1,china,Taking,United States,raw_response_ll,4.440892098500626e-16
+1,china,Taking,United States,conditional_ll,4.440892098500626e-16
+1,china,Taking,China,raw_response_ll,0.0
+1,china,Taking,China,conditional_ll,1.3322676295501878e-15
+1,pooled,Taking,United States,raw_response_ll,0.0
+1,pooled,Taking,United States,conditional_ll,4.440892098500626e-16
+1,pooled,Taking,China,raw_response_ll,4.440892098500626e-16
+1,pooled,Taking,China,conditional_ll,8.881784197001252e-16
+2,us,Giving,United States,raw_response_ll,4.440892098500626e-16
+2,us,Giving,United States,conditional_ll,8.881784197001252e-16
+2,us,Giving,China,raw_response_ll,0.0
+2,us,Giving,China,conditional_ll,8.881784197001252e-16
+2,china,Giving,United States,raw_response_ll,0.0
+2,china,Giving,United States,conditional_ll,4.440892098500626e-16
+2,china,Giving,China,raw_response_ll,4.440892098500626e-16
+2,china,Giving,China,conditional_ll,8.881784197001252e-16
+2,pooled,Giving,United States,raw_response_ll,4.440892098500626e-16
+2,pooled,Giving,United States,conditional_ll,8.881784197001252e-16
+2,pooled,Giving,China,raw_response_ll,0.0
+2,pooled,Giving,China,conditional_ll,8.881784197001252e-16
+2,us,Taking,United States,raw_response_ll,4.440892098500626e-16
+2,us,Taking,United States,conditional_ll,1.3322676295501878e-15
+2,us,Taking,China,raw_response_ll,0.0
+2,us,Taking,China,conditional_ll,8.881784197001252e-16
+2,china,Taking,United States,raw_response_ll,4.440892098500626e-16
+2,china,Taking,United States,conditional_ll,4.440892098500626e-16
+2,china,Taking,China,raw_response_ll,0.0
+2,china,Taking,China,conditional_ll,1.3322676295501878e-15
+2,pooled,Taking,United States,raw_response_ll,4.440892098500626e-16
+2,pooled,Taking,United States,conditional_ll,4.440892098500626e-16
+2,pooled,Taking,China,raw_response_ll,4.440892098500626e-16
+2,pooled,Taking,China,conditional_ll,8.881784197001252e-16

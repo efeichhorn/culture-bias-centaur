@@ -1,0 +1,33 @@
+{
+  "issue": "Standalone baselines skipped k-bit precision preparation; production frozen and fitted evaluations used preparation.",
+  "resolution": "Use training-compatible preparation for all stages, regenerate standalone Centaur and Llama baselines, retain strict per-order probability and valid-mass checks.",
+  "gpu_jobs": {
+    "controlled_audit": "12306367",
+    "corrected_baselines": "12306368"
+  },
+  "failed_initial_diagnostic_job": {
+    "job": "12306365",
+    "reason": "Diagnostic directory not mounted in container; corrected bind and resubmitted. No model ran."
+  },
+  "checked_completed_runs": 16,
+  "maximum_baseline_difference_across_completed_runs": 0.0,
+  "saved_adapter_reload_checks": {
+    "cao": "seed0/fold0/us: exact match",
+    "anllo": "seed0/fold0/us: exact match"
+  },
+  "training_changed_or_repeated": false,
+  "original_production_snapshot_preserved": true,
+  "old_baselines_preserved": "outputs/culture_extensions_20261021/baseline",
+  "canonical_baselines": "outputs/culture_extensions_20261021/baseline_precision_aligned",
+  "canonical_analysis": "outputs/culture_extensions_20261021/analysis_precision_aligned",
+  "recompute_command": ".venv/bin/python scripts/analyze_culture_extensions.py",
+  "tests": "19 passed: tests/test_analyze_culture_extensions.py and tests/test_culture_extension_centaur70b.py",
+  "precision_report": "gpu_outputs/precision_report.json",
+  "source_hashes": {
+    "scripts/culture_extension_centaur70b.py": "5feae91bfd690eb131b06354f645dd87c904641122290f492147b28304342d87",
+    "scripts/analyze_culture_extensions.py": "f06a15930cd9bb1c3ca02dbf0af33f0f47274f9891845319d094caf46a3a8c7c",
+    "project_updates/culture_extension_20261021/diagnostics/check_precision.py": "2822c9a012d718d84218b3e40c8bbe8eda84f5f4103388c583e1d7739cd270a1",
+    "project_updates/culture_extension_20261021/diagnostics/aligned_trainer.py": "5feae91bfd690eb131b06354f645dd87c904641122290f492147b28304342d87"
+  },
+  "caveat": "The old bfloat16 baseline also differed across repeat evaluations; no separate attribution to particular kernels was established. Exact equality was demonstrated for the prepared path on these prompts, not universally for all hardware."
+}

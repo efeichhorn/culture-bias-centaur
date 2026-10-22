@@ -1,0 +1,10 @@
+ACL 2023 LaTeX template, as requested by the ULM course handout.
+Source: https://2023.aclweb.org/downloads/acl2023.zip
+Downloaded: 22 October 2026.
+
+acl2023.sty and acl_natbib.bst are unmodified template files.
+Their authorship and terms remain with the original authors.
+The large example bibliography and template PDF are not included.
+
+Compile main.tex with pdfLaTeX and BibTeX (or latexmk -pdf).
+The course has not stated a page limit in the checked materials.

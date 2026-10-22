@@ -1,0 +1,13 @@
+{
+  "source": "publication-bias-transfer-demo/outputs/culture_extensions_20261021/cao/seed0/fold0/us/train_metrics.json",
+  "source_sha256": "560180e5436bab6e2a8081f87eb8914616d865a6b83d0f3c68bb3d2757d20ec3",
+  "runtime_versions": {
+    "python": "3.12.13",
+    "torch": "2.10.0+git8514f05",
+    "transformers": "5.5.4",
+    "accelerate": "1.13.0",
+    "peft": "0.19.1",
+    "bitsandbytes": "0.50.2",
+    "safetensors": "0.7.0"
+  }
+}
