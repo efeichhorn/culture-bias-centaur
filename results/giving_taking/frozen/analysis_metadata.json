@@ -1,0 +1,25 @@
+{
+  "status": "validated_explicit_allocation_baselines",
+  "behavior_path": "${WORKSPACE}/data_cache/dictator_Behavior_corrected_20260930.csv",
+  "response_column": "Token",
+  "response_scale": "percent",
+  "behavior_provenance_path": "${WORKSPACE}/data_cache/dictator_Behavior_corrected_20260930.provenance.json",
+  "candidates_path": "${WORKSPACE}/model_results/dictator_a1_controls_20260930/candidate_probabilities.csv",
+  "evaluation_split_ids": [
+    0,
+    1,
+    2
+  ],
+  "bootstrap_seed": 20260930,
+  "bootstrap_resamples": 4000,
+  "uncertainty": "Shared participant multiplicities across fixed evaluation splits, stratified by Dataset and Nation; 95% percentile intervals. No inference-seed resampling: saved model probabilities are deterministic reused predictions.",
+  "histogram": "Add-one smoothed per-target allocation histogram over 21 choices; uses saved Giving training participant IDs only. Histogram fit kept fixed during evaluation bootstrap. Available only for Giving.",
+  "scope": "Frozen plain Llama-70B, frozen Centaur-70B, original/US/China label prompts, and a Giving allocation histogram. No existing culture-adapter probabilities included.",
+  "limitations": [
+    "Validation status is explicit caller input; inspect independent source-column audit evidence before interpreting allocation outcomes.",
+    "Giving participants are held out relative to saved culture-training manifests, not necessarily upstream Centaur pretraining.",
+    "Taking samples were collected separately; no Taking histogram fitted.",
+    "Prompt comparisons are descriptive for this exact wording; no prompt-family generalization interval.",
+    "Raw LL includes probability assigned outside the 21 valid allocations; conditional LL removes that format penalty."
+  ]
+}

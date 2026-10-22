@@ -1,0 +1,26 @@
+GroupNo,item,item_chinese,fold,fold_rationale
+1,boy,男孩,0,boy; German; farmer; property developer; homeless
+5,German,德国人,0,boy; German; farmer; property developer; homeless
+12,farmer,农民,0,boy; German; farmer; property developer; homeless
+16,property developer,房地产商,0,boy; German; farmer; property developer; homeless
+23,homeless,流浪人员,0,boy; German; farmer; property developer; homeless
+2,girl,女孩,1,girl; Japanese; civil servant; pharmaceutical executive; disabled
+6,Japanese,日本人,1,girl; Japanese; civil servant; pharmaceutical executive; disabled
+13,civil servant,公务员,1,girl; Japanese; civil servant; pharmaceutical executive; disabled
+17,pharmaceutical executive,药企总裁,1,girl; Japanese; civil servant; pharmaceutical executive; disabled
+24,disabled,残障人士,1,girl; Japanese; civil servant; pharmaceutical executive; disabled
+3,male,男人,2,male; North Korean; janitor; investment banker; no information
+7,North Korean,朝鲜人,2,male; North Korean; janitor; investment banker; no information
+14,janitor,保洁,2,male; North Korean; janitor; investment banker; no information
+18,investment banker,投资银行家,2,male; North Korean; janitor; investment banker; no information
+25,no information,无信息,2,male; North Korean; janitor; investment banker; no information
+4,female,女人,3,female; Pakistani; Jewish; nanny; lawyer
+8,Pakistani,巴基斯坦人,3,female; Pakistani; Jewish; nanny; lawyer
+10,Jewish,犹太人,3,female; Pakistani; Jewish; nanny; lawyer
+15,nanny,保姆,3,female; Pakistani; Jewish; nanny; lawyer
+19,lawyer,律师,3,female; Pakistani; Jewish; nanny; lawyer
+9,Australian,澳大利亚人,4,Australian; Greek; teacher; athlete; scientist
+11,Greek,希腊人,4,Australian; Greek; teacher; athlete; scientist
+20,teacher,老师,4,Australian; Greek; teacher; athlete; scientist
+21,athlete,运动员,4,Australian; Greek; teacher; athlete; scientist
+22,scientist,科学家,4,Australian; Greek; teacher; athlete; scientist

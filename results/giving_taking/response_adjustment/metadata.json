@@ -1,0 +1,15 @@
+{
+  "status": "exploratory_corrected_cpu_followup",
+  "source_sha": "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "folds": 5,
+  "response_offset_free_parameters": 20,
+  "ridge": 0.001,
+  "uncertainty": "Wave/target summaries have seed SD only. Prior paired intervals reuse 4000 shared-participant + observed-seed bootstrap replicates; fixed target groups, fits, and splits. Bootstrap seed 20261013. No target-population generalization inferred.",
+  "raw_prior_construction": "Preserves frozen Centaur valid-number mass, changes conditional distribution only.",
+  "target_expected_values": "Conditional on 21 valid responses. Giving is tokens given; Taking is tokens taken."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "model_results/dictator_centaur70b_item_holdout_corrected_20260930/seed0/fold0/us/train_metrics.json",
+  "source_sha256": "96fd27634eb64006ceb61a24b93f6a06eb539530498f3a6024fce7e26d1607d0",
+  "runtime_versions": {
+    "python": "3.12.13",
+    "torch": "2.10.0+git8514f05",
+    "transformers": "5.5.4",
+    "accelerate": "1.13.0",
+    "peft": "0.19.1",
+    "bitsandbytes": "0.50.2",
+    "safetensors": "0.7.0"
+  }
+}

@@ -1,0 +1,145 @@
+task,Country,metric,contrast,seed,value
+Giving,China,conditional_ll,china_gain_vs_base,0,0.4828495095540684
+Giving,China,conditional_ll,china_gain_vs_base,1,0.44029431995131607
+Giving,China,conditional_ll,china_gain_vs_base,2,0.4611912719307215
+Giving,China,conditional_ll,own_minus_other,0,0.16759776148059766
+Giving,China,conditional_ll,own_minus_other,1,0.11286730962722899
+Giving,China,conditional_ll,own_minus_other,2,0.15062765710267637
+Giving,China,conditional_ll,own_minus_pooled,0,0.077669564671491
+Giving,China,conditional_ll,own_minus_pooled,1,0.03981977975107473
+Giving,China,conditional_ll,own_minus_pooled,2,0.06509518350998159
+Giving,China,conditional_ll,pooled_gain_vs_base,0,0.40517994488257747
+Giving,China,conditional_ll,pooled_gain_vs_base,1,0.4004745402002413
+Giving,China,conditional_ll,pooled_gain_vs_base,2,0.39609608842073996
+Giving,China,conditional_ll,pooled_minus_other,0,0.08992819680910666
+Giving,China,conditional_ll,pooled_minus_other,1,0.07304752987615426
+Giving,China,conditional_ll,pooled_minus_other,2,0.08553247359269478
+Giving,China,conditional_ll,us_gain_vs_base,0,0.3152517480734708
+Giving,China,conditional_ll,us_gain_vs_base,1,0.32742701032408705
+Giving,China,conditional_ll,us_gain_vs_base,2,0.3105636148280451
+Giving,China,raw_response_ll,china_gain_vs_base,0,0.4831890147802781
+Giving,China,raw_response_ll,china_gain_vs_base,1,0.4406206544078126
+Giving,China,raw_response_ll,china_gain_vs_base,2,0.4615386566823843
+Giving,China,raw_response_ll,own_minus_other,0,0.1674988244625987
+Giving,China,raw_response_ll,own_minus_other,1,0.1127936814999094
+Giving,China,raw_response_ll,own_minus_other,2,0.15056751825371564
+Giving,China,raw_response_ll,own_minus_pooled,0,0.07761869717617424
+Giving,China,raw_response_ll,own_minus_pooled,1,0.03975187491397469
+Giving,China,raw_response_ll,own_minus_pooled,2,0.06501623574568301
+Giving,China,raw_response_ll,pooled_gain_vs_base,0,0.40557031760410384
+Giving,China,raw_response_ll,pooled_gain_vs_base,1,0.4008687794938379
+Giving,China,raw_response_ll,pooled_gain_vs_base,2,0.39652242093670126
+Giving,China,raw_response_ll,pooled_minus_other,0,0.08988012728642443
+Giving,China,raw_response_ll,pooled_minus_other,1,0.07304180658593472
+Giving,China,raw_response_ll,pooled_minus_other,2,0.08555128250803264
+Giving,China,raw_response_ll,us_gain_vs_base,0,0.3156901903176794
+Giving,China,raw_response_ll,us_gain_vs_base,1,0.32782697290790325
+Giving,China,raw_response_ll,us_gain_vs_base,2,0.31097113842866864
+Giving,United States,conditional_ll,china_gain_vs_base,0,0.2348648134626304
+Giving,United States,conditional_ll,china_gain_vs_base,1,0.21248819397471444
+Giving,United States,conditional_ll,china_gain_vs_base,2,0.2505535145904654
+Giving,United States,conditional_ll,own_minus_other,0,0.0948257081382777
+Giving,United States,conditional_ll,own_minus_other,1,0.12027044464764551
+Giving,United States,conditional_ll,own_minus_other,2,0.08046928580866639
+Giving,United States,conditional_ll,own_minus_pooled,0,0.019357519897286127
+Giving,United States,conditional_ll,own_minus_pooled,1,0.02404430396345697
+Giving,United States,conditional_ll,own_minus_pooled,2,-0.002216148083876396
+Giving,United States,conditional_ll,pooled_gain_vs_base,0,0.310333001703622
+Giving,United States,conditional_ll,pooled_gain_vs_base,1,0.308714334658903
+Giving,United States,conditional_ll,pooled_gain_vs_base,2,0.33323894848300817
+Giving,United States,conditional_ll,pooled_minus_other,0,0.07546818824099157
+Giving,United States,conditional_ll,pooled_minus_other,1,0.09622614068418854
+Giving,United States,conditional_ll,pooled_minus_other,2,0.08268543389254278
+Giving,United States,conditional_ll,us_gain_vs_base,0,0.32969052160090806
+Giving,United States,conditional_ll,us_gain_vs_base,1,0.33275863862236
+Giving,United States,conditional_ll,us_gain_vs_base,2,0.33102280039913173
+Giving,United States,raw_response_ll,china_gain_vs_base,0,0.23520431868884029
+Giving,United States,raw_response_ll,china_gain_vs_base,1,0.21281452843121124
+Giving,United States,raw_response_ll,china_gain_vs_base,2,0.2509008993421282
+Giving,United States,raw_response_ll,own_minus_other,0,0.0949246451562765
+Giving,United States,raw_response_ll,own_minus_other,1,0.12034407277496491
+Giving,United States,raw_response_ll,own_minus_other,2,0.08052942465762701
+Giving,United States,raw_response_ll,own_minus_pooled,0,0.019405589419968262
+Giving,United States,raw_response_ll,own_minus_pooled,1,0.024050027253676432
+Giving,United States,raw_response_ll,own_minus_pooled,2,-0.0022349569992143347
+Giving,United States,raw_response_ll,pooled_gain_vs_base,0,0.3107233744251485
+Giving,United States,raw_response_ll,pooled_gain_vs_base,1,0.3091085739524997
+Giving,United States,raw_response_ll,pooled_gain_vs_base,2,0.3336652809989696
+Giving,United States,raw_response_ll,pooled_minus_other,0,0.07551905573630822
+Giving,United States,raw_response_ll,pooled_minus_other,1,0.09629404552128847
+Giving,United States,raw_response_ll,pooled_minus_other,2,0.08276438165684134
+Giving,United States,raw_response_ll,us_gain_vs_base,0,0.3301289638451168
+Giving,United States,raw_response_ll,us_gain_vs_base,1,0.33315860120617613
+Giving,United States,raw_response_ll,us_gain_vs_base,2,0.33143032399975525
+Taking,China,conditional_ll,china_gain_vs_base,0,0.05027913825221907
+Taking,China,conditional_ll,china_gain_vs_base,1,0.04527550979555057
+Taking,China,conditional_ll,china_gain_vs_base,2,0.04154940356769766
+Taking,China,conditional_ll,own_minus_other,0,-0.05248746678162382
+Taking,China,conditional_ll,own_minus_other,1,-0.06677307284283938
+Taking,China,conditional_ll,own_minus_other,2,-0.060024905457646036
+Taking,China,conditional_ll,own_minus_pooled,0,-0.04622779060056064
+Taking,China,conditional_ll,own_minus_pooled,1,-0.05391415777774526
+Taking,China,conditional_ll,own_minus_pooled,2,-0.04255211545787893
+Taking,China,conditional_ll,pooled_gain_vs_base,0,0.09650692885277971
+Taking,China,conditional_ll,pooled_gain_vs_base,1,0.09918966757329582
+Taking,China,conditional_ll,pooled_gain_vs_base,2,0.08410151902557658
+Taking,China,conditional_ll,pooled_minus_other,0,-0.0062596761810631806
+Taking,China,conditional_ll,pooled_minus_other,1,-0.012858915065094132
+Taking,China,conditional_ll,pooled_minus_other,2,-0.017472789999767105
+Taking,China,conditional_ll,us_gain_vs_base,0,0.10276660503384288
+Taking,China,conditional_ll,us_gain_vs_base,1,0.11204858263838996
+Taking,China,conditional_ll,us_gain_vs_base,2,0.1015743090253437
+Taking,China,raw_response_ll,china_gain_vs_base,0,0.05049373045103995
+Taking,China,raw_response_ll,china_gain_vs_base,1,0.04546606336167382
+Taking,China,raw_response_ll,china_gain_vs_base,2,0.04175349416008025
+Taking,China,raw_response_ll,own_minus_other,0,-0.052579608288270525
+Taking,China,raw_response_ll,own_minus_other,1,-0.0668563387069243
+Taking,China,raw_response_ll,own_minus_other,2,-0.06011065150850064
+Taking,China,raw_response_ll,own_minus_pooled,0,-0.04627170800265733
+Taking,China,raw_response_ll,own_minus_pooled,1,-0.053980967375997134
+Taking,China,raw_response_ll,own_minus_pooled,2,-0.04262738005033195
+Taking,China,raw_response_ll,pooled_gain_vs_base,0,0.09676543845369727
+Taking,China,raw_response_ll,pooled_gain_vs_base,1,0.09944703073767094
+Taking,China,raw_response_ll,pooled_gain_vs_base,2,0.08438087421041221
+Taking,China,raw_response_ll,pooled_minus_other,0,-0.006307900285613198
+Taking,China,raw_response_ll,pooled_minus_other,1,-0.012875371330927157
+Taking,China,raw_response_ll,pooled_minus_other,2,-0.017483271458168692
+Taking,China,raw_response_ll,us_gain_vs_base,0,0.10307333873931049
+Taking,China,raw_response_ll,us_gain_vs_base,1,0.1123224020685981
+Taking,China,raw_response_ll,us_gain_vs_base,2,0.1018641456685809
+Taking,United States,conditional_ll,china_gain_vs_base,0,0.12106819383383025
+Taking,United States,conditional_ll,china_gain_vs_base,1,0.11405579094805171
+Taking,United States,conditional_ll,china_gain_vs_base,2,0.10665194608075917
+Taking,United States,conditional_ll,own_minus_other,0,0.09070938098167254
+Taking,United States,conditional_ll,own_minus_other,1,0.1020518580746502
+Taking,United States,conditional_ll,own_minus_other,2,0.10945646023409489
+Taking,United States,conditional_ll,own_minus_pooled,0,0.028763284016077886
+Taking,United States,conditional_ll,own_minus_pooled,1,0.029040823859357186
+Taking,United States,conditional_ll,own_minus_pooled,2,0.042360758555049366
+Taking,United States,conditional_ll,pooled_gain_vs_base,0,0.1830142907994249
+Taking,United States,conditional_ll,pooled_gain_vs_base,1,0.18706682516334472
+Taking,United States,conditional_ll,pooled_gain_vs_base,2,0.17374764775980472
+Taking,United States,conditional_ll,pooled_minus_other,0,0.06194609696559466
+Taking,United States,conditional_ll,pooled_minus_other,1,0.07301103421529301
+Taking,United States,conditional_ll,pooled_minus_other,2,0.06709570167904552
+Taking,United States,conditional_ll,us_gain_vs_base,0,0.2117775748155028
+Taking,United States,conditional_ll,us_gain_vs_base,1,0.21610764902270194
+Taking,United States,conditional_ll,us_gain_vs_base,2,0.21610840631485406
+Taking,United States,raw_response_ll,china_gain_vs_base,0,0.12128278603265097
+Taking,United States,raw_response_ll,china_gain_vs_base,1,0.11424634451417486
+Taking,United States,raw_response_ll,china_gain_vs_base,2,0.1068560366731417
+Taking,United States,raw_response_ll,own_minus_other,0,0.0908015224883193
+Taking,United States,raw_response_ll,own_minus_other,1,0.1021351239387351
+Taking,United States,raw_response_ll,own_minus_other,2,0.10954220628494941
+Taking,United States,raw_response_ll,own_minus_pooled,0,0.02881150812062795
+Taking,United States,raw_response_ll,own_minus_pooled,1,0.0290572801251902
+Taking,United States,raw_response_ll,own_minus_pooled,2,0.042371240013450884
+Taking,United States,raw_response_ll,pooled_gain_vs_base,0,0.18327280040034233
+Taking,United States,raw_response_ll,pooled_gain_vs_base,1,0.18732418832771977
+Taking,United States,raw_response_ll,pooled_gain_vs_base,2,0.17402700294464024
+Taking,United States,raw_response_ll,pooled_minus_other,0,0.06199001436769134
+Taking,United States,raw_response_ll,pooled_minus_other,1,0.0730778438135449
+Taking,United States,raw_response_ll,pooled_minus_other,2,0.06717096627149854
+Taking,United States,raw_response_ll,us_gain_vs_base,0,0.21208430852097027
+Taking,United States,raw_response_ll,us_gain_vs_base,1,0.21638146845290998
+Taking,United States,raw_response_ll,us_gain_vs_base,2,0.2163982429580911

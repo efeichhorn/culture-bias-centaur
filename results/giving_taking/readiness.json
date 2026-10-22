@@ -1,0 +1,10 @@
+{
+  "status": "complete_validated",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "validated_fit_count": 45,
+  "behavior_sha256": "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd"
+}

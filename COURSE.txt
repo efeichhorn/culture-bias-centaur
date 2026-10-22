@@ -1,0 +1,40 @@
+UNDERSTANDING LANGUAGE MODELS (2026)
+Checked in Moodle on 22 October 2026.
+
+Deadline: 31 October 2026, 00:00, as displayed in Moodle.
+This is midnight at the start of 31 October.
+
+PAPER
+- Use the ACL template.
+- Abstract: at most 150 words, including the conclusion.
+- Order: Introduction, Methods, Results, Discussion, optional Conclusion and
+  Acknowledgments, References, AI usage declaration.
+- Methods should permit replication and should not include results.
+- Explain hypotheses, metrics, data, models and limitations. Link the code.
+- No course page limit was found. The Report length forum post has no reply.
+  The ACL conference's own page limits are not a confirmed course limit.
+
+CODE
+- Submit code through a public repository.
+- Include a README, study/analysis scripts, requirements and instructions for
+  obtaining data and models. Do not include unchanged source datasets or weights.
+- Keep this repository private until reviewed, as requested by the author.
+
+SUBMISSION
+- Upload one file (PDF or ZIP), once per group.
+- Include every group member's name and matriculation number. The handout also
+  requests the number of credits.
+- Add those private details to the course submission, not the public repository.
+  paper/submission_details.example.tex shows the optional local-only field.
+- The draft has not been submitted to Moodle.
+
+SOURCES
+https://moodle.zdv.uni-tuebingen.de/course/view.php?id=1591
+https://moodle.zdv.uni-tuebingen.de/mod/assign/view.php?id=119576
+https://moodle.zdv.uni-tuebingen.de/pluginfile.php/237915/mod_resource/content/1/grading_criteria.pdf
+https://moodle.zdv.uni-tuebingen.de/pluginfile.php/237917/mod_resource/content/1/project-topic-compass.pdf
+https://moodle.zdv.uni-tuebingen.de/mod/forum/discuss.php?d=60724
+
+The grading handout has 2025 page headers but is linked in the 2026 course and
+gives a September 2026 proposal date. Submission dates above come from the live
+assignment page.

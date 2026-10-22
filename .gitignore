@@ -1,0 +1,35 @@
+# Local data and model files
+.env
+.env.*
+!.env.example
+data/*
+!data/README.txt
+data_cache/
+model_results/
+outputs/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.parquet
+*.jsonl
+
+# Environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+build/
+*.log
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+paper/main.pdf
+paper/submission_details.tex
+
