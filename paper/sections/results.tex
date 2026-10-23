@@ -1,35 +1,75 @@
 \section{Results}
 \label{sec:results}
 
-All 126 planned adapter fits are complete. Results are descriptive unless an interval is stated. Categorization and lottery uncertainty and calibration checks remain unfinished.
+\begin{itemize}
+\item All planned fine-tuning fits are complete. The newer dataset results remain descriptive until uncertainty and calibration checks are finished.
+\end{itemize}
 
-\subsection{Population shifts and predictive fit}
+\subsection{H1: population fit depends on the task}
+\begin{itemize}
+\item Frozen Centaur fits US responses better in allocation and categorization; Chinese responses slightly better in lottery tradeoffs (Figure~\ref{fig:frozen}).
+\item No consistent Western advantage across tasks. Response predictability may contribute to the score differences.
+\item Supporting Ruggeri audit: no clear Western advantage. Its study was already represented in Centaur's original fine-tuning data.
+\end{itemize}
 
-Frozen Centaur fits US responses better in Giving, Taking, and categorization. Categorization NLL is $0.602$ for the US sample and $0.724$ for the Chinese sample. The all-item lottery audit reverses this ordering ($0.549$ versus $0.523$). Thus, the population ordering depends on the task; raw score differences alone do not establish cultural bias.
 
-Fine-tuning population consistently changes unseen-item predictions (Figure~\ref{fig:population}). US-versus-China categorization adapters differ by $26.6$ percentage points in category choice probability (seed range $23.5$--$28.9$). China-versus-US lottery adapters differ by $21.5$ points on tradeoffs ($18.9$--$23.1$), compared with $2.7$ on dominance items. Giving's US, pooled, and Chinese adapters predict $2.39$, $2.99$, and $3.82$ fewer tokens than frozen Centaur; the US-minus-China gap is $1.43$ tokens.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/frozen_sample_fit.pdf}
+\caption{Frozen Centaur and Llama prediction error by population (H1); lower is better. Giving uses held-out participants, Taking a separate sample, and the other tasks all retained participants. Allocation bars have 95\% participant-bootstrap intervals; the newer tasks are descriptive. Category choice covers 15 items; lotteries cover four tradeoff pairs. Scores are conditional on valid responses and should be compared within each task.}
+\label{fig:frozen}
+\end{figure}
 
-\begin{figure*}[t]
+\subsection{H2: fine-tuning population changes predictions}
+\begin{itemize}
+\item Clear shifts on unseen items across all three domains (Figures~\ref{fig:population} and~\ref{fig:transfer}).
+\item US fine-tuning produces more category choices; Chinese fine-tuning produces more 10-point lottery choices, especially on tradeoff items.
+\item Matching the population generally improves within-task fit relative to the other population's adapter. It does not always improve over frozen Centaur.
+\end{itemize}
+
+
+
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/population_predictions.pdf}
-\caption{Population composition shifts predictions on unseen items. Bars show mean category-choice probability across 15 word triads (left) and 10-point choice probability across four lottery tradeoffs (right). Colored conditions use equal-budget fine-tuning; gray is frozen Centaur. Predictions hold out each item and average both answer orders and three seeds; dots show seeds. Lottery fine-tuning includes both tradeoff and dominance items, while this panel evaluates tradeoffs. These conditional probabilities measure prediction shifts, not accuracy.}
+\caption{Fine-tuning population shifts predictions on unseen items (H2). Bars show category-choice probability across 15 items and 10-point choice probability across four lottery tradeoffs. Pooled fine-tuning uses equal numbers of US and Chinese participants. Dots show three seeds; predictions average both answer orders. Lottery fine-tuning includes dominance items as well. These shifts do not measure accuracy.}
 \label{fig:population}
-\end{figure*}
+\end{figure}
 
-Population matching generally helps within the fine-tuned task. In Giving, pooled fine-tuning beats the other-population adapter by $0.085$ nats for US responses (95\% interval $[0.055,0.114]$) and $0.083$ for Chinese responses ($[0.068,0.096]$). In categorization, own-population adapters beat the other-population adapter in every seed. Own-adapter NLLs are $0.551$ US/$0.700$ China, versus frozen $0.604$/$0.721$ on the same held-out samples. One Chinese seed nevertheless worsens relative to frozen Centaur.
+\subsection{H3: shifts transfer, but human differences do not}
+\begin{itemize}
+\item Giving-only fine-tuning also changes Taking predictions (Figures~\ref{fig:transfer} and~\ref{fig:social}). Population-dependent shifts persist on the untrained task.
+\item The model's population gap has the opposite direction to the pooled human Taking gap; the human gap also varies across study waves.
+\item The US adapter predicts both Taking populations better. Population matching therefore does not transfer consistently.
+\item Fewer tokens mean less generosity in Giving but more generosity in Taking. A similar numerical shift can change behavioral meaning.
+\end{itemize}
 
-Lottery own-adapter NLLs are $0.448$ US/$0.321$ China, versus frozen $0.541$/$0.517$. Both populations improve in every seed. Own-population matching beats the other-population adapter except in one Chinese seed. These estimates use only eight test people per country per split. Matching the population and improving over the starting model are therefore separate outcomes.
 
-\subsection{Taking transfer does not preserve the human contrast}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/giving_taking_population_effects.pdf}
+\caption{How fine-tuning on Giving changes Giving and Taking (H2--H3). Top: change in expected tokens from frozen Centaur; dots show three seeds. Bottom: prediction gain over frozen Centaur for each population; bars have 95\% paired participant-and-seed bootstrap intervals. All conditions use equal data budgets and held-out targets. Taking is never used for fine-tuning. A negative shift means less giving but also less taking, so its meaning for generosity differs between tasks.}
+\label{fig:transfer}
+\end{figure}
 
-Giving-only fine-tuning shifts Taking predictions downward by $2.15$ tokens for US, $2.47$ for pooled, and $3.15$ for Chinese data. The US-minus-China model gap remains positive ($1.00$ token), but the pooled human Taking gap is negative ($-0.88$; 95\% interval $[-1.19,-0.57]$). The human direction also varies across study waves.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/social_group_predictions.pdf}
+\caption{Human responses and model predictions for five illustrative social groups (H2--H3). Both panels use adapters fine-tuned only on Giving, with the plotted target held out. Circles show human means; squares show US and China fine-tuning; diamonds show pooled fine-tuning; crosses show frozen Centaur. Human intervals are 95\% participant-bootstrap intervals; model intervals show one standard deviation across three seeds. The selected groups illustrate the patterns; they are not a test across all targets.}
+\label{fig:social}
+\end{figure}
 
-The US adapter predicts both Taking samples better. Own-minus-other log-score gains are $0.101$ nats for US responses ($[0.086,0.116]$) and $-0.060$ for Chinese responses ($[-0.071,-0.048]$). A population-dependent shift thus survives task transfer without reproducing the human difference. Its behavioral meaning also changes: fewer tokens imply less generosity in Giving but more generosity in Taking.
+\subsection{H4: gains beyond response adjustment vary}
+\begin{itemize}
+\item Categorization: little consistent benefit beyond the simple response adjustment.
+\item Taking: mostly positive gains beyond adjustment. Lottery tradeoffs: mixed gains, depending on fine-tuning and evaluation population (Figure~\ref{fig:adjustment}).
+\item Answer-order effects are large. Check whether remaining gains reflect calibration before claiming richer behavioral learning.
+\end{itemize}
 
-\subsection{Benefits beyond response adjustment vary}
-
-Pooled categorization fine-tuning loses to the scalar adjustment by $0.003$ nats on average. Pooled lottery fine-tuning gains $0.025$ nats across all items and $0.016$ on tradeoffs, with positive pooled tradeoff gains in every seed. This benefit is condition-dependent: US-only fine-tuning loses to its adjustment on tradeoffs in all seeds despite gains on dominance items.
-
-Giving-to-Taking transfer gains are $0.071$ nats for US responses ($[0.051,0.091]$) and $0.154$ for Chinese responses ($[0.135,0.171]$). Fine-tuning can therefore improve transfer beyond the tested common response shift while failing to reproduce the population contrast.
-
-These gains do not yet identify richer behavioral learning. Frozen Centaur's mean semantic probability gap between answer orders is $19.4$ points for categorization and $20.2$ for lotteries. Both orders are averaged, but whether fine-tuning gains largely reflect calibration requires the pending order-aware control.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/response_adjustment_comparison.pdf}
+\caption{Fine-tuning compared with a response adjustment fitted to the same data (H4). Positive values favor fine-tuning. Both methods use Giving data for the top panels, category choices for the bottom left, and lottery choices for the bottom right. The adjustment changes response preferences shared across items while model weights stay fixed. Error bars show 95\% paired participant-and-seed bootstrap intervals for allocation tasks; dots show three seeds for the newer tasks. Lottery results cover tradeoffs only. Answer-position calibration remains to be checked.}
+\label{fig:adjustment}
+\end{figure}

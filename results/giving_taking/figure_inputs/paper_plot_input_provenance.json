@@ -1,0 +1,22 @@
+{
+  "description": "Aggregate figure inputs exported without raw participant observations. Existing means and intervals are unchanged. Source files remain in the original archived analysis repository.",
+  "sources": [
+    {
+      "archive": "publication-bias-transfer-demo",
+      "path": "project_updates/culture_slides_20261014/bar_figures/baseline/centaur_sample_error.json",
+      "sha256": "e77a633460a30dbf4c6d58b6255770e46c134afa7bee9fed7b54684b4f84bc11"
+    },
+    {
+      "archive": "publication-bias-transfer-demo",
+      "path": "project_updates/culture_slides_20261014/bar_figures/baseline/llama_sample_error.json",
+      "sha256": "4c34fed16f31ce07498627681e9a284c21c4b5d53d01cc2f6784b1ca0103e1c8"
+    },
+    {
+      "archive": "publication-bias-transfer-demo",
+      "path": "project_updates/culture_slides_20261014/bar_figures/shifts/paper/population_prediction_shifts.json",
+      "sha256": "5a859502e665831ce8741fbe431d8b2b2d6146b805d593a4e17ebc64622a2b01"
+    }
+  ],
+  "frozen_interval_method": "95% whole-participant bootstrap, stratified by country and wave; 4000 draws with shared weights across overlapping evaluation splits; fixed models and targets.",
+  "prediction_shift_method": "One held-out-fold prediction per target; equal average over 25 targets and three seeds; conditional over allocations 0-20; no confidence intervals."
+}

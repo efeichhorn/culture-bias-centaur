@@ -1,12 +1,26 @@
 \section{Discussion and Limitations}
 \label{sec:discussion}
 
-Fine-tuning population changes predictions on unseen items. That is the clearest result. Its consequences differ across tasks: population matching generally helps within-task fit, but it does not guarantee improvement over frozen Centaur or faithful transfer. Giving-to-Taking transfer provides a concrete counterexample. The response-adjustment control further shows that changing model weights is not always needed to obtain the predictive benefit.
+\begin{itemize}
+\item Main interpretation: fine-tuning population changes what Centaur predicts. This can reflect a learned response tendency without better prediction or faithful transfer.
+\item The simple adjustment is an important reference: what does changing model weights add beyond changing a general response preference?
+\item Avoid a broad ``Western bias'' claim. The population ordering changes across tasks.
+\end{itemize}
 
-\textbf{Country is not a causal measure of culture.} Samples also differ in language, recruitment, education, and other characteristics. All model prompts are English; original categorization responses were collected in English and Mandarin. Lower NLL may partly reflect more predictable responses. We therefore study population composition and fit, without attributing their differences to a cultural mechanism or claiming a general Western bias.
+\subsection{Limits}
+\begin{itemize}
+\item Country, language, recruitment, and other sample differences remain intertwined; nationality is not a direct measure of culture.
+\item Few items, small lottery test samples, and only three seeds. Repetitions do not add independent people.
+\item Lower prediction error can partly reflect more predictable human responses.
+\item Frozen Llama comparisons do not show whether Centaur's original fine-tuning causes the observed sensitivity.
+\item Exploratory dataset selection and uncertain prior model exposure limit generalization.
+\end{itemize}
 
-\textbf{Inference is limited.} Categorization has 15 items; lotteries have eight, with only eight held-out people per country per split. Repetitions do not add independent people. Three joint seeds provide limited information about fitting variability, and existing allocation intervals condition on fixed stimuli. The new-domain uncertainty estimates are unfinished. The studies were selected after published human contrasts were known, so the work is exploratory.
-
-\textbf{The controls do not settle mechanism.} Base Llama is evaluated frozen; we cannot attribute population sensitivity specifically to Centaur's original fine-tuning. The scalar adjustment is only one calibration control. Large answer-order effects make an order-aware comparison necessary before interpreting gains as learning population-specific item structure. Study publication dates also do not establish absence from base-model pretraining.
-
-\textbf{Next steps are analyses, chiefly using saved predictions.} Before submission we need paired participant uncertainty, item-level comparisons with human differences, a response-predictability reference, the planned coding/inclusion sensitivities, and order-aware calibration controls. Evaluating the saved models with Mandarin categorization prompts would test language sensitivity without another fine-tuning sweep. The retained allocation sample also needs final reconciliation with the source study's participant accounting. Resolving these points takes priority over adding datasets.
+\subsection{Before submission}
+\begin{itemize}
+\item Add paired uncertainty and human/model comparisons for the newer datasets.
+\item Complete answer-order, calibration, and response-predictability checks.
+\item Check lottery inclusion rules, categorization coding, and Mandarin prompt sensitivity.
+\item Reconcile allocation participant counts with the source study and verify the final claims.
+\item Prioritize these analyses before another large fine-tuning sweep.
+\end{itemize}

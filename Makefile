@@ -7,6 +7,7 @@ results:
 
 figures:
 	$(PYTHON) scripts/plot_paper.py
+	$(PYTHON) scripts/plot_social_group_predictions.py
 
 test:
 	$(PYTHON) -m pytest -q tests

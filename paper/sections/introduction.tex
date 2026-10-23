@@ -1,10 +1,21 @@
 \section{Introduction}
 \label{sec:introduction}
 
-A model that predicts average human behavior may still fit some populations better than others. Centaur adapts a language model to behavioral experiments and generalizes across participants and tasks \citep{binz2025centaur}. We ask how the population represented in additional fine-tuning data shapes its predictions.
+\begin{itemize}
+\item Centaur predicts behavior across tasks \citep{binz2025centaur}. Good average performance may hide differences between populations.
+\item Main question: what changes when the people represented in fine-tuning data change?
+\item Keep three outcomes separate: a prediction shift, better prediction, and reproduction of human population differences.
+\end{itemize}
 
-Fine-tuning may change predictions without improving them. It may learn a general response preference, or how a population responds to particular items. Either change may fail to transfer faithfully to another task. These outcomes require separate tests.
+\subsection{Hypotheses}
+\begin{itemize}
+\item \textbf{H1:} Frozen Centaur predicts Western samples more accurately.
+\item \textbf{H2:} Population composition during fine-tuning shifts predicted behavior.
+\item \textbf{H3:} Population-dependent prediction shifts persist on unseen tasks.
+\item \textbf{H4:} Fine-tuning improves predictions beyond a shared response adjustment.
+\end{itemize}
 
-We use US and Chinese samples from Giving and Taking dictator games \citep{wang2026decomposing}, category-versus-relation word choices \citep{cao2024differences}, and explicit lotteries \citep{anllo2024preferences}. Within each domain, US-only, China-only, and pooled fine-tuning use equal data budgets and identical prompts. Evaluation holds out people and complete items. Giving also provides a transfer test: adapters fine-tuned only on Giving are evaluated on Taking.
-
-We ask four questions: Does frozen Centaur fit one population better? Does fine-tuning population change unseen-item predictions? Do these changes improve fit and transfer faithfully? Does fine-tuning outperform a simple response adjustment? Our contribution is to separate these outcomes empirically. Country comparisons do not identify a cultural mechanism.
+\begin{itemize}
+\item H2 and H3 concern changes in model behavior; improved accuracy is a separate check.
+\item Exploratory hypotheses. Country comparisons do not identify culture as the cause.
+\end{itemize}

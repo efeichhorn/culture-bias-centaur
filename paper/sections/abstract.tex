@@ -1,1 +1,6 @@
-Behavioral foundation models are fitted to human responses, but their population coverage is rarely evaluated separately from their average predictive performance. We examine how the population composition of additional fine-tuning changes Centaur-70B across resource allocation, categorization, and lottery choices. Equal-budget adapters use US, Chinese, or pooled responses, with participants and items held out for evaluation. Population composition produces consistent prediction shifts: 26.6 percentage points for category choices and 21.5 points for lottery tradeoffs. Matching the fine-tuning population generally improves within-task prediction, but Giving-to-Taking transfer does not reproduce the observed population contrast. A simple response adjustment explains much of the categorization result, whereas fine-tuning performs better on some lottery and transfer comparisons. These exploratory results distinguish population sensitivity, predictive benefit, and transfer fidelity. Uncertainty estimation and calibration checks remain incomplete for the two newer datasets.
+\begin{itemize}
+\item Question: whose behavior does Centaur predict, and how does fine-tuning population change its predictions?
+\item Compare US, Chinese, and pooled fine-tuning across allocation, categorization, and lottery choices.
+\item Main finding: population composition shifts predictions; better fit and faithful transfer do not always follow.
+\item Still to finish: uncertainty estimates and calibration checks for the newer datasets.
+\end{itemize}
