@@ -18,8 +18,10 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from tueplots import bundles
 from matplotlib.patches import Patch
+from matplotlib.transforms import ScaledTranslation
+
+from paper_plot_style import COLORS as PALETTE, paper_style
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,7 +30,7 @@ PANELS = (
     ("anllo", "tradeoff", 4, "b  Lottery tradeoffs", "10-point lottery choice (%)"),
 )
 CONDITIONS = ("frozen", "us", "pooled", "china")
-COLORS = ("#B9BEC4", "#4878A8", "#8E82A8", "#CF866F")
+COLORS = tuple(PALETTE[condition] for condition in CONDITIONS)
 LABELS = ("Frozen", "US", "Pooled", "China")
 COUNTRIES = ("United States", "China")
 COUNTRY_LABELS = ("US responses", "China responses")
@@ -92,35 +94,12 @@ def figure_data(source: Path) -> list[dict]:
     return data
 
 
-def paper_style(height: float = 2.5) -> dict:
-    """Shared tueplots typography, with an ACL full-width figure canvas."""
-    style = bundles.neurips2024(usetex=False, nrows=1, ncols=2, family="sans-serif")
-    style.update({
-        "font.sans-serif": ["DejaVu Sans"],
-        "figure.figsize": (6.3, height),
-        "axes.spines.top": False,
-        "axes.spines.right": False,
-        "axes.spines.left": False,
-        "axes.edgecolor": "#B8BFC5",
-        "axes.linewidth": 0.6,
-        "axes.labelcolor": "#26333D",
-        "text.color": "#26333D",
-        "xtick.color": "#26333D",
-        "ytick.color": "#52606A",
-        "xtick.major.size": 0,
-        "ytick.major.size": 0,
-        "pdf.fonttype": 42,
-        "ps.fonttype": 42,
-        "savefig.dpi": 300,
-    })
-    return style
-
-
 def decorate(ax, title: str, ylabel: str) -> None:
-    ax.set_axisbelow(True)
-    ax.grid(axis="y", color="#E7EBEE", linewidth=0.55)
-    ax.set_ylabel(ylabel, labelpad=5)
-    ax.set_title(title, loc="left", fontweight="bold", pad=10)
+    letter, title_text = title.split("  ", 1)
+    ax.set_ylabel(ylabel, labelpad=4)
+    ax.set_title(title_text, loc="left", x=.065, fontweight="normal", pad=6)
+    ax.text(0, 1, letter, transform=ax.transAxes + ScaledTranslation(0, 6 / 72, ax.figure.dpi_scale_trans),
+            fontweight="bold", fontsize=9, ha="left", va="baseline")
 
 
 def save(fig, output_dir: Path, name: str) -> None:
@@ -132,27 +111,24 @@ def save(fig, output_dir: Path, name: str) -> None:
 
 
 def draw(data: list[dict], output_dir: Path) -> None:
-    with plt.rc_context(paper_style()):
+    with plt.rc_context(paper_style(2.2)):
         fig, axes = plt.subplots(1, 2)
         for ax, (dataset, _, _, title, ylabel) in zip(axes, PANELS):
             ax.set_ylim(0, 100)
             ax.set_yticks([0, 25, 50, 75, 100])
             ax.set_xlim(-0.55, 3.55)
-            ax.set_axisbelow(True)
-            ax.grid(axis="y", color="#E7EBEE", linewidth=0.55)
             for x, (condition, color) in enumerate(zip(CONDITIONS, COLORS)):
                 values = [100 * row["predicted_probability"] for row in data
                           if row["dataset"] == dataset and row["model"] == condition]
                 mean = sum(values) / len(values)
-                ax.bar(x, mean, width=0.64, color=color, edgecolor="none", zorder=2)
+                ax.bar(x, mean, width=.52, color=color, edgecolor="none", zorder=2)
                 if condition != "frozen":
-                    ax.scatter([x - 0.12, x, x + 0.12], values, s=13,
-                               color="#26333D", edgecolor="white", linewidth=0.45,
+                    ax.scatter([x - .10, x, x + .10], values, s=7,
+                               color="black", edgecolor="white", linewidth=.3,
                                zorder=3)
             ax.set_xticks(range(4), LABELS)
-            ax.set_xlabel("Centaur model", labelpad=7)
-            ax.set_ylabel(ylabel, labelpad=5)
-            ax.set_title(title, loc="left", fontweight="bold", pad=10)
+            ax.set_xlabel("Centaur model", labelpad=4)
+            decorate(ax, title, ylabel)
         save(fig, output_dir, "population_predictions")
 
 
@@ -260,21 +236,21 @@ def extension_summaries() -> tuple[list[dict], list[dict]]:
 
 
 def draw_frozen(rows: list[dict], output_dir: Path) -> None:
-    with plt.rc_context(paper_style(4.35)):
+    with plt.rc_context(paper_style(3.7, nrows=2)):
         fig, axes = plt.subplots(2, 2)
         tasks = ("Giving", "Taking", "Category choice", "Lottery tradeoffs")
         for panel, (ax, task) in enumerate(zip(axes.flat, tasks)):
             for x, model in enumerate(("centaur", "llama")):
-                for offset, country, color in zip((-.18, .18), COUNTRIES, (COLORS[1], COLORS[3])):
+                for offset, country, color in zip((-.16, .16), COUNTRIES, (COLORS[1], COLORS[3])):
                     row = one(rows, task=task, model=model, Country=country, metric="conditional_ll")
                     value = float(row["prediction_error"])
-                    ax.bar(x + offset, value, width=.32, color=color, zorder=2)
+                    ax.bar(x + offset, value, width=.27, color=color, zorder=2)
                     if "error_ci_low" in row:
                         ax.errorbar(x + offset, value,
                                     yerr=[[value - float(row["error_ci_low"])],
                                           [float(row["error_ci_high"]) - value]],
-                                    fmt="none", color="#26333D", linewidth=.7, capsize=2, zorder=3)
-            decorate(ax, f"{'abcd'[panel]}  {task}", "Error (nats; lower is better)")
+                                    fmt="none", color="black", linewidth=.55, capsize=1.5, capthick=.55, zorder=3)
+            decorate(ax, f"{'abcd'[panel]}  {task}", "Prediction error (nats)")
             ax.set_ylim(0, 3.2 if panel < 2 else .8)
             ax.set_yticks([0, 1, 2, 3] if panel < 2 else [0, .2, .4, .6, .8])
             ax.set_xticks([0, 1], ["Centaur", "Llama"])
@@ -288,63 +264,63 @@ def draw_frozen(rows: list[dict], output_dir: Path) -> None:
 
 def grouped_gain(ax, rows: list[dict], task: str) -> None:
     for x, country in enumerate(COUNTRIES):
-        for offset, condition, color in zip((-.24, 0, .24), CONDITIONS[1:], COLORS[1:]):
+        for offset, condition, color in zip((-.22, 0, .22), CONDITIONS[1:], COLORS[1:]):
             row = one(rows, task=task, country=country, condition=condition)
             value = row["value"]
-            ax.bar(x + offset, value, width=.21, color=color, zorder=2)
+            ax.bar(x + offset, value, width=.18, color=color, zorder=2)
             if "ci_low" in row:
                 ax.errorbar(x + offset, value,
                             yerr=[[value - row["ci_low"]], [row["ci_high"] - value]],
-                            fmt="none", color="#26333D", linewidth=.7, capsize=2, zorder=3)
+                            fmt="none", color="black", linewidth=.55, capsize=1.5, capthick=.55, zorder=3)
             else:
                 ax.scatter([x+offset-.05, x+offset, x+offset+.05], row["seed_values"],
-                           s=11, color="#26333D", edgecolor="white", linewidth=.4, zorder=3)
+                           s=6, color="black", edgecolor="white", linewidth=.3, zorder=3)
     ax.set_xticks([0, 1], COUNTRY_LABELS)
     ax.set_xlim(-.60, 1.60)
-    ax.axhline(0, color="#A8B0B8", linewidth=.75, zorder=1)
+    ax.axhline(0, color="black", linewidth=.5, zorder=1)
 
 
 def population_legend(fig) -> None:
     fig.legend(handles=[Patch(color=color, label=label) for color, label in zip(COLORS[1:], LABELS[1:])],
                title="Fine-tuning sample", frameon=False, ncols=3,
                loc="outside upper center", handlelength=1,
-               columnspacing=1.5, title_fontsize=8)
+               columnspacing=1.5, title_fontsize=7)
 
 
 def draw_allocation_effects(shifts: list[dict], gains: list[dict], output_dir: Path) -> None:
-    with plt.rc_context(paper_style(4.65)):
+    with plt.rc_context(paper_style(3.8, nrows=2)):
         fig, axes = plt.subplots(2, 2)
         for panel, task in enumerate(("Giving", "Taking")):
             ax = axes[0, panel]
             for x, condition, color in zip(range(3), CONDITIONS[1:], COLORS[1:]):
                 values = [float(one(shifts, task=task, condition=condition, seed=seed)["shift_tokens"])
                           for seed in ("0", "1", "2")]
-                ax.bar(x, mean(values), width=.62, color=color, zorder=2)
-                ax.scatter([x-.11, x, x+.11], values, s=13, color="#26333D",
-                           edgecolor="white", linewidth=.45, zorder=3)
+                ax.bar(x, mean(values), width=.50, color=color, zorder=2)
+                ax.scatter([x-.10, x, x+.10], values, s=7, color="black",
+                           edgecolor="white", linewidth=.3, zorder=3)
             decorate(ax, f"{'ab'[panel]}  {task}: prediction shift", "Shift from frozen (tokens)")
             ax.set_ylim(-4.5, .15)
             ax.set_yticks([-4, -3, -2, -1, 0])
             ax.set_xticks(range(3), LABELS[1:])
-            ax.set_xlabel("Giving fine-tuning sample", labelpad=7)
+            ax.set_xlabel("Giving fine-tuning sample", labelpad=4)
             ax.set_xlim(-.6, 2.6)
-            ax.axhline(0, color="#A8B0B8", linewidth=.75, zorder=1)
+            ax.axhline(0, color="black", linewidth=.5, zorder=1)
 
             ax = axes[1, panel]
             grouped_gain(ax, gains, task)
-            decorate(ax, f"{'cd'[panel]}  {task}: prediction gain", "Gain over frozen\n(nats; higher is better)")
+            decorate(ax, f"{'cd'[panel]}  {task}: prediction gain", "Gain over frozen (nats)")
             ax.set_ylim(0, .56)
             ax.set_yticks([0, .2, .4])
         save(fig, output_dir, "giving_taking_population_effects")
 
 
 def draw_controls(rows: list[dict], output_dir: Path) -> None:
-    with plt.rc_context(paper_style(4.65)):
+    with plt.rc_context(paper_style(3.7, nrows=2)):
         fig, axes = plt.subplots(2, 2)
         tasks = ("Giving", "Taking", "Category choice", "Lottery tradeoffs")
         for panel, (ax, task) in enumerate(zip(axes.flat, tasks)):
             grouped_gain(ax, rows, task)
-            decorate(ax, f"{'abcd'[panel]}  {task}", "Gain over adjustment\n(nats; higher is better)")
+            decorate(ax, f"{'abcd'[panel]}  {task}", "Gain over adjustment (nats)")
             ax.set_ylim(-.10, .25)
             ax.set_yticks([-.1, 0, .1, .2])
         population_legend(fig)
@@ -380,7 +356,7 @@ CAPTIONS = {
 
 
 def write_metadata(output_dir: Path) -> None:
-    metadata = {"style": "tueplots.neurips2024, 6.3-inch ACL full-width canvas; vector PDF and 300-dpi PNG",
+    metadata = {"style": "tueplots.neurips2024(usetex=False, family='serif'); Times New Roman; 9-pt labels/titles, 7-pt ticks/legends; 6.3-inch-wide canvas; thin black axes and outward ticks; vector PDF and 300-dpi PNG",
                 "figures": {}, "data_export_sha256": {
                     str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
                     for path in (ROOT / "results/paper_figure_data.csv", ROOT / "results/allocation_figure_data.csv")

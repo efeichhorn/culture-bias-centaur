@@ -1,5 +1,5 @@
 {
-  "style": "tueplots.neurips2024, 6.3-inch ACL full-width canvas; vector PDF and 300-dpi PNG",
+  "style": "tueplots.neurips2024(usetex=False, family='serif'); Times New Roman; 9-pt labels/titles, 7-pt ticks/legends; 6.3-inch-wide canvas; thin black axes and outward ticks; vector PDF and 300-dpi PNG",
   "figures": {
     "frozen_sample_fit": {
       "hypothesis": "H1",
