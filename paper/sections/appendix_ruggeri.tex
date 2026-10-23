@@ -1,12 +1,10 @@
-\section{Supplementary Frozen-Model Audit: Temporal Discounting}
+\section{Supporting Audit: Temporal Discounting}
 \label{app:ruggeri}
-
-We additionally inspect released Centaur and Llama predictions for intertemporal monetary choices from \citet{ruggeri2022globalizability}. This is a supporting audit, not a fourth fine-tuning experiment. The study contributed to Centaur's original corpus; its held-out participants do not provide an independent unseen-study replication.
-
-Country metadata could be verified for 1,195 of 1,295 test participants (92.3\%), covering 14,234 responses and all 61 countries. The original test-file order was retained to align the released response losses. Metadata were joined using experiment and original participant identifiers, with matching prompt strings checked. The remaining 100 participants have scores but lack verified country metadata in the current analysis.
-
-The exploratory primary comparison assigns equal weight to countries after averaging responses within participants and participants within country. Its operational Western reference consists of UN M49 Northern, Western, and Southern Europe plus the US, Canada, Australia, and New Zealand; it is a geographic grouping rather than a validated cultural taxonomy. There are 25 observed reference countries and 36 other countries. A paired hierarchical bootstrap with 10,000 draws resamples countries within each group and people within each selected country.
-
-Frozen Centaur's mean response NLL is $0.446$ in the reference group and $0.428$ elsewhere. The other-minus-reference difference is $-0.017$ nats, with a 95\% interval of $[-0.043,0.008]$. This does not establish a Western prediction advantage or equivalence between groups. Llama scores are $0.757$ and $0.720$, respectively. The difference in Centaur's improvement over Llama is $0.020$ nats ($[-0.007,0.047]$), also inconclusive under the primary analysis.
-
-These saved scores use full-vocabulary response NLL and condition on earlier observed answers. They must not be pooled numerically with the main independent-prompt conditional-NLL results. Country samples are small, metadata coverage is incomplete, and the prompts are an English representation of a study administered in multiple languages. The audit supplies context for task dependence of population fit, with these limits explicit.
+\begin{itemize}
+\item Released frozen predictions for \citet{ruggeri2022globalizability}; no additional fine-tuning.
+\item Country metadata verified for most test participants, covering all 61 countries. Some participant metadata remain missing.
+\item Main comparison weights countries equally; the Western grouping is an operational geographic definition.
+\item No clear Western prediction advantage. This does not establish equivalence between groups.
+\item Seen-study evaluation: Ruggeri was represented in Centaur's original fine-tuning corpus.
+\item Scores use full-vocabulary likelihood and earlier observed answers. Do not pool them numerically with the main independent-choice results.
+\end{itemize}

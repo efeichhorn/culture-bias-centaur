@@ -1,5 +1,6 @@
 \pdfoutput=1
 \documentclass[11pt]{article}
+\PassOptionsToPackage{hyperfootnotes=false}{hyperref}
 \usepackage{acl2023}
 \usepackage{times}
 \usepackage{latexsym}
@@ -9,12 +10,21 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{float}
+\setlist[itemize]{leftmargin=*,itemsep=3pt,parsep=0pt,topsep=4pt}
 \title{Population Composition Changes Centaur's Predictions}
 \author{Edward Eichhorn\thanks{Code and aggregate results: \url{https://github.com/efeichhorn/culture-bias-centaur}.}}
 \InputIfFileExists{submission_details.tex}{}{}
 \begin{document}
-\maketitle
-\begin{center}\small Working draft --- 22 October 2026\end{center}
+% One-column working notes; restore \maketitle for the submission draft.
+\onecolumn
+\raggedbottom
+\setlength{\titlebox}{2.3cm}
+\makeatletter
+\@maketitle\@thanks
+\makeatother
+\begin{center}\small Section notes --- 23 October 2026\end{center}
 \ifdefined\SubmissionDetails
 \begin{center}\small\SubmissionDetails\end{center}
 \fi

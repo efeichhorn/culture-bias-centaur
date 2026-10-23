@@ -1,0 +1,59 @@
+figure,panel,condition,country,mean,ci_low,ci_high,seed_0,seed_1,seed_2
+frozen_sample_fit,Giving,centaur,China,2.899851048357266,2.866277147895984,2.932426818166208,,,
+frozen_sample_fit,Giving,centaur,United States,2.552555129130314,2.506430250611217,2.600610798893974,,,
+frozen_sample_fit,Taking,centaur,China,2.77356778573518,2.754970438322902,2.79141654420925,,,
+frozen_sample_fit,Taking,centaur,United States,2.624362200872802,2.60118824047479,2.646670734585752,,,
+frozen_sample_fit,Giving,llama,China,2.684185931131392,2.659858330160723,2.708901375167167,,,
+frozen_sample_fit,Giving,llama,United States,2.480958890128548,2.452201194541977,2.511207249705385,,,
+frozen_sample_fit,Taking,llama,China,2.833992352701253,2.819783454967636,2.847860345613836,,,
+frozen_sample_fit,Taking,llama,United States,2.692206636953285,2.676385703270284,2.707728245210474,,,
+frozen_sample_fit,Category choice,centaur,United States,0.6016067267769034,,,,,
+frozen_sample_fit,Category choice,llama,United States,0.6824288064049482,,,,,
+frozen_sample_fit,Category choice,centaur,China,0.7241446424049447,,,,,
+frozen_sample_fit,Category choice,llama,China,0.687833040612754,,,,,
+frozen_sample_fit,Lottery tradeoffs,centaur,United States,0.6769629976583286,,,,,
+frozen_sample_fit,Lottery tradeoffs,llama,United States,0.6885766156383271,,,,,
+frozen_sample_fit,Lottery tradeoffs,centaur,China,0.6571528743524755,,,,,
+frozen_sample_fit,Lottery tradeoffs,llama,China,0.6752431931442896,,,,,
+giving_taking_population_effects,Giving shift,us,,-2.38696528442309,,,-2.40198294635818,-2.494771305266792,-2.264141601644298
+giving_taking_population_effects,Giving shift,pooled,,-2.9914549031522384,,,-2.867884064715598,-3.119239912802044,-2.987240731939073
+giving_taking_population_effects,Giving shift,china,,-3.817793693636571,,,-3.799919855673584,-3.792372076910202,-3.861089148325926
+giving_taking_population_effects,Taking shift,us,,-2.1458347263123607,,,-2.158245979295968,-2.196343885062532,-2.082914314578582
+giving_taking_population_effects,Taking shift,pooled,,-2.468985879406174,,,-2.383847122493925,-2.507667148373245,-2.515443367351352
+giving_taking_population_effects,Taking shift,china,,-3.1478025416872106,,,-3.096723076403151,-3.126756133209096,-3.219928415449385
+giving_taking_population_effects,Giving,us,United States,0.33115732020746663,0.2975648935367002,0.3637057188590037,,,
+giving_taking_population_effects,Giving,pooled,United States,0.3174287616151777,0.2738887722256676,0.3601825338699393,,,
+giving_taking_population_effects,Giving,china,United States,0.2326355073426034,0.16585217231854404,0.298750485026886,,,
+giving_taking_population_effects,Giving,us,China,0.3177474577418677,0.280435592621251,0.3566336030229006,,,
+giving_taking_population_effects,Giving,pooled,China,0.40058352450118623,0.3581305703566403,0.44283947987777045,,,
+giving_taking_population_effects,Giving,china,China,0.46144503381203533,0.4043945868493739,0.5187932954432811,,,
+giving_taking_population_effects,Taking,us,United States,0.21466454338435292,0.20106000055279252,0.22878148788346125,,,
+giving_taking_population_effects,Taking,pooled,United States,0.18127625457419147,0.16511438621528707,0.19736588256559665,,,
+giving_taking_population_effects,Taking,china,United States,0.11392531028754704,0.09325279129175319,0.1357343292826481,,,
+giving_taking_population_effects,Taking,us,China,0.10546316556585884,0.09098846963289087,0.1207481832974157,,,
+giving_taking_population_effects,Taking,pooled,China,0.09326603848388404,0.07664837992094191,0.10974647722773981,,,
+giving_taking_population_effects,Taking,china,China,0.045701350538489095,0.027476929425398842,0.06508063970660365,,,
+response_adjustment_comparison,Giving,us,United States,-0.03109116653883483,-0.050057840399936826,-0.0118413608073121,,,
+response_adjustment_comparison,Giving,pooled,United States,-0.0030006319505752406,-0.030180324356301087,0.023475831282398853,,,
+response_adjustment_comparison,Giving,china,United States,0.049504963336552826,0.024358467510208107,0.07334089311974745,,,
+response_adjustment_comparison,Giving,us,China,-0.04992528786354437,-0.06966519101707831,-0.03110187002201361,,,
+response_adjustment_comparison,Giving,pooled,China,-0.056519355117666294,-0.07983655199272739,-0.033965112614086655,,,
+response_adjustment_comparison,Giving,china,China,-0.02020426561004411,-0.04071913672209045,0.00037881849068183767,,,
+response_adjustment_comparison,Taking,us,United States,0.014772946115513516,0.0004300341624619936,0.029380066226445574,,,
+response_adjustment_comparison,Taking,pooled,United States,0.07108364597207678,0.051272504188188635,0.0912983271954969,,,
+response_adjustment_comparison,Taking,china,United States,0.17290049310969005,0.1554840381212035,0.18977070142028252,,,
+response_adjustment_comparison,Taking,us,China,0.11930348695436299,0.10250954288812285,0.13517825356015842,,,
+response_adjustment_comparison,Taking,pooled,China,0.1536965230712218,0.13468690070937453,0.1712053678157566,,,
+response_adjustment_comparison,Taking,china,China,0.20938520158665921,0.19279140217434693,0.22522442783345856,,,
+response_adjustment_comparison,Category choice,us,United States,0.011669414127394898,,,0.006171465898906381,0.01210415608269988,0.016732620400578435
+response_adjustment_comparison,Category choice,pooled,United States,-0.010671285708697168,,,-0.010240517336774335,-0.007266593416038525,-0.014506746373278645
+response_adjustment_comparison,Category choice,china,United States,-0.0291754301535276,,,-0.031449666829348244,-0.02984612150529309,-0.02623050212594147
+response_adjustment_comparison,Category choice,us,China,-0.01132479550081252,,,-0.0007890356001116761,-0.015180699134355047,-0.018004651767970836
+response_adjustment_comparison,Category choice,pooled,China,0.004785400518503291,,,-0.00031599493099110365,0.0012077688515741425,0.013464427634926834
+response_adjustment_comparison,Category choice,china,China,-0.008688775252645295,,,-0.019976760745516353,-0.0044086740333736385,-0.0016808909790458904
+response_adjustment_comparison,Lottery tradeoffs,us,United States,0.011501110859100327,,,0.024681354568792613,0.034685145900613557,-0.024863167892105187
+response_adjustment_comparison,Lottery tradeoffs,pooled,United States,0.03514306590422245,,,0.041401670217796616,0.059415604658116794,0.0046119228367539344
+response_adjustment_comparison,Lottery tradeoffs,china,United States,0.04442345278972822,,,0.047059205706271534,0.0371193446383421,0.049091808024571026
+response_adjustment_comparison,Lottery tradeoffs,us,China,-0.03696385447075686,,,-0.026466228753742715,-0.05793719495461658,-0.026488139703911284
+response_adjustment_comparison,Lottery tradeoffs,pooled,China,-0.0027378818040498984,,,0.00783919579270781,-0.017761449337313162,0.001708608132455658
+response_adjustment_comparison,Lottery tradeoffs,china,China,0.009797257364891954,,,-0.0012924907395508445,-0.005856297816864531,0.036540560651091236

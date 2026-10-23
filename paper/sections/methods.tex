@@ -1,52 +1,32 @@
 \section{Methods}
 \label{sec:methods}
 
-\subsection{Tasks and samples}
+\subsection{Tasks}
+\begin{itemize}
+\item \textbf{Giving / Taking} \citep{wang2026decomposing}: give tokens to, or take tokens from, members of different social groups. Fine-tune on Giving only; evaluate Giving and Taking. More giving and less taking mean greater generosity.
+\item \textbf{Categorization} \citep{cao2024differences}: category-based versus relation-based word choices. Fine-tune on some items; evaluate unseen items.
+\item \textbf{Lotteries} \citep{anllo2024preferences}: choices between explicit lotteries. Fine-tune on both tradeoff and dominance items; report their held-out results separately.
+\end{itemize}
 
-\textbf{Giving and Taking.} We use allocation responses from \citet{wang2026decomposing}. Giving asks how many of one's 20 tokens to give; Taking asks how many of another person's 20 tokens to take. Each participant responds to 25 social target groups. More giving and less taking indicate greater generosity. The retained samples contain 1,371 US and 1,301 Chinese Giving participants, and 1,371 US and 1,329 Chinese Taking participants across two waves. Taking was collected separately; identifiers do not establish whether anyone joined multiple panel samples.
+\subsection{Comparison}
+\begin{itemize}
+\item Start from the same frozen Centaur model. Add an adapter fine-tuned on US, Chinese, or 50/50 pooled responses.
+\item Equal data budgets and optimization settings within each task; three split/fitting seeds.
+\item Hold out complete participants and items. Keep repeated responses together. Taking never enters fine-tuning or model selection.
+\item Identical English prompts without country labels. Average both answer orders for binary choices.
+\item Include frozen Centaur and base Llama as references. Llama receives no additional fine-tuning.
+\end{itemize}
 
-\textbf{Categorization.} We use the 15 critical word triads from Experiment 2 of \citet{cao2024differences}: 295 retained US and 178 Chinese participants. Each choice pairs a cue with either a category-related or relation-related word. We retain the authors' participant inclusion list, reconstruct responses from raw records, and trim whitespace before matching alternatives, including the saw/hammer item. Fillers and attention checks are excluded.
+\subsection{How each hypothesis is tested}
+\begin{itemize}
+\item \textbf{H1:} Compare frozen prediction error across populations. Distinguish absolute fit from improvement over Llama.
+\item \textbf{H2:} Compare predicted choices after fine-tuning on different populations, using the same unseen items.
+\item \textbf{H3:} Fine-tune on Giving, then compare Taking predictions. Separately check accuracy and agreement with the human population difference.
+\item \textbf{H4:} Compare fine-tuning with a control fitted to the same responses. The control changes a common response preference across items without changing model weights.
+\item Measures: expected tokens or choice probability for shifts; conditional negative log likelihood for fit (lower is better).
+\end{itemize}
 
-\textbf{Lotteries.} We use phase 3, conditions 5--12, of \citet{anllo2024preferences}. Eight pairs offer 10 or 0 points versus 1 or 0 points, with four repetitions per pair. Four items involve tradeoffs and four involve dominance; choosing 10 points is not a risk measure across all items. Fine-tuning uses the US and Chinese samples (50 and 49 people). The frozen audit includes all 561 retained participants from 11 countries. Prompts describe independent explicit choices, without invented feedback or histories.
-
-\subsection{Splits and fine-tuning}
-
-US-only, China-only, and 50/50 pooled conditions have equal participant and response budgets within each task. Three joint seeds vary participant sampling/splitting and adapter initialization. Complete participant records and complete item families remain together. Table~\ref{tab:design} gives the fine-tuning design.
-
-\begin{table}[t]
-\centering
-\small
-\begin{tabular}{lrrr}
-\hline
- & Giving & Categories & Lotteries \\
-\hline
-People per fit & 910 & 124 & 34 \\
-Test people/country & 196 & 28 & 8 \\
-Items per fit & 20 & 12 & 6 \\
-Held-out items/fold & 5 & 3 & 2 \\
-Folds & 5 & 5 & 4 \\
-Fits (all conditions) & 45 & 45 & 36 \\
-\hline
-\end{tabular}
-\caption{Each domain uses three conditions and three seeds. Pooled fits use half their participants from each country. Test counts are per split. Lottery folds each hold out one tradeoff and one dominance item.}
-\label{tab:design}
-\end{table}
-
-Giving splits are stratified by country and wave. Taking never enters fine-tuning or selection; each Taking target uses the adapter that withheld the corresponding Giving target. Categorization uses balanced pools of 178 people per country, split into 124 fine-tuning, 26 validation, and 28 test participants. Lottery pools have 49 people per country, split into 34, seven, and eight. Predictions are stitched once per held-out item within seed and condition. The extension protocol was fixed before new model outcomes, after inspecting published human contrasts; it was not preregistered.
-
-We freeze Centaur-70B's Llama-3.1 backbone and original adapter \citep{binz2025centaur}, then add a rank-eight adapter with rank-stabilized scaling, alpha eight, and no dropout. Settings are four-bit NF4 with double quantization and BF16 computation; AdamW with learning rate $5\times10^{-5}$ and weight decay $0.01$; three warmup steps; and 25 updates. All attention and feed-forward projection modules receive adapters. Each update averages empirical response-distribution cross-entropy over the complete fine-tuning item set, using full-vocabulary response log probabilities. The final checkpoint is fixed; held-out outcomes never select it.
-
-Prompts are English, country-blind, independent decisions. Binary tasks use both A/B orders, each with half weight. We map candidate probabilities to semantic choices and average orders equally. Mirroring does not add human observations. Candidate tokenization and zero-adapter equivalence are checked. Frozen and adapted evaluations use matching precision preparation. The frozen base-Llama control disables the Centaur adapter; it receives no further fine-tuning.
-
-\subsection{Scores and controls}
-
-Predictions are normalized over valid responses: 21 allocations or two binary choices. We measure shifts in expected tokens or semantic choice probability. Predictive error is conditional negative log likelihood (NLL), in nats per response; lower is better. We average repetitions within item, items within person, and people within country. Combined US/China scores weight countries equally. Adaptation scores use held-out people and items; frozen audits state their broader sample scope.
-
-The response-adjustment control changes probabilities while preserving frozen model weights. For binary choices, one offset is shared across items:
-\begin{equation}
- \operatorname{logit}q_{\delta,j}(1)
- = \operatorname{logit}q_{0,j}(1)+\delta.
-\end{equation}
-For allocations, $q_{\delta,j}(y)\propto q_{0,j}(y)\exp(\delta_y)$, with 20 independent offsets across 21 responses, shared across targets. Each control uses its adapter's exact fine-tuning observations and fixed ridge regularization $0.001$. It changes common response preferences while retaining the frozen model's item differences.
-
-Allocation intervals use 4,000 paired bootstrap draws over whole participants within country and wave, preserving shared identities across overlapping splits, plus resampling of the three fitted seeds. Items and folds stay fixed. The newer domains currently have descriptive seed summaries only. Their pending uncertainty analysis must preserve participant and repetition dependence. Neither folds nor repeated trials are treated as independent experiments.
+\begin{itemize}
+\item Uncertainty: resample whole participants, retaining dependence across overlapping splits. Show seed variation separately; folds and repeated trials are not independent samples.
+\item Allocation intervals are available. Paired uncertainty for categorization and lotteries remains to be completed.
+\end{itemize}

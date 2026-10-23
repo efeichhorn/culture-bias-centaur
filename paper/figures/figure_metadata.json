@@ -1,0 +1,67 @@
+{
+  "style": "tueplots.neurips2024, 6.3-inch ACL full-width canvas; vector PDF and 300-dpi PNG",
+  "figures": {
+    "frozen_sample_fit": {
+      "hypothesis": "H1",
+      "caption": "Frozen-model prediction error by evaluated population; lower is better. Probabilities are normalized over valid responses (21 allocations or two choices). Giving uses held-out participants, Taking a separate sample, and category/lottery panels all retained participants. Allocation error bars are existing 95% participant-bootstrap intervals; the other panels are descriptive without intervals. Category choice covers 15 Cao items and lotteries four Anllo tradeoff pairs. English prompts omit country labels. Sample fit alone does not isolate cultural bias; absolute scores are not directly comparable across tasks.",
+      "sources": [
+        "results/giving_taking/figure_inputs/frozen_sample_error.csv",
+        "results/giving_taking/frozen/metrics_summary.csv",
+        "results/cao_anllo/frozen_baseline_country_metrics.csv"
+      ],
+      "interpretation": "Centaur has lower error on US responses in Giving, Taking and category choice, and on Chinese responses in lottery tradeoffs. Pooled is inapplicable because these are frozen models and the colors identify evaluated human samples.",
+      "source_sha256": {
+        "results/giving_taking/figure_inputs/frozen_sample_error.csv": "89c2f4e9284d174cf404bf22e9cce4c3e675ddf1fcb2bd8ebfb2d872edd63b04",
+        "results/giving_taking/frozen/metrics_summary.csv": "ff67bd32e6316626ad178bec3fe44398bc3a02609c8badc72933e02ed979595c",
+        "results/cao_anllo/frozen_baseline_country_metrics.csv": "5c3317ab9e64d72c089b56cf6f4f94343ae26f1fe723e55ed8a9bed4e5840bf7"
+      }
+    },
+    "giving_taking_population_effects": {
+      "hypothesis": "H2-H3",
+      "caption": "Effects of Giving-only fine-tuning on Giving and Taking. Top: expected allocation shifts from frozen Centaur across 25 held-out targets; dots show three seeds. Bottom: conditional log-score gains on held-out Giving participants or the separate Taking sample; higher is better. Colors identify fine-tuning samples, with 910 participants per fit (pooled: 455 per country). Error bars are existing 95% paired participant-and-seed bootstrap intervals (4,000 draws; fixed targets/folds). Negative shifts mean less given but less taken, with opposite implications for generosity.",
+      "sources": [
+        "results/giving_taking/figure_inputs/prediction_shifts_by_seed.csv",
+        "results/giving_taking/response_adjustment/human_model_means_by_seed.csv",
+        "results/giving_taking/bootstrap_intervals.csv",
+        "results/giving_taking/seed_metrics.csv"
+      ],
+      "interpretation": "The Chinese adapter shifts mean allocations down most in both tasks; pooled is intermediate. Population matching gives the highest Giving score, but the US adapter has the highest Taking score in both evaluated populations. Shifts and predictive benefit are separate quantities.",
+      "source_sha256": {
+        "results/giving_taking/figure_inputs/prediction_shifts_by_seed.csv": "b53f6d6cb6417937e7da3c1a347f918b18ad9c79ece5b39fd5d781ce5e6fb535",
+        "results/giving_taking/response_adjustment/human_model_means_by_seed.csv": "ffc858fefef38be072ccbef85e4c3070284114e6b9a0b8e8c6453d712be0404d",
+        "results/giving_taking/bootstrap_intervals.csv": "80250eb7528374015a42849de0a3c1b8bd678e0760fe6b285f118e4449f52d29",
+        "results/giving_taking/seed_metrics.csv": "2fded4249c669e8aa75a819649863321384063bd90e8c2ccd537c5fd8e4b30c7"
+      }
+    },
+    "response_adjustment_comparison": {
+      "hypothesis": "H4",
+      "caption": "Fine-tuning gain over a matched response adjustment; positive values favor fine-tuning. Both methods use identical observations: Giving only for panels a-b, category choices for c, and lottery choices for d. The adjustment fits target-independent response-logit offsets (20 for allocations, one for binary choices). All fine-tuning populations are shown, including 50:50 pooled. Allocation error bars are existing 95% paired participant-and-seed bootstrap intervals; category/lottery dots show three seeds without intervals. Panels c-d use held-out participants and items; d covers four tradeoff pairs. This control does not separately correct answer-position preferences.",
+      "sources": [
+        "results/giving_taking/response_adjustment/prior_paired_intervals.csv",
+        "results/giving_taking/response_adjustment/prior_metrics_by_seed.csv",
+        "results/cao_anllo/seed_metrics.csv"
+      ],
+      "interpretation": "The benefit beyond response adjustment varies by task and population. The binary control does not separately adjust response position; fine-tuning's residual benefit is not yet isolated from answer-order debiasing.",
+      "source_sha256": {
+        "results/giving_taking/response_adjustment/prior_paired_intervals.csv": "03a29a8fbc07a0c7c32472c830d8ab7f751c36757d99780eef291f2efbd543f0",
+        "results/giving_taking/response_adjustment/prior_metrics_by_seed.csv": "b8fdb5b18c4c2a6f579c7e3719a425dbe7f47e0319b56bfc4e6a1e339d9fb204",
+        "results/cao_anllo/seed_metrics.csv": "e2cbc92848f4ae30b2da37da424597e80b2c150e651a7d515feb9a8ccea9575a"
+      }
+    },
+    "population_predictions": {
+      "hypothesis": "H2, additional tasks",
+      "caption": "Prediction shifts on unseen items: category choice across 15 Cao word triads and 10-point lottery choice across four Anllo tradeoff pairs. Bars show frozen Centaur or equal-budget US, pooled and China fine-tuning; dots show three seeds. Probabilities are normalized over the two choices and averaged over both answer orders and held-out items. Anllo fine-tuning uses six of eight pairs per fold, including dominance pairs; this panel evaluates only tradeoffs. These are prediction shifts, not accuracy improvements.",
+      "sources": [
+        "results/cao_anllo/seed_metrics.csv"
+      ],
+      "interpretation": "US fine-tuning yields more category choices than China fine-tuning; China fine-tuning yields more 10-point tradeoff choices. Pooled is intermediate in both tasks. These are held-out-item tests, not transfer to a different task.",
+      "source_sha256": {
+        "results/cao_anllo/seed_metrics.csv": "e2cbc92848f4ae30b2da37da424597e80b2c150e651a7d515feb9a8ccea9575a"
+      }
+    }
+  },
+  "data_export_sha256": {
+    "results/paper_figure_data.csv": "4a4fdb65efdc853bbd88545471c03561267828c2a5fd3ad8e28ea82042c13bab",
+    "results/allocation_figure_data.csv": "3d223709b0be4076415f960028c86860bfe29b2f94f27e5be90457f76ec8e9e7"
+  }
+}

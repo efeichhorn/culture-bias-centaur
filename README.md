@@ -36,7 +36,7 @@ make paper       # requires latexmk and a LaTeX installation
 make overleaf    # creates build/culture-bias-centaur-overleaf.zip
 ```
 
-Edit `paper/sections/` and `paper/references.bib`. The paper is a working draft. The newer datasets still need uncertainty estimates, stronger calibration controls and the planned sensitivity checks. No additional training is started by these commands.
+Edit `paper/sections/` and `paper/references.bib`. The paper is currently a section outline with notes and figures. The newer datasets still need uncertainty estimates, stronger calibration controls and the planned sensitivity checks. No additional training is started by these commands.
 
 The Overleaf project contains `paper/` only. Sync is manual: copy edited sources back to `paper/` before committing, or upload local changes to Overleaf.
 
