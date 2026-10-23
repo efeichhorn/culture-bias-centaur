@@ -3,9 +3,9 @@
 
 \begin{itemize}
 \item Main interpretation: fine-tuning population changes what Centaur predicts. This can reflect a learned response tendency without better prediction or faithful transfer.
-\item The simple adjustment is an important reference: what does changing model weights add beyond changing a general response preference?
-\item Strongest argument: population-specific shifts can persist without improving on frozen Centaur in every condition or reproducing human differences after transfer. H2 establishes sensitivity; H3 and H4 test what that sensitivity achieves.
-\item Avoid a broad ``Western bias'' claim. The population ordering changes across tasks.
+\item Response adjustment tests what changing model weights adds beyond changing a general response preference.
+\item Population-specific shifts can persist without improving on frozen Centaur in every condition or reproducing human differences after transfer. H2 establishes sensitivity; H3 and H4 test what that sensitivity achieves.
+\item No consistent Western prediction advantage; the population ordering changes across tasks.
 \end{itemize}
 
 \subsection{Limits}
@@ -16,14 +16,4 @@
 \item Frozen Llama comparisons do not show whether Centaur's original fine-tuning causes the observed sensitivity.
 \item Exploratory dataset selection and uncertain prior model exposure limit generalization.
 \item Giving-to-Taking is one transfer test. A wave-dependent human contrast cannot support a universal failure-of-transfer claim.
-\end{itemize}
-
-\subsection{Before submission}
-\begin{itemize}
-\item \textbf{First:} add paired participant uncertainty for the newer datasets and report effect sizes with intervals for the primary contrasts.
-\item \textbf{First:} complete answer-order and calibration checks, fitting controls only on fine-tuning data. Check whether score differences reflect how predictable each human sample is.
-\item \textbf{First:} add the all-target, wave-specific human--model comparison for Giving and Taking; add held-out human reference values to the newer-dataset plots.
-\item Check lottery inclusion rules and categorization coding. Mandarin prompts are a useful language-sensitivity check if scope allows.
-\item Reconcile allocation participant counts with the source study and verify the final claims.
-\item Prioritize these analyses before another large fine-tuning sweep.
 \end{itemize}
