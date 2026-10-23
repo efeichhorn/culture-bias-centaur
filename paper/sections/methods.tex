@@ -5,8 +5,8 @@
 \subsection{Tasks}
 \begin{itemize}
 \item \textbf{Giving / Taking} \citep{wang2026decomposing}: tokens given to, or taken from, members of different social groups. Fine-tuning on Giving only; evaluation on Giving and Taking. More giving and less taking mean greater generosity.
-\item \textbf{Categorization} \citep{cao2024differences}: category-based versus relation-based word choices. Fine-tuning on a subset of items; evaluation on unseen items.
-\item \textbf{Lotteries} \citep{anllo2024preferences}: choices between explicit lotteries. Fine-tuning on both tradeoff and dominance items; separate held-out results for each type.
+\item \textbf{Categorization} \citep{cao2024differences}: choosing words that share a category or have a relation to each other. Fine-tuning on some items; testing on unseen items.
+\item \textbf{Lotteries} \citep{anllo2024preferences}: choosing between lotteries with stated outcomes and probabilities. Fine-tuning on both tradeoff and dominance items; separate test results for each type.
 \end{itemize}
 
 \begin{table}[H]
@@ -29,35 +29,35 @@ Lotteries & 50 / 49 & 6 of 8 pairs; 4 repetitions each & 2 unseen pairs; 8 held-
 
 \subsection{Comparison}
 \begin{itemize}
-\item Same frozen Centaur model, with separate adapters fine-tuned on US, Chinese, or 50/50 pooled responses.
-\item Equal data budgets and optimization settings within each task; three split/fitting seeds.
-\item Participants per adapter: 910 for Giving, 124 for categorization, 34 for lotteries. Pooled uses half from each country at the same total budget.
-\item Complete participants and items held out from fine-tuning; repeated responses stay in the same split. Taking never enters fine-tuning or model selection.
-\item Identical English prompts without country labels. Binary-choice predictions averaged across both answer orders.
-\item Reference models: frozen Centaur and base Llama. Llama receives no additional fine-tuning.
+\item Same starting Centaur model, with separate adapters fine-tuned on US responses, Chinese responses, or a 50/50 mix (pooled).
+\item Same amount of data and fine-tuning settings within each task. Three seeds, which change the data split and fitting run.
+\item Participants per adapter: 910 for Giving, 124 for categorization, 34 for lotteries. Pooled uses half from each country, with the same total number.
+\item Test participants and items are left out of fine-tuning. Repeated answers from one participant stay in the same split. Taking is never used for fine-tuning or choosing a model.
+\item Same English prompts, with no country labels. For choices between two answers, predictions are averaged across both answer orders.
+\item Comparisons with frozen Centaur and base Llama. Llama gets no extra fine-tuning.
 \end{itemize}
 
 \subsection{How each hypothesis is tested}
 \begin{itemize}
-\item \textbf{H1:} Frozen prediction error by population: the US--China error difference and, separately, the difference in improvement over Llama.
-\item \textbf{H2:} US-adapter minus China-adapter expected responses on the same unseen items, with pooled fine-tuning alongside both.
-\item \textbf{H3:} Adapter contrast on Taking alongside the human US--China contrast: direction and size. Predictive accuracy is a separate outcome.
+\item \textbf{H1:} How well frozen Centaur predicts each population: the US--China difference in prediction error and, separately, how much it improves over Llama for each population.
+\item \textbf{H2:} Difference between the US and China adapters' expected responses on the same unseen items. Pooled fine-tuning shown alongside both.
+\item \textbf{H3:} Difference between the adapters on Taking, compared with the human US--China difference: same direction and similar size? Accuracy checked separately.
 \item \textbf{H4:} Adjustment NLL minus fine-tuned NLL on the same test responses. Positive values favor fine-tuning.
-\item Measures: expected tokens or choice probability for shifts; conditional negative log likelihood for fit (lower is better).
+\item Measures: expected tokens or choice probability show how predictions shift. Conditional negative log likelihood (NLL) measures prediction error; lower is better.
 \end{itemize}
 
 \subsection{Response adjustment}
 \begin{itemize}
-\item Frozen probabilities reweighted by one response preference shared across items:
+\item A simple adjustment makes certain answers more or less likely, in the same way for every item. It starts from frozen Centaur's probabilities:
 \[
 q_{\delta}(y\mid x)=\frac{p_0(y\mid x)e^{\delta_y}}{\sum_k p_0(k\mid x)e^{\delta_k}}.
 \]
-\item Allocation: 21 token responses, with offsets constrained to sum to zero (20 free parameters). Offsets fitted on the adapter's Giving participants and targets, then applied to both Giving and Taking.
-\item Binary choices: one offset to the semantic log odds, fitted before averaging the two answer orders. Positive means category choice or the 10-point lottery option. Fixed ridge penalty; appendix specification pending.
-\item This control can learn a general response preference without changing model weights. It cannot independently correct answer-position bias; a gain over it alone does not establish richer cultural learning.
+\item Allocation: one adjustment for each of the 21 possible token responses. They sum to zero, leaving 20 free parameters. Fitted on the same Giving participants and targets as the adapter, then used for both Giving and Taking.
+\item Binary choices: one adjustment to the log odds of an answer, fitted before averaging the two answer orders. Positive favors the category choice or the 10-point lottery option. Fixed ridge penalty; exact specification still missing from the appendix.
+\item Model weights stay fixed. The adjustment can learn an overall answer preference, but it cannot separately correct a preference for the first or second answer. Beating this control alone doesn't tell us whether the model learned richer cultural patterns.
 \end{itemize}
 
 \begin{itemize}
-\item Uncertainty plan: whole-participant resampling, retaining dependence across overlapping splits. Seed variation shown separately; folds and repeated trials are not independent samples.
-\item Allocation intervals are available. Paired uncertainty for categorization and lotteries remains to be completed.
+\item Planned uncertainty analysis: resampling whole participants, keeping their responses together across overlapping splits. Variation across seeds shown separately. Folds and repeated trials don't count as independent samples.
+\item Allocation intervals are already available. Paired uncertainty estimates for categorization and lotteries are still missing.
 \end{itemize}

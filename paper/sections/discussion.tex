@@ -2,18 +2,18 @@
 \label{sec:discussion}
 
 \begin{itemize}
-\item Main interpretation: fine-tuning population changes what Centaur predicts. This can reflect a learned response tendency without better prediction or faithful transfer.
-\item Response adjustment tests what changing model weights adds beyond changing a general response preference.
-\item Population-specific shifts can persist without improving on frozen Centaur in every condition or reproducing human differences after transfer. H2 establishes sensitivity; H3 and H4 test what that sensitivity achieves.
-\item No consistent Western prediction advantage; the population ordering changes across tasks.
+\item Main takeaway: who we fine-tune on changes what Centaur predicts. The model may learn a general answer tendency without getting more accurate or capturing human differences on a new task.
+\item The response adjustment helps show what fine-tuning adds beyond making certain answers more likely overall.
+\item Differences between adapters can carry over to a new task even when they don't beat frozen Centaur in every condition or match human differences. H2 shows that the population matters; H3 and H4 ask what the model has picked up from it.
+\item No consistent Western advantage. Which population is predicted better changes from task to task.
 \end{itemize}
 
 \subsection{Limits}
 \begin{itemize}
-\item Country, language, recruitment, and other sample differences remain intertwined; nationality is not a direct measure of culture.
-\item Few items, small lottery test samples, and only three seeds. Repetitions do not add independent people.
-\item Lower prediction error can partly reflect more predictable human responses.
-\item Frozen Llama comparisons do not show whether Centaur's original fine-tuning causes the observed sensitivity.
-\item Exploratory dataset selection and uncertain prior model exposure limit generalization.
-\item Giving-to-Taking is one transfer test. A wave-dependent human contrast cannot support a universal failure-of-transfer claim.
+\item Country, language, recruitment, and other sample differences are hard to separate. Nationality is only a rough guide to culture.
+\item Few items, small lottery test samples, and only three seeds. Repeated answers don't add more independent people.
+\item Better scores can partly mean that the human responses are easier to predict.
+\item Comparing with frozen Llama doesn't tell us whether Centaur's original fine-tuning caused its sensitivity to the new fine-tuning population.
+\item The datasets were chosen as the project developed. Prior model exposure is also uncertain, so it's unclear how far these findings extend.
+\item Giving to Taking is only one test on a new task, and the human difference changes across waves. This doesn't show that transfer fails in general.
 \end{itemize}
