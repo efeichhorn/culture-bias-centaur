@@ -19,11 +19,10 @@ from matplotlib.lines import Line2D
 from matplotlib.ticker import MultipleLocator
 import numpy as np
 import pandas as pd
-from tueplots import bundles
+from paper_plot_style import COLORS, paper_style
 
 ROOT = Path(__file__).resolve().parents[1]
 GROUPS = [23, 2, 13, 8, 11]
-COLORS = {"us": "#4878A8", "china": "#CF866F", "pooled": "#8E82A8", "frozen": "#8B9299"}
 BEHAVIOR_SHA = "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd"
 
 
@@ -130,37 +129,36 @@ def draw(data: pd.DataFrame, output_dir: Path) -> None:
         raise ValueError("Nonfinite figure values")
     if not ((data.lower <= data["mean"]) & (data["mean"] <= data.upper)).all():
         raise ValueError("Interval does not contain its displayed mean")
-    plt.rcParams.update(bundles.neurips2024(usetex=False, family="sans-serif"))
-    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.titlesize": 9,
-                        "axes.labelsize": 8, "xtick.labelsize": 7, "ytick.labelsize": 8,
-                        "axes.spines.top": False, "axes.spines.right": False,
-                        "axes.spines.left": False, "axes.edgecolor": "#BBC1C6", "axes.linewidth": .6,
-                        "text.color": "#26333D", "axes.labelcolor": "#26333D", "pdf.fonttype": 42,
-                        "figure.constrained_layout.use": False, "figure.autolayout": False})
-    fig, axes = plt.subplots(1, 2, figsize=(6.3, 3.6), sharex=True, sharey=True)
+    plt.rcParams.update(paper_style(3.2))
+    plt.rcParams.update({"axes.titlesize": 9, "axes.labelsize": 9,
+                        "xtick.labelsize": 7, "ytick.labelsize": 7,
+                        "legend.fontsize": 7,
+                        "figure.constrained_layout.use": False})
+    fig, axes = plt.subplots(1, 2, sharex=True, sharey=True, layout="none")
     positions = {group: 4-i for i, group in enumerate(GROUPS)}
-    for ax, task, title, label in zip(axes, ["Giving", "Taking"],
-                                    ["a  Held-out Giving", "b  Taking transfer"],
-                                    ["Mean tokens given", "Mean tokens taken"]):
+    for ax, panel, task, title, label in zip(axes, ["a", "b"], ["Giving", "Taking"],
+                                           ["Held-out Giving", "Taking transfer"],
+                                           ["Mean tokens given", "Mean tokens taken"]):
         for row in data[data.task == task].itertuples():
             human = row.source == "human"
-            offset = (.235 if row.population == "us" else .165) if human else {"us": -.015, "pooled": -.065, "china": -.115, "frozen": -.32}[row.population]
+            offset = (.32 if row.population == "us" else .192) if human else {"us": .064, "pooled": -.064, "china": -.192, "frozen": -.32}[row.population]
             marker = "o" if human else "x" if row.population == "frozen" else "D" if row.population == "pooled" else "s"
             color = COLORS[row.population]
             y = positions[row.group] + offset
             if row.interval != "none":
                 ax.errorbar(row.mean, y, xerr=[[row.mean-row.lower], [row.upper-row.mean]],
-                            fmt="none", ecolor=color, lw=.85, capsize=1.8, capthick=.7, zorder=2)
-            marker_style = {"linewidths": .9} if marker == "x" else {"linewidths": .45, "edgecolors": "white"}
-            ax.scatter(row.mean, y, s=23 if marker == "D" else 21, marker=marker, color=color,
+                            fmt="none", ecolor=color, lw=.65, capsize=1.25, capthick=.5, zorder=2)
+            marker_style = {"linewidths": .8} if marker == "x" else {"linewidths": .35, "edgecolors": "white"}
+            ax.scatter(row.mean, y, s=15 if marker == "D" else 14, marker=marker, color=color,
                        **marker_style, zorder=3)
-        ax.set_title(title, loc="left", fontweight="bold", pad=9)
+        ax.set_title(title, loc="left", x=.08, fontweight="normal", pad=7)
+        ax.text(0, 1.035, panel, transform=ax.transAxes, fontsize=9, fontweight="bold",
+                ha="left", va="bottom")
         ax.set_xlabel(label)
         ax.set_yticks([positions[g] for g in GROUPS], [str(data[data.group == g].item.iloc[0]).capitalize() for g in GROUPS])
-        ax.tick_params(axis="y", length=0, pad=6)
-        ax.tick_params(axis="x", width=.6, length=3)
-        ax.grid(axis="x", color="#E5E8EB", linewidth=.5, zorder=0)
-        ax.set_ylim(-.6, 4.65)
+        ax.tick_params(axis="y", length=2.5, pad=4)
+        ax.grid(False)
+        ax.set_ylim(-.55, 4.55)
         ax.xaxis.set_major_locator(MultipleLocator(2))
     low = np.floor(data.lower.min()/2)*2
     high = np.ceil(data.upper.max()/2)*2
@@ -171,13 +169,13 @@ def draw(data: pd.DataFrame, output_dir: Path) -> None:
                                        ("frozen", "x", "Frozen Centaur"), ("pooled", "D", "Pooled fine-tuning")]:
         legend.append(Line2D([], [], marker=marker, linestyle="none", color=COLORS[population],
                              markeredgecolor=COLORS[population] if marker == "x" else "white",
-                             markeredgewidth=.6, markersize=4.5, label=label))
-    fig.legend(handles=legend, loc="lower center", ncol=3, frameon=False, fontsize=7.5,
-               handletextpad=.35, columnspacing=1.6, bbox_to_anchor=(.54, .005))
-    fig.subplots_adjust(left=.145, right=.995, top=.92, bottom=.24, wspace=.14)
+                             markeredgewidth=.5, markersize=3.7, label=label))
+    fig.legend(handles=legend, loc="lower center", ncol=3, frameon=False, fontsize=7,
+               handletextpad=.35, columnspacing=1.7, bbox_to_anchor=(.54, .012))
+    fig.subplots_adjust(left=.135, right=.99, top=.91, bottom=.25, wspace=.17)
     output_dir.mkdir(parents=True, exist_ok=True)
     for extension in ["pdf", "png"]:
-        fig.savefig(output_dir / f"social_group_predictions.{extension}", dpi=300, bbox_inches="tight", pad_inches=.03)
+        fig.savefig(output_dir / f"social_group_predictions.{extension}", dpi=300)
     plt.close(fig)
 
 
