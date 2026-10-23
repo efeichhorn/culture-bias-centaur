@@ -2,29 +2,29 @@
 \label{sec:introduction}
 
 \begin{itemize}
-\item Centaur predicts behavior across tasks \citep{binz2025centaur}. Good average performance may hide differences between populations.
-\item Main question: what changes when the people represented in fine-tuning data change?
-\item Three separate outcomes: prediction shift, better prediction, and reproduction of human population differences.
-\item Contribution: testing whether population-dependent adaptation improves prediction and preserves human differences on a new task, and how much it adds beyond a general response preference.
-\item Why this matters: using a model as a human proxy requires checking which population patterns it reproduces. A shift after fine-tuning alone does not establish this.
+\item Centaur predicts behavior across tasks \citep{binz2025centaur}. A good average score can hide that it predicts some populations better than others.
+\item Main question: what changes when we change who we fine-tune on?
+\item Three things to distinguish: whether predictions change, whether they get better, and whether they capture the differences between human populations.
+\item What this study adds: whether fine-tuning on different populations improves predictions, carries human differences over to a new task, and adds more than a general preference for certain answers.
+\item Why this matters: if we use Centaur to stand in for people, we need to know whose behavior it captures. Changed predictions alone don't tell us that.
 \end{itemize}
 
 \subsection{Related work}
 \begin{itemize}
-\item Centaur: behavioral fine-tuning and generalization across experiments \citep{binz2025centaur}.
-\item Cross-country evaluation: \citet{chen2026proxies} compare prompted LLM responses with human economic preferences across 74 countries and find weak recovery of cultural patterns.
-\item Our focus: prediction shifts, accuracy, and transfer when the fine-tuning population changes. The model, prompts, and data budget stay fixed.
+\item Centaur: fine-tuning on human behavior and testing on other experiments \citep{binz2025centaur}.
+\item Cross-country comparison: \citet{chen2026proxies} compare prompted LLM answers with human economic preferences across 74 countries. The models capture the cultural patterns poorly.
+\item Our focus: what happens to predictions, accuracy, and transfer when we change who we fine-tune on. The starting model, prompts, and amount of data stay the same.
 \end{itemize}
 
 \subsection{Hypotheses}
 \begin{itemize}
 \item \textbf{H1:} Frozen Centaur predicts Western samples more accurately.
-\item \textbf{H2:} Population composition during fine-tuning shifts predicted behavior.
-\item \textbf{H3:} Population-dependent prediction shifts persist on unseen tasks.
-\item \textbf{H4:} Fine-tuning improves predictions beyond a shared response adjustment.
+\item \textbf{H2:} Fine-tuning on different populations changes the predicted behavior.
+\item \textbf{H3:} These prediction differences also appear on tasks not used for fine-tuning.
+\item \textbf{H4:} Fine-tuning improves predictions more than a simple adjustment of response preferences.
 \end{itemize}
 
 \begin{itemize}
-\item H2 and H3 concern changes in model behavior; improved accuracy is a separate check.
-\item H1 is tested mainly with US and Chinese samples. H3 has one task-transfer test, Giving to Taking (since that is already in the dataset), unfortunately the other datasets just test unseen items.
+\item H2 and H3 are about whether predictions change. Whether they get better is a separate question.
+\item H1 mainly compares US and Chinese samples. H3 has one test on a new task: Giving to Taking, both available in the same dataset. The other datasets only test new items within the same task.
 \end{itemize}

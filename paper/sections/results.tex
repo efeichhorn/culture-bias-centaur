@@ -3,11 +3,11 @@
 
 
 
-\subsection{H1: population fit depends on the task}
+\subsection{H1: which population is predicted better depends on the task}
 \begin{itemize}
-\item Frozen Centaur fits US responses better in allocation and categorization; Chinese responses slightly better in lottery tradeoffs (Figure~\ref{fig:frozen}).
-\item No consistent US advantage across these tasks. Response predictability may contribute to the score differences.
-\item Ruggeri data: no clear Western advantage. Its study was already represented in Centaur's original fine-tuning data.
+\item Frozen Centaur predicts US responses better in allocation and categorization, and Chinese responses slightly better in lottery tradeoffs (Figure~\ref{fig:frozen}).
+\item No consistent US advantage across these tasks. Some samples may simply be easier to predict.
+\item Ruggeri data: no clear Western advantage either. This study was already part of Centaur's original fine-tuning data.
 \end{itemize}
 
 
@@ -20,10 +20,10 @@
 
 \subsection{H2: fine-tuning population changes predictions}
 \begin{itemize}
-\item Clear shifts on unseen items across all three domains (Figures~\ref{fig:population} and~\ref{fig:transfer}).
-\item US fine-tuning produces more category choices; Chinese fine-tuning produces more 10-point lottery choices, especially on tradeoff items.
-\item Matching the population generally improves within-task fit relative to the other population's adapter. It does not always improve over frozen Centaur.
-\item Effect sizes: China fine-tuning improves Giving log score for held-out Chinese responses by 0.144 nats over US fine-tuning (95\% CI 0.105--0.179). US-minus-China fine-tuning shifts category choices by +26.6 percentage points and 10-point lottery choices by -21.5 points on tradeoff pairs. Participant uncertainty for the latter two remains pending.
+\item Clear prediction shifts on unseen items in all three datasets (Figures~\ref{fig:population} and~\ref{fig:transfer}).
+\item After US fine-tuning, the model predicts more category choices. After Chinese fine-tuning, it predicts more 10-point lottery choices, especially on tradeoff items.
+\item Within the same task, fine-tuning on the matching population usually predicts its responses better than fine-tuning on the other population. It doesn't always beat frozen Centaur.
+\item Size of the differences: China fine-tuning improves Giving log score for held-out Chinese responses by 0.144 nats over US fine-tuning (95\% CI 0.105--0.179). Compared with China fine-tuning, US fine-tuning predicts 26.6 percentage points more category choices and 21.5 points fewer 10-point lottery choices on tradeoff pairs. Participant uncertainty for these last two estimates is still missing.
 \end{itemize}
 
 
@@ -36,13 +36,13 @@
 \label{fig:population}
 \end{figure}
 
-\subsection{H3: transferred shifts do not consistently match human population differences}
+\subsection{H3: shifts carry over to Taking, but don't consistently match human differences}
 \begin{itemize}
-\item Giving-only fine-tuning also changes Taking predictions (Figures~\ref{fig:transfer} and~\ref{fig:social}). Population-dependent shifts persist on the untrained task.
-\item The model's population gap has the opposite direction to the pooled human Taking gap; the human gap also varies across study waves.
-\item The US adapter predicts both Taking populations better. Population matching therefore does not transfer consistently.
-\item Fewer tokens mean less generosity in Giving but more generosity in Taking. A similar numerical shift can change behavioral meaning.
-\item \textbf{Planned figure (pending):} human US--China differences alongside US-adapter--China-adapter differences across all 25 targets, separately for Giving and Taking. Human references by wave, using held-out Giving participants. The same adapters fitted across waves supply the model contrast. Differences and uncertainty on a common response scale. The five groups below are illustrations.
+\item Fine-tuning only on Giving also changes Taking predictions (Figures~\ref{fig:transfer} and~\ref{fig:social}). The differences between fine-tuning populations carry over to this new task.
+\item On Taking, the difference between adapters goes in the opposite direction to the human US--China difference when both study waves are combined. The human difference also changes across waves.
+\item The US adapter predicts both Taking populations better. Matching the fine-tuning and test populations doesn't consistently help on the new task.
+\item Fewer tokens mean less generosity in Giving but more generosity in Taking. The same numerical shift can mean different behavior.
+\item \textbf{Figure still missing:} human US--China differences next to the differences between adapters, for all 25 targets. Giving and Taking shown separately, with human data split by wave and held-out participants used for Giving. The model comparison uses the same adapters, fitted across waves. Differences and uncertainty shown on the same response scale. The five groups below are examples.
 \end{itemize}
 
 
@@ -60,11 +60,11 @@
 \label{fig:social}
 \end{figure}
 
-\subsection{H4: gains beyond response adjustment vary}
+\subsection{H4: fine-tuning adds more than a response adjustment in some cases}
 \begin{itemize}
-\item Categorization: little consistent benefit beyond the simple response adjustment.
-\item Taking: mostly positive gains beyond adjustment. Lottery tradeoffs: mixed gains, depending on fine-tuning and evaluation population (Figure~\ref{fig:adjustment}).
-\item Answer-order effects are large. Calibration may explain some remaining gains; richer behavioral learning is not yet established.
+\item Categorization: fine-tuning adds little consistent benefit over the simple response adjustment.
+\item Taking: fine-tuning usually does better than the adjustment. Lottery tradeoffs: mixed results, depending on who the model was fine-tuned on and who it predicts (Figure~\ref{fig:adjustment}).
+\item Answer order has a large effect. Some remaining gains may come from correcting answer preferences. We don't yet know whether they reflect richer learning about behavior.
 \end{itemize}
 
 \begin{figure}[H]

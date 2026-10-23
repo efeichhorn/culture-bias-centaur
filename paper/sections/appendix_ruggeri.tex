@@ -1,10 +1,10 @@
 \section{Supporting Audit: Temporal Discounting}
 \label{app:ruggeri}
 \begin{itemize}
-\item Released frozen predictions for \citet{ruggeri2022globalizability}; no additional fine-tuning.
-\item Country metadata verified for most test participants, covering all 61 countries. Some participant metadata remain missing.
-\item Main comparison weights countries equally; the Western grouping is an operational geographic definition.
-\item No clear Western prediction advantage. This does not establish equivalence between groups.
-\item Seen-study evaluation: Ruggeri was represented in Centaur's original fine-tuning corpus.
-\item Scores use full-vocabulary likelihood and earlier observed answers. They are not directly comparable with the main independent-choice scores.
+\item Published frozen predictions for \citet{ruggeri2022globalizability}; no extra fine-tuning.
+\item Country information checked for most test participants, covering all 61 countries. Still missing for some participants.
+\item Each country counts equally in the main comparison. ``Western'' is defined by a geographic grouping.
+\item No clear Western advantage. That doesn't mean the groups are equally predictable.
+\item Ruggeri was already part of Centaur's original fine-tuning data, so this is a check on a study it has seen before.
+\item Scores use probabilities over the full vocabulary, and predictions include earlier observed answers as context. They can't be compared directly with the scores for independent choices in the main analysis.
 \end{itemize}
