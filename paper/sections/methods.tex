@@ -8,10 +8,29 @@
 \item \textbf{Lotteries} \citep{anllo2024preferences}: choices between explicit lotteries. Fine-tune on both tradeoff and dominance items; report their held-out results separately.
 \end{itemize}
 
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.15\textwidth}p{0.19\textwidth}p{0.26\textwidth}p{0.30\textwidth}}
+\toprule
+Task & Retained US / China & Fine-tuning items & Evaluation \\
+\midrule
+Giving & 1,371 / 1,301 & 20 of 25 social targets & 5 unseen targets; 196 held-out people per country \\
+Taking & 1,371 / 1,329 & None; use Giving adapters & Same 5 unseen targets; separate Taking sample \\
+Categorization & 295 / 178 & 12 of 15 critical items & 3 unseen items; 28 held-out people per country \\
+Lotteries & 50 / 49 & 6 of 8 pairs; 4 repetitions each & 2 unseen pairs; 8 held-out people per country \\
+\bottomrule
+\end{tabular}
+\caption{Design summary. Evaluation counts are per split; item counts are per fold. Allocation and categorization use five folds, lotteries four. Lottery results distinguish tradeoff from dominance pairs. Retained counts describe the analysis data.}
+\label{tab:design}
+\end{table}
+
 \subsection{Comparison}
 \begin{itemize}
 \item Start from the same frozen Centaur model. Add an adapter fine-tuned on US, Chinese, or 50/50 pooled responses.
 \item Equal data budgets and optimization settings within each task; three split/fitting seeds.
+\item Participants per adapter: 910 for Giving, 124 for categorization, 34 for lotteries. Pooled uses half from each country at the same total budget.
 \item Hold out complete participants and items. Keep repeated responses together. Taking never enters fine-tuning or model selection.
 \item Identical English prompts without country labels. Average both answer orders for binary choices.
 \item Include frozen Centaur and base Llama as references. Llama receives no additional fine-tuning.
@@ -19,11 +38,22 @@
 
 \subsection{How each hypothesis is tested}
 \begin{itemize}
-\item \textbf{H1:} Compare frozen prediction error across populations. Distinguish absolute fit from improvement over Llama.
-\item \textbf{H2:} Compare predicted choices after fine-tuning on different populations, using the same unseen items.
-\item \textbf{H3:} Fine-tune on Giving, then compare Taking predictions. Separately check accuracy and agreement with the human population difference.
-\item \textbf{H4:} Compare fine-tuning with a control fitted to the same responses. The control changes a common response preference across items without changing model weights.
+\item \textbf{H1:} Compare frozen prediction error across populations. Report the US--China error difference and, separately, the difference in improvement over Llama.
+\item \textbf{H2:} Compare US-adapter minus China-adapter expected responses on the same unseen items. Show pooled fine-tuning alongside both.
+\item \textbf{H3:} Compare that adapter contrast on Taking with the human US--China contrast, including its direction and size. Check predictive accuracy separately.
+\item \textbf{H4:} Report adjustment NLL minus fine-tuned NLL on the same test responses. Positive values favor fine-tuning.
 \item Measures: expected tokens or choice probability for shifts; conditional negative log likelihood for fit (lower is better).
+\end{itemize}
+
+\subsection{Response adjustment}
+\begin{itemize}
+\item Reweight frozen probabilities by one response preference shared across items:
+\[
+q_{\delta}(y\mid x)=\frac{p_0(y\mid x)e^{\delta_y}}{\sum_k p_0(k\mid x)e^{\delta_k}}.
+\]
+\item Allocation: 21 token responses, with offsets constrained to sum to zero (20 free parameters). Fit on the adapter's Giving participants and targets; reuse the same offsets for Giving and Taking.
+\item Binary choices: one offset to the semantic log odds, fitted before averaging the two answer orders. Positive means category choice or the 10-point lottery option. Keep the saved ridge penalty fixed; give its exact form in the appendix.
+\item This control can learn a general response preference without changing model weights. It cannot independently correct answer-position bias; a gain over it alone does not establish richer cultural learning.
 \end{itemize}
 
 \begin{itemize}

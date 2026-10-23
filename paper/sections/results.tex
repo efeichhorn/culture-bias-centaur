@@ -3,12 +3,13 @@
 
 \begin{itemize}
 \item All planned fine-tuning fits are complete. The newer dataset results remain descriptive until uncertainty and calibration checks are finished.
+\item For the draft: give one primary contrast per hypothesis, its effect size, and a paired interval. Label seed ranges as descriptive; do not use them as confidence intervals.
 \end{itemize}
 
 \subsection{H1: population fit depends on the task}
 \begin{itemize}
 \item Frozen Centaur fits US responses better in allocation and categorization; Chinese responses slightly better in lottery tradeoffs (Figure~\ref{fig:frozen}).
-\item No consistent Western advantage across tasks. Response predictability may contribute to the score differences.
+\item No consistent US advantage across these tasks. Response predictability may contribute to the score differences.
 \item Supporting Ruggeri audit: no clear Western advantage. Its study was already represented in Centaur's original fine-tuning data.
 \end{itemize}
 
@@ -25,6 +26,7 @@
 \item Clear shifts on unseen items across all three domains (Figures~\ref{fig:population} and~\ref{fig:transfer}).
 \item US fine-tuning produces more category choices; Chinese fine-tuning produces more 10-point lottery choices, especially on tradeoff items.
 \item Matching the population generally improves within-task fit relative to the other population's adapter. It does not always improve over frozen Centaur.
+\item Saved numerical examples: China fine-tuning improves Giving log score for held-out Chinese responses by 0.144 nats over US fine-tuning (95\% CI 0.105--0.179). US-minus-China fine-tuning shifts category choices by +26.6 percentage points and 10-point lottery choices by -21.5 points on tradeoff pairs. The latter two still need participant uncertainty.
 \end{itemize}
 
 
@@ -37,12 +39,13 @@
 \label{fig:population}
 \end{figure}
 
-\subsection{H3: shifts transfer, but human differences do not}
+\subsection{H3: transferred shifts do not consistently match human population differences}
 \begin{itemize}
 \item Giving-only fine-tuning also changes Taking predictions (Figures~\ref{fig:transfer} and~\ref{fig:social}). Population-dependent shifts persist on the untrained task.
 \item The model's population gap has the opposite direction to the pooled human Taking gap; the human gap also varies across study waves.
 \item The US adapter predicts both Taking populations better. Population matching therefore does not transfer consistently.
 \item Fewer tokens mean less generosity in Giving but more generosity in Taking. A similar numerical shift can change behavioral meaning.
+\item \textbf{Figure still to add:} compare human US--China differences with US-adapter--China-adapter differences across all 25 targets, separately for Giving and Taking. Split human references by wave; use held-out Giving participants. The same adapters fitted across waves supply the model contrast. Show uncertainty on a common response scale. The five groups below are illustrations.
 \end{itemize}
 
 

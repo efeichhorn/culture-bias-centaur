@@ -5,6 +5,15 @@
 \item Centaur predicts behavior across tasks \citep{binz2025centaur}. Good average performance may hide differences between populations.
 \item Main question: what changes when the people represented in fine-tuning data change?
 \item Keep three outcomes separate: a prediction shift, better prediction, and reproduction of human population differences.
+\item Contribution: test whether population-dependent adaptation improves prediction and preserves human differences on a new task, and how much it adds beyond a general response preference.
+\item Why this matters: using a model as a human proxy requires checking which population patterns it reproduces. A shift after fine-tuning alone does not establish this.
+\end{itemize}
+
+\subsection{Related work to cover}
+\begin{itemize}
+\item Centaur: behavioral fine-tuning and generalization across experiments \citep{binz2025centaur}. Connect those tests to the question of population coverage.
+\item Cross-country evaluation: \citet{chen2026proxies} compare prompted LLM responses with human economic preferences across 74 countries and find weak recovery of cultural patterns.
+\item Our focus: change the population used for fine-tuning while holding the model, prompts, and data budget fixed; compare shifts, accuracy, and transfer. Check the closest adaptation studies before making a novelty claim.
 \end{itemize}
 
 \subsection{Hypotheses}
@@ -17,5 +26,6 @@
 
 \begin{itemize}
 \item H2 and H3 concern changes in model behavior; improved accuracy is a separate check.
+\item H1 is tested mainly with US and Chinese samples. H3 has one task-transfer test, Giving to Taking; the other datasets test unseen items.
 \item Exploratory hypotheses. Country comparisons do not identify culture as the cause.
 \end{itemize}
