@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.path import Path as MplPath
 from matplotlib.patches import Circle, FancyArrowPatch, FancyBboxPatch, PathPatch, Polygon, Rectangle
+from figure_helpers import fit_label_widths
 from paper_plot_style import COLORS, paper_style
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -306,13 +307,9 @@ def draw(output: Path) -> None:
                     gid=f"evaluation-legend-line-{condition}")
             label(x+10, y, name, f"evaluation-legend-label-{condition}", ha="left", size=6.2)
 
-        fig.canvas.draw()
-        renderer = fig.canvas.get_renderer()
-        px_per_unit = ax.get_window_extent(renderer).width / WIDTH
-        for artist, width in width_checks:
-            if artist.get_window_extent(renderer).width > width*px_per_unit:
-                measured = artist.get_window_extent(renderer).width / px_per_unit
-                raise ValueError(f"Text exceeds available space: {artist.get_text()!r} ({measured:.1f} > {width})")
+        fitted_labels = fit_label_widths(fig, ax, width_checks, WIDTH)
+        if fitted_labels:
+            provenance["fitted_labels"] = fitted_labels
 
         provenance["layout"] = "Tall common prompt, embedding, frozen weights, and frozen Centaur adapters; unchanged trainable adapter dimensions. Aligned Frozen and Trainable top brackets identify update status; lower Model weights and LoRA adapters brackets identify parameter type, including frozen Centaur LoRA. Dark output cards match the input. One population adapter is selected consistently across all layers."
         provenance["displayed_output"] = "Illustrative integer responses to the displayed farmer item; not recorded model predictions or population means."

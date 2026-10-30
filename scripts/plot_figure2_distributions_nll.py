@@ -183,9 +183,22 @@ def draw(input_dir: Path, output_dir: Path):
         for task in ("Categorization", "Risky choice"):
             draw_binary(axes[task], data, task, labels[task])
         draw_nll(axes["NLL"], gap)
-        fig.canvas.draw()
-        renderer = fig.canvas.get_renderer()
-        legend_boxes = [l.get_window_extent(renderer).transformed(fig.transFigure.inverted()) for l in (legend_a, legend_b)]
+        legends = (legend_a, legend_b)
+        original_sizes = {text: text.get_fontsize() for legend in legends for text in legend.get_texts()}
+        for attempt in range(4):
+            fig.canvas.draw()
+            renderer = fig.canvas.get_renderer()
+            legend_boxes = [legend.get_window_extent(renderer).transformed(fig.transFigure.inverted())
+                            for legend in legends]
+            if all(box.x0 >= 0 and box.x1 <= 1 for box in legend_boxes):
+                break
+            if attempt < 3:
+                for legend, box in zip(legends, legend_boxes):
+                    if box.x0 < 0 or box.x1 > 1:
+                        center = (box.x0 + box.x1) / 2
+                        ratio = .98 * 2 * min(center, 1-center) / box.width
+                        for text in legend.get_texts():
+                            text.set_fontsize(max(.8 * original_sizes[text], text.get_fontsize() * ratio))
         assert abs((legend_boxes[0].y0+legend_boxes[0].y1)/2 - (legend_boxes[1].y0+legend_boxes[1].y1)/2) < .001
         assert all(box.x0 >= 0 and box.x1 <= 1 for box in legend_boxes), [b.bounds for b in legend_boxes]
         for extension in ("png", "pdf", "svg"):
