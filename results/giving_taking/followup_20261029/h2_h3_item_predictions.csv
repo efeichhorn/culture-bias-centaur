@@ -1,0 +1,451 @@
+task,item_id,item,seed,condition,prediction
+Giving,1,boy,0,china,5.83469382069237
+Giving,1,boy,0,pooled,6.597549156620906
+Giving,1,boy,0,us,7.0975739025510896
+Giving,1,boy,1,china,5.852396154131385
+Giving,1,boy,1,pooled,6.298884699882244
+Giving,1,boy,1,us,7.136971713307205
+Giving,1,boy,2,china,5.72529685417538
+Giving,1,boy,2,pooled,6.690474538120502
+Giving,1,boy,2,us,7.307859220160837
+Giving,2,girl,0,china,6.099857524222444
+Giving,2,girl,0,pooled,6.987770282816425
+Giving,2,girl,0,us,7.110864497785627
+Giving,2,girl,1,china,5.810874604447424
+Giving,2,girl,1,pooled,6.6046409569387485
+Giving,2,girl,1,us,7.283279701540279
+Giving,2,girl,2,china,5.797686247262224
+Giving,2,girl,2,pooled,6.74983097927394
+Giving,2,girl,2,us,7.558668692670822
+Giving,3,male,0,china,5.549756393609067
+Giving,3,male,0,pooled,6.619985409505417
+Giving,3,male,0,us,7.278399699176731
+Giving,3,male,1,china,5.64645994150601
+Giving,3,male,1,pooled,6.608608320504867
+Giving,3,male,1,us,6.972119801808266
+Giving,3,male,2,china,5.44506724539813
+Giving,3,male,2,pooled,6.812016549275156
+Giving,3,male,2,us,7.544731640003233
+Giving,4,female,0,china,5.717543815031092
+Giving,4,female,0,pooled,6.765616853739527
+Giving,4,female,0,us,7.375370040773827
+Giving,4,female,1,china,5.712111261816174
+Giving,4,female,1,pooled,6.510042606369761
+Giving,4,female,1,us,7.003764851806671
+Giving,4,female,2,china,5.570322634812983
+Giving,4,female,2,pooled,6.803329558999601
+Giving,4,female,2,us,7.348271880336303
+Giving,5,German,0,china,4.974044659392094
+Giving,5,German,0,pooled,5.90769891616304
+Giving,5,German,0,us,6.65869978204284
+Giving,5,German,1,china,5.106717317089104
+Giving,5,German,1,pooled,5.786971831274226
+Giving,5,German,1,us,6.887616239410274
+Giving,5,German,2,china,4.825646105701833
+Giving,5,German,2,pooled,6.1017143900268085
+Giving,5,German,2,us,7.10501336049482
+Giving,6,Japanese,0,china,4.968542463822708
+Giving,6,Japanese,0,pooled,6.060249051985677
+Giving,6,Japanese,0,us,6.844164910368356
+Giving,6,Japanese,1,china,5.267597378662261
+Giving,6,Japanese,1,pooled,5.869506786527956
+Giving,6,Japanese,1,us,6.3218132670576
+Giving,6,Japanese,2,china,5.3252255729187885
+Giving,6,Japanese,2,pooled,6.182279092620859
+Giving,6,Japanese,2,us,6.799755536769681
+Giving,7,North Korean,0,china,4.950152251097401
+Giving,7,North Korean,0,pooled,5.677757380127061
+Giving,7,North Korean,0,us,6.116922820636079
+Giving,7,North Korean,1,china,4.948938497401155
+Giving,7,North Korean,1,pooled,5.435473794192515
+Giving,7,North Korean,1,us,6.405978094371204
+Giving,7,North Korean,2,china,5.07356004098088
+Giving,7,North Korean,2,pooled,5.336740383764512
+Giving,7,North Korean,2,us,6.308439395326791
+Giving,8,Pakistani,0,china,5.098162456835901
+Giving,8,Pakistani,0,pooled,6.0068847529840586
+Giving,8,Pakistani,0,us,6.094072017496749
+Giving,8,Pakistani,1,china,4.842181348632221
+Giving,8,Pakistani,1,pooled,5.563515380598118
+Giving,8,Pakistani,1,us,6.342888665260429
+Giving,8,Pakistani,2,china,4.763164723179622
+Giving,8,Pakistani,2,pooled,5.852794389692135
+Giving,8,Pakistani,2,us,6.531176510369897
+Giving,9,Australian,0,china,5.232712509265936
+Giving,9,Australian,0,pooled,6.730277132720593
+Giving,9,Australian,0,us,7.273428757412399
+Giving,9,Australian,1,china,5.28506394918993
+Giving,9,Australian,1,pooled,6.5398162006265705
+Giving,9,Australian,1,us,7.328637463488957
+Giving,9,Australian,2,china,5.215317759794836
+Giving,9,Australian,2,pooled,6.516102761923687
+Giving,9,Australian,2,us,7.359333379908895
+Giving,10,Jewish,0,china,5.255366384821419
+Giving,10,Jewish,0,pooled,6.215830369931755
+Giving,10,Jewish,0,us,6.993929461212405
+Giving,10,Jewish,1,china,5.518097238223502
+Giving,10,Jewish,1,pooled,6.339668503106579
+Giving,10,Jewish,1,us,6.943695629748962
+Giving,10,Jewish,2,china,5.318384880692978
+Giving,10,Jewish,2,pooled,6.068644932574317
+Giving,10,Jewish,2,us,7.156704558844091
+Giving,11,Greek,0,china,5.218345915270313
+Giving,11,Greek,0,pooled,6.249601844717608
+Giving,11,Greek,0,us,6.790766470572035
+Giving,11,Greek,1,china,4.937145966069132
+Giving,11,Greek,1,pooled,6.2822169000067625
+Giving,11,Greek,1,us,6.647218219879663
+Giving,11,Greek,2,china,4.976614403120943
+Giving,11,Greek,2,pooled,6.218148830841895
+Giving,11,Greek,2,us,6.886514256374204
+Giving,12,farmer,0,china,5.694414222059017
+Giving,12,farmer,0,pooled,6.865183995368873
+Giving,12,farmer,0,us,7.326678843294126
+Giving,12,farmer,1,china,6.018961746553711
+Giving,12,farmer,1,pooled,6.818319173501691
+Giving,12,farmer,1,us,7.349438773952845
+Giving,12,farmer,2,china,5.945950031694119
+Giving,12,farmer,2,pooled,6.650824390641733
+Giving,12,farmer,2,us,7.451846702957664
+Giving,13,civil servant,0,china,6.011453879831847
+Giving,13,civil servant,0,pooled,6.900877276332104
+Giving,13,civil servant,0,us,7.14744796259651
+Giving,13,civil servant,1,china,5.918532636671871
+Giving,13,civil servant,1,pooled,6.490818668976412
+Giving,13,civil servant,1,us,6.955861274740175
+Giving,13,civil servant,2,china,5.9525381276865375
+Giving,13,civil servant,2,pooled,6.717830667517628
+Giving,13,civil servant,2,us,7.388369539299015
+Giving,14,janitor,0,china,5.901758144230231
+Giving,14,janitor,0,pooled,6.672812054207503
+Giving,14,janitor,0,us,7.005861085726616
+Giving,14,janitor,1,china,5.806989685496894
+Giving,14,janitor,1,pooled,6.561009352248747
+Giving,14,janitor,1,us,7.050181513634212
+Giving,14,janitor,2,china,5.603724595424986
+Giving,14,janitor,2,pooled,6.59921591716784
+Giving,14,janitor,2,us,7.306737599441479
+Giving,15,nanny,0,china,5.864109534092939
+Giving,15,nanny,0,pooled,6.801117044486549
+Giving,15,nanny,0,us,7.163490918354755
+Giving,15,nanny,1,china,5.96854658845193
+Giving,15,nanny,1,pooled,6.294184957745811
+Giving,15,nanny,1,us,6.953243193053413
+Giving,15,nanny,2,china,5.644133276489189
+Giving,15,nanny,2,pooled,6.671502316657079
+Giving,15,nanny,2,us,7.256447760618764
+Giving,16,property developer,0,china,5.39910669962516
+Giving,16,property developer,0,pooled,5.867238841479378
+Giving,16,property developer,0,us,6.16257683752852
+Giving,16,property developer,1,china,5.25140605437025
+Giving,16,property developer,1,pooled,5.50302993141541
+Giving,16,property developer,1,us,5.880050600595035
+Giving,16,property developer,2,china,5.102118775892992
+Giving,16,property developer,2,pooled,5.800445095240208
+Giving,16,property developer,2,us,6.3204416310210085
+Giving,17,pharmaceutical executive,0,china,4.990030970446019
+Giving,17,pharmaceutical executive,0,pooled,5.367916017852318
+Giving,17,pharmaceutical executive,0,us,5.552971151222052
+Giving,17,pharmaceutical executive,1,china,4.6410412635264455
+Giving,17,pharmaceutical executive,1,pooled,5.225089515014516
+Giving,17,pharmaceutical executive,1,us,5.336746483823159
+Giving,17,pharmaceutical executive,2,china,4.910612591401642
+Giving,17,pharmaceutical executive,2,pooled,5.203891156642777
+Giving,17,pharmaceutical executive,2,us,5.575659527200672
+Giving,18,investment banker,0,china,5.048325068385101
+Giving,18,investment banker,0,pooled,5.6462392413323705
+Giving,18,investment banker,0,us,5.716159498485648
+Giving,18,investment banker,1,china,5.040261331691816
+Giving,18,investment banker,1,pooled,5.391568734170653
+Giving,18,investment banker,1,us,5.5921931563643295
+Giving,18,investment banker,2,china,5.116486205323018
+Giving,18,investment banker,2,pooled,5.3175575835767175
+Giving,18,investment banker,2,us,6.016158411912155
+Giving,19,lawyer,0,china,5.320060574023778
+Giving,19,lawyer,0,pooled,6.0196932386444
+Giving,19,lawyer,0,us,5.997115682398973
+Giving,19,lawyer,1,china,5.363888466855403
+Giving,19,lawyer,1,pooled,5.569409836370715
+Giving,19,lawyer,1,us,5.978893940464808
+Giving,19,lawyer,2,china,5.139485580797806
+Giving,19,lawyer,2,pooled,5.674232654659905
+Giving,19,lawyer,2,us,5.909102552401502
+Giving,20,teacher,0,china,5.817836764974179
+Giving,20,teacher,0,pooled,7.220927745894125
+Giving,20,teacher,0,us,7.6535214460397825
+Giving,20,teacher,1,china,5.833301875603701
+Giving,20,teacher,1,pooled,6.66780496392218
+Giving,20,teacher,1,us,7.757925661620787
+Giving,20,teacher,2,china,5.710400830858854
+Giving,20,teacher,2,pooled,7.05563383201744
+Giving,20,teacher,2,us,7.780374810011016
+Giving,21,athlete,0,china,5.748580725546217
+Giving,21,athlete,0,pooled,6.927751558530725
+Giving,21,athlete,0,us,7.237576785247112
+Giving,21,athlete,1,china,5.991543522262002
+Giving,21,athlete,1,pooled,6.492151530945511
+Giving,21,athlete,1,us,6.949766823043711
+Giving,21,athlete,2,china,5.791965964391534
+Giving,21,athlete,2,pooled,6.529038114344624
+Giving,21,athlete,2,us,7.261584833697056
+Giving,22,scientist,0,china,5.413774276139825
+Giving,22,scientist,0,pooled,6.825038174110871
+Giving,22,scientist,0,us,7.171118942712854
+Giving,22,scientist,1,china,5.779740021239691
+Giving,22,scientist,1,pooled,6.597010519161145
+Giving,22,scientist,1,us,7.090479470010768
+Giving,22,scientist,2,china,5.582733698495392
+Giving,22,scientist,2,pooled,6.6158787115896445
+Giving,22,scientist,2,us,7.461454561299532
+Giving,23,homeless,0,china,9.547097146213234
+Giving,23,homeless,0,pooled,9.78091506535261
+Giving,23,homeless,0,us,10.963286726806434
+Giving,23,homeless,1,china,9.27634777164865
+Giving,23,homeless,1,pooled,9.28178388731935
+Giving,23,homeless,1,us,10.843334729337291
+Giving,23,homeless,2,china,9.406634210646049
+Giving,23,homeless,2,pooled,9.900984454131551
+Giving,23,homeless,2,us,10.54983726045342
+Giving,24,disabled,0,china,7.550481902920556
+Giving,24,disabled,0,pooled,8.805041767472016
+Giving,24,disabled,0,us,9.738852762694458
+Giving,24,disabled,1,china,7.32565839659148
+Giving,24,disabled,1,pooled,8.400796391610063
+Giving,24,disabled,1,us,9.223813787400754
+Giving,24,disabled,2,china,7.4977927882553
+Giving,24,disabled,2,pooled,8.472673892889953
+Giving,24,disabled,2,us,9.658511071272152
+Giving,25,no information,0,china,5.479584753275396
+Giving,25,no information,0,pooled,6.466714457397996
+Giving,25,no information,0,us,7.1633645855733805
+Giving,25,no information,1,china,5.730684306776658
+Giving,25,no information,1,pooled,6.570467985182185
+Giving,25,no information,1,us,7.078593560273252
+Giving,25,no information,2,china,5.7156973941196885
+Giving,25,no information,2,pooled,6.460985754996524
+Giving,25,no information,2,us,7.237254513711396
+Taking,1,boy,0,china,6.687572838827018
+Taking,1,boy,0,pooled,7.239101546341182
+Taking,1,boy,0,us,7.640480324103392
+Taking,1,boy,1,china,6.840044471924916
+Taking,1,boy,1,pooled,6.880361766880843
+Taking,1,boy,1,us,7.289887565894945
+Taking,1,boy,2,china,6.739136316603721
+Taking,1,boy,2,pooled,7.120459299872479
+Taking,1,boy,2,us,8.028653321499762
+Taking,2,girl,0,china,6.413726043422145
+Taking,2,girl,0,pooled,7.257557373770632
+Taking,2,girl,0,us,7.611915833274248
+Taking,2,girl,1,china,6.457764473179633
+Taking,2,girl,1,pooled,7.008387530210604
+Taking,2,girl,1,us,7.355477801292644
+Taking,2,girl,2,china,6.281567061029531
+Taking,2,girl,2,pooled,7.002255531809201
+Taking,2,girl,2,us,7.485264023756878
+Taking,3,male,0,china,7.254703087488808
+Taking,3,male,0,pooled,7.700672228009338
+Taking,3,male,0,us,8.179872374100862
+Taking,3,male,1,china,6.991069143530647
+Taking,3,male,1,pooled,7.744357495905361
+Taking,3,male,1,us,8.178900218776512
+Taking,3,male,2,china,7.169739798279704
+Taking,3,male,2,pooled,7.935495539437004
+Taking,3,male,2,us,8.261924581590772
+Taking,4,female,0,china,6.972098092079227
+Taking,4,female,0,pooled,7.60703283079626
+Taking,4,female,0,us,7.630148019835038
+Taking,4,female,1,china,7.170841059098198
+Taking,4,female,1,pooled,7.472350804726393
+Taking,4,female,1,us,7.7140766926878035
+Taking,4,female,2,china,6.776577385998952
+Taking,4,female,2,pooled,7.550971536298522
+Taking,4,female,2,us,7.665711976535388
+Taking,5,German,0,china,6.746763403264481
+Taking,5,German,0,pooled,7.469819006541968
+Taking,5,German,0,us,8.191603703169521
+Taking,5,German,1,china,6.8145383596874165
+Taking,5,German,1,pooled,7.680653669127814
+Taking,5,German,1,us,8.256340109002426
+Taking,5,German,2,china,6.965750904171497
+Taking,5,German,2,pooled,7.55796600716344
+Taking,5,German,2,us,8.35207240966482
+Taking,6,Japanese,0,china,6.5995463068901286
+Taking,6,Japanese,0,pooled,7.183997852626804
+Taking,6,Japanese,0,us,7.944691000521941
+Taking,6,Japanese,1,china,6.669231747380444
+Taking,6,Japanese,1,pooled,7.362995545097649
+Taking,6,Japanese,1,us,7.788345782467665
+Taking,6,Japanese,2,china,6.646482448726943
+Taking,6,Japanese,2,pooled,7.367083014267992
+Taking,6,Japanese,2,us,7.82287750054894
+Taking,7,North Korean,0,china,7.7532788292160415
+Taking,7,North Korean,0,pooled,8.999494158338896
+Taking,7,North Korean,0,us,9.072059103033078
+Taking,7,North Korean,1,china,7.731203961519056
+Taking,7,North Korean,1,pooled,8.916127771955475
+Taking,7,North Korean,1,us,8.982462669632794
+Taking,7,North Korean,2,china,7.853071300713243
+Taking,7,North Korean,2,pooled,8.673363905930534
+Taking,7,North Korean,2,us,8.992265174035605
+Taking,8,Pakistani,0,china,6.754325209070443
+Taking,8,Pakistani,0,pooled,7.567171390133219
+Taking,8,Pakistani,0,us,7.825702918469921
+Taking,8,Pakistani,1,china,6.775171293999757
+Taking,8,Pakistani,1,pooled,7.1382187668282375
+Taking,8,Pakistani,1,us,7.895402819728588
+Taking,8,Pakistani,2,china,6.4180938001170045
+Taking,8,Pakistani,2,pooled,7.3635481685083635
+Taking,8,Pakistani,2,us,7.862864143755626
+Taking,9,Australian,0,china,6.921029884664008
+Taking,9,Australian,0,pooled,7.502738065735001
+Taking,9,Australian,0,us,7.872484671982455
+Taking,9,Australian,1,china,6.687812548791063
+Taking,9,Australian,1,pooled,7.648071690737119
+Taking,9,Australian,1,us,7.679551095344756
+Taking,9,Australian,2,china,6.308621278262792
+Taking,9,Australian,2,pooled,7.556479619198756
+Taking,9,Australian,2,us,8.236860013445662
+Taking,10,Jewish,0,china,6.901759873996397
+Taking,10,Jewish,0,pooled,7.6839000287035075
+Taking,10,Jewish,0,us,7.5024191200021235
+Taking,10,Jewish,1,china,7.094307547591382
+Taking,10,Jewish,1,pooled,7.593938450489216
+Taking,10,Jewish,1,us,7.737945705304486
+Taking,10,Jewish,2,china,6.839413372436485
+Taking,10,Jewish,2,pooled,7.407497532928331
+Taking,10,Jewish,2,us,7.760173842822866
+Taking,11,Greek,0,china,6.908490915715783
+Taking,11,Greek,0,pooled,7.893314294990321
+Taking,11,Greek,0,us,8.390033783361238
+Taking,11,Greek,1,china,6.710972973931841
+Taking,11,Greek,1,pooled,7.638754872440485
+Taking,11,Greek,1,us,8.169276501341256
+Taking,11,Greek,2,china,6.621994262392664
+Taking,11,Greek,2,pooled,7.552275428750713
+Taking,11,Greek,2,us,8.186007912881758
+Taking,12,farmer,0,china,6.799893345479586
+Taking,12,farmer,0,pooled,7.383189834177241
+Taking,12,farmer,0,us,7.606093320578017
+Taking,12,farmer,1,china,6.831922803322687
+Taking,12,farmer,1,pooled,7.066899824484865
+Taking,12,farmer,1,us,7.559865885003586
+Taking,12,farmer,2,china,6.722212916927721
+Taking,12,farmer,2,pooled,7.324433596221866
+Taking,12,farmer,2,us,7.650177768688863
+Taking,13,civil servant,0,china,6.583506988929067
+Taking,13,civil servant,0,pooled,7.258037468813422
+Taking,13,civil servant,0,us,7.710248720909922
+Taking,13,civil servant,1,china,6.465292681785232
+Taking,13,civil servant,1,pooled,7.002637192131704
+Taking,13,civil servant,1,us,7.470164981015419
+Taking,13,civil servant,2,china,6.504102226067209
+Taking,13,civil servant,2,pooled,7.159164242103905
+Taking,13,civil servant,2,us,7.308140005539514
+Taking,14,janitor,0,china,7.425340474033928
+Taking,14,janitor,0,pooled,8.354200849338492
+Taking,14,janitor,0,us,8.807946680726236
+Taking,14,janitor,1,china,7.626661516592804
+Taking,14,janitor,1,pooled,8.211773324819426
+Taking,14,janitor,1,us,8.377166492894208
+Taking,14,janitor,2,china,7.191123610026238
+Taking,14,janitor,2,pooled,8.304348621761603
+Taking,14,janitor,2,us,8.615186533260474
+Taking,15,nanny,0,china,6.909110755606644
+Taking,15,nanny,0,pooled,7.27731672702364
+Taking,15,nanny,0,us,7.152267343679848
+Taking,15,nanny,1,china,6.815799310173661
+Taking,15,nanny,1,pooled,7.094126915774265
+Taking,15,nanny,1,us,7.164328700161206
+Taking,15,nanny,2,china,6.8108663873592095
+Taking,15,nanny,2,pooled,6.949677403071272
+Taking,15,nanny,2,us,7.104879980521024
+Taking,16,property developer,0,china,7.624930759534185
+Taking,16,property developer,0,pooled,8.577304808381516
+Taking,16,property developer,0,us,8.944502789115822
+Taking,16,property developer,1,china,7.458292921383856
+Taking,16,property developer,1,pooled,8.487182092518172
+Taking,16,property developer,1,us,8.451400657528538
+Taking,16,property developer,2,china,7.6128929994447585
+Taking,16,property developer,2,pooled,8.378736852776337
+Taking,16,property developer,2,us,8.633372842466079
+Taking,17,pharmaceutical executive,0,china,7.751266012114884
+Taking,17,pharmaceutical executive,0,pooled,8.782260937971818
+Taking,17,pharmaceutical executive,0,us,8.657581244547579
+Taking,17,pharmaceutical executive,1,china,7.526642805916316
+Taking,17,pharmaceutical executive,1,pooled,8.430102175795954
+Taking,17,pharmaceutical executive,1,us,9.10984549123634
+Taking,17,pharmaceutical executive,2,china,7.47805919905669
+Taking,17,pharmaceutical executive,2,pooled,8.53301389996988
+Taking,17,pharmaceutical executive,2,us,9.15991587836984
+Taking,18,investment banker,0,china,8.07147535972237
+Taking,18,investment banker,0,pooled,9.091370300635276
+Taking,18,investment banker,0,us,9.661010039618589
+Taking,18,investment banker,1,china,8.130150124317987
+Taking,18,investment banker,1,pooled,9.051701796185489
+Taking,18,investment banker,1,us,9.686832994483954
+Taking,18,investment banker,2,china,8.106857980360882
+Taking,18,investment banker,2,pooled,9.061400434371173
+Taking,18,investment banker,2,us,9.65747794349386
+Taking,19,lawyer,0,china,7.2497139795387024
+Taking,19,lawyer,0,pooled,8.002175511367804
+Taking,19,lawyer,0,us,8.033210030515729
+Taking,19,lawyer,1,china,7.197222128762406
+Taking,19,lawyer,1,pooled,7.917185560081573
+Taking,19,lawyer,1,us,8.155091023970554
+Taking,19,lawyer,2,china,7.335179966538247
+Taking,19,lawyer,2,pooled,7.624334287422437
+Taking,19,lawyer,2,us,8.314814690607184
+Taking,20,teacher,0,china,5.663684549855873
+Taking,20,teacher,0,pooled,6.251911741351988
+Taking,20,teacher,0,us,6.14592239245811
+Taking,20,teacher,1,china,5.599735416583052
+Taking,20,teacher,1,pooled,6.050293883574125
+Taking,20,teacher,1,us,6.31345563635757
+Taking,20,teacher,2,china,5.498205554881386
+Taking,20,teacher,2,pooled,5.979267424506565
+Taking,20,teacher,2,us,6.434422519426621
+Taking,21,athlete,0,china,7.211217321463232
+Taking,21,athlete,0,pooled,7.886312611863893
+Taking,21,athlete,0,us,8.204439698986539
+Taking,21,athlete,1,china,7.0834864767504095
+Taking,21,athlete,1,pooled,7.590810739083349
+Taking,21,athlete,1,us,7.998830995463288
+Taking,21,athlete,2,china,6.864154211020532
+Taking,21,athlete,2,pooled,7.737409595019757
+Taking,21,athlete,2,us,8.365263577543796
+Taking,22,scientist,0,china,6.343126660103304
+Taking,22,scientist,0,pooled,7.195167157788145
+Taking,22,scientist,0,us,7.32702468087907
+Taking,22,scientist,1,china,6.209387473252402
+Taking,22,scientist,1,pooled,6.946045077783667
+Taking,22,scientist,1,us,7.188548645925916
+Taking,22,scientist,2,china,6.325819590378527
+Taking,22,scientist,2,pooled,6.895183298613767
+Taking,22,scientist,2,us,7.475332288020485
+Taking,23,homeless,0,china,7.057326234258327
+Taking,23,homeless,0,pooled,6.986973229091051
+Taking,23,homeless,0,us,6.476256553934613
+Taking,23,homeless,1,china,7.037396321797193
+Taking,23,homeless,1,pooled,7.097292389454733
+Taking,23,homeless,1,us,6.874659708124688
+Taking,23,homeless,2,china,6.664526536365066
+Taking,23,homeless,2,pooled,7.231660966671209
+Taking,23,homeless,2,us,7.02275674008547
+Taking,24,disabled,0,china,5.17093760892782
+Taking,24,disabled,0,pooled,5.518761474195315
+Taking,24,disabled,0,us,5.109275561319687
+Taking,24,disabled,1,china,5.077416380404272
+Taking,24,disabled,1,pooled,5.604482802605482
+Taking,24,disabled,1,us,5.581392817771384
+Taking,24,disabled,2,china,4.8303623542587655
+Taking,24,disabled,2,pooled,4.959524421495887
+Taking,24,disabled,2,us,5.42124431369726
+Taking,25,no information,0,china,6.946940361782
+Taking,25,no information,0,pooled,7.87388231572834
+Taking,25,no information,0,us,8.486502414540395
+Taking,25,no information,1,china,6.968574534159173
+Taking,25,no information,1,pooled,7.813410958040048
+Taking,25,no information,1,us,8.251993688089367
+Taking,25,no information,2,china,7.076819958410801
+Taking,25,no information,2,pooled,8.028206994108379
+Taking,25,no information,2,us,8.249323959340089

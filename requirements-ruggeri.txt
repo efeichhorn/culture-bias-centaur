@@ -1,4 +1,0 @@
-# Optional: reconstruct Ruggeri's country join from separately obtained files.
--r requirements.txt
-pyarrow
-tokenizers

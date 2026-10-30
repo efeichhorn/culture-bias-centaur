@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Five-fold item-generalization experiment for Giving-trained culture adapters."""
+"""Fixed social-target folds and allocation training helpers."""
 
 from __future__ import annotations
 
@@ -255,49 +255,3 @@ def evaluate_fold_condition(args: argparse.Namespace) -> None:
             json.dumps(metadata, indent=2) + "\n",
             encoding="utf-8",
         )
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Five-fold item holdout for Giving culture adapters and Taking transfer."
-    )
-    parser.add_argument("--stage", required=True, choices=["manifest", "train", "evaluate"])
-    parser.add_argument("--condition", choices=CONDITIONS)
-    parser.add_argument("--fold", type=int, choices=ITEM_FOLDS, default=0)
-    parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--behavior-path", required=True)
-    parser.add_argument("--group-path", required=True)
-    parser.add_argument("--corpus-dir")
-    parser.add_argument("--output-dir", required=True)
-    parser.add_argument("--model-name", default="marcelbinz/Llama-3.1-Minitaur-8B")
-    parser.add_argument("--max-steps", type=int, default=20)
-    parser.add_argument("--learning-rate", type=float, default=5e-5)
-    parser.add_argument("--warmup-ratio", type=float, default=0.03)
-    parser.add_argument("--weight-decay", type=float, default=0.01)
-    parser.add_argument("--batch-size", type=int, default=5)
-    parser.add_argument("--gradient-accumulation-steps", type=int, default=4)
-    parser.add_argument("--max-seq-length", type=int, default=768)
-    parser.add_argument("--lora-r", type=int, default=8)
-    parser.add_argument("--lora-alpha", type=int, default=16)
-    parser.add_argument("--lora-dropout", type=float, default=0.05)
-    parser.add_argument("--bf16", action=argparse.BooleanOptionalAction, default=True)
-    parser.add_argument("--attn-implementation", default="sdpa")
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    if args.stage == "manifest":
-        prepare_manifest(args)
-    elif args.stage == "train":
-        if not args.corpus_dir:
-            raise ValueError("--corpus-dir is required for training.")
-        train_fold_condition(args)
-    else:
-        if not args.corpus_dir:
-            raise ValueError("--corpus-dir is required for evaluation.")
-        evaluate_fold_condition(args)
-
-
-if __name__ == "__main__":
-    main()

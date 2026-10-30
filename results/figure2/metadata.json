@@ -1,0 +1,155 @@
+{
+  "figure": "Observed responses and population NLL gaps (H1)",
+  "samples": [
+    {
+      "task": "Giving",
+      "source": "us",
+      "unique_participants": 517,
+      "participants_per_split": [
+        196,
+        196,
+        196
+      ]
+    },
+    {
+      "task": "Giving",
+      "source": "china",
+      "unique_participants": 496,
+      "participants_per_split": [
+        196,
+        196,
+        196
+      ]
+    },
+    {
+      "task": "Taking",
+      "source": "us",
+      "unique_participants": 1329,
+      "participants_per_split": [
+        1329
+      ]
+    },
+    {
+      "task": "Taking",
+      "source": "china",
+      "unique_participants": 1329,
+      "participants_per_split": [
+        1329
+      ]
+    },
+    {
+      "task": "Categorization",
+      "source": "us",
+      "unique_participants": 295
+    },
+    {
+      "task": "Categorization",
+      "source": "china",
+      "unique_participants": 178
+    },
+    {
+      "task": "Risky choice",
+      "source": "us",
+      "unique_participants": 50
+    },
+    {
+      "task": "Risky choice",
+      "source": "china",
+      "unique_participants": 49
+    }
+  ],
+  "categorization_item_order": [
+    "teacup",
+    "teacher",
+    "bowl",
+    "pigeon",
+    "boot",
+    "legs",
+    "goat",
+    "bee",
+    "saw",
+    "dress",
+    "elephant",
+    "notepad",
+    "spoon",
+    "airplane",
+    "ring"
+  ],
+  "risky_choice_order": [
+    {
+      "item_id": "8",
+      "group": "tradeoff",
+      "p_10": 0.25,
+      "p_1": 0.75
+    },
+    {
+      "item_id": "9",
+      "group": "tradeoff",
+      "p_10": 0.25,
+      "p_1": 1
+    },
+    {
+      "item_id": "10",
+      "group": "tradeoff",
+      "p_10": 0.5,
+      "p_1": 1
+    },
+    {
+      "item_id": "11",
+      "group": "tradeoff",
+      "p_10": 0.75,
+      "p_1": 1
+    },
+    {
+      "item_id": "6",
+      "group": "dominance",
+      "p_10": 0.25,
+      "p_1": 0.25
+    },
+    {
+      "item_id": "7",
+      "group": "dominance",
+      "p_10": 0.75,
+      "p_1": 0.25
+    },
+    {
+      "item_id": "5",
+      "group": "dominance",
+      "p_10": 0.75,
+      "p_1": 0.75
+    },
+    {
+      "item_id": "12",
+      "group": "dominance",
+      "p_10": 1,
+      "p_1": 1
+    }
+  ],
+  "aggregation": {
+    "allocation_human": "Equal target means; Giving also averages three held-out participant splits. Taking uses 1329 participants per country matched within wave.",
+    "allocation_model": "Conditional response probabilities averaged over 25 targets.",
+    "binary_human": "Repeated choices averaged within participant and item, then across participants.",
+    "binary_model": "Conditional probabilities averaged across both answer orders.",
+    "nll_gap": "Chinese minus US mean conditional NLL. Intervals use 4000 participant-bootstrap draws. Risky choice includes all eight items."
+  },
+  "file_sha256": {
+    "response_probabilities.csv": "3f9f07d4aedc9f824ad1c303c41605c66915f4742be5dbeb8ac0ead938c98109",
+    "population_nll_gaps.csv": "71a45603fbbfccce31bd444003b65c61218a9e6c2cb34fde2a2009b6adf4cd1b"
+  },
+  "source_sha256": {
+    "data/workspace/data_cache/dictator_Behavior_corrected_20260930.csv": "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd",
+    "data/workspace/model_results/dictator_a1_controls_20260930/candidate_probabilities.csv": "5a213df4b96ddd5d34012f22697936bb410185e4ee3ea45e317b19eeeb95a775",
+    "data/workspace/data_cache/dictator_centaur70b/seed0/participant_split_manifest.csv": "42fb311efec8d92d84a9d8d7b303f15b89d84ecb9406d2ff5a279932b2a56622",
+    "data/workspace/data_cache/dictator_centaur70b/seed1/participant_split_manifest.csv": "68eaa096b466ccb764c074da328d366b471ab174b4b7365c1b4d34fb34266aee",
+    "data/workspace/data_cache/dictator_centaur70b/seed2/participant_split_manifest.csv": "3ecc098c3dcf46b71607ea206c7f684fa7c1866efb9af1e7c766a8034710d5be",
+    "data/workspace/data_cache/balanced_taking_20261029/selected_participants.csv": "a29f05a06167e7d71aca5206649100b8c873a73e00cb1246333076f30825a435",
+    "data/workspace/publication-bias-transfer-demo/data_cache/culture_extensions_20261021/cao/items.json": "dff08c0a770a68b77ed2e7c75740cd982732320649535ab6bcc768889ddb9b91",
+    "data/workspace/publication-bias-transfer-demo/data_cache/culture_extensions_20261021/cao/responses.csv": "87567f31ba785f4e3d96e2e1b4d4f9a721329dd667e84e8fd0881f5142b70d74",
+    "data/workspace/publication-bias-transfer-demo/outputs/culture_extensions_20261021/baseline_precision_aligned/cao/candidate_probabilities.csv": "75816b881451cc40ebf6f89c36f32e53842a25f39084f076b84d9948ac0d2c1b",
+    "data/workspace/publication-bias-transfer-demo/data_cache/culture_extensions_20261021/anllo/items.json": "b3caaa6c1a90d8d8f77a2ee8f1ceb68f63faa5155b0c5505016762d9c22032f2",
+    "data/workspace/publication-bias-transfer-demo/data_cache/culture_extensions_20261021/anllo/responses.csv": "90f2e0c1fbcc3507aa367e1c86d933f76335a489992ce1eb57bcd60a03f5759a",
+    "data/workspace/publication-bias-transfer-demo/outputs/culture_extensions_20261021/baseline_precision_aligned/anllo/candidate_probabilities.csv": "75d9d6940987c1698b7f69dfecd654d976aa76fa19985e1e231c393e5d04b961",
+    "results/giving_taking/balanced_taking_20261029/h1_population_contrasts.csv": "ea34b546728e296d0d902cc82e8cc204f75117b31d489638d6d71e5812ab526b",
+    "results/cao_anllo/followup_20261029/frozen_contrasts.csv": "09ad51592b114a25ccf4e2031cfe4ab821949377b78c7d21c1b12552640bcbd0"
+  }
+}

@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-"""Read-only audit diagnostics from corrected A1 predictions and training manifests.
+"""Analyse corrected allocation predictions and fit the H4 response adjustment.
 
-Outputs only to --output. Requires corrected local data and saved model predictions.
-Response-prior fit reuses the mathematical optimizer in the legacy audit module,
-but NEVER its run() function or legacy inputs. All source data, manifests, and
-predictions below are explicitly corrected. Ridge=.001 is the preexisting fixed
-diagnostic setting; it is not selected on current Giving test or Taking results.
-These are exploratory follow-up diagnostics, not preregistered confirmatory tests.
+Requires the original participant splits and saved model predictions. The
+ridge penalty is fixed at .001. Writes the results to --output.
 """
 import argparse
 import hashlib

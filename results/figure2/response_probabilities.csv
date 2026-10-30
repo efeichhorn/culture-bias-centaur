@@ -1,0 +1,261 @@
+task,source,option,probability,outcome
+Giving,us,0,0.20578231292517005,tokens_given
+Giving,us,1,0.08408163265306123,tokens_given
+Giving,us,2,0.0626530612244898,tokens_given
+Giving,us,3,0.038299319727891155,tokens_given
+Giving,us,4,0.030204081632653063,tokens_given
+Giving,us,5,0.13741496598639455,tokens_given
+Giving,us,6,0.020476190476190478,tokens_given
+Giving,us,7,0.018639455782312925,tokens_given
+Giving,us,8,0.021292517006802722,tokens_given
+Giving,us,9,0.011088435374149658,tokens_given
+Giving,us,10,0.2895238095238095,tokens_given
+Giving,us,11,0.005510204081632653,tokens_given
+Giving,us,12,0.008775510204081632,tokens_given
+Giving,us,13,0.003401360544217687,tokens_given
+Giving,us,14,0.0018367346938775511,tokens_given
+Giving,us,15,0.020816326530612245,tokens_given
+Giving,us,16,0.003129251700680272,tokens_given
+Giving,us,17,0.0025170068027210884,tokens_given
+Giving,us,18,0.002993197278911565,tokens_given
+Giving,us,19,0.003061224489795918,tokens_given
+Giving,us,20,0.028503401360544217,tokens_given
+Giving,china,0,0.2540136054421768,tokens_given
+Giving,china,1,0.10700680272108844,tokens_given
+Giving,china,2,0.10598639455782315,tokens_given
+Giving,china,3,0.07122448979591836,tokens_given
+Giving,china,4,0.04659863945578232,tokens_given
+Giving,china,5,0.1129251700680272,tokens_given
+Giving,china,6,0.03700680272108844,tokens_given
+Giving,china,7,0.022789115646258504,tokens_given
+Giving,china,8,0.03387755102040816,tokens_given
+Giving,china,9,0.014829931972789116,tokens_given
+Giving,china,10,0.1082312925170068,tokens_given
+Giving,china,11,0.007346938775510205,tokens_given
+Giving,china,12,0.014557823129251699,tokens_given
+Giving,china,13,0.007006802721088436,tokens_given
+Giving,china,14,0.0063265306122448975,tokens_given
+Giving,china,15,0.018299319727891155,tokens_given
+Giving,china,16,0.005306122448979592,tokens_given
+Giving,china,17,0.003741496598639456,tokens_given
+Giving,china,18,0.005714285714285713,tokens_given
+Giving,china,19,0.0019047619047619048,tokens_given
+Giving,china,20,0.015306122448979593,tokens_given
+Giving,centaur,0,0.0690093889750655,tokens_given
+Giving,centaur,1,0.02982364111875188,tokens_given
+Giving,centaur,2,0.02772769203656085,tokens_given
+Giving,centaur,3,0.030422541215513448,tokens_given
+Giving,centaur,4,0.03423646660313824,tokens_given
+Giving,centaur,5,0.10584466163026317,tokens_given
+Giving,centaur,6,0.03987729747344829,tokens_given
+Giving,centaur,7,0.03785536559801322,tokens_given
+Giving,centaur,8,0.04339483065977304,tokens_given
+Giving,centaur,9,0.029484725103357475,tokens_given
+Giving,centaur,10,0.18849304598234504,tokens_given
+Giving,centaur,11,0.023775804599150508,tokens_given
+Giving,centaur,12,0.04521996366170575,tokens_given
+Giving,centaur,13,0.026045705422768725,tokens_given
+Giving,centaur,14,0.02670712184448603,tokens_given
+Giving,centaur,15,0.08353366678286608,tokens_given
+Giving,centaur,16,0.026056543889573375,tokens_given
+Giving,centaur,17,0.026643857839416533,tokens_given
+Giving,centaur,18,0.03777308241971071,tokens_given
+Giving,centaur,19,0.017997233087156318,tokens_given
+Giving,centaur,20,0.05007736405693477,tokens_given
+Giving,llama,0,0.0879026473823491,tokens_given
+Giving,llama,1,0.05897424302173974,tokens_given
+Giving,llama,2,0.04361787737245998,tokens_given
+Giving,llama,3,0.061890199971961574,tokens_given
+Giving,llama,4,0.05045118797184425,tokens_given
+Giving,llama,5,0.14976827106321217,tokens_given
+Giving,llama,6,0.04258289711617667,tokens_given
+Giving,llama,7,0.05896492037424773,tokens_given
+Giving,llama,8,0.045260386509673324,tokens_given
+Giving,llama,9,0.0359280911788028,tokens_given
+Giving,llama,10,0.13885060872017627,tokens_given
+Giving,llama,11,0.023325912862320962,tokens_given
+Giving,llama,12,0.02657413308416601,tokens_given
+Giving,llama,13,0.022402986035318314,tokens_given
+Giving,llama,14,0.012442512172133794,tokens_given
+Giving,llama,15,0.036275285161164544,tokens_given
+Giving,llama,16,0.013353117417597045,tokens_given
+Giving,llama,17,0.01717959985787475,tokens_given
+Giving,llama,18,0.015294388696208965,tokens_given
+Giving,llama,19,0.02729636838296289,tokens_given
+Giving,llama,20,0.031664365647608106,tokens_given
+Taking,us,0,0.1764033107599699,tokens_taken
+Taking,us,1,0.04966139954853273,tokens_taken
+Taking,us,2,0.044303987960872836,tokens_taken
+Taking,us,3,0.031723100075244544,tokens_taken
+Taking,us,4,0.025944319036869827,tokens_taken
+Taking,us,5,0.11045899172310007,tokens_taken
+Taking,us,6,0.019683972911963884,tokens_taken
+Taking,us,7,0.019232505643340857,tokens_taken
+Taking,us,8,0.02507148231753198,tokens_taken
+Taking,us,9,0.015018811136192627,tokens_taken
+Taking,us,10,0.2583897667419112,tokens_taken
+Taking,us,11,0.009149736644093303,tokens_taken
+Taking,us,12,0.014477050413844996,tokens_taken
+Taking,us,13,0.007133182844243792,tokens_taken
+Taking,us,14,0.006320541760722348,tokens_taken
+Taking,us,15,0.03325808878856283,tokens_taken
+Taking,us,16,0.005387509405568096,tokens_taken
+Taking,us,17,0.005748683220466516,tokens_taken
+Taking,us,18,0.007915726109857035,tokens_taken
+Taking,us,19,0.007705041384499624,tokens_taken
+Taking,us,20,0.12701279157261097,tokens_taken
+Taking,china,0,0.15166290443942815,tokens_taken
+Taking,china,1,0.043972911963882616,tokens_taken
+Taking,china,2,0.04966139954853273,tokens_taken
+Taking,china,3,0.03894657637321294,tokens_taken
+Taking,china,4,0.030458991723100074,tokens_taken
+Taking,china,5,0.09339352896914974,tokens_taken
+Taking,china,6,0.03193378480060196,tokens_taken
+Taking,china,7,0.020496613995485326,tokens_taken
+Taking,china,8,0.03413092550790068,tokens_taken
+Taking,china,9,0.0181489841986456,tokens_taken
+Taking,china,10,0.1586155003762227,tokens_taken
+Taking,china,11,0.016764484574868323,tokens_taken
+Taking,china,12,0.025703536493604212,tokens_taken
+Taking,china,13,0.010985703536493604,tokens_taken
+Taking,china,14,0.012249811888638074,tokens_taken
+Taking,china,15,0.04812641083521445,tokens_taken
+Taking,china,16,0.014687735139202409,tokens_taken
+Taking,china,17,0.009601203912716329,tokens_taken
+Taking,china,18,0.021309255079006773,tokens_taken
+Taking,china,19,0.011978931527464258,tokens_taken
+Taking,china,20,0.15717080511662904,tokens_taken
+Taking,centaur,0,0.07412641055113667,tokens_taken
+Taking,centaur,1,0.028642627835235163,tokens_taken
+Taking,centaur,2,0.025877559408997063,tokens_taken
+Taking,centaur,3,0.02756599934635023,tokens_taken
+Taking,centaur,4,0.030916160835502707,tokens_taken
+Taking,centaur,5,0.09221046244721368,tokens_taken
+Taking,centaur,6,0.036960742026257584,tokens_taken
+Taking,centaur,7,0.035154965328858874,tokens_taken
+Taking,centaur,8,0.040900522053750395,tokens_taken
+Taking,centaur,9,0.027254586232127512,tokens_taken
+Taking,centaur,10,0.15806453858999342,tokens_taken
+Taking,centaur,11,0.024732306996510814,tokens_taken
+Taking,centaur,12,0.05084383530704248,tokens_taken
+Taking,centaur,13,0.030235885465904385,tokens_taken
+Taking,centaur,14,0.030551130003684146,tokens_taken
+Taking,centaur,15,0.08932942484868762,tokens_taken
+Taking,centaur,16,0.03189885553847633,tokens_taken
+Taking,centaur,17,0.03189118108312976,tokens_taken
+Taking,centaur,18,0.04676749057171948,tokens_taken
+Taking,centaur,19,0.021967088299454623,tokens_taken
+Taking,centaur,20,0.06410822722996609,tokens_taken
+Taking,llama,0,0.10902613574619209,tokens_taken
+Taking,llama,1,0.05888342423575733,tokens_taken
+Taking,llama,2,0.04821181207059823,tokens_taken
+Taking,llama,3,0.07499640182198293,tokens_taken
+Taking,llama,4,0.05299166081660126,tokens_taken
+Taking,llama,5,0.11329022003349902,tokens_taken
+Taking,llama,6,0.03994741301994047,tokens_taken
+Taking,llama,7,0.059459973629780005,tokens_taken
+Taking,llama,8,0.044185870181157334,tokens_taken
+Taking,llama,9,0.03246057711309464,tokens_taken
+Taking,llama,10,0.08477248163885441,tokens_taken
+Taking,llama,11,0.02193470914091754,tokens_taken
+Taking,llama,12,0.030895521816607686,tokens_taken
+Taking,llama,13,0.02692586960683472,tokens_taken
+Taking,llama,14,0.014941545708616584,tokens_taken
+Taking,llama,15,0.03878431852981357,tokens_taken
+Taking,llama,16,0.018335160958413328,tokens_taken
+Taking,llama,17,0.028984401004263062,tokens_taken
+Taking,llama,18,0.02313288904327614,tokens_taken
+Taking,llama,19,0.03863223937811676,tokens_taken
+Taking,llama,20,0.039207374505681944,tokens_taken
+Categorization,us,teacup,0.4745762711864407,taxonomic_choice
+Categorization,us,teacher,0.48135593220338985,taxonomic_choice
+Categorization,us,bowl,0.711864406779661,taxonomic_choice
+Categorization,us,pigeon,0.7694915254237288,taxonomic_choice
+Categorization,us,boot,0.688135593220339,taxonomic_choice
+Categorization,us,legs,0.5966101694915255,taxonomic_choice
+Categorization,us,goat,0.8576271186440678,taxonomic_choice
+Categorization,us,bee,0.7728813559322034,taxonomic_choice
+Categorization,us,saw,0.7661016949152543,taxonomic_choice
+Categorization,us,dress,0.8508474576271187,taxonomic_choice
+Categorization,us,elephant,0.8101694915254237,taxonomic_choice
+Categorization,us,notepad,0.8983050847457628,taxonomic_choice
+Categorization,us,spoon,0.9355932203389831,taxonomic_choice
+Categorization,us,airplane,0.8305084745762712,taxonomic_choice
+Categorization,us,ring,0.6271186440677966,taxonomic_choice
+Categorization,china,teacup,0.4943820224719101,taxonomic_choice
+Categorization,china,teacher,0.3202247191011236,taxonomic_choice
+Categorization,china,bowl,0.5674157303370787,taxonomic_choice
+Categorization,china,pigeon,0.30337078651685395,taxonomic_choice
+Categorization,china,boot,0.34269662921348315,taxonomic_choice
+Categorization,china,legs,0.3595505617977528,taxonomic_choice
+Categorization,china,goat,0.2752808988764045,taxonomic_choice
+Categorization,china,bee,0.3651685393258427,taxonomic_choice
+Categorization,china,saw,0.43820224719101125,taxonomic_choice
+Categorization,china,dress,0.48314606741573035,taxonomic_choice
+Categorization,china,elephant,0.47191011235955055,taxonomic_choice
+Categorization,china,notepad,0.8764044943820225,taxonomic_choice
+Categorization,china,spoon,0.8651685393258427,taxonomic_choice
+Categorization,china,airplane,0.48314606741573035,taxonomic_choice
+Categorization,china,ring,0.3202247191011236,taxonomic_choice
+Categorization,centaur,teacup,0.5692670484732598,taxonomic_choice
+Categorization,centaur,teacher,0.46330909052764147,taxonomic_choice
+Categorization,centaur,bowl,0.48835491964447253,taxonomic_choice
+Categorization,centaur,pigeon,0.5800720619913605,taxonomic_choice
+Categorization,centaur,boot,0.5251912461685032,taxonomic_choice
+Categorization,centaur,legs,0.5399008755390527,taxonomic_choice
+Categorization,centaur,goat,0.7452179026961109,taxonomic_choice
+Categorization,centaur,bee,0.5997213443335299,taxonomic_choice
+Categorization,centaur,saw,0.4694063958938155,taxonomic_choice
+Categorization,centaur,dress,0.6677168542265922,taxonomic_choice
+Categorization,centaur,elephant,0.6488727997920213,taxonomic_choice
+Categorization,centaur,notepad,0.7514757151018284,taxonomic_choice
+Categorization,centaur,spoon,0.6415403534070164,taxonomic_choice
+Categorization,centaur,airplane,0.6158218312274905,taxonomic_choice
+Categorization,centaur,ring,0.6628986776929882,taxonomic_choice
+Categorization,llama,teacup,0.513858470662844,taxonomic_choice
+Categorization,llama,teacher,0.4791996558188308,taxonomic_choice
+Categorization,llama,bowl,0.5125364158056223,taxonomic_choice
+Categorization,llama,pigeon,0.48040983647913643,taxonomic_choice
+Categorization,llama,boot,0.4521496125757781,taxonomic_choice
+Categorization,llama,legs,0.5387768834353249,taxonomic_choice
+Categorization,llama,goat,0.5867099297383643,taxonomic_choice
+Categorization,llama,bee,0.5057990146496723,taxonomic_choice
+Categorization,llama,saw,0.5035517912499561,taxonomic_choice
+Categorization,llama,dress,0.4973471453857731,taxonomic_choice
+Categorization,llama,elephant,0.38133222757599083,taxonomic_choice
+Categorization,llama,notepad,0.5563452054415355,taxonomic_choice
+Categorization,llama,spoon,0.563240928105985,taxonomic_choice
+Categorization,llama,airplane,0.5769290397307464,taxonomic_choice
+Categorization,llama,ring,0.4781535467099905,taxonomic_choice
+Risky choice,us,5,0.955,10_point_choice
+Risky choice,us,6,0.9,10_point_choice
+Risky choice,us,7,0.945,10_point_choice
+Risky choice,us,8,0.555,10_point_choice
+Risky choice,us,9,0.43,10_point_choice
+Risky choice,us,10,0.6,10_point_choice
+Risky choice,us,11,0.705,10_point_choice
+Risky choice,us,12,0.905,10_point_choice
+Risky choice,china,5,0.9693877551020408,10_point_choice
+Risky choice,china,6,0.9591836734693877,10_point_choice
+Risky choice,china,7,0.9438775510204082,10_point_choice
+Risky choice,china,8,0.7704081632653061,10_point_choice
+Risky choice,china,9,0.6785714285714286,10_point_choice
+Risky choice,china,10,0.8418367346938775,10_point_choice
+Risky choice,china,11,0.8826530612244898,10_point_choice
+Risky choice,china,12,0.9693877551020408,10_point_choice
+Risky choice,centaur,5,0.6937860103852029,10_point_choice
+Risky choice,centaur,6,0.6829936039153446,10_point_choice
+Risky choice,centaur,7,0.674644154469654,10_point_choice
+Risky choice,centaur,8,0.5292774561994276,10_point_choice
+Risky choice,centaur,9,0.4823721267715002,10_point_choice
+Risky choice,centaur,10,0.5223416328930137,10_point_choice
+Risky choice,centaur,11,0.5697535338610441,10_point_choice
+Risky choice,centaur,12,0.7521751424322476,10_point_choice
+Risky choice,llama,5,0.5092889356797354,10_point_choice
+Risky choice,llama,6,0.5076698469051467,10_point_choice
+Risky choice,llama,7,0.5137286329664855,10_point_choice
+Risky choice,llama,8,0.5061764828954944,10_point_choice
+Risky choice,llama,9,0.5192271188997647,10_point_choice
+Risky choice,llama,10,0.5122197187184314,10_point_choice
+Risky choice,llama,11,0.5239915858688412,10_point_choice
+Risky choice,llama,12,0.5189933799891233,10_point_choice

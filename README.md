@@ -1,50 +1,77 @@
-# Population bias in Centaur
+# Population Composition Changes Centaur's Predictions
 
-Code and draft paper on how the population used for fine-tuning changes Centaur's behavioral predictions.
+Code and data for comparing Centaur predictions after fine-tuning on US,
+Chinese, or equally pooled responses. The tasks are social allocation
+(Giving and Taking), categorization, and risky choice.
 
-## Contents
+## Run
 
-| Folder | Contents |
-|---|---|
-| `paper/` | ACL-format draft, references and figures |
-| `scripts/`, `src/` | Data preparation, fine-tuning and analysis |
-| `results/` | Aggregate results for Giving/Taking, Cao and Anlló; supporting Ruggeri audit |
-| `designs/` | Study protocols |
-| `tests/` | Checks for the analysis and data preparation |
-| `slurm/` | Configurable cluster runners |
-| `provenance/` | Source hashes and recorded training environments |
-
-Raw participant data, model weights and unrelated experiments are excluded.
-
-## Start here
+Use Python 3.10–3.12. From this folder:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 make results figures test
 ```
 
-These commands use committed aggregates and need no GPU. For raw-data analysis and fine-tuning, see [REPRODUCING.txt](REPRODUCING.txt) and [data/README.txt](data/README.txt).
+This checks the saved results, rebuilds all six paper figures, and runs the tests.
+It needs no GPU or model download. Tables go to `build/results/`; figures go to
+`paper/figures/`.
 
-## Paper
-
-[Open the Overleaf draft](https://www.overleaf.com/project/6ada6357f0e9637a95c1b3eb).
+To repeat the analyses from participant responses and saved model predictions:
 
 ```bash
-make paper       # requires latexmk and a LaTeX installation
-make overleaf    # creates build/culture-bias-centaur-overleaf.zip
+make data
+make analysis
 ```
 
-Edit `paper/sections/` and `paper/references.bib`. The paper is currently a section outline with notes and figures. The newer datasets still need uncertainty estimates, stronger calibration controls and the planned sensitivity checks. No additional training is started by these commands.
+The data archive includes prepared responses, participant splits, prompts,
+predictions, and records for 126 fits. Model weights and unchanged source
+datasets are excluded. See [data/README.md](data/README.md) for the file formats,
+source links, and extraction details.
 
-The Overleaf project contains `paper/` only. Sync is manual: copy edited sources back to `paper/` before committing, or upload local changes to Overleaf.
+## Files
 
-## Before submission
+| Path | Contents |
+|---|---|
+| `scripts/` | Data preparation, training, evaluation, analysis, and plots |
+| `src/` | Shared model and training code |
+| `data/` | Prepared inputs and saved model outputs |
+| `results/` | Analysis tables used in the paper |
+| `designs/` | Training settings and fixed item folds |
+| `provenance/` | Source checks and recorded software versions |
+| `tests/` | Checks for splits, scoring, training settings, and analysis |
+| `slurm/` | Runners for the original GPU cluster |
+| `paper/` | Downloaded manuscript source and reproduced figures |
 
-- Finish the analyses above and review every claim and reference.
-- Confirm authors, course details and the paper-length limit.
-- Review the AI-use declaration.
-- Review the repository before making it public. See [COURSE.txt](COURSE.txt).
+[REPRODUCING.txt](REPRODUCING.txt) gives the full analysis and GPU commands.
+The [Overleaf project](https://www.overleaf.com/project/6ada6357f0e9637a95c1b3eb)
+is the working paper. The local source was downloaded on 30 October 2026;
+changes here do not sync to Overleaf.
 
-This repository is private during drafting. Code and data licensing must be settled before public release; third-party materials retain their original terms.
+## Paper results
+
+| Question | Main analysis | Figure |
+|---|---|---|
+| H1: Does frozen Centaur fit US responses better? | Frozen-model NLL by population | 2 |
+| H2: Does fine-tuning population change predictions? | US, China, and pooled adapters on held-out items | 3 |
+| H3: Do these differences transfer? | Giving-trained adapters evaluated on Taking | 3 |
+| H4: Does fine-tuning beat response adjustment? | Paired NLL differences on the same test responses | 4 |
+
+There are 45 allocation fits, 45 categorization fits, and 36 risky-choice fits.
+All use the final checkpoint after 25 updates. The validation split was unused.
+Prediction shifts and predictive gains are separate outcomes. Bootstrap
+intervals are conditional on the evaluated items and saved fits.
+
+## Package
+
+```bash
+make submission
+```
+
+This creates `build/culture-bias-centaur-submission.zip` with code, data,
+results, and the local paper sources. It excludes environments, caches,
+model weights, and local build files. Nothing is uploaded or submitted.
+Use `make paper` to compile the local manuscript if LaTeX and `latexmk` are
+installed.

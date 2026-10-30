@@ -1,0 +1,13 @@
+task,Country,metric,contrast,mean,ci_low,ci_high,method,seeds,resamples
+Taking,China,conditional_ll,centaur_minus_llama,0.060424566966072527,0.043850263092387536,0.07756997678450019,shared_participant_fixed_seeds,1,4000
+Taking,China,conditional_ll,centaur_score,-2.77356778573518,-2.7917761189244574,-2.755813647430439,shared_participant_fixed_seeds,1,4000
+Taking,China,conditional_ll,llama_score,-2.8339923527012525,-2.8483509867752415,-2.819916637648986,shared_participant_fixed_seeds,1,4000
+Taking,China,raw_response_ll,centaur_minus_llama,0.2526503746055678,0.23607607073188275,0.26979578442399527,shared_participant_fixed_seeds,1,4000
+Taking,China,raw_response_ll,centaur_score,-2.774152487538828,-2.792360820728106,-2.7563983492340896,shared_participant_fixed_seeds,1,4000
+Taking,China,raw_response_ll,llama_score,-3.0268028621443954,-3.041161496218386,-3.0127271470921295,shared_participant_fixed_seeds,1,4000
+Taking,United States,conditional_ll,centaur_minus_llama,0.06983954026092405,0.049456828113618165,0.08994314257395071,shared_participant_fixed_seeds,1,4000
+Taking,United States,conditional_ll,centaur_score,-2.622412782665425,-2.645818726656254,-2.599828038744267,shared_participant_fixed_seeds,1,4000
+Taking,United States,conditional_ll,llama_score,-2.692252322926349,-2.7082611169552715,-2.675917108576447,shared_participant_fixed_seeds,1,4000
+Taking,United States,raw_response_ll,centaur_minus_llama,0.2620653479004193,0.24168263575311333,0.28216895021344585,shared_participant_fixed_seeds,1,4000
+Taking,United States,raw_response_ll,centaur_score,-2.6229974844690727,-2.646403428459903,-2.600412740547912,shared_participant_fixed_seeds,1,4000
+Taking,United States,raw_response_ll,llama_score,-2.885062832369492,-2.901071626398421,-2.8687276180195957,shared_participant_fixed_seeds,1,4000

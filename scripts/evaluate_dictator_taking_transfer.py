@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Zero-shot Taking evaluation of LoRA adapters trained only on Giving data."""
+"""Taking prompts, response loading, and evaluation helpers."""
 
 from __future__ import annotations
 
@@ -232,30 +232,3 @@ def evaluate_condition(args: argparse.Namespace) -> None:
     )
     print(metrics.to_string(index=False), flush=True)
     print(json.dumps(metadata, indent=2), flush=True)
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description=(
-            "Evaluate Giving-trained Minitaur adapters zero-shot on the independent "
-            "Taking task."
-        )
-    )
-    parser.add_argument("--model-name", default="marcelbinz/Llama-3.1-Minitaur-8B")
-    parser.add_argument("--behavior-path", required=True)
-    parser.add_argument("--group-path", required=True)
-    parser.add_argument("--adapter-root", required=True)
-    parser.add_argument("--output-dir", required=True)
-    parser.add_argument("--condition", required=True, choices=CONDITIONS)
-    parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--bf16", action=argparse.BooleanOptionalAction, default=True)
-    parser.add_argument("--attn-implementation", default="sdpa")
-    return parser.parse_args()
-
-
-def main() -> None:
-    evaluate_condition(parse_args())
-
-
-if __name__ == "__main__":
-    main()

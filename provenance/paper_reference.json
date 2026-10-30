@@ -1,0 +1,14 @@
+{
+  "project_url": "https://www.overleaf.com/project/6ada6357f0e9637a95c1b3eb",
+  "source_download_date": "2026-10-30",
+  "source_zip_sha256": "9cc65084d3f15d3d2f45bf6a13805519c7bf4cb015685a8afe998cd3a03c5e4d",
+  "local_change": "Figure 3 path shortened from figures/upload/ to figures/.",
+  "figures": [
+    "finetuning_pipeline",
+    "figure2_distributions_nll",
+    "population_effects_h2_h3",
+    "response_adjustment_comparison",
+    "frozen_sample_fit",
+    "answer_position_control"
+  ]
+}

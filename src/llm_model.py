@@ -54,7 +54,8 @@ def require_llm_dependencies() -> None:
         raise RuntimeError(
             "LLM dependency problems ("
             + " | ".join(parts)
-            + "). Install or upgrade with `pip install -r requirements-llm.txt`."
+            + "). Install a GPU-compatible PyTorch build, then run "
+            "`pip install -r requirements-training.txt`."
         )
 
 

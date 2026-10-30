@@ -1,0 +1,73 @@
+task,Country,metric,contrast,mean,ci_low,ci_high,method,seeds,resamples
+Taking,China,conditional_ll,china_prior_gain,-0.16368385104817015,-0.19635835733259305,-0.13078873474677513,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,china_prior_minus_lora,-0.20938520158665927,-0.22392020811026286,-0.1948365877682511,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,china_prior_score,-2.93725163678335,-2.9701788461734377,-2.9046690140821396,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,pooled_prior_gain,-0.060430484587337775,-0.08916088703057987,-0.03144061597798582,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,pooled_prior_minus_lora,-0.1536965230712218,-0.16789380206428595,-0.13960516972610618,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,pooled_prior_score,-2.8339982703225175,-2.8664001745819,-2.8006618303020216,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,us_prior_gain,-0.013840321388504153,-0.040235135729698765,0.012410623781113168,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,us_prior_minus_lora,-0.119303486954363,-0.1317773932518749,-0.10677709437680981,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,us_prior_score,-2.787408107123684,-2.8206787811102285,-2.7527852889419333,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,china_prior_gain,-0.16368385104817104,-0.19635835733259394,-0.13078873474677605,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,china_prior_minus_lora,-0.2095882803724357,-0.22412328689603947,-0.19503966655402769,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,china_prior_score,-2.9378363385869988,-2.9707635479770853,-2.9052537158857894,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,pooled_prior_gain,-0.06043048458733866,-0.0891608870305808,-0.031440615977986745,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,pooled_prior_minus_lora,-0.1539615990545988,-0.1681588780476629,-0.1398702457094832,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,pooled_prior_score,-2.834582972126166,-2.8669848763855486,-2.8012465321056714,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,us_prior_gain,-0.01384032138850503,-0.040235135729699646,0.012410623781112313,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,us_prior_minus_lora,-0.1195936168806682,-0.13206752317818007,-0.10706722430311498,shared_participant_fixed_seeds,3,4000
+Taking,China,raw_response_ll,us_prior_score,-2.7879928089273327,-2.821263482913878,-2.753369990745581,shared_participant_fixed_seeds,3,4000
+Taking,China,conditional_ll,china_prior_gain,-0.16368385104817015,-0.19678064683308955,-0.13024898152090328,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,china_prior_minus_lora,-0.20938520158665927,-0.22533611541798154,-0.19315170630062412,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,china_prior_score,-2.93725163678335,-2.9703865466286956,-2.9043722844149156,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,pooled_prior_gain,-0.060430484587337775,-0.09337512045350946,-0.028263571436245034,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,pooled_prior_minus_lora,-0.1536965230712218,-0.17086990499381813,-0.13573309065395528,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,pooled_prior_score,-2.8339982703225175,-2.8701354980222886,-2.79900468795217,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,us_prior_gain,-0.013840321388504153,-0.04028244778302825,0.013512830824860218,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,us_prior_minus_lora,-0.119303486954363,-0.13464739950109816,-0.10286217574722649,shared_participant_and_seed,3,4000
+Taking,China,conditional_ll,us_prior_score,-2.787408107123684,-2.820705791977656,-2.752246771513389,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,china_prior_gain,-0.16368385104817104,-0.19678064683309057,-0.13024898152090408,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,china_prior_minus_lora,-0.2095882803724357,-0.22554720708132375,-0.1933545847644615,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,china_prior_score,-2.9378363385869988,-2.970971248432343,-2.9049569862185654,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,pooled_prior_gain,-0.06043048458733866,-0.09337512045351037,-0.028263571436245964,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,pooled_prior_minus_lora,-0.1539615990545988,-0.17112764075007056,-0.13599177396807305,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,pooled_prior_score,-2.834582972126166,-2.8707201998259375,-2.799589389755819,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,us_prior_gain,-0.01384032138850503,-0.04028244778302913,0.01351283082485937,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,us_prior_minus_lora,-0.1195936168806682,-0.1349321903563937,-0.10315187891368927,shared_participant_and_seed,3,4000
+Taking,China,raw_response_ll,us_prior_score,-2.7879928089273327,-2.821290493781305,-2.752831473317038,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,china_prior_gain,-0.06292490170911487,-0.10140092730522754,-0.02589861600891634,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,china_prior_minus_lora,-0.1747837640704292,-0.19200906675061374,-0.1579635709794153,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,china_prior_score,-2.68533768437454,-2.721568738852675,-2.6504246235188877,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,pooled_prior_gain,0.10786966067813823,0.07722711635181637,0.13824588055467762,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,pooled_prior_minus_lora,-0.07222231278584512,-0.08782235485581116,-0.05721414257258037,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,pooled_prior_score,-2.5145431219872862,-2.5510895248642735,-2.4797620300978087,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,us_prior_gain,0.1989038203963175,0.17254431777232968,0.22500334776111855,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,us_prior_minus_lora,-0.015278932839435487,-0.0283371407824043,-0.002613713521397464,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,us_prior_score,-2.4235089622691075,-2.4627867322319843,-2.3868864653896957,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,china_prior_gain,-0.06292490170911563,-0.1014009273052283,-0.0258986160089172,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,china_prior_minus_lora,-0.17498684285620544,-0.1922121455363899,-0.1581666497651914,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,china_prior_score,-2.6859223861781882,-2.722153440656321,-2.6510093253225353,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,pooled_prior_gain,0.10786966067813747,0.07722711635181567,0.1382458805546769,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,pooled_prior_minus_lora,-0.0724873887692219,-0.08808743083918798,-0.05747921855595709,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,pooled_prior_score,-2.5151278237909356,-2.551674226667923,-2.480346731901458,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,us_prior_gain,0.19890382039631674,0.17254431777232893,0.22500334776111786,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,us_prior_minus_lora,-0.015569062765740436,-0.02862727070870927,-0.002903843447702396,shared_participant_fixed_seeds,3,4000
+Taking,United States,raw_response_ll,us_prior_score,-2.4240936640727564,-2.463371434035633,-2.387471167193344,shared_participant_fixed_seeds,3,4000
+Taking,United States,conditional_ll,china_prior_gain,-0.06292490170911487,-0.10142213116734483,-0.0256225898368737,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,china_prior_minus_lora,-0.1747837640704292,-0.192453524609196,-0.15687543898347547,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,china_prior_score,-2.68533768437454,-2.7217915019950656,-2.650280842708701,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,pooled_prior_gain,0.10786966067813823,0.07380425386412036,0.14012968801924547,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,pooled_prior_minus_lora,-0.07222231278584512,-0.0936714436385643,-0.05248903239533097,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,pooled_prior_score,-2.5145431219872862,-2.5534067088444883,-2.4786329980235933,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,us_prior_gain,0.1989038203963175,0.17144592845458287,0.22583078574847756,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,us_prior_minus_lora,-0.015278932839435487,-0.02988511734973211,-0.0010979165923443379,shared_participant_and_seed,3,4000
+Taking,United States,conditional_ll,us_prior_score,-2.4235089622691075,-2.4637726981515606,-2.385584374050605,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,china_prior_gain,-0.06292490170911563,-0.10142213116734566,-0.025622589836874526,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,china_prior_minus_lora,-0.17498684285620544,-0.19265660339497223,-0.1570754122414193,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,china_prior_score,-2.6859223861781882,-2.722376203798712,-2.6508655445123477,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,pooled_prior_gain,0.10786966067813747,0.07380425386411973,0.14012968801924483,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,pooled_prior_minus_lora,-0.0724873887692219,-0.09392899006977724,-0.05276143361289863,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,pooled_prior_score,-2.5151278237909356,-2.5539914106481376,-2.4792176998272417,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,us_prior_gain,0.19890382039631674,0.17144592845458198,0.22583078574847676,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,us_prior_minus_lora,-0.015569062765740436,-0.030161752154395774,-0.0013826884501996514,shared_participant_and_seed,3,4000
+Taking,United States,raw_response_ll,us_prior_score,-2.4240936640727564,-2.4643573999552104,-2.386169075854256,shared_participant_and_seed,3,4000

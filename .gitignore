@@ -3,7 +3,9 @@
 .env.*
 !.env.example
 data/*
-!data/README.txt
+!data/README.md
+!data/paper_inputs.zip
+!data/paper_inputs.manifest.json
 data_cache/
 model_results/
 outputs/

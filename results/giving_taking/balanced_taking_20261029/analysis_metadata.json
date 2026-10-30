@@ -1,0 +1,34 @@
+{
+  "status": "complete_validated_balanced_taking_reanalysis",
+  "task": "Taking; ancillary frozen H1 Giving contrasts",
+  "source_behavior_sha256": "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd",
+  "selection_seed": 20261029,
+  "selection_algorithm": "Sort unique Dataset/Nation/SubNo keys; NumPy default_rng; iterate Dataset/Nation strata in sorted order; sample without replacement only when available count exceeds target; keep whole participants.",
+  "numpy_version": "2.3.5",
+  "pandas_version": "2.2.3",
+  "selection_manifest": "/Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/build/balanced_taking_20261029/selected_participants.csv",
+  "selection_manifest_sha256": "a29f05a06167e7d71aca5206649100b8c873a73e00cb1246333076f30825a435",
+  "participants_per_country": 1329,
+  "wave_counts_per_country": {
+    "Wave 1": 529,
+    "Wave 2": 800
+  },
+  "sampling": "US: select 529/546 in Wave 1 and 800/825 in Wave 2; China: retain all 529/800. Same people for every saved model, seed and human comparison.",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "bootstrap_seed": 20261029,
+  "resamples": 4000,
+  "uncertainty": "95% percentile bootstrap. Resample participants independently by country and wave; share weights across models and seeds; resample the three observed fitted seeds together across countries. Frozen controls use participant-only intervals. Selection, model fits, response adjustment offsets, target groups and folds are held fixed. Only three seeds limit training-run inference.",
+  "primary_metric": "conditional_ll (log probability normalized across 21 legal token responses); NLL is its negative",
+  "response_adjustment": "Reuse the previously fitted fixed Giving-only response offsets (ridge .001), applied unchanged to Taking; no model training or response-offset refitting.",
+  "population_predictions": "Model predictions do not depend on evaluation participant; recomputed means equal saved preselection means. Human means and scores must use this manifest.",
+  "h1_giving": "Frozen H1 Giving comparisons preserve the original three heldout participant splits (data_cache/dictator_centaur70b/seed*/participant_split_manifest.csv), with shared weights for overlapping test participants, fixed splits and fixed wave proportions. Original published means are reproduced before exporting intervals; Giving is not subsampled.",
+  "schemas": "Taking-only replacements for results/giving_taking/{seed_metrics.csv,bootstrap_intervals.csv,figure_inputs/*,frozen/metrics_summary.csv,response_adjustment/prior_metrics_by_seed.csv,response_adjustment/prior_paired_intervals.csv}; original unbalanced outputs retained. *_score contrasts are log likelihood, not NLL. country_contrasts subtract China from US for the named outcome; own_minus_other names vary the matching adapter with test country.",
+  "exploratory": true,
+  "models_retrained": false,
+  "private_data": "Selected participant keys are saved only in ignored build/. No individual observations or scores are included in aggregate outputs.",
+  "command": "python scripts/analyze_balanced_taking.py --workspace /Users/edwardeichhorn/Desktop/machine_replication --output /Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/results/giving_taking/balanced_taking_20261029 --manifest /Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/build/balanced_taking_20261029/selected_participants.csv --selection-seed 20261029 --bootstrap-seed 20261029 --resamples 4000"
+}

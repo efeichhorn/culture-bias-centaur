@@ -1,0 +1,437 @@
+check,values,maximum_absolute_error
+historical_humans/Giving/Combined/China/0/china,25,8.881784197001252e-16
+saved_models/Giving/Combined/China/0/china,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/0/china,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/0/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/0/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/0/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/0/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/0/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/0/china,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/China/0/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/0/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/United States/0/china,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/0/pooled,25,8.881784197001252e-16
+saved_models/Giving/Combined/China/0/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/0/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/0/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/0/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/0/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/0/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/0/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/0/pooled,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/China/0/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/0/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/United States/0/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/0/us,25,8.881784197001252e-16
+saved_models/Giving/Combined/China/0/us,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/0/us,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/0/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/0/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/0/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/0/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/0/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/0/us,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/China/0/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/0/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/United States/0/us,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/1/china,25,1.7763568394002505e-15
+saved_models/Giving/Combined/China/1/china,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/1/china,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/1/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/1/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/1/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/1/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/1/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/1/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/China/1/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/1/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/United States/1/china,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/1/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Combined/China/1/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/1/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/1/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/1/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/1/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/1/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/1/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/1/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/China/1/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/1/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/United States/1/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/1/us,25,1.7763568394002505e-15
+saved_models/Giving/Combined/China/1/us,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/1/us,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/1/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/1/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/1/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/1/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/1/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/1/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/China/1/us,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/1/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 2/United States/1/us,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/2/china,25,1.7763568394002505e-15
+saved_models/Giving/Combined/China/2/china,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/2/china,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/2/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/2/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/2/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/2/china,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/2/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/2/china,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/China/2/china,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/2/china,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/United States/2/china,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/2/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Combined/China/2/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/United States/2/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/2/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/China/2/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/2/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 1/United States/2/pooled,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/2/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/China/2/pooled,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/China/2/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Wave 2/United States/2/pooled,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/United States/2/pooled,25,1.7763568394002505e-15
+historical_humans/Giving/Combined/China/2/us,25,1.7763568394002505e-15
+saved_models/Giving/Combined/China/2/us,25,8.881784197001252e-16
+historical_humans/Giving/Combined/United States/2/us,25,1.7763568394002505e-15
+saved_models/Giving/Combined/United States/2/us,25,8.881784197001252e-16
+historical_humans/Giving/Wave 1/China/2/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/China/2/us,25,8.881784197001252e-16
+historical_humans/Giving/Wave 1/United States/2/us,25,1.7763568394002505e-15
+saved_models/Giving/Wave 1/United States/2/us,25,8.881784197001252e-16
+historical_humans/Giving/Wave 2/China/2/us,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/China/2/us,25,8.881784197001252e-16
+historical_humans/Giving/Wave 2/United States/2/us,25,8.881784197001252e-16
+saved_models/Giving/Wave 2/United States/2/us,25,8.881784197001252e-16
+historical_humans/Taking/Combined/China/0/china,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/0/china,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/United States/0/china,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/0/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/China/0/china,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/0/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/United States/0/china,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/0/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/China/0/china,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/0/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/United States/0/china,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/0/china,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/China/0/pooled,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/0/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Combined/United States/0/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/0/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 1/China/0/pooled,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/0/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 1/United States/0/pooled,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/0/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 2/China/0/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/0/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 2/United States/0/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/0/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Combined/China/0/us,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/0/us,25,3.552713678800501e-15
+historical_humans/Taking/Combined/United States/0/us,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/0/us,25,3.552713678800501e-15
+historical_humans/Taking/Wave 1/China/0/us,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/0/us,25,3.552713678800501e-15
+historical_humans/Taking/Wave 1/United States/0/us,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/0/us,25,3.552713678800501e-15
+historical_humans/Taking/Wave 2/China/0/us,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/0/us,25,3.552713678800501e-15
+historical_humans/Taking/Wave 2/United States/0/us,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/0/us,25,3.552713678800501e-15
+historical_humans/Taking/Combined/China/1/china,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/1/china,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/United States/1/china,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/1/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/China/1/china,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/1/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/United States/1/china,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/1/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/China/1/china,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/1/china,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/United States/1/china,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/1/china,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/China/1/pooled,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/1/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Combined/United States/1/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/1/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 1/China/1/pooled,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/1/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 1/United States/1/pooled,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/1/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 2/China/1/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/1/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Wave 2/United States/1/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/1/pooled,25,2.6645352591003757e-15
+historical_humans/Taking/Combined/China/1/us,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/1/us,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/United States/1/us,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/1/us,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/China/1/us,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/1/us,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/United States/1/us,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/1/us,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/China/1/us,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/1/us,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/United States/1/us,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/1/us,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/China/2/china,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/2/china,25,8.881784197001252e-16
+historical_humans/Taking/Combined/United States/2/china,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/2/china,25,8.881784197001252e-16
+historical_humans/Taking/Wave 1/China/2/china,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/2/china,25,8.881784197001252e-16
+historical_humans/Taking/Wave 1/United States/2/china,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/2/china,25,8.881784197001252e-16
+historical_humans/Taking/Wave 2/China/2/china,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/2/china,25,8.881784197001252e-16
+historical_humans/Taking/Wave 2/United States/2/china,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/2/china,25,8.881784197001252e-16
+historical_humans/Taking/Combined/China/2/pooled,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/2/pooled,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/United States/2/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/2/pooled,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/China/2/pooled,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/2/pooled,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 1/United States/2/pooled,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/2/pooled,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/China/2/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/2/pooled,25,1.7763568394002505e-15
+historical_humans/Taking/Wave 2/United States/2/pooled,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/2/pooled,25,1.7763568394002505e-15
+historical_humans/Taking/Combined/China/2/us,25,3.552713678800501e-15
+saved_models/Taking/Combined/China/2/us,25,5.329070518200751e-15
+historical_humans/Taking/Combined/United States/2/us,25,1.7763568394002505e-15
+saved_models/Taking/Combined/United States/2/us,25,5.329070518200751e-15
+historical_humans/Taking/Wave 1/China/2/us,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/China/2/us,25,5.329070518200751e-15
+historical_humans/Taking/Wave 1/United States/2/us,25,3.552713678800501e-15
+saved_models/Taking/Wave 1/United States/2/us,25,5.329070518200751e-15
+historical_humans/Taking/Wave 2/China/2/us,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/China/2/us,25,5.329070518200751e-15
+historical_humans/Taking/Wave 2/United States/2/us,25,1.7763568394002505e-15
+saved_models/Taking/Wave 2/United States/2/us,25,5.329070518200751e-15
+historical_aggregate_humans/Giving/Combined/China/0/china,1,0.0
+historical_aggregate_models/Giving/Combined/China/0/china,1,0.0
+historical_aggregate_humans/Giving/Combined/China/0/pooled,1,0.0
+historical_aggregate_models/Giving/Combined/China/0/pooled,1,0.0
+historical_aggregate_humans/Giving/Combined/China/0/us,1,0.0
+historical_aggregate_models/Giving/Combined/China/0/us,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/0/china,1,1.7763568394002505e-15
+historical_aggregate_models/Giving/Combined/United States/0/china,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/0/pooled,1,1.7763568394002505e-15
+historical_aggregate_models/Giving/Combined/United States/0/pooled,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/0/us,1,1.7763568394002505e-15
+historical_aggregate_models/Giving/Combined/United States/0/us,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/0/china,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/0/china,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/0/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/0/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/0/us,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/0/us,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/0/china,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/0/china,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/0/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/0/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/0/us,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/0/us,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/0/china,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/0/china,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/0/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/0/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/0/us,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/0/us,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/0/china,1,0.0
+historical_aggregate_models/Giving/Wave 2/United States/0/china,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/0/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 2/United States/0/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/0/us,1,0.0
+historical_aggregate_models/Giving/Wave 2/United States/0/us,1,0.0
+historical_aggregate_humans/Taking/Combined/China/0/china,1,0.0
+historical_aggregate_models/Taking/Combined/China/0/china,1,0.0
+historical_aggregate_humans/Taking/Combined/China/0/pooled,1,0.0
+historical_aggregate_models/Taking/Combined/China/0/pooled,1,0.0
+historical_aggregate_humans/Taking/Combined/China/0/us,1,0.0
+historical_aggregate_models/Taking/Combined/China/0/us,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Combined/United States/0/china,1,0.0
+historical_aggregate_models/Taking/Combined/United States/0/china,1,0.0
+historical_aggregate_humans/Taking/Combined/United States/0/pooled,1,0.0
+historical_aggregate_models/Taking/Combined/United States/0/pooled,1,0.0
+historical_aggregate_humans/Taking/Combined/United States/0/us,1,0.0
+historical_aggregate_models/Taking/Combined/United States/0/us,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 1/China/0/china,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/0/china,1,0.0
+historical_aggregate_humans/Taking/Wave 1/China/0/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/0/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 1/China/0/us,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/0/us,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 1/United States/0/china,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/0/china,1,0.0
+historical_aggregate_humans/Taking/Wave 1/United States/0/pooled,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/0/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 1/United States/0/us,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/0/us,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 2/China/0/china,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/0/china,1,0.0
+historical_aggregate_humans/Taking/Wave 2/China/0/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/0/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 2/China/0/us,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/0/us,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 2/United States/0/china,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/0/china,1,0.0
+historical_aggregate_humans/Taking/Wave 2/United States/0/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/0/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 2/United States/0/us,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/0/us,1,8.881784197001252e-16
+historical_aggregate_humans/Giving/Combined/China/1/china,1,0.0
+historical_aggregate_models/Giving/Combined/China/1/china,1,0.0
+historical_aggregate_humans/Giving/Combined/China/1/pooled,1,0.0
+historical_aggregate_models/Giving/Combined/China/1/pooled,1,0.0
+historical_aggregate_humans/Giving/Combined/China/1/us,1,0.0
+historical_aggregate_models/Giving/Combined/China/1/us,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/1/china,1,0.0
+historical_aggregate_models/Giving/Combined/United States/1/china,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/1/pooled,1,0.0
+historical_aggregate_models/Giving/Combined/United States/1/pooled,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/1/us,1,0.0
+historical_aggregate_models/Giving/Combined/United States/1/us,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/1/china,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/1/china,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/1/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/1/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/1/us,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/1/us,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/1/china,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/1/china,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/1/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/1/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/1/us,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/1/us,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/1/china,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/1/china,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/1/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/1/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/1/us,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/1/us,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/1/china,1,1.7763568394002505e-15
+historical_aggregate_models/Giving/Wave 2/United States/1/china,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_models/Giving/Wave 2/United States/1/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/1/us,1,1.7763568394002505e-15
+historical_aggregate_models/Giving/Wave 2/United States/1/us,1,0.0
+historical_aggregate_humans/Taking/Combined/China/1/china,1,0.0
+historical_aggregate_models/Taking/Combined/China/1/china,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Combined/China/1/pooled,1,0.0
+historical_aggregate_models/Taking/Combined/China/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_humans/Taking/Combined/China/1/us,1,0.0
+historical_aggregate_models/Taking/Combined/China/1/us,1,0.0
+historical_aggregate_humans/Taking/Combined/United States/1/china,1,0.0
+historical_aggregate_models/Taking/Combined/United States/1/china,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Combined/United States/1/pooled,1,0.0
+historical_aggregate_models/Taking/Combined/United States/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_humans/Taking/Combined/United States/1/us,1,0.0
+historical_aggregate_models/Taking/Combined/United States/1/us,1,0.0
+historical_aggregate_humans/Taking/Wave 1/China/1/china,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/1/china,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 1/China/1/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_humans/Taking/Wave 1/China/1/us,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/1/us,1,0.0
+historical_aggregate_humans/Taking/Wave 1/United States/1/china,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/1/china,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 1/United States/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_humans/Taking/Wave 1/United States/1/us,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/1/us,1,0.0
+historical_aggregate_humans/Taking/Wave 2/China/1/china,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/1/china,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 2/China/1/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_humans/Taking/Wave 2/China/1/us,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/1/us,1,0.0
+historical_aggregate_humans/Taking/Wave 2/United States/1/china,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/1/china,1,8.881784197001252e-16
+historical_aggregate_humans/Taking/Wave 2/United States/1/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/1/pooled,1,1.7763568394002505e-15
+historical_aggregate_humans/Taking/Wave 2/United States/1/us,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/1/us,1,0.0
+historical_aggregate_humans/Giving/Combined/China/2/china,1,0.0
+historical_aggregate_models/Giving/Combined/China/2/china,1,0.0
+historical_aggregate_humans/Giving/Combined/China/2/pooled,1,0.0
+historical_aggregate_models/Giving/Combined/China/2/pooled,1,0.0
+historical_aggregate_humans/Giving/Combined/China/2/us,1,0.0
+historical_aggregate_models/Giving/Combined/China/2/us,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/2/china,1,0.0
+historical_aggregate_models/Giving/Combined/United States/2/china,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/2/pooled,1,0.0
+historical_aggregate_models/Giving/Combined/United States/2/pooled,1,0.0
+historical_aggregate_humans/Giving/Combined/United States/2/us,1,0.0
+historical_aggregate_models/Giving/Combined/United States/2/us,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/2/china,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/2/china,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/2/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/2/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 1/China/2/us,1,0.0
+historical_aggregate_models/Giving/Wave 1/China/2/us,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/2/china,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/2/china,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/2/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/2/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 1/United States/2/us,1,0.0
+historical_aggregate_models/Giving/Wave 1/United States/2/us,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/2/china,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/2/china,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/2/pooled,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/2/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 2/China/2/us,1,0.0
+historical_aggregate_models/Giving/Wave 2/China/2/us,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/2/china,1,8.881784197001252e-16
+historical_aggregate_models/Giving/Wave 2/United States/2/china,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/2/pooled,1,8.881784197001252e-16
+historical_aggregate_models/Giving/Wave 2/United States/2/pooled,1,0.0
+historical_aggregate_humans/Giving/Wave 2/United States/2/us,1,8.881784197001252e-16
+historical_aggregate_models/Giving/Wave 2/United States/2/us,1,0.0
+historical_aggregate_humans/Taking/Combined/China/2/china,1,0.0
+historical_aggregate_models/Taking/Combined/China/2/china,1,0.0
+historical_aggregate_humans/Taking/Combined/China/2/pooled,1,0.0
+historical_aggregate_models/Taking/Combined/China/2/pooled,1,0.0
+historical_aggregate_humans/Taking/Combined/China/2/us,1,0.0
+historical_aggregate_models/Taking/Combined/China/2/us,1,0.0
+historical_aggregate_humans/Taking/Combined/United States/2/china,1,0.0
+historical_aggregate_models/Taking/Combined/United States/2/china,1,0.0
+historical_aggregate_humans/Taking/Combined/United States/2/pooled,1,0.0
+historical_aggregate_models/Taking/Combined/United States/2/pooled,1,0.0
+historical_aggregate_humans/Taking/Combined/United States/2/us,1,0.0
+historical_aggregate_models/Taking/Combined/United States/2/us,1,0.0
+historical_aggregate_humans/Taking/Wave 1/China/2/china,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/2/china,1,0.0
+historical_aggregate_humans/Taking/Wave 1/China/2/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/2/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 1/China/2/us,1,0.0
+historical_aggregate_models/Taking/Wave 1/China/2/us,1,0.0
+historical_aggregate_humans/Taking/Wave 1/United States/2/china,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/2/china,1,0.0
+historical_aggregate_humans/Taking/Wave 1/United States/2/pooled,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/2/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 1/United States/2/us,1,1.7763568394002505e-15
+historical_aggregate_models/Taking/Wave 1/United States/2/us,1,0.0
+historical_aggregate_humans/Taking/Wave 2/China/2/china,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/2/china,1,0.0
+historical_aggregate_humans/Taking/Wave 2/China/2/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/2/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 2/China/2/us,1,0.0
+historical_aggregate_models/Taking/Wave 2/China/2/us,1,0.0
+historical_aggregate_humans/Taking/Wave 2/United States/2/china,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/2/china,1,0.0
+historical_aggregate_humans/Taking/Wave 2/United States/2/pooled,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/2/pooled,1,0.0
+historical_aggregate_humans/Taking/Wave 2/United States/2/us,1,0.0
+historical_aggregate_models/Taking/Wave 2/United States/2/us,1,0.0
+combined_wave_weighting/Giving/0,75,1.7763568394002505e-15
+combined_wave_weighting/Giving/1,75,1.7763568394002505e-15
+combined_wave_weighting/Taking/0,75,1.7763568394002505e-15
+combined_wave_weighting/Taking/1,75,1.7763568394002505e-15

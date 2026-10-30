@@ -53,7 +53,9 @@ def main():
     ).to_csv(output / "population_shifts.csv")
 
     giving = pd.read_csv(source / "giving_taking/seed_contrasts.csv")
-    giving.groupby(["task", "Country", "metric", "contrast"]).value.agg(
+    taking = pd.read_csv(source / "giving_taking/balanced_taking_20261029/seed_contrasts.csv")
+    allocation = pd.concat([giving[giving.task == "Giving"], taking], ignore_index=True)
+    allocation.groupby(["task", "Country", "metric", "contrast"]).value.agg(
         mean="mean", seed_sd="std", seed_min="min", seed_max="max"
     ).to_csv(output / "giving_taking_contrasts.csv")
     print(f"Wrote three summary tables to {output}")

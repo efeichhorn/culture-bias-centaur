@@ -1,0 +1,9 @@
+panel,task,source,estimate,ci_low,ci_high,units,outcome,interval
+b,Giving,llama,0.2032270410028442,0.165596174966485,0.2409214378592178,nats,China minus US conditional NLL,95% participant bootstrap
+b,Giving,centaur,0.3472959192269522,0.2924980478572225,0.4048051414513486,nats,China minus US conditional NLL,95% participant bootstrap
+b,Taking,llama,0.1417400297749034,0.1200600541974504,0.1631998211463863,nats,China minus US conditional NLL,95% participant bootstrap
+b,Taking,centaur,0.1511550030697548,0.1219069780966145,0.1800944308425539,nats,China minus US conditional NLL,95% participant bootstrap
+b,Categorization,llama,0.0054042342078057,0.0022135000297165,0.0086976326592084,nats,China minus US conditional NLL,95% participant bootstrap
+b,Categorization,centaur,0.1225379156280412,0.1030165936899816,0.1417955272218123,nats,China minus US conditional NLL,95% participant bootstrap
+b,Risky choice,llama,-0.0075645832027333,-0.0112251529478945,-0.0039846097328546,nats,China minus US conditional NLL,95% participant bootstrap
+b,Risky choice,centaur,-0.0258878643839778,-0.0537262825450419,0.0005700149561035,nats,China minus US conditional NLL,95% participant bootstrap

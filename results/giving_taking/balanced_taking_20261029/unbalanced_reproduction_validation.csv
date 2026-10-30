@@ -1,0 +1,101 @@
+family,seed,condition,Country,metric,absolute_error
+frozen,-1,centaur,China,raw_response_ll,0.0
+frozen,-1,centaur,China,conditional_ll,0.0
+frozen,-1,centaur,United States,raw_response_ll,0.0
+frozen,-1,centaur,United States,conditional_ll,0.0
+frozen,-1,llama,China,raw_response_ll,4.440892098500626e-16
+frozen,-1,llama,China,conditional_ll,8.881784197001252e-16
+frozen,-1,llama,United States,raw_response_ll,0.0
+frozen,-1,llama,United States,conditional_ll,0.0
+frozen_giving,-1,centaur,China,raw_response_ll,0.0
+frozen_giving,-1,llama,China,raw_response_ll,0.0
+frozen_giving,-1,centaur,China,conditional_ll,0.0
+frozen_giving,-1,llama,China,conditional_ll,0.0
+frozen_giving,-1,centaur,United States,raw_response_ll,4.440892098500626e-16
+frozen_giving,-1,llama,United States,raw_response_ll,0.0
+frozen_giving,-1,centaur,United States,conditional_ll,0.0
+frozen_giving,-1,llama,United States,conditional_ll,0.0
+adapter_or_prior,0,base,China,raw_response_ll,0.0
+adapter_or_prior,0,base,China,conditional_ll,0.0
+adapter_or_prior,0,base,United States,raw_response_ll,0.0
+adapter_or_prior,0,base,United States,conditional_ll,0.0
+adapter_or_prior,0,us,China,raw_response_ll,8.881784197001252e-16
+adapter_or_prior,0,us,China,conditional_ll,4.440892098500626e-16
+adapter_or_prior,0,us,United States,raw_response_ll,0.0
+adapter_or_prior,0,us,United States,conditional_ll,0.0
+adapter_or_prior,0,us_prior,China,raw_response_ll,0.0
+adapter_or_prior,0,us_prior,China,conditional_ll,0.0
+adapter_or_prior,0,us_prior,United States,raw_response_ll,0.0
+adapter_or_prior,0,us_prior,United States,conditional_ll,0.0
+adapter_or_prior,0,pooled,China,raw_response_ll,0.0
+adapter_or_prior,0,pooled,China,conditional_ll,0.0
+adapter_or_prior,0,pooled,United States,raw_response_ll,0.0
+adapter_or_prior,0,pooled,United States,conditional_ll,4.440892098500626e-16
+adapter_or_prior,0,pooled_prior,China,raw_response_ll,0.0
+adapter_or_prior,0,pooled_prior,China,conditional_ll,0.0
+adapter_or_prior,0,pooled_prior,United States,raw_response_ll,0.0
+adapter_or_prior,0,pooled_prior,United States,conditional_ll,4.440892098500626e-16
+adapter_or_prior,0,china,China,raw_response_ll,0.0
+adapter_or_prior,0,china,China,conditional_ll,0.0
+adapter_or_prior,0,china,United States,raw_response_ll,0.0
+adapter_or_prior,0,china,United States,conditional_ll,0.0
+adapter_or_prior,0,china_prior,China,raw_response_ll,0.0
+adapter_or_prior,0,china_prior,China,conditional_ll,0.0
+adapter_or_prior,0,china_prior,United States,raw_response_ll,0.0
+adapter_or_prior,0,china_prior,United States,conditional_ll,0.0
+adapter_or_prior,1,base,China,raw_response_ll,0.0
+adapter_or_prior,1,base,China,conditional_ll,0.0
+adapter_or_prior,1,base,United States,raw_response_ll,0.0
+adapter_or_prior,1,base,United States,conditional_ll,0.0
+adapter_or_prior,1,us,China,raw_response_ll,0.0
+adapter_or_prior,1,us,China,conditional_ll,0.0
+adapter_or_prior,1,us,United States,raw_response_ll,4.440892098500626e-16
+adapter_or_prior,1,us,United States,conditional_ll,0.0
+adapter_or_prior,1,us_prior,China,raw_response_ll,0.0
+adapter_or_prior,1,us_prior,China,conditional_ll,0.0
+adapter_or_prior,1,us_prior,United States,raw_response_ll,0.0
+adapter_or_prior,1,us_prior,United States,conditional_ll,0.0
+adapter_or_prior,1,pooled,China,raw_response_ll,0.0
+adapter_or_prior,1,pooled,China,conditional_ll,0.0
+adapter_or_prior,1,pooled,United States,raw_response_ll,0.0
+adapter_or_prior,1,pooled,United States,conditional_ll,4.440892098500626e-16
+adapter_or_prior,1,pooled_prior,China,raw_response_ll,0.0
+adapter_or_prior,1,pooled_prior,China,conditional_ll,0.0
+adapter_or_prior,1,pooled_prior,United States,raw_response_ll,0.0
+adapter_or_prior,1,pooled_prior,United States,conditional_ll,0.0
+adapter_or_prior,1,china,China,raw_response_ll,0.0
+adapter_or_prior,1,china,China,conditional_ll,0.0
+adapter_or_prior,1,china,United States,raw_response_ll,0.0
+adapter_or_prior,1,china,United States,conditional_ll,0.0
+adapter_or_prior,1,china_prior,China,raw_response_ll,0.0
+adapter_or_prior,1,china_prior,China,conditional_ll,0.0
+adapter_or_prior,1,china_prior,United States,raw_response_ll,0.0
+adapter_or_prior,1,china_prior,United States,conditional_ll,0.0
+adapter_or_prior,2,base,China,raw_response_ll,0.0
+adapter_or_prior,2,base,China,conditional_ll,0.0
+adapter_or_prior,2,base,United States,raw_response_ll,0.0
+adapter_or_prior,2,base,United States,conditional_ll,0.0
+adapter_or_prior,2,us,China,raw_response_ll,0.0
+adapter_or_prior,2,us,China,conditional_ll,0.0
+adapter_or_prior,2,us,United States,raw_response_ll,0.0
+adapter_or_prior,2,us,United States,conditional_ll,4.440892098500626e-16
+adapter_or_prior,2,us_prior,China,raw_response_ll,0.0
+adapter_or_prior,2,us_prior,China,conditional_ll,0.0
+adapter_or_prior,2,us_prior,United States,raw_response_ll,0.0
+adapter_or_prior,2,us_prior,United States,conditional_ll,0.0
+adapter_or_prior,2,pooled,China,raw_response_ll,0.0
+adapter_or_prior,2,pooled,China,conditional_ll,0.0
+adapter_or_prior,2,pooled,United States,raw_response_ll,0.0
+adapter_or_prior,2,pooled,United States,conditional_ll,0.0
+adapter_or_prior,2,pooled_prior,China,raw_response_ll,0.0
+adapter_or_prior,2,pooled_prior,China,conditional_ll,0.0
+adapter_or_prior,2,pooled_prior,United States,raw_response_ll,0.0
+adapter_or_prior,2,pooled_prior,United States,conditional_ll,0.0
+adapter_or_prior,2,china,China,raw_response_ll,0.0
+adapter_or_prior,2,china,China,conditional_ll,0.0
+adapter_or_prior,2,china,United States,raw_response_ll,0.0
+adapter_or_prior,2,china,United States,conditional_ll,0.0
+adapter_or_prior,2,china_prior,China,raw_response_ll,0.0
+adapter_or_prior,2,china_prior,China,conditional_ll,0.0
+adapter_or_prior,2,china_prior,United States,raw_response_ll,0.0
+adapter_or_prior,2,china_prior,United States,conditional_ll,0.0

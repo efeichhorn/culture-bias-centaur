@@ -1,31 +1,56 @@
-FROM THE COMMITTED AGGREGATES
+SETUP
 
+Use Python 3.10–3.12 for CPU work. Run commands from this repository root.
+
+python3 -m venv .venv
+source .venv/bin/activate
 python -m pip install -r requirements.txt
-python scripts/reproduce_summary.py
-python -m pytest tests
 
-This rebuilds summary tables in build/results/. It checks 81 verified extension
-fits and matching frozen references. It does not reanalyse individual responses
-or retrain models. Seed ranges are descriptive, not confidence intervals.
+provenance/cpu_environment.txt records the tested CPU package versions.
+requirements-training.txt is only needed for GPU training or inference.
 
-FULL REANALYSIS / TRAINING
+SAVED RESULTS AND FIGURES
 
-Raw data, participant splits, model scores and weights stay outside Git.
-Source URLs and model IDs are in data/README.txt. Use each script's --help for
-paths. No training runs during installation.
+make results figures test
 
-Cao/Anllo preparation:
-python scripts/prepare_cao_culture_extension.py
-python scripts/prepare_anllo_culture_extension.py
-python scripts/prepare_culture_extension_runs.py
+This writes summary tables to build/results/ and the six paper figures to
+paper/figures/. It uses results/ and needs no downloaded data or model weights.
 
-These create ignored data_cache/ files. The 81 conditions are then listed in
-data_cache/culture_extensions_20261021/runs/run_index.json. The trainer accepts
---run-manifest, --stage and --output-dir. Use baseline with the same numerical
-preparation as training. The collector accepts --repo-root, --run-index,
---outputs-root, --baseline-root and --analysis-dir.
+Figure 1: scripts/plot_finetuning_pipeline.py
+Figure 2: scripts/plot_figure2_distributions_nll.py
+Figure 3: scripts/plot_h2_h3.py
+Figure 4: scripts/plot_h4.py
+Appendix figures: scripts/plot_results_revision.py
 
-Giving/Taking source preparation (from this repository root):
+FULL CPU REANALYSIS
+
+make data
+make analysis
+
+The archive is about 47 MB and expands to 2.81 GB. Extraction checks every
+file's SHA-256 hash. See data/README.md for schemas and original source links.
+
+scripts/reproduce_analyses.py reruns the frozen-model comparisons, 126-fit
+analysis, response adjustments, balanced Taking analysis, participant
+bootstraps, and Figure 2 data export. It compares the regenerated tables with
+results/ and writes build/reanalysis/verification.json. New outputs stay in
+build/reanalysis/. The reference tables in results/ are not replaced.
+
+Each bootstrap uses 4,000 resamples and the recorded seed. Numerical checks
+allow 1e-10 rounding differences between CPU libraries. Training fits and
+items are fixed; the intervals do not cover new training samples or items.
+
+To store extracted data elsewhere:
+python scripts/prepare_paper_data.py --output /path/to/workspace
+make analysis WORKSPACE=/path/to/workspace
+
+ORIGINAL DATA PREPARATION
+
+Use these steps to repeat preparation from the source studies. They are not
+needed for the saved-data reanalysis above. Keep original downloads outside
+the submission. The preparation scripts check source hashes.
+
+Allocation:
 export WANG_WORKSPACE="$PWD"
 mkdir -p data_cache model_results/wang_source_audit_20260930
 curl --fail --location https://osf.io/download/wtmpu/ -o data_cache/dictator_Behavior.xlsx
@@ -46,39 +71,197 @@ PYDATA
 cp provenance/wang_source_audit/*.json model_results/wang_source_audit_20260930/
 python scripts/repair_wang_behavior_columns.py --workspace "$WANG_WORKSPACE"
 
-The guard checks the original CSV hash and all eight source-audit records.
-The corrected CSV must have SHA256
-65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd.
-Original spreadsheets remain unchanged. To repeat the Giving raw-survey audit:
-python scripts/repair_wang_behavior_columns.py --workspace "$WANG_WORKSPACE" --audit-giving
-Taking's saved report documents its raw-file URLs and matching procedure.
+The correction fixes displaced column labels. The corrected Behavior CSV
+must have SHA-256 65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd.
+All reported results use this corrected file. Source checks for all eight
+samples are in provenance/wang_source_audit/.
 
-Giving/Taking: run dictator_centaur70b_qlora.py --stage prepare with
---behavior-path, --group-path, --output-dir and --seed to create each corpus.
-dictator_centaur70b_item_holdout.py handles training and evaluation with the
-resulting --corpus-dir. analyze_dictator_corrected_adapters.py requires
---behavior-path, --corpus-root, --results-root and --output-dir. Its inputs must
-be the corrected 45-fit run, never the earlier mislabeled-data experiment.
+Categorization and lotteries:
+python scripts/prepare_cao_culture_extension.py
+python scripts/prepare_anllo_culture_extension.py
+python scripts/prepare_culture_extension_runs.py
 
-audit_corrected_response_adjustment.py requires --workspace and --output.
-It retains the historical data_cache/ and model_results/ subdirectory layout
-inside that explicitly supplied workspace. It imports only optimizer helpers
-from audit_dictator_response_prior.py, never the legacy analysis entry point.
+These download the source data, prepare responses, and write fixed folds,
+participant splits and 81 run manifests to data_cache/culture_extensions_20261021/.
+Taking is evaluation-only. The unused validation split is retained in the
+manifests; results use the final checkpoint, not validation-based selection.
 
-Ruggeri: install requirements-ruggeri.txt. ruggeri_analyze.py requires
---test-file, --private-dir, --score-dir and --output-dir. It stores participant
-scores only in the supplied private directory. ruggeri_plot.py can use the
-committed aggregates without private data.
+GPU RUNS
 
-GPU ENVIRONMENT
+These commands run from the repository root, after extracting data/paper_inputs.zip.
+They use the original prepared responses and participant splits. New model fits
+go to build/retrain; the saved paper results stay in data/workspace.
 
-requirements-training.txt records the observed package versions, but does not
-supply the custom ROCm Torch build. Saved versions are in provenance/. The two
-Slurm runners require HF_HOME, VIPER_PYTHON_OVERLAY and VIPER_TRAIN_CONTAINER.
-For Giving/Taking also set C70_RUN_KIND (smoke/full/base), with optional
-C70_BEHAVIOR_PATH, C70_GROUP_PATH, C70_CORPUS_ROOT and C70_OUTPUT_ROOT.
-Cluster execution must be checked on the target GPU environment.
+The recorded environment used Python 3.12.13, Torch 2.10.0+git8514f05,
+Transformers 5.5.4, Accelerate 1.13.0, PEFT 0.19.1, bitsandbytes 0.50.2,
+and safetensors 0.7.0. See provenance/giving_taking_runtime.json and
+provenance/cao_anllo_runtime.json. Install a working ROCm/CUDA PyTorch build
+before requirements-training.txt. The original custom Torch build is not
+provided. Install GPU PyTorch for your system using https://pytorch.org/get-started/locally/,
+then run: python -m pip install -r requirements-training.txt
+The code checks GPU availability, adapter APIs and zero-step model
+equivalence before training; the target GPU environment still needs a smoke run.
 
-The export manifest records source hashes and exclusions. Absolute source paths
-in aggregate metadata were replaced by ${WORKSPACE}; this is a provenance label,
-not an environment variable automatically expanded by the analysis scripts.
+Model IDs:
+  unsloth/Meta-Llama-3.1-70B-bnb-4bit
+  marcelbinz/Llama-3.1-Centaur-70B-adapter
+
+The historical records do not record Hugging Face commit revisions. Model IDs
+and runtime versions are known; exact upstream model revisions are not verified.
+Obtain access from Hugging Face if needed, then cache the model files:
+
+hf download unsloth/Meta-Llama-3.1-70B-bnb-4bit
+hf download marcelbinz/Llama-3.1-Centaur-70B-adapter
+
+Run the following in Bash. Use a new TRAIN_OUTPUT directory for each full rerun.
+
+set -euo pipefail
+WORKSPACE="$PWD/data/workspace"
+TRAIN_OUTPUT="$PWD/build/retrain"
+BEHAVIOR="$WORKSPACE/data_cache/dictator_Behavior_corrected_20260930.csv"
+GROUPS_FILE="$TRAIN_OUTPUT/GroupNo.csv"
+mkdir -p "$TRAIN_OUTPUT"
+
+# Download the unchanged target key separately.
+curl --fail --location https://osf.io/download/684051ee2434947ecd85b513/ -o "$TRAIN_OUTPUT/GroupNo.xlsx"
+python - "$TRAIN_OUTPUT/GroupNo.xlsx" "$GROUPS_FILE" <<'PYGROUPS'
+from pathlib import Path
+import hashlib
+import sys
+import pandas as pd
+source = Path(sys.argv[1])
+assert hashlib.sha256(source.read_bytes()).hexdigest() == "b8c8ebd90552deec41204e81b1917e68d533be6cec3a1e71bdb0137e4d489fea"
+pd.read_excel(source).to_csv(sys.argv[2], index=False)
+PYGROUPS
+
+ALLOCATION: CORPORA, THREE FROZEN REFERENCES AND 45 FITS
+
+for seed in 0 1 2; do
+  corpus="$TRAIN_OUTPUT/corpora/seed$seed"
+  python scripts/dictator_centaur70b_qlora.py --stage prepare \
+    --behavior-path "$BEHAVIOR" --group-path "$GROUPS_FILE" \
+    --seed "$seed" --output-dir "$corpus"
+  python scripts/validate_dictator_centaur70b_corrected.py \
+    --behavior-path "$BEHAVIOR" --corpus-dir "$corpus" --seed "$seed"
+done
+
+# Smoke: one update, then evaluation and output validation.
+common=(--behavior-path "$BEHAVIOR" --group-path "$GROUPS_FILE"
+        --corpus-dir "$TRAIN_OUTPUT/corpora/seed0" --seed 0 --fold 0
+        --condition us --micro-batch-size 20 --output-dir "$TRAIN_OUTPUT/smoke/allocation")
+python scripts/dictator_centaur70b_item_holdout.py "${common[@]}" --stage train --max-optimizer-steps 1
+python scripts/dictator_centaur70b_item_holdout.py "${common[@]}" --stage evaluate
+python scripts/validate_dictator_centaur70b_corrected.py \
+  --behavior-path "$BEHAVIOR" --corpus-dir "$TRAIN_OUTPUT/corpora/seed0" \
+  --output-dir "$TRAIN_OUTPUT/smoke/allocation" --seed 0 --fold 0 --condition us \
+  --steps 1 --write-completion
+
+for seed in 0 1 2; do
+  corpus="$TRAIN_OUTPUT/corpora/seed$seed"
+  output="$TRAIN_OUTPUT/allocation/seed$seed/base"
+  python scripts/dictator_centaur70b_item_holdout.py --stage evaluate \
+    --behavior-path "$BEHAVIOR" --group-path "$GROUPS_FILE" --corpus-dir "$corpus" \
+    --seed "$seed" --condition base --fold -1 --output-dir "$output"
+  python scripts/validate_dictator_centaur70b_corrected.py \
+    --behavior-path "$BEHAVIOR" --corpus-dir "$corpus" --seed "$seed" \
+    --condition base --fold -1 --steps 0 --output-dir "$output" --write-completion
+  for fold in 0 1 2 3 4; do
+    for condition in us china pooled; do
+      output="$TRAIN_OUTPUT/allocation/seed$seed/fold$fold/$condition"
+      common=(--behavior-path "$BEHAVIOR" --group-path "$GROUPS_FILE" --corpus-dir "$corpus"
+              --seed "$seed" --fold "$fold" --condition "$condition" --output-dir "$output"
+              --learning-rate 5e-5 --weight-decay 0.01 --warmup-steps 3
+              --micro-batch-size 20 --gradient-accumulation-steps 1 --max-seq-length 768
+              --lora-r 8 --lora-alpha 8 --lora-dropout 0 --use-rslora --gradient-checkpointing
+              --optimizer adamw --training-objective item_distribution --distribution-repeats 25
+              --attn-implementation sdpa --step0-items 5 --step0-tolerance 1e-6)
+      python scripts/dictator_centaur70b_item_holdout.py "${common[@]}" --stage train
+      python scripts/dictator_centaur70b_item_holdout.py "${common[@]}" --stage evaluate
+      python scripts/validate_dictator_centaur70b_corrected.py \
+        --behavior-path "$BEHAVIOR" --corpus-dir "$corpus" --seed "$seed" \
+        --fold "$fold" --condition "$condition" --steps 25 --output-dir "$output" --write-completion
+    done
+  done
+done
+
+# Base Llama and frozen Centaur controls, including the original prompt.
+python scripts/evaluate_dictator_a1_controls.py \
+  --group-path "$GROUPS_FILE" --output-dir "$TRAIN_OUTPUT/allocation_controls"
+
+# Aggregate the 45 new fits and their three frozen references.
+python scripts/analyze_dictator_corrected_adapters.py \
+  --behavior-path "$BEHAVIOR" --corpus-root "$TRAIN_OUTPUT/corpora" \
+  --results-root "$TRAIN_OUTPUT/allocation" --output-dir "$TRAIN_OUTPUT/allocation/analysis"
+
+BINARY TASKS: TWO SMOKES, TWO FROZEN REFERENCES AND 81 FITS
+
+These manifests contain the original fixed item folds and training targets.
+The binary trainer evaluates frozen and trained models in the same process.
+No separate evaluate command is needed after a successful train command.
+
+export WORKSPACE TRAIN_OUTPUT
+python - <<'PY'
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+source = Path(os.environ["WORKSPACE"]) / "publication-bias-transfer-demo"
+output_root = Path(os.environ["TRAIN_OUTPUT"]) / "binary"
+index = json.loads((source / "data_cache/culture_extensions_20261021/runs/run_index.json").read_text())
+
+def run(entry, stage):
+    dataset = entry["dataset"]
+    manifest = source / entry["manifest"]
+    if stage == "train":
+        output = output_root / dataset / f"seed{entry['seed']}" / f"fold{entry['fold']}" / entry["condition"]
+    else:
+        output = output_root / ("baseline_precision_aligned" if stage == "baseline" else "smoke") / dataset
+    subprocess.run([
+        sys.executable, "scripts/culture_extension_centaur70b.py", "--stage", stage,
+        "--run-manifest", str(manifest), "--output-dir", str(output),
+        "--micro-batch-size", "24" if dataset == "cao" else "12",
+    ], check=True)
+    subprocess.run([
+        sys.executable, "scripts/validate_culture_extension_run.py", "--stage", stage,
+        "--run-manifest", str(manifest), "--output-dir", str(output),
+    ], check=True)
+
+for dataset in ("cao", "anllo"):
+    first = next(entry for entry in index["runs"] if entry["dataset"] == dataset
+                 and entry["seed"] == 0 and entry["fold"] == 0 and entry["condition"] == "us")
+    run(first, "smoke")
+    run(first, "baseline")
+for entry in index["runs"]:
+    run(entry, "train")
+PY
+
+python scripts/analyze_culture_extensions.py \
+  --repo-root "$WORKSPACE/publication-bias-transfer-demo" \
+  --run-index "$WORKSPACE/publication-bias-transfer-demo/data_cache/culture_extensions_20261021/runs/run_index.json" \
+  --outputs-root "$TRAIN_OUTPUT/binary" --baseline-root "$TRAIN_OUTPUT/binary/baseline_precision_aligned" \
+  --analysis-dir "$TRAIN_OUTPUT/binary/analysis"
+
+The saved-data follow-up scripts check their results against the original fits.
+Use their normal commands to reproduce the paper from saved inputs; do not
+replace these inputs with new fits and expect identical estimates.
+
+CLUSTER RUNNERS
+
+slurm/run_dictator_centaur70b_corrected.sh and
+slurm/run_culture_extension_20261021.sh provide the original cluster setup.
+Set HF_HOME, VIPER_PYTHON_OVERLAY and VIPER_TRAIN_CONTAINER, then choose the
+account, partition, memory and GPU allocation for your cluster. Both runners
+validate outputs before marking a job complete. The portable commands above
+can run without Slurm or the original container.
+
+PAPER AND SUBMISSION ARCHIVE
+
+make paper       # requires latexmk and the LaTeX packages used in paper/main.tex
+make submission
+
+The submission ZIP contains code, prepared data, results and local manuscript
+sources. SHA256SUMS lists its files; a separate .zip.sha256 checks the ZIP.
+The packager verifies both the embedded data and each packaged file.
+It does not upload files, submit coursework, or sync the manuscript to Overleaf.
