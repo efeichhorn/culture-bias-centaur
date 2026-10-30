@@ -20,6 +20,31 @@ COUNTRIES = ("United States", "China")
 GIVING_TAKING = ROOT / "results/giving_taking"
 
 
+def fit_label_widths(fig, ax, labels, coordinate_width: float) -> list[dict]:
+    """Fit bounded labels to the current font, allowing at most 20% shrinkage."""
+    original_sizes = {artist: artist.get_fontsize() for artist, _ in labels}
+    for attempt in range(4):
+        fig.canvas.draw()
+        renderer = fig.canvas.get_renderer()
+        pixels_per_unit = ax.get_window_extent(renderer).width / coordinate_width
+        overflow = []
+        for artist, width in labels:
+            measured = artist.get_window_extent(renderer).width / pixels_per_unit
+            if measured > width:
+                overflow.append((artist, width, measured))
+        if not overflow:
+            return [{"label": artist.get_gid(), "font_size": artist.get_fontsize()}
+                    for artist, size in original_sizes.items() if artist.get_fontsize() < size]
+        if attempt < 3:
+            for artist, width, measured in overflow:
+                size = artist.get_fontsize() * width / measured * .98
+                artist.set_fontsize(max(.8 * original_sizes[artist], size))
+
+    details = "; ".join(f"{artist.get_text()!r} ({measured:.1f} > {width})"
+                        for artist, width, measured in overflow)
+    raise ValueError(f"Text exceeds available space after fitting: {details}")
+
+
 
 def decorate(ax, title: str, ylabel: str) -> None:
     letter, title_text = title.split("  ", 1)

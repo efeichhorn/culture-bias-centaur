@@ -30,7 +30,7 @@
     "frozen_sample_fit": true,
     "answer_position_control": true
   },
-  "bundled_font_check": "All six figures render with Matplotlib's STIXGeneral when system Times fonts are unavailable.",
+  "bundled_font_check": "All six figures render with STIXGeneral on Matplotlib 3.10.9 and 3.11.2. Labels and legends stay within their bounds.",
   "paper": {
     "command": "make paper",
     "pages": 13,
