@@ -1,0 +1,241 @@
+task,Country,metric,contrast,seed,value
+Taking,China,conditional_ll,base_score,0,-2.77356778573518
+Taking,China,conditional_ll,base_score,1,-2.77356778573518
+Taking,China,conditional_ll,base_score,2,-2.77356778573518
+Taking,China,conditional_ll,china_gain_vs_base,0,0.05027913825221907
+Taking,China,conditional_ll,china_gain_vs_base,1,0.04527550979555057
+Taking,China,conditional_ll,china_gain_vs_base,2,0.04154940356769766
+Taking,China,conditional_ll,china_prior_gain,0,-0.16610554913285636
+Taking,China,conditional_ll,china_prior_gain,1,-0.15744918969289368
+Taking,China,conditional_ll,china_prior_gain,2,-0.1674968143187604
+Taking,China,conditional_ll,china_prior_minus_lora,0,-0.21638468738507544
+Taking,China,conditional_ll,china_prior_minus_lora,1,-0.20272469948844424
+Taking,China,conditional_ll,china_prior_minus_lora,2,-0.20904621788645808
+Taking,China,conditional_ll,china_prior_score,0,-2.939673334868036
+Taking,China,conditional_ll,china_prior_score,1,-2.9310169754280735
+Taking,China,conditional_ll,china_prior_score,2,-2.94106460005394
+Taking,China,conditional_ll,china_score,0,-2.7232886474829607
+Taking,China,conditional_ll,china_score,1,-2.7282922759396295
+Taking,China,conditional_ll,china_score,2,-2.732018382167482
+Taking,China,conditional_ll,own_minus_other,0,-0.05248746678162382
+Taking,China,conditional_ll,own_minus_other,1,-0.06677307284283938
+Taking,China,conditional_ll,own_minus_other,2,-0.060024905457646036
+Taking,China,conditional_ll,own_minus_pooled,0,-0.04622779060056064
+Taking,China,conditional_ll,own_minus_pooled,1,-0.05391415777774526
+Taking,China,conditional_ll,own_minus_pooled,2,-0.04255211545787893
+Taking,China,conditional_ll,pooled_gain_vs_base,0,0.09650692885277971
+Taking,China,conditional_ll,pooled_gain_vs_base,1,0.09918966757329582
+Taking,China,conditional_ll,pooled_gain_vs_base,2,0.08410151902557658
+Taking,China,conditional_ll,pooled_minus_other,0,-0.0062596761810631806
+Taking,China,conditional_ll,pooled_minus_other,1,-0.012858915065094132
+Taking,China,conditional_ll,pooled_minus_other,2,-0.017472789999767105
+Taking,China,conditional_ll,pooled_prior_gain,0,-0.0439017872709973
+Taking,China,conditional_ll,pooled_prior_gain,1,-0.0631566822257196
+Taking,China,conditional_ll,pooled_prior_gain,2,-0.07423298426529641
+Taking,China,conditional_ll,pooled_prior_minus_lora,0,-0.140408716123777
+Taking,China,conditional_ll,pooled_prior_minus_lora,1,-0.1623463497990154
+Taking,China,conditional_ll,pooled_prior_minus_lora,2,-0.158334503290873
+Taking,China,conditional_ll,pooled_prior_score,0,-2.817469573006177
+Taking,China,conditional_ll,pooled_prior_score,1,-2.836724467960899
+Taking,China,conditional_ll,pooled_prior_score,2,-2.847800770000476
+Taking,China,conditional_ll,pooled_score,0,-2.6770608568824
+Taking,China,conditional_ll,pooled_score,1,-2.674378118161884
+Taking,China,conditional_ll,pooled_score,2,-2.689466266709603
+Taking,China,conditional_ll,us_gain_vs_base,0,0.10276660503384288
+Taking,China,conditional_ll,us_gain_vs_base,1,0.11204858263838996
+Taking,China,conditional_ll,us_gain_vs_base,2,0.1015743090253437
+Taking,China,conditional_ll,us_minus_china_adapter,0,0.05248746678162382
+Taking,China,conditional_ll,us_minus_china_adapter,1,0.06677307284283938
+Taking,China,conditional_ll,us_minus_china_adapter,2,0.060024905457646036
+Taking,China,conditional_ll,us_prior_gain,0,-0.020709958083011928
+Taking,China,conditional_ll,us_prior_gain,1,-0.015986104046072678
+Taking,China,conditional_ll,us_prior_gain,2,-0.00482490203642785
+Taking,China,conditional_ll,us_prior_minus_lora,0,-0.12347656311685483
+Taking,China,conditional_ll,us_prior_minus_lora,1,-0.12803468668446263
+Taking,China,conditional_ll,us_prior_minus_lora,2,-0.10639921106177154
+Taking,China,conditional_ll,us_prior_score,0,-2.794277743818192
+Taking,China,conditional_ll,us_prior_score,1,-2.7895538897812524
+Taking,China,conditional_ll,us_prior_score,2,-2.7783926877716074
+Taking,China,conditional_ll,us_score,0,-2.670801180701337
+Taking,China,conditional_ll,us_score,1,-2.66151920309679
+Taking,China,conditional_ll,us_score,2,-2.671993476709836
+Taking,China,raw_response_ll,base_score,0,-2.774152487538828
+Taking,China,raw_response_ll,base_score,1,-2.774152487538828
+Taking,China,raw_response_ll,base_score,2,-2.774152487538828
+Taking,China,raw_response_ll,china_gain_vs_base,0,0.05049373045103995
+Taking,China,raw_response_ll,china_gain_vs_base,1,0.04546606336167382
+Taking,China,raw_response_ll,china_gain_vs_base,2,0.04175349416008025
+Taking,China,raw_response_ll,china_prior_gain,0,-0.16610554913285724
+Taking,China,raw_response_ll,china_prior_gain,1,-0.15744918969289456
+Taking,China,raw_response_ll,china_prior_gain,2,-0.1674968143187613
+Taking,China,raw_response_ll,china_prior_minus_lora,0,-0.21659927958389721
+Taking,China,raw_response_ll,china_prior_minus_lora,1,-0.20291525305456837
+Taking,China,raw_response_ll,china_prior_minus_lora,2,-0.20925030847884152
+Taking,China,raw_response_ll,china_prior_score,0,-2.940258036671685
+Taking,China,raw_response_ll,china_prior_score,1,-2.9316016772317224
+Taking,China,raw_response_ll,china_prior_score,2,-2.941649301857589
+Taking,China,raw_response_ll,china_score,0,-2.723658757087788
+Taking,China,raw_response_ll,china_score,1,-2.728686424177154
+Taking,China,raw_response_ll,china_score,2,-2.7323989933787476
+Taking,China,raw_response_ll,own_minus_other,0,-0.052579608288270525
+Taking,China,raw_response_ll,own_minus_other,1,-0.0668563387069243
+Taking,China,raw_response_ll,own_minus_other,2,-0.06011065150850064
+Taking,China,raw_response_ll,own_minus_pooled,0,-0.04627170800265733
+Taking,China,raw_response_ll,own_minus_pooled,1,-0.053980967375997134
+Taking,China,raw_response_ll,own_minus_pooled,2,-0.04262738005033195
+Taking,China,raw_response_ll,pooled_gain_vs_base,0,0.09676543845369727
+Taking,China,raw_response_ll,pooled_gain_vs_base,1,0.09944703073767094
+Taking,China,raw_response_ll,pooled_gain_vs_base,2,0.08438087421041221
+Taking,China,raw_response_ll,pooled_minus_other,0,-0.006307900285613198
+Taking,China,raw_response_ll,pooled_minus_other,1,-0.012875371330927157
+Taking,China,raw_response_ll,pooled_minus_other,2,-0.017483271458168692
+Taking,China,raw_response_ll,pooled_prior_gain,0,-0.04390178727099819
+Taking,China,raw_response_ll,pooled_prior_gain,1,-0.0631566822257205
+Taking,China,raw_response_ll,pooled_prior_gain,2,-0.0742329842652973
+Taking,China,raw_response_ll,pooled_prior_minus_lora,0,-0.14066722572469545
+Taking,China,raw_response_ll,pooled_prior_minus_lora,1,-0.16260371296339143
+Taking,China,raw_response_ll,pooled_prior_minus_lora,2,-0.1586138584757095
+Taking,China,raw_response_ll,pooled_prior_score,0,-2.818054274809826
+Taking,China,raw_response_ll,pooled_prior_score,1,-2.837309169764548
+Taking,China,raw_response_ll,pooled_prior_score,2,-2.848385471804125
+Taking,China,raw_response_ll,pooled_score,0,-2.6773870490851306
+Taking,China,raw_response_ll,pooled_score,1,-2.674705456801157
+Taking,China,raw_response_ll,pooled_score,2,-2.689771613328416
+Taking,China,raw_response_ll,us_gain_vs_base,0,0.10307333873931049
+Taking,China,raw_response_ll,us_gain_vs_base,1,0.1123224020685981
+Taking,China,raw_response_ll,us_gain_vs_base,2,0.1018641456685809
+Taking,China,raw_response_ll,us_minus_china_adapter,0,0.052579608288270525
+Taking,China,raw_response_ll,us_minus_china_adapter,1,0.0668563387069243
+Taking,China,raw_response_ll,us_minus_china_adapter,2,0.06011065150850064
+Taking,China,raw_response_ll,us_prior_gain,0,-0.02070995808301278
+Taking,China,raw_response_ll,us_prior_gain,1,-0.015986104046073566
+Taking,China,raw_response_ll,us_prior_gain,2,-0.004824902036428738
+Taking,China,raw_response_ll,us_prior_minus_lora,0,-0.12378329682232325
+Taking,China,raw_response_ll,us_prior_minus_lora,1,-0.12830850611467168
+Taking,China,raw_response_ll,us_prior_minus_lora,2,-0.10668904770500964
+Taking,China,raw_response_ll,us_prior_score,0,-2.7948624456218405
+Taking,China,raw_response_ll,us_prior_score,1,-2.7901385915849013
+Taking,China,raw_response_ll,us_prior_score,2,-2.7789773895752563
+Taking,China,raw_response_ll,us_score,0,-2.6710791487995174
+Taking,China,raw_response_ll,us_score,1,-2.6618300854702297
+Taking,China,raw_response_ll,us_score,2,-2.6722883418702468
+Taking,United States,conditional_ll,base_score,0,-2.622412782665425
+Taking,United States,conditional_ll,base_score,1,-2.622412782665425
+Taking,United States,conditional_ll,base_score,2,-2.622412782665425
+Taking,United States,conditional_ll,china_gain_vs_base,0,0.11904512815212362
+Taking,United States,conditional_ll,china_gain_vs_base,1,0.11203999452828835
+Taking,United States,conditional_ll,china_gain_vs_base,2,0.104491464403531
+Taking,United States,conditional_ll,china_prior_gain,0,-0.060607345275223094
+Taking,United States,conditional_ll,china_prior_gain,1,-0.05743913413632729
+Taking,United States,conditional_ll,china_prior_gain,2,-0.07072822571579421
+Taking,United States,conditional_ll,china_prior_minus_lora,0,-0.17965247342734672
+Taking,United States,conditional_ll,china_prior_minus_lora,1,-0.16947912866461565
+Taking,United States,conditional_ll,china_prior_minus_lora,2,-0.17521969011932523
+Taking,United States,conditional_ll,china_prior_score,0,-2.683020127940648
+Taking,United States,conditional_ll,china_prior_score,1,-2.679851916801752
+Taking,United States,conditional_ll,china_prior_score,2,-2.693141008381219
+Taking,United States,conditional_ll,china_score,0,-2.5033676545133012
+Taking,United States,conditional_ll,china_score,1,-2.5103727881371363
+Taking,United States,conditional_ll,china_score,2,-2.517921318261894
+Taking,United States,conditional_ll,own_minus_other,0,0.09229182976864266
+Taking,United States,conditional_ll,own_minus_other,1,0.10349241234488551
+Taking,United States,conditional_ll,own_minus_other,2,0.1111874305097878
+Taking,United States,conditional_ll,own_minus_pooled,0,0.029487665040215376
+Taking,United States,conditional_ll,own_minus_pooled,1,0.02971745668075467
+Taking,United States,conditional_ll,own_minus_pooled,2,0.043067217594338826
+Taking,United States,conditional_ll,pooled_gain_vs_base,0,0.18184929288055088
+Taking,United States,conditional_ll,pooled_gain_vs_base,1,0.18581495019241917
+Taking,United States,conditional_ll,pooled_gain_vs_base,2,0.17261167731898
+Taking,United States,conditional_ll,pooled_minus_other,0,0.06280416472842729
+Taking,United States,conditional_ll,pooled_minus_other,1,0.07377495566413085
+Taking,United States,conditional_ll,pooled_minus_other,2,0.06812021291544897
+Taking,United States,conditional_ll,pooled_prior_gain,0,0.12339740424213023
+Taking,United States,conditional_ll,pooled_prior_gain,1,0.09769165153620525
+Taking,United States,conditional_ll,pooled_prior_gain,2,0.1025199262560792
+Taking,United States,conditional_ll,pooled_prior_minus_lora,0,-0.05845188863842066
+Taking,United States,conditional_ll,pooled_prior_minus_lora,1,-0.08812329865621393
+Taking,United States,conditional_ll,pooled_prior_minus_lora,2,-0.07009175106290076
+Taking,United States,conditional_ll,pooled_prior_score,0,-2.4990153784232945
+Taking,United States,conditional_ll,pooled_prior_score,1,-2.5247211311292195
+Taking,United States,conditional_ll,pooled_prior_score,2,-2.5198928564093457
+Taking,United States,conditional_ll,pooled_score,0,-2.440563489784874
+Taking,United States,conditional_ll,pooled_score,1,-2.436597832473006
+Taking,United States,conditional_ll,pooled_score,2,-2.4498011053464452
+Taking,United States,conditional_ll,us_gain_vs_base,0,0.2113369579207663
+Taking,United States,conditional_ll,us_gain_vs_base,1,0.21553240687317385
+Taking,United States,conditional_ll,us_gain_vs_base,2,0.2156788949133188
+Taking,United States,conditional_ll,us_minus_china_adapter,0,0.09229182976864266
+Taking,United States,conditional_ll,us_minus_china_adapter,1,0.10349241234488551
+Taking,United States,conditional_ll,us_minus_china_adapter,2,0.1111874305097878
+Taking,United States,conditional_ll,us_prior_gain,0,0.19636396193924027
+Taking,United States,conditional_ll,us_prior_gain,1,0.19336434036258615
+Taking,United States,conditional_ll,us_prior_gain,2,0.20698315888712604
+Taking,United States,conditional_ll,us_prior_minus_lora,0,-0.014972995981525992
+Taking,United States,conditional_ll,us_prior_minus_lora,1,-0.02216806651058773
+Taking,United States,conditional_ll,us_prior_minus_lora,2,-0.00869573602619274
+Taking,United States,conditional_ll,us_prior_score,0,-2.4260488207261846
+Taking,United States,conditional_ll,us_prior_score,1,-2.4290484423028387
+Taking,United States,conditional_ll,us_prior_score,2,-2.415429623778299
+Taking,United States,conditional_ll,us_score,0,-2.4110758247446586
+Taking,United States,conditional_ll,us_score,1,-2.406880375792251
+Taking,United States,conditional_ll,us_score,2,-2.406733887752106
+Taking,United States,raw_response_ll,base_score,0,-2.6229974844690727
+Taking,United States,raw_response_ll,base_score,1,-2.6229974844690727
+Taking,United States,raw_response_ll,base_score,2,-2.6229974844690727
+Taking,United States,raw_response_ll,china_gain_vs_base,0,0.11925972035094436
+Taking,United States,raw_response_ll,china_gain_vs_base,1,0.11223054809441148
+Taking,United States,raw_response_ll,china_gain_vs_base,2,0.10469555499591354
+Taking,United States,raw_response_ll,china_prior_gain,0,-0.060607345275223885
+Taking,United States,raw_response_ll,china_prior_gain,1,-0.05743913413632806
+Taking,United States,raw_response_ll,china_prior_gain,2,-0.07072822571579496
+Taking,United States,raw_response_ll,china_prior_minus_lora,0,-0.17986706562616825
+Taking,United States,raw_response_ll,china_prior_minus_lora,1,-0.16966968223073955
+Taking,United States,raw_response_ll,china_prior_minus_lora,2,-0.1754237807117085
+Taking,United States,raw_response_ll,china_prior_score,0,-2.6836048297442967
+Taking,United States,raw_response_ll,china_prior_score,1,-2.680436618605401
+Taking,United States,raw_response_ll,china_prior_score,2,-2.693725710184868
+Taking,United States,raw_response_ll,china_score,0,-2.503737764118129
+Taking,United States,raw_response_ll,china_score,1,-2.5107669363746616
+Taking,United States,raw_response_ll,china_score,2,-2.5183019294731595
+Taking,United States,raw_response_ll,own_minus_other,0,0.09238397127528941
+Taking,United States,raw_response_ll,own_minus_other,1,0.10357567820897043
+Taking,United States,raw_response_ll,own_minus_other,2,0.11127317656064231
+Taking,United States,raw_response_ll,own_minus_pooled,0,0.02953588914476545
+Taking,United States,raw_response_ll,own_minus_pooled,1,0.029733912946587684
+Taking,United States,raw_response_ll,own_minus_pooled,2,0.04307769905274035
+Taking,United States,raw_response_ll,pooled_gain_vs_base,0,0.18210780248146832
+Taking,United States,raw_response_ll,pooled_gain_vs_base,1,0.18607231335679422
+Taking,United States,raw_response_ll,pooled_gain_vs_base,2,0.1728910325038155
+Taking,United States,raw_response_ll,pooled_minus_other,0,0.06284808213052397
+Taking,United States,raw_response_ll,pooled_minus_other,1,0.07384176526238274
+Taking,United States,raw_response_ll,pooled_minus_other,2,0.06819547750790196
+Taking,United States,raw_response_ll,pooled_prior_gain,0,0.12339740424212944
+Taking,United States,raw_response_ll,pooled_prior_gain,1,0.09769165153620449
+Taking,United States,raw_response_ll,pooled_prior_gain,2,0.10251992625607848
+Taking,United States,raw_response_ll,pooled_prior_minus_lora,0,-0.05871039823933887
+Taking,United States,raw_response_ll,pooled_prior_minus_lora,1,-0.08838066182058975
+Taking,United States,raw_response_ll,pooled_prior_minus_lora,2,-0.07037110624773704
+Taking,United States,raw_response_ll,pooled_prior_score,0,-2.4996000802269434
+Taking,United States,raw_response_ll,pooled_prior_score,1,-2.5253058329328684
+Taking,United States,raw_response_ll,pooled_prior_score,2,-2.5204775582129946
+Taking,United States,raw_response_ll,pooled_score,0,-2.4408896819876045
+Taking,United States,raw_response_ll,pooled_score,1,-2.4369251711122786
+Taking,United States,raw_response_ll,pooled_score,2,-2.4501064519652576
+Taking,United States,raw_response_ll,us_gain_vs_base,0,0.21164369162623378
+Taking,United States,raw_response_ll,us_gain_vs_base,1,0.21580622630338192
+Taking,United States,raw_response_ll,us_gain_vs_base,2,0.21596873155655585
+Taking,United States,raw_response_ll,us_minus_china_adapter,0,0.09238397127528941
+Taking,United States,raw_response_ll,us_minus_china_adapter,1,0.10357567820897043
+Taking,United States,raw_response_ll,us_minus_china_adapter,2,0.11127317656064231
+Taking,United States,raw_response_ll,us_prior_gain,0,0.19636396193923955
+Taking,United States,raw_response_ll,us_prior_gain,1,0.19336434036258537
+Taking,United States,raw_response_ll,us_prior_gain,2,0.20698315888712532
+Taking,United States,raw_response_ll,us_prior_minus_lora,0,-0.015279729686994231
+Taking,United States,raw_response_ll,us_prior_minus_lora,1,-0.02244188594079653
+Taking,United States,raw_response_ll,us_prior_minus_lora,2,-0.008985572669430548
+Taking,United States,raw_response_ll,us_prior_score,0,-2.4266335225298334
+Taking,United States,raw_response_ll,us_prior_score,1,-2.4296331441064876
+Taking,United States,raw_response_ll,us_prior_score,2,-2.4160143255819473
+Taking,United States,raw_response_ll,us_score,0,-2.411353792842839
+Taking,United States,raw_response_ll,us_score,1,-2.407191258165691
+Taking,United States,raw_response_ll,us_score,2,-2.407028752912517

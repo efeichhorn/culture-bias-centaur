@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Balanced participant splits and source checks for allocation models."""
 from __future__ import annotations
 
 import argparse
@@ -710,64 +711,3 @@ def analyze(args: argparse.Namespace) -> None:
     (run_dir / "contrast_effects.json").write_text(
         json.dumps(effects, indent=2) + "\n", encoding="utf-8"
     )
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Mixed-wave participant-split culture-finetuning experiment."
-    )
-    parser.add_argument(
-        "--stage", required=True, choices=["prepare", "train", "evaluate", "analyze"]
-    )
-    parser.add_argument("--condition", choices=CONDITIONS)
-    parser.add_argument("--behavior-path", required=True)
-    parser.add_argument("--group-path", required=True)
-    parser.add_argument("--corpus-dir")
-    parser.add_argument("--output-dir", required=True)
-    parser.add_argument(
-        "--base-result-dir",
-        default="../model_results/dictator_giving_base/marcelbinz_Llama-3.1-Minitaur-8B",
-    )
-    parser.add_argument(
-        "--model-name", default="marcelbinz/Llama-3.1-Minitaur-8B"
-    )
-    parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--train-fraction", type=float, default=0.70)
-    parser.add_argument("--validation-fraction", type=float, default=0.15)
-    parser.add_argument("--max-steps", type=int, default=25)
-    parser.add_argument("--learning-rate", type=float, default=5e-5)
-    parser.add_argument("--warmup-ratio", type=float, default=0.03)
-    parser.add_argument("--weight-decay", type=float, default=0.01)
-    parser.add_argument("--batch-size", type=int, default=5)
-    parser.add_argument("--gradient-accumulation-steps", type=int, default=4)
-    parser.add_argument("--max-seq-length", type=int, default=768)
-    parser.add_argument("--lora-r", type=int, default=8)
-    parser.add_argument("--lora-alpha", type=int, default=16)
-    parser.add_argument("--lora-dropout", type=float, default=0.05)
-    parser.add_argument("--bf16", action=argparse.BooleanOptionalAction, default=True)
-    parser.add_argument("--attn-implementation", default="sdpa")
-    parser.add_argument("--generation-batch-size", type=int, default=8)
-    parser.add_argument("--bootstrap-resamples", type=int, default=1000)
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    if args.stage == "prepare":
-        prepare_corpora(args)
-    elif args.stage == "train":
-        if not args.corpus_dir:
-            raise ValueError("--corpus-dir is required for training.")
-        train_condition(args)
-    elif args.stage == "evaluate":
-        if not args.corpus_dir:
-            raise ValueError("--corpus-dir is required for evaluation.")
-        evaluate_condition(args)
-    else:
-        if not args.corpus_dir:
-            raise ValueError("--corpus-dir is required for analysis.")
-        analyze(args)
-
-
-if __name__ == "__main__":
-    main()

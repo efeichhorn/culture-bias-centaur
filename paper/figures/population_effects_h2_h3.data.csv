@@ -1,0 +1,622 @@
+task,item,seed,condition,prediction,unit
+Categorization,bee,0,us,76.05562133394439,percent
+Categorization,dress,0,us,72.19590575995761,percent
+Categorization,spoon,0,us,77.60075460177985,percent
+Categorization,bee,0,china,37.4875659716017,percent
+Categorization,dress,0,china,46.75752502880068,percent
+Categorization,spoon,0,china,46.29772770958382,percent
+Categorization,bee,0,pooled,55.87527048560846,percent
+Categorization,dress,0,pooled,62.13624776496268,percent
+Categorization,spoon,0,pooled,62.31797824652079,percent
+Categorization,teacup,0,us,59.21012437817287,percent
+Categorization,notepad,0,us,79.46151811045576,percent
+Categorization,airplane,0,us,77.41924153120333,percent
+Categorization,teacup,0,china,56.63899157048322,percent
+Categorization,notepad,0,china,53.606244358399714,percent
+Categorization,airplane,0,china,41.95185794570981,percent
+Categorization,teacup,0,pooled,56.59045771151363,percent
+Categorization,notepad,0,pooled,68.55450476644972,percent
+Categorization,airplane,0,pooled,59.95253626316448,percent
+Categorization,pigeon,0,us,76.35773288310453,percent
+Categorization,boot,0,us,61.64985357202817,percent
+Categorization,elephant,0,us,78.84258872791956,percent
+Categorization,pigeon,0,china,43.55747844969811,percent
+Categorization,boot,0,china,45.54849414155246,percent
+Categorization,elephant,0,china,37.08903881498019,percent
+Categorization,pigeon,0,pooled,53.81673844044877,percent
+Categorization,boot,0,pooled,49.45259458887029,percent
+Categorization,elephant,0,pooled,51.56334291315156,percent
+Categorization,teacher,0,us,47.94742058195171,percent
+Categorization,saw,0,us,60.915509477924076,percent
+Categorization,ring,0,us,80.84761267194696,percent
+Categorization,teacher,0,china,23.70465843991205,percent
+Categorization,saw,0,china,47.93580576968327,percent
+Categorization,ring,0,china,69.23560441808908,percent
+Categorization,teacher,0,pooled,30.66319288415798,percent
+Categorization,saw,0,pooled,51.74986720908248,percent
+Categorization,ring,0,pooled,72.31871195180906,percent
+Categorization,bowl,0,us,67.48322146891275,percent
+Categorization,legs,0,us,67.9248917355541,percent
+Categorization,goat,0,us,86.06456400903669,percent
+Categorization,bowl,0,china,56.41279440499083,percent
+Categorization,legs,0,china,50.12706080606327,percent
+Categorization,goat,0,china,60.769310519869116,percent
+Categorization,bowl,0,pooled,61.181361456504376,percent
+Categorization,legs,0,pooled,55.99887864530959,percent
+Categorization,goat,0,pooled,74.1886856315744,percent
+Categorization,bee,1,us,80.18684255585377,percent
+Categorization,dress,1,us,75.99488462123686,percent
+Categorization,spoon,1,us,81.59143949889753,percent
+Categorization,bee,1,china,36.38052740164157,percent
+Categorization,dress,1,china,46.64684887916269,percent
+Categorization,spoon,1,china,43.60423070839545,percent
+Categorization,bee,1,pooled,57.70347433427958,percent
+Categorization,dress,1,pooled,63.09024494458536,percent
+Categorization,spoon,1,pooled,64.03958494236981,percent
+Categorization,teacup,1,us,58.6202616506955,percent
+Categorization,notepad,1,us,80.89776432258428,percent
+Categorization,airplane,1,us,79.94496310303161,percent
+Categorization,teacup,1,china,54.21683200888948,percent
+Categorization,notepad,1,china,50.910230821304715,percent
+Categorization,airplane,1,china,38.27869263203688,percent
+Categorization,teacup,1,pooled,55.94469670872881,percent
+Categorization,notepad,1,pooled,67.77680516475222,percent
+Categorization,airplane,1,pooled,59.403319701225534,percent
+Categorization,pigeon,1,us,80.00548189018987,percent
+Categorization,boot,1,us,66.32460025127229,percent
+Categorization,elephant,1,us,82.47680916795956,percent
+Categorization,pigeon,1,china,39.82575841289489,percent
+Categorization,boot,1,china,45.99497690574605,percent
+Categorization,elephant,1,china,33.015864307258056,percent
+Categorization,pigeon,1,pooled,54.982243688474306,percent
+Categorization,boot,1,pooled,53.00110666590571,percent
+Categorization,elephant,1,pooled,53.5271429066102,percent
+Categorization,teacher,1,us,49.92887926794753,percent
+Categorization,saw,1,us,61.853799287931864,percent
+Categorization,ring,1,us,83.15154987537501,percent
+Categorization,teacher,1,china,25.81643485844617,percent
+Categorization,saw,1,china,46.15611145246496,percent
+Categorization,ring,1,china,64.0486915454078,percent
+Categorization,teacher,1,pooled,32.36369754272715,percent
+Categorization,saw,1,pooled,52.35392497236799,percent
+Categorization,ring,1,pooled,71.98424903275048,percent
+Categorization,bowl,1,us,71.16819556262217,percent
+Categorization,legs,1,us,72.96781433739898,percent
+Categorization,goat,1,us,88.13676419476279,percent
+Categorization,bowl,1,china,52.94693903353915,percent
+Categorization,legs,1,china,47.66824851482261,percent
+Categorization,goat,1,china,53.532200956643514,percent
+Categorization,bowl,1,pooled,60.61185632923345,percent
+Categorization,legs,1,pooled,56.199868137489574,percent
+Categorization,goat,1,pooled,74.71439837500496,percent
+Categorization,bee,2,us,78.95883661655766,percent
+Categorization,dress,2,us,74.90153311137688,percent
+Categorization,spoon,2,us,81.21994602523557,percent
+Categorization,bee,2,china,37.4826076932611,percent
+Categorization,dress,2,china,46.93463811075818,percent
+Categorization,spoon,2,china,46.64230012599972,percent
+Categorization,bee,2,pooled,56.17156373760549,percent
+Categorization,dress,2,pooled,61.65286288956552,percent
+Categorization,spoon,2,pooled,63.55948492037777,percent
+Categorization,teacup,2,us,59.243176989180604,percent
+Categorization,notepad,2,us,80.59825402859484,percent
+Categorization,airplane,2,us,79.74608622587176,percent
+Categorization,teacup,2,china,54.81518984177982,percent
+Categorization,notepad,2,china,52.63773703832973,percent
+Categorization,airplane,2,china,40.041885081078284,percent
+Categorization,teacup,2,pooled,56.05018389725718,percent
+Categorization,notepad,2,pooled,69.19023219249762,percent
+Categorization,airplane,2,pooled,61.49344638342238,percent
+Categorization,pigeon,2,us,78.79205432079414,percent
+Categorization,boot,2,us,65.05405008662223,percent
+Categorization,elephant,2,us,81.31251993779436,percent
+Categorization,pigeon,2,china,41.80902150373439,percent
+Categorization,boot,2,china,47.42568209156996,percent
+Categorization,elephant,2,china,35.98667843574329,percent
+Categorization,pigeon,2,pooled,54.7502587368802,percent
+Categorization,boot,2,pooled,51.12608265551416,percent
+Categorization,elephant,2,pooled,51.72582151013005,percent
+Categorization,teacher,2,us,53.03001852660433,percent
+Categorization,saw,2,us,65.98901644153352,percent
+Categorization,ring,2,us,83.2544947023345,percent
+Categorization,teacher,2,china,25.26827875860923,percent
+Categorization,saw,2,china,48.57128089097263,percent
+Categorization,ring,2,china,67.5414170684432,percent
+Categorization,teacher,2,pooled,32.64261922876071,percent
+Categorization,saw,2,pooled,54.29186935016784,percent
+Categorization,ring,2,pooled,73.84602024537803,percent
+Categorization,bowl,2,us,72.65347084671578,percent
+Categorization,legs,2,us,71.21406391384141,percent
+Categorization,goat,2,us,88.09476247299209,percent
+Categorization,bowl,2,china,54.381797229361375,percent
+Categorization,legs,2,china,48.45525637605002,percent
+Categorization,goat,2,china,58.1178947160665,percent
+Categorization,bowl,2,pooled,63.27899792196475,percent
+Categorization,legs,2,pooled,56.57752473011352,percent
+Categorization,goat,2,pooled,74.8960516248874,percent
+Lottery tradeoffs,8,0,us,65.07464421165773,percent
+Lottery tradeoffs,8,0,china,76.53150330329275,percent
+Lottery tradeoffs,8,0,pooled,70.80573779156778,percent
+Lottery tradeoffs,9,0,us,46.90825495981239,percent
+Lottery tradeoffs,9,0,china,78.22080943103094,percent
+Lottery tradeoffs,9,0,pooled,59.39412896002574,percent
+Lottery tradeoffs,10,0,us,55.880413922339656,percent
+Lottery tradeoffs,10,0,china,80.01907027033451,percent
+Lottery tradeoffs,10,0,pooled,71.75025630950921,percent
+Lottery tradeoffs,11,0,us,75.46957157308253,percent
+Lottery tradeoffs,11,0,china,84.3481589463681,percent
+Lottery tradeoffs,11,0,pooled,79.72349923998738,percent
+Lottery tradeoffs,8,1,us,61.69035332476383,percent
+Lottery tradeoffs,8,1,china,78.16383296462821,percent
+Lottery tradeoffs,8,1,pooled,74.95512062585738,percent
+Lottery tradeoffs,9,1,us,43.209546170886,percent
+Lottery tradeoffs,9,1,china,79.53365009980051,percent
+Lottery tradeoffs,9,1,pooled,56.91472973745929,percent
+Lottery tradeoffs,10,1,us,55.12038799802966,percent
+Lottery tradeoffs,10,1,china,80.64988084637082,percent
+Lottery tradeoffs,10,1,pooled,71.82178767266674,percent
+Lottery tradeoffs,11,1,us,73.73288626336553,percent
+Lottery tradeoffs,11,1,china,85.27471652541541,percent
+Lottery tradeoffs,11,1,pooled,81.84914002282075,percent
+Lottery tradeoffs,8,2,us,65.61770216942105,percent
+Lottery tradeoffs,8,2,china,80.09150065884506,percent
+Lottery tradeoffs,8,2,pooled,69.47911299628109,percent
+Lottery tradeoffs,9,2,us,43.24008895934962,percent
+Lottery tradeoffs,9,2,china,82.15921674522228,percent
+Lottery tradeoffs,9,2,pooled,56.18802371930831,percent
+Lottery tradeoffs,10,2,us,56.263008738310425,percent
+Lottery tradeoffs,10,2,china,81.64170084038778,percent
+Lottery tradeoffs,10,2,pooled,66.4181728021984,percent
+Lottery tradeoffs,11,2,us,74.6355340426131,percent
+Lottery tradeoffs,11,2,china,88.30050108874158,percent
+Lottery tradeoffs,11,2,pooled,81.04506991990276,percent
+Giving,boy,0,china,5.83469382069237,tokens
+Giving,boy,0,pooled,6.597549156620906,tokens
+Giving,boy,0,us,7.0975739025510896,tokens
+Giving,boy,1,china,5.852396154131385,tokens
+Giving,boy,1,pooled,6.298884699882244,tokens
+Giving,boy,1,us,7.136971713307205,tokens
+Giving,boy,2,china,5.72529685417538,tokens
+Giving,boy,2,pooled,6.690474538120502,tokens
+Giving,boy,2,us,7.307859220160837,tokens
+Giving,girl,0,china,6.099857524222444,tokens
+Giving,girl,0,pooled,6.987770282816425,tokens
+Giving,girl,0,us,7.110864497785627,tokens
+Giving,girl,1,china,5.810874604447424,tokens
+Giving,girl,1,pooled,6.6046409569387485,tokens
+Giving,girl,1,us,7.283279701540279,tokens
+Giving,girl,2,china,5.797686247262224,tokens
+Giving,girl,2,pooled,6.74983097927394,tokens
+Giving,girl,2,us,7.558668692670822,tokens
+Giving,male,0,china,5.549756393609067,tokens
+Giving,male,0,pooled,6.619985409505417,tokens
+Giving,male,0,us,7.278399699176731,tokens
+Giving,male,1,china,5.64645994150601,tokens
+Giving,male,1,pooled,6.608608320504867,tokens
+Giving,male,1,us,6.972119801808266,tokens
+Giving,male,2,china,5.44506724539813,tokens
+Giving,male,2,pooled,6.812016549275156,tokens
+Giving,male,2,us,7.544731640003233,tokens
+Giving,female,0,china,5.717543815031092,tokens
+Giving,female,0,pooled,6.765616853739527,tokens
+Giving,female,0,us,7.375370040773827,tokens
+Giving,female,1,china,5.712111261816174,tokens
+Giving,female,1,pooled,6.510042606369761,tokens
+Giving,female,1,us,7.003764851806671,tokens
+Giving,female,2,china,5.570322634812983,tokens
+Giving,female,2,pooled,6.803329558999601,tokens
+Giving,female,2,us,7.348271880336303,tokens
+Giving,German,0,china,4.974044659392094,tokens
+Giving,German,0,pooled,5.90769891616304,tokens
+Giving,German,0,us,6.65869978204284,tokens
+Giving,German,1,china,5.106717317089104,tokens
+Giving,German,1,pooled,5.786971831274226,tokens
+Giving,German,1,us,6.887616239410274,tokens
+Giving,German,2,china,4.825646105701833,tokens
+Giving,German,2,pooled,6.1017143900268085,tokens
+Giving,German,2,us,7.10501336049482,tokens
+Giving,Japanese,0,china,4.968542463822708,tokens
+Giving,Japanese,0,pooled,6.060249051985677,tokens
+Giving,Japanese,0,us,6.844164910368356,tokens
+Giving,Japanese,1,china,5.267597378662261,tokens
+Giving,Japanese,1,pooled,5.869506786527956,tokens
+Giving,Japanese,1,us,6.3218132670576,tokens
+Giving,Japanese,2,china,5.3252255729187885,tokens
+Giving,Japanese,2,pooled,6.182279092620859,tokens
+Giving,Japanese,2,us,6.799755536769681,tokens
+Giving,North Korean,0,china,4.950152251097401,tokens
+Giving,North Korean,0,pooled,5.677757380127061,tokens
+Giving,North Korean,0,us,6.116922820636079,tokens
+Giving,North Korean,1,china,4.948938497401155,tokens
+Giving,North Korean,1,pooled,5.435473794192515,tokens
+Giving,North Korean,1,us,6.405978094371204,tokens
+Giving,North Korean,2,china,5.07356004098088,tokens
+Giving,North Korean,2,pooled,5.336740383764512,tokens
+Giving,North Korean,2,us,6.308439395326791,tokens
+Giving,Pakistani,0,china,5.098162456835901,tokens
+Giving,Pakistani,0,pooled,6.0068847529840586,tokens
+Giving,Pakistani,0,us,6.094072017496749,tokens
+Giving,Pakistani,1,china,4.842181348632221,tokens
+Giving,Pakistani,1,pooled,5.563515380598118,tokens
+Giving,Pakistani,1,us,6.342888665260429,tokens
+Giving,Pakistani,2,china,4.763164723179622,tokens
+Giving,Pakistani,2,pooled,5.852794389692135,tokens
+Giving,Pakistani,2,us,6.531176510369897,tokens
+Giving,Australian,0,china,5.232712509265936,tokens
+Giving,Australian,0,pooled,6.730277132720593,tokens
+Giving,Australian,0,us,7.273428757412399,tokens
+Giving,Australian,1,china,5.28506394918993,tokens
+Giving,Australian,1,pooled,6.5398162006265705,tokens
+Giving,Australian,1,us,7.328637463488957,tokens
+Giving,Australian,2,china,5.215317759794836,tokens
+Giving,Australian,2,pooled,6.516102761923687,tokens
+Giving,Australian,2,us,7.359333379908895,tokens
+Giving,Jewish,0,china,5.255366384821419,tokens
+Giving,Jewish,0,pooled,6.215830369931755,tokens
+Giving,Jewish,0,us,6.993929461212405,tokens
+Giving,Jewish,1,china,5.518097238223502,tokens
+Giving,Jewish,1,pooled,6.339668503106579,tokens
+Giving,Jewish,1,us,6.943695629748962,tokens
+Giving,Jewish,2,china,5.318384880692978,tokens
+Giving,Jewish,2,pooled,6.068644932574317,tokens
+Giving,Jewish,2,us,7.156704558844091,tokens
+Giving,Greek,0,china,5.218345915270313,tokens
+Giving,Greek,0,pooled,6.249601844717608,tokens
+Giving,Greek,0,us,6.790766470572035,tokens
+Giving,Greek,1,china,4.937145966069132,tokens
+Giving,Greek,1,pooled,6.2822169000067625,tokens
+Giving,Greek,1,us,6.647218219879663,tokens
+Giving,Greek,2,china,4.976614403120943,tokens
+Giving,Greek,2,pooled,6.218148830841895,tokens
+Giving,Greek,2,us,6.886514256374204,tokens
+Giving,farmer,0,china,5.694414222059017,tokens
+Giving,farmer,0,pooled,6.865183995368873,tokens
+Giving,farmer,0,us,7.326678843294126,tokens
+Giving,farmer,1,china,6.018961746553711,tokens
+Giving,farmer,1,pooled,6.818319173501691,tokens
+Giving,farmer,1,us,7.349438773952845,tokens
+Giving,farmer,2,china,5.945950031694119,tokens
+Giving,farmer,2,pooled,6.650824390641733,tokens
+Giving,farmer,2,us,7.451846702957664,tokens
+Giving,civil servant,0,china,6.011453879831847,tokens
+Giving,civil servant,0,pooled,6.900877276332104,tokens
+Giving,civil servant,0,us,7.14744796259651,tokens
+Giving,civil servant,1,china,5.918532636671871,tokens
+Giving,civil servant,1,pooled,6.490818668976412,tokens
+Giving,civil servant,1,us,6.955861274740175,tokens
+Giving,civil servant,2,china,5.9525381276865375,tokens
+Giving,civil servant,2,pooled,6.717830667517628,tokens
+Giving,civil servant,2,us,7.388369539299015,tokens
+Giving,janitor,0,china,5.901758144230231,tokens
+Giving,janitor,0,pooled,6.672812054207503,tokens
+Giving,janitor,0,us,7.005861085726616,tokens
+Giving,janitor,1,china,5.806989685496894,tokens
+Giving,janitor,1,pooled,6.561009352248747,tokens
+Giving,janitor,1,us,7.050181513634212,tokens
+Giving,janitor,2,china,5.603724595424986,tokens
+Giving,janitor,2,pooled,6.59921591716784,tokens
+Giving,janitor,2,us,7.306737599441479,tokens
+Giving,nanny,0,china,5.864109534092939,tokens
+Giving,nanny,0,pooled,6.801117044486549,tokens
+Giving,nanny,0,us,7.163490918354755,tokens
+Giving,nanny,1,china,5.96854658845193,tokens
+Giving,nanny,1,pooled,6.294184957745811,tokens
+Giving,nanny,1,us,6.953243193053413,tokens
+Giving,nanny,2,china,5.644133276489189,tokens
+Giving,nanny,2,pooled,6.671502316657079,tokens
+Giving,nanny,2,us,7.256447760618764,tokens
+Giving,property developer,0,china,5.39910669962516,tokens
+Giving,property developer,0,pooled,5.867238841479378,tokens
+Giving,property developer,0,us,6.16257683752852,tokens
+Giving,property developer,1,china,5.25140605437025,tokens
+Giving,property developer,1,pooled,5.50302993141541,tokens
+Giving,property developer,1,us,5.880050600595035,tokens
+Giving,property developer,2,china,5.102118775892992,tokens
+Giving,property developer,2,pooled,5.800445095240208,tokens
+Giving,property developer,2,us,6.3204416310210085,tokens
+Giving,pharmaceutical executive,0,china,4.990030970446019,tokens
+Giving,pharmaceutical executive,0,pooled,5.367916017852318,tokens
+Giving,pharmaceutical executive,0,us,5.552971151222052,tokens
+Giving,pharmaceutical executive,1,china,4.6410412635264455,tokens
+Giving,pharmaceutical executive,1,pooled,5.225089515014516,tokens
+Giving,pharmaceutical executive,1,us,5.336746483823159,tokens
+Giving,pharmaceutical executive,2,china,4.910612591401642,tokens
+Giving,pharmaceutical executive,2,pooled,5.203891156642777,tokens
+Giving,pharmaceutical executive,2,us,5.575659527200672,tokens
+Giving,investment banker,0,china,5.048325068385101,tokens
+Giving,investment banker,0,pooled,5.6462392413323705,tokens
+Giving,investment banker,0,us,5.716159498485648,tokens
+Giving,investment banker,1,china,5.040261331691816,tokens
+Giving,investment banker,1,pooled,5.391568734170653,tokens
+Giving,investment banker,1,us,5.5921931563643295,tokens
+Giving,investment banker,2,china,5.116486205323018,tokens
+Giving,investment banker,2,pooled,5.3175575835767175,tokens
+Giving,investment banker,2,us,6.016158411912155,tokens
+Giving,lawyer,0,china,5.320060574023778,tokens
+Giving,lawyer,0,pooled,6.0196932386444,tokens
+Giving,lawyer,0,us,5.997115682398973,tokens
+Giving,lawyer,1,china,5.363888466855403,tokens
+Giving,lawyer,1,pooled,5.569409836370715,tokens
+Giving,lawyer,1,us,5.978893940464808,tokens
+Giving,lawyer,2,china,5.139485580797806,tokens
+Giving,lawyer,2,pooled,5.674232654659905,tokens
+Giving,lawyer,2,us,5.909102552401502,tokens
+Giving,teacher,0,china,5.817836764974179,tokens
+Giving,teacher,0,pooled,7.220927745894125,tokens
+Giving,teacher,0,us,7.6535214460397825,tokens
+Giving,teacher,1,china,5.833301875603701,tokens
+Giving,teacher,1,pooled,6.66780496392218,tokens
+Giving,teacher,1,us,7.757925661620787,tokens
+Giving,teacher,2,china,5.710400830858854,tokens
+Giving,teacher,2,pooled,7.05563383201744,tokens
+Giving,teacher,2,us,7.780374810011016,tokens
+Giving,athlete,0,china,5.748580725546217,tokens
+Giving,athlete,0,pooled,6.927751558530725,tokens
+Giving,athlete,0,us,7.237576785247112,tokens
+Giving,athlete,1,china,5.991543522262002,tokens
+Giving,athlete,1,pooled,6.492151530945511,tokens
+Giving,athlete,1,us,6.949766823043711,tokens
+Giving,athlete,2,china,5.791965964391534,tokens
+Giving,athlete,2,pooled,6.529038114344624,tokens
+Giving,athlete,2,us,7.261584833697056,tokens
+Giving,scientist,0,china,5.413774276139825,tokens
+Giving,scientist,0,pooled,6.825038174110871,tokens
+Giving,scientist,0,us,7.171118942712854,tokens
+Giving,scientist,1,china,5.779740021239691,tokens
+Giving,scientist,1,pooled,6.597010519161145,tokens
+Giving,scientist,1,us,7.090479470010768,tokens
+Giving,scientist,2,china,5.582733698495392,tokens
+Giving,scientist,2,pooled,6.6158787115896445,tokens
+Giving,scientist,2,us,7.461454561299532,tokens
+Giving,homeless,0,china,9.547097146213234,tokens
+Giving,homeless,0,pooled,9.78091506535261,tokens
+Giving,homeless,0,us,10.963286726806434,tokens
+Giving,homeless,1,china,9.27634777164865,tokens
+Giving,homeless,1,pooled,9.28178388731935,tokens
+Giving,homeless,1,us,10.843334729337291,tokens
+Giving,homeless,2,china,9.406634210646049,tokens
+Giving,homeless,2,pooled,9.900984454131551,tokens
+Giving,homeless,2,us,10.54983726045342,tokens
+Giving,disabled,0,china,7.550481902920556,tokens
+Giving,disabled,0,pooled,8.805041767472016,tokens
+Giving,disabled,0,us,9.738852762694458,tokens
+Giving,disabled,1,china,7.32565839659148,tokens
+Giving,disabled,1,pooled,8.400796391610063,tokens
+Giving,disabled,1,us,9.223813787400754,tokens
+Giving,disabled,2,china,7.4977927882553,tokens
+Giving,disabled,2,pooled,8.472673892889953,tokens
+Giving,disabled,2,us,9.658511071272152,tokens
+Giving,no information,0,china,5.479584753275396,tokens
+Giving,no information,0,pooled,6.466714457397996,tokens
+Giving,no information,0,us,7.1633645855733805,tokens
+Giving,no information,1,china,5.730684306776658,tokens
+Giving,no information,1,pooled,6.570467985182185,tokens
+Giving,no information,1,us,7.078593560273252,tokens
+Giving,no information,2,china,5.7156973941196885,tokens
+Giving,no information,2,pooled,6.460985754996524,tokens
+Giving,no information,2,us,7.237254513711396,tokens
+Taking,boy,0,china,6.687572838827018,tokens
+Taking,boy,0,pooled,7.239101546341182,tokens
+Taking,boy,0,us,7.640480324103392,tokens
+Taking,boy,1,china,6.840044471924916,tokens
+Taking,boy,1,pooled,6.880361766880843,tokens
+Taking,boy,1,us,7.289887565894945,tokens
+Taking,boy,2,china,6.739136316603721,tokens
+Taking,boy,2,pooled,7.120459299872479,tokens
+Taking,boy,2,us,8.028653321499762,tokens
+Taking,girl,0,china,6.413726043422145,tokens
+Taking,girl,0,pooled,7.257557373770632,tokens
+Taking,girl,0,us,7.611915833274248,tokens
+Taking,girl,1,china,6.457764473179633,tokens
+Taking,girl,1,pooled,7.008387530210604,tokens
+Taking,girl,1,us,7.355477801292644,tokens
+Taking,girl,2,china,6.281567061029531,tokens
+Taking,girl,2,pooled,7.002255531809201,tokens
+Taking,girl,2,us,7.485264023756878,tokens
+Taking,male,0,china,7.254703087488808,tokens
+Taking,male,0,pooled,7.700672228009338,tokens
+Taking,male,0,us,8.179872374100862,tokens
+Taking,male,1,china,6.991069143530647,tokens
+Taking,male,1,pooled,7.744357495905361,tokens
+Taking,male,1,us,8.178900218776512,tokens
+Taking,male,2,china,7.169739798279704,tokens
+Taking,male,2,pooled,7.935495539437004,tokens
+Taking,male,2,us,8.261924581590772,tokens
+Taking,female,0,china,6.972098092079227,tokens
+Taking,female,0,pooled,7.60703283079626,tokens
+Taking,female,0,us,7.630148019835038,tokens
+Taking,female,1,china,7.170841059098198,tokens
+Taking,female,1,pooled,7.472350804726393,tokens
+Taking,female,1,us,7.7140766926878035,tokens
+Taking,female,2,china,6.776577385998952,tokens
+Taking,female,2,pooled,7.550971536298522,tokens
+Taking,female,2,us,7.665711976535388,tokens
+Taking,German,0,china,6.746763403264481,tokens
+Taking,German,0,pooled,7.469819006541968,tokens
+Taking,German,0,us,8.191603703169521,tokens
+Taking,German,1,china,6.8145383596874165,tokens
+Taking,German,1,pooled,7.680653669127814,tokens
+Taking,German,1,us,8.256340109002426,tokens
+Taking,German,2,china,6.965750904171497,tokens
+Taking,German,2,pooled,7.55796600716344,tokens
+Taking,German,2,us,8.35207240966482,tokens
+Taking,Japanese,0,china,6.5995463068901286,tokens
+Taking,Japanese,0,pooled,7.183997852626804,tokens
+Taking,Japanese,0,us,7.944691000521941,tokens
+Taking,Japanese,1,china,6.669231747380444,tokens
+Taking,Japanese,1,pooled,7.362995545097649,tokens
+Taking,Japanese,1,us,7.788345782467665,tokens
+Taking,Japanese,2,china,6.646482448726943,tokens
+Taking,Japanese,2,pooled,7.367083014267992,tokens
+Taking,Japanese,2,us,7.82287750054894,tokens
+Taking,North Korean,0,china,7.7532788292160415,tokens
+Taking,North Korean,0,pooled,8.999494158338896,tokens
+Taking,North Korean,0,us,9.072059103033078,tokens
+Taking,North Korean,1,china,7.731203961519056,tokens
+Taking,North Korean,1,pooled,8.916127771955475,tokens
+Taking,North Korean,1,us,8.982462669632794,tokens
+Taking,North Korean,2,china,7.853071300713243,tokens
+Taking,North Korean,2,pooled,8.673363905930534,tokens
+Taking,North Korean,2,us,8.992265174035605,tokens
+Taking,Pakistani,0,china,6.754325209070443,tokens
+Taking,Pakistani,0,pooled,7.567171390133219,tokens
+Taking,Pakistani,0,us,7.825702918469921,tokens
+Taking,Pakistani,1,china,6.775171293999757,tokens
+Taking,Pakistani,1,pooled,7.1382187668282375,tokens
+Taking,Pakistani,1,us,7.895402819728588,tokens
+Taking,Pakistani,2,china,6.4180938001170045,tokens
+Taking,Pakistani,2,pooled,7.3635481685083635,tokens
+Taking,Pakistani,2,us,7.862864143755626,tokens
+Taking,Australian,0,china,6.921029884664008,tokens
+Taking,Australian,0,pooled,7.502738065735001,tokens
+Taking,Australian,0,us,7.872484671982455,tokens
+Taking,Australian,1,china,6.687812548791063,tokens
+Taking,Australian,1,pooled,7.648071690737119,tokens
+Taking,Australian,1,us,7.679551095344756,tokens
+Taking,Australian,2,china,6.308621278262792,tokens
+Taking,Australian,2,pooled,7.556479619198756,tokens
+Taking,Australian,2,us,8.236860013445662,tokens
+Taking,Jewish,0,china,6.901759873996397,tokens
+Taking,Jewish,0,pooled,7.6839000287035075,tokens
+Taking,Jewish,0,us,7.5024191200021235,tokens
+Taking,Jewish,1,china,7.094307547591382,tokens
+Taking,Jewish,1,pooled,7.593938450489216,tokens
+Taking,Jewish,1,us,7.737945705304486,tokens
+Taking,Jewish,2,china,6.839413372436485,tokens
+Taking,Jewish,2,pooled,7.407497532928331,tokens
+Taking,Jewish,2,us,7.760173842822866,tokens
+Taking,Greek,0,china,6.908490915715783,tokens
+Taking,Greek,0,pooled,7.893314294990321,tokens
+Taking,Greek,0,us,8.390033783361238,tokens
+Taking,Greek,1,china,6.710972973931841,tokens
+Taking,Greek,1,pooled,7.638754872440485,tokens
+Taking,Greek,1,us,8.169276501341256,tokens
+Taking,Greek,2,china,6.621994262392664,tokens
+Taking,Greek,2,pooled,7.552275428750713,tokens
+Taking,Greek,2,us,8.186007912881758,tokens
+Taking,farmer,0,china,6.799893345479586,tokens
+Taking,farmer,0,pooled,7.383189834177241,tokens
+Taking,farmer,0,us,7.606093320578017,tokens
+Taking,farmer,1,china,6.831922803322687,tokens
+Taking,farmer,1,pooled,7.066899824484865,tokens
+Taking,farmer,1,us,7.559865885003586,tokens
+Taking,farmer,2,china,6.722212916927721,tokens
+Taking,farmer,2,pooled,7.324433596221866,tokens
+Taking,farmer,2,us,7.650177768688863,tokens
+Taking,civil servant,0,china,6.583506988929067,tokens
+Taking,civil servant,0,pooled,7.258037468813422,tokens
+Taking,civil servant,0,us,7.710248720909922,tokens
+Taking,civil servant,1,china,6.465292681785232,tokens
+Taking,civil servant,1,pooled,7.002637192131704,tokens
+Taking,civil servant,1,us,7.470164981015419,tokens
+Taking,civil servant,2,china,6.504102226067209,tokens
+Taking,civil servant,2,pooled,7.159164242103905,tokens
+Taking,civil servant,2,us,7.308140005539514,tokens
+Taking,janitor,0,china,7.425340474033928,tokens
+Taking,janitor,0,pooled,8.354200849338492,tokens
+Taking,janitor,0,us,8.807946680726236,tokens
+Taking,janitor,1,china,7.626661516592804,tokens
+Taking,janitor,1,pooled,8.211773324819426,tokens
+Taking,janitor,1,us,8.377166492894208,tokens
+Taking,janitor,2,china,7.191123610026238,tokens
+Taking,janitor,2,pooled,8.304348621761603,tokens
+Taking,janitor,2,us,8.615186533260474,tokens
+Taking,nanny,0,china,6.909110755606644,tokens
+Taking,nanny,0,pooled,7.27731672702364,tokens
+Taking,nanny,0,us,7.152267343679848,tokens
+Taking,nanny,1,china,6.815799310173661,tokens
+Taking,nanny,1,pooled,7.094126915774265,tokens
+Taking,nanny,1,us,7.164328700161206,tokens
+Taking,nanny,2,china,6.8108663873592095,tokens
+Taking,nanny,2,pooled,6.949677403071272,tokens
+Taking,nanny,2,us,7.104879980521024,tokens
+Taking,property developer,0,china,7.624930759534185,tokens
+Taking,property developer,0,pooled,8.577304808381516,tokens
+Taking,property developer,0,us,8.944502789115822,tokens
+Taking,property developer,1,china,7.458292921383856,tokens
+Taking,property developer,1,pooled,8.487182092518172,tokens
+Taking,property developer,1,us,8.451400657528538,tokens
+Taking,property developer,2,china,7.6128929994447585,tokens
+Taking,property developer,2,pooled,8.378736852776337,tokens
+Taking,property developer,2,us,8.633372842466079,tokens
+Taking,pharmaceutical executive,0,china,7.751266012114884,tokens
+Taking,pharmaceutical executive,0,pooled,8.782260937971818,tokens
+Taking,pharmaceutical executive,0,us,8.657581244547579,tokens
+Taking,pharmaceutical executive,1,china,7.526642805916316,tokens
+Taking,pharmaceutical executive,1,pooled,8.430102175795954,tokens
+Taking,pharmaceutical executive,1,us,9.10984549123634,tokens
+Taking,pharmaceutical executive,2,china,7.47805919905669,tokens
+Taking,pharmaceutical executive,2,pooled,8.53301389996988,tokens
+Taking,pharmaceutical executive,2,us,9.15991587836984,tokens
+Taking,investment banker,0,china,8.07147535972237,tokens
+Taking,investment banker,0,pooled,9.091370300635276,tokens
+Taking,investment banker,0,us,9.661010039618589,tokens
+Taking,investment banker,1,china,8.130150124317987,tokens
+Taking,investment banker,1,pooled,9.051701796185489,tokens
+Taking,investment banker,1,us,9.686832994483954,tokens
+Taking,investment banker,2,china,8.106857980360882,tokens
+Taking,investment banker,2,pooled,9.061400434371173,tokens
+Taking,investment banker,2,us,9.65747794349386,tokens
+Taking,lawyer,0,china,7.2497139795387024,tokens
+Taking,lawyer,0,pooled,8.002175511367804,tokens
+Taking,lawyer,0,us,8.033210030515729,tokens
+Taking,lawyer,1,china,7.197222128762406,tokens
+Taking,lawyer,1,pooled,7.917185560081573,tokens
+Taking,lawyer,1,us,8.155091023970554,tokens
+Taking,lawyer,2,china,7.335179966538247,tokens
+Taking,lawyer,2,pooled,7.624334287422437,tokens
+Taking,lawyer,2,us,8.314814690607184,tokens
+Taking,teacher,0,china,5.663684549855873,tokens
+Taking,teacher,0,pooled,6.251911741351988,tokens
+Taking,teacher,0,us,6.14592239245811,tokens
+Taking,teacher,1,china,5.599735416583052,tokens
+Taking,teacher,1,pooled,6.050293883574125,tokens
+Taking,teacher,1,us,6.31345563635757,tokens
+Taking,teacher,2,china,5.498205554881386,tokens
+Taking,teacher,2,pooled,5.979267424506565,tokens
+Taking,teacher,2,us,6.434422519426621,tokens
+Taking,athlete,0,china,7.211217321463232,tokens
+Taking,athlete,0,pooled,7.886312611863893,tokens
+Taking,athlete,0,us,8.204439698986539,tokens
+Taking,athlete,1,china,7.0834864767504095,tokens
+Taking,athlete,1,pooled,7.590810739083349,tokens
+Taking,athlete,1,us,7.998830995463288,tokens
+Taking,athlete,2,china,6.864154211020532,tokens
+Taking,athlete,2,pooled,7.737409595019757,tokens
+Taking,athlete,2,us,8.365263577543796,tokens
+Taking,scientist,0,china,6.343126660103304,tokens
+Taking,scientist,0,pooled,7.195167157788145,tokens
+Taking,scientist,0,us,7.32702468087907,tokens
+Taking,scientist,1,china,6.209387473252402,tokens
+Taking,scientist,1,pooled,6.946045077783667,tokens
+Taking,scientist,1,us,7.188548645925916,tokens
+Taking,scientist,2,china,6.325819590378527,tokens
+Taking,scientist,2,pooled,6.895183298613767,tokens
+Taking,scientist,2,us,7.475332288020485,tokens
+Taking,homeless,0,china,7.057326234258327,tokens
+Taking,homeless,0,pooled,6.986973229091051,tokens
+Taking,homeless,0,us,6.476256553934613,tokens
+Taking,homeless,1,china,7.037396321797193,tokens
+Taking,homeless,1,pooled,7.097292389454733,tokens
+Taking,homeless,1,us,6.874659708124688,tokens
+Taking,homeless,2,china,6.664526536365066,tokens
+Taking,homeless,2,pooled,7.231660966671209,tokens
+Taking,homeless,2,us,7.02275674008547,tokens
+Taking,disabled,0,china,5.17093760892782,tokens
+Taking,disabled,0,pooled,5.518761474195315,tokens
+Taking,disabled,0,us,5.109275561319687,tokens
+Taking,disabled,1,china,5.077416380404272,tokens
+Taking,disabled,1,pooled,5.604482802605482,tokens
+Taking,disabled,1,us,5.581392817771384,tokens
+Taking,disabled,2,china,4.8303623542587655,tokens
+Taking,disabled,2,pooled,4.959524421495887,tokens
+Taking,disabled,2,us,5.42124431369726,tokens
+Taking,no information,0,china,6.946940361782,tokens
+Taking,no information,0,pooled,7.87388231572834,tokens
+Taking,no information,0,us,8.486502414540395,tokens
+Taking,no information,1,china,6.968574534159173,tokens
+Taking,no information,1,pooled,7.813410958040048,tokens
+Taking,no information,1,us,8.251993688089367,tokens
+Taking,no information,2,china,7.076819958410801,tokens
+Taking,no information,2,pooled,8.028206994108379,tokens
+Taking,no information,2,us,8.249323959340089,tokens

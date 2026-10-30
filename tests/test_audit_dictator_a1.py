@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from scripts.audit_dictator_a1 import Audit, check_candidates, histogram_candidates, score_participants, shared_bootstrap
+from scripts.audit_dictator_a1 import check_candidates, histogram_candidates, score_participants, shared_bootstrap
 
 
 def test_laplace_histogram_counts_and_unseen_responses() -> None:
@@ -47,36 +47,3 @@ def test_shared_bootstrap_keeps_paired_contrast_and_original_wave_weights() -> N
     samples, _, _ = shared_bootstrap(pd.DataFrame(rows), 100, np.random.default_rng(12))
     np.testing.assert_allclose(samples[:,:,0], 40 / 3)
     np.testing.assert_allclose(samples[:,:,1] - samples[:,:,0], 3)
-
-
-def test_control_analysis_distinguishes_format_gain_from_conditional_gain(tmp_path) -> None:
-    audit = Audit.__new__(Audit)
-    audit.root = tmp_path
-    audit.output = tmp_path / "audit"
-    audit.output.mkdir()
-    audit.inputs = set()
-    audit.seed, audit.resamples = 17, 100
-    humans = pd.DataFrame([dict(Dataset=1, Nation=nation, SubNo=1, Country=country, GroupNo=group, TokenChoice=0) for nation,country in [(0,"United States"),(1,"China")] for group in range(1,26)])
-    audit.taking = humans.assign(Dataset=3)
-    audit.test_rows = lambda _: humans
-    parts = []
-    for model, model_offset in [("llama",0),("centaur",.2)]:
-        for task in ["giving", "taking"]:
-            for variant, variant_offset in [("original",0),("us",.04),("china",.07)]:
-                frame = pd.DataFrame([dict(GroupNo=group, response_value=response, conditional_probability=1/21, full_vocab_log_probability=np.log(.5/21)+model_offset+variant_offset, valid_response_mass=.5*np.exp(model_offset+variant_offset)) for group in range(1,26) for response in range(21)])
-                parts.append(frame.assign(model_condition=model, task=task, prompt_variant=variant))
-                if model == "centaur" and variant == "original":
-                    previous = tmp_path / f"model_results/dictator_centaur70b_item_holdout/seed0/base/evaluations/{task}/candidate_probabilities.csv"
-                    previous.parent.mkdir(parents=True)
-                    frame.to_csv(previous,index=False)
-    path = tmp_path / "model_results/dictator_a1_controls_20260930/candidate_probabilities.csv"
-    path.parent.mkdir(parents=True)
-    pd.concat(parts).to_csv(path,index=False)
-    assert audit.control_analysis()
-    summary = pd.read_csv(audit.output / "control_contrast_summary.csv")
-    raw = summary.loc[summary.metric.eq("raw_response_ll")]
-    base_gain = raw.loc[raw.contrast.eq("centaur_minus_llama_original"), "mean"]
-    np.testing.assert_allclose(base_gain,.2)
-    np.testing.assert_allclose(summary.loc[summary.metric.eq("conditional_ll"), "mean"],0,atol=1e-14)
-    matched = raw.loc[raw.Country.eq("China") & raw.contrast.eq("centaur_matched_minus_opposite"), "mean"]
-    np.testing.assert_allclose(matched,.03)

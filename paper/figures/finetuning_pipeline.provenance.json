@@ -1,0 +1,36 @@
+{
+  "source": "results/giving_taking/figure_inputs/prediction_shifts_by_seed.csv",
+  "method": "Equal average over three seeds; source values average 25 held-out targets, conditional on responses 0-20.",
+  "means_tokens": {
+    "Giving": {
+      "frozen": 9.507351569906543,
+      "us": 7.120386285483454,
+      "china": 5.689557876269973,
+      "pooled": 6.515896666754306
+    },
+    "Taking": {
+      "frozen": 10.005593672242517,
+      "us": 7.859758945930157,
+      "china": 6.857791130555307,
+      "pooled": 7.536607792836343
+    }
+  },
+  "us_minus_china_tokens": {
+    "Giving": 1.4308284092134809,
+    "Taking": 1.00196781537485
+  },
+  "curve_shape": "Illustrative Gaussian, common width 0.45 tokens; not an estimated response density or uncertainty interval.",
+  "display_range_tokens": [
+    4,
+    11.5
+  ],
+  "human_inset": "Qualitative Giving direction only: China below US in both source waves; curve positions and widths are illustrative.",
+  "human_inset_source": "results/giving_taking/frozen/human_allocation_summary.csv",
+  "layout": "Tall common prompt, embedding, frozen weights, and frozen Centaur adapters; unchanged trainable adapter dimensions. Aligned Frozen and Trainable top brackets identify update status; lower Model weights and LoRA adapters brackets identify parameter type, including frozen Centaur LoRA. Dark output cards match the input. One population adapter is selected consistently across all layers.",
+  "displayed_output": "Illustrative integer responses to the displayed farmer item; not recorded model predictions or population means.",
+  "example_outputs_tokens": {
+    "us": 8,
+    "china": 5,
+    "pooled": 6
+  }
+}

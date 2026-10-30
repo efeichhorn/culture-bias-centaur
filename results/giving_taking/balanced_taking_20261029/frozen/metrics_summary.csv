@@ -1,0 +1,5 @@
+condition,Country,raw_response_ll,conditional_ll,task
+centaur_original,China,-2.774152487538828,-2.77356778573518,Taking
+centaur_original,United States,-2.6229974844690727,-2.622412782665425,Taking
+llama_original,China,-3.0268028621443954,-2.8339923527012525,Taking
+llama_original,United States,-2.885062832369492,-2.692252322926349,Taking

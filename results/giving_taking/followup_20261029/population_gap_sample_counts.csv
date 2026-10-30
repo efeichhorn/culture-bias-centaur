@@ -1,0 +1,25 @@
+task,sample,nation,seed,participants,unique_participants_across_seeds
+Giving,Wave 1,0,0,76,205
+Giving,Wave 1,0,1,76,205
+Giving,Wave 1,0,2,76,205
+Giving,Wave 2,0,0,120,312
+Giving,Wave 2,0,1,120,312
+Giving,Wave 2,0,2,120,312
+Giving,Wave 1,1,0,76,198
+Giving,Wave 1,1,1,76,198
+Giving,Wave 1,1,2,76,198
+Giving,Wave 2,1,0,120,298
+Giving,Wave 2,1,1,120,298
+Giving,Wave 2,1,2,120,298
+Taking,Wave 1,0,0,529,529
+Taking,Wave 1,0,1,529,529
+Taking,Wave 1,0,2,529,529
+Taking,Wave 2,0,0,800,800
+Taking,Wave 2,0,1,800,800
+Taking,Wave 2,0,2,800,800
+Taking,Wave 1,1,0,529,529
+Taking,Wave 1,1,1,529,529
+Taking,Wave 1,1,2,529,529
+Taking,Wave 2,1,0,800,800
+Taking,Wave 2,1,1,800,800
+Taking,Wave 2,1,2,800,800

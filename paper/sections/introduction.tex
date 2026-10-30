@@ -1,30 +1,40 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\begin{itemize}
-\item Centaur predicts behavior across tasks \citep{binz2025centaur}. A good average score can hide that it predicts some populations better than others.
-\item Main question: what changes when we change who we fine-tune on?
-\item Three things to distinguish: whether predictions change, whether they get better, and whether they capture the differences between human populations.
-\item What this study adds: whether fine-tuning on different populations improves predictions, carries human differences over to a new task, and adds more than a general preference for certain answers.
-\item Why this matters: if we use Centaur to stand in for people, we need to know whose behavior it captures. Changed predictions alone don't tell us that.
-\end{itemize}
+\textbf{Draft:}
 
-\subsection{Related work}
-\begin{itemize}
-\item Centaur: fine-tuning on human behavior and testing on other experiments \citep{binz2025centaur}.
-\item Cross-country comparison: \citet{chen2026proxies} compare prompted LLM answers with human economic preferences across 74 countries. The models capture the cultural patterns poorly.
-\item Our focus: what happens to predictions, accuracy, and transfer when we change who we fine-tune on. The starting model, prompts, and amount of data stay the same.
-\end{itemize}
+Since the introduction of GPT-3, methods from cognitive science and psychology have been used for research on large language models (LLMs) \citep{binz2023using, hagendorff2024machinepsychology}. More recently, however, this influence has also begun to run in the opposite direction: the ability of these models to reproduce complex human behavior has led researchers to use LLMs themselves as research tools in these disciplines \citep{dillion2023can,demszky2023using}.
+
+\citet{binz2025centaur}, for example, demonstrated that Centaur-70B, Meta's Llama 3.1 70B model fine-tuned on trial-by-trial data from more than 60,000 participants, predicts human choices across a wide variety of tasks more accurately than specialized computational models. As a consequence, they proposed that models fine-tuned on large behavioral datasets could serve as a step toward a \textit{"unified theory of cognition"}. \citet{jagadish2026toward}, building up on Centaur, argued that these models could even speed up behavioral data generation and hypothesis testing in cognitive science, possibly leading to an \textit{"automated science of the mind"}.
+
+However, one of the prominent criticisms of simulating participant data with LLMs, is that the models overrepresent Western, educated, industrialized, rich and democratic (WEIRD) populations and therefore have a limited ability to represent diverse human populations and human cognition in general \citep{atari2023humans}. So instead of improving the generalizability of theories in cognitive science and psychology, it has been argued that LLMs rather perpetuate the \textit{"illusion of generalizability"} \citep{crockett2025ai}. 
+
+More broadly, these concerns stem from long-standing debates about how biases in \textit{human experiments and data} (which are used for fine-tuning) affect their validity and generalizability. Such biases include the \textit{WEIRD sampling bias} discussed above \citep{henrich2010weirdest}, \textit{publication bias}, whereby statistically significant findings are more likely to be published than null results \citep{franco2014publication}, and \textit{task-selection bias}, whereby findings from a narrow range of experimental paradigms are generalized to human cognition more broadly \citep{yarkoni2022generalizability}. 
+
+Foundation models such as Llama 3.1 may inherit representational biases from their pretraining text, while behavioral fine-tuning may reinforce these biases or introduce new, experimental-data-related ones. Although the use of LLMs to approximate human responses has received considerable criticism, comparatively little work has examined how the composition of behavioral fine-tuning data shapes the responses of models such as Centaur.
+
+
+In this study, we focus on the \textit{WEIRD sampling bias} and ask what changes when Centaur is fine-tuned on data from different populations. We fine-tune the same starting model on data from tasks showing cross-cultural differences in behavior, using responses from US participants, Chinese participants, or an equal mix of both, while keeping the amount of data, prompts, and fine-tuning settings the same. Across tasks involving social allocation \citep{wang2026decomposing}, categorization \citep{cao2024differences}, and risky choice \citep{anllo2024preferences}, we look at three questions: whether predictions change, whether they become more accurate, and whether they capture the differences observed between human populations. We further test whether the effects of population-specific fine-tuning generalize to a new task variant that was not included in the fine-tuning data. And finally, we compare fine-tuning with a response adjustment to assess whether it adds predictive value beyond changes in overall answer preferences.
+
+These questions become increasingly relevant as behavioral datasets used for fine-tuning are being expanded \citep{binz2026posttraining}. We argue that, before further scaling this approach, we should have a clearer understanding of how these datasets should be composed, how the balance of populations shapes model predictions, and where inherent biases in the predictions might generalize. These insights, in our opinion, are essential to even consider  LLMs such as Centaur as foundation models of human cognition or relying on their simulated behavior to generate scientific insights in an  automated scientific discovery pipeline.
+
+\input{sections/figure_pipeline}
 
 \subsection{Hypotheses}
-\begin{itemize}
-\item \textbf{H1:} Frozen Centaur predicts Western samples more accurately.
-\item \textbf{H2:} Fine-tuning on different populations changes the predicted behavior.
-\item \textbf{H3:} These prediction differences also appear on tasks not used for fine-tuning.
-\item \textbf{H4:} Fine-tuning improves predictions more than a simple adjustment of response preferences.
-\end{itemize}
+
+We test four hypotheses:
 
 \begin{itemize}
-\item H2 and H3 are about whether predictions change. Whether they get better is a separate question.
-\item H1 mainly compares US and Chinese samples. H3 has one test on a new task: Giving to Taking, both available in the same dataset. The other datasets only test new items within the same task.
+\item \textbf{H1:} Without additional fine-tuning, Centaur predicts human behavior more accurately in US samples than in Chinese samples.
+
+\item \textbf{H2:} With equal training budgets, fine-tuning on
+US versus Chinese responses produces different mean predictions
+on held-out items from the same task.
+
+\item \textbf{H3:} Models fine-tuned on US versus Chinese responses
+also differ in their mean predictions on a task variant excluded
+from the additional fine-tuning.
+
+\item \textbf{H4:} Fine-tuning predicts held-out responses more
+accurately than a response adjustment fitted to the same data.
 \end{itemize}

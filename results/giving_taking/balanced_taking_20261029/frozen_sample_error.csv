@@ -1,0 +1,5 @@
+task,Country,model,metric,prediction_error,error_ci_low,error_ci_high
+Taking,China,centaur,conditional_ll,2.77356778573518,2.755813647430439,2.7917761189244574
+Taking,China,llama,conditional_ll,2.8339923527012525,2.819916637648986,2.8483509867752415
+Taking,United States,centaur,conditional_ll,2.622412782665425,2.599828038744267,2.645818726656254
+Taking,United States,llama,conditional_ll,2.692252322926349,2.675917108576447,2.7082611169552715

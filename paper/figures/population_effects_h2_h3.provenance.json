@@ -1,0 +1,25 @@
+{
+  "figure": "population_effects_h2_h3",
+  "task_order": [
+    "Categorization",
+    "Lottery tradeoffs",
+    "Giving",
+    "Taking"
+  ],
+  "aggregation": "Each item averages three seeds; task means give each item equal weight.",
+  "spread": "Light lines show fixed held-out items, not uncertainty intervals.",
+  "response_definitions": {
+    "Categorization": "taxonomic choice",
+    "Lottery tradeoffs": "10-point choice",
+    "Giving": "expected tokens given",
+    "Taking": "expected tokens taken"
+  },
+  "sources": {
+    "results/cao_anllo/followup_20261029/prediction_summary.csv": "3510b3811fc717308e7c3692de7148f65ef7a80154d87528b74b30c5511d4260",
+    "results/cao_anllo/item_predictions.csv": "acc4ef42881d3f50bae4308c2c28e6cc204888efd4f14d2ed19599da3c0b5bb4",
+    "results/giving_taking/figure_inputs/prediction_shifts_by_seed.csv": "b53f6d6cb6417937e7da3c1a347f918b18ad9c79ece5b39fd5d781ce5e6fb535",
+    "results/giving_taking/followup_20261029/h2_h3_item_predictions.csv": "a6ad69ad7b5ba5f711d00c1ff76dfae3199a999f0867a13bc806e485f92e38d4",
+    "scripts/paper_plot_style.py": "c55a1354ad4556ebbe9e40ef2f220dd24037eee94ae4cdd2c1fc087bfd6cca67",
+    "scripts/plot_h2_h3.py": "b7f7642a893901f15595e8e174f35efbbb785d0d2b1c7287b8053d2988b76fe6"
+  }
+}

@@ -1,0 +1,7 @@
+Asset: centaur.png
+Creator: Milena Rmus (credited on the official Centaur project page)
+Project: https://marcelbinz.github.io/centaur
+Source: https://marcelbinz.github.io/imgs/centaur_crop.png
+Downloaded: 2026-10-27
+Treatment: original asset placed at its original aspect ratio, without editing
+Related paper: Binz et al. (2025), doi:10.1038/s41586-025-09215-4

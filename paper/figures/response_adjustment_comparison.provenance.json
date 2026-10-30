@@ -1,0 +1,13 @@
+{
+  "estimand": "NLL of matched response adjustment minus NLL of fine-tuned model",
+  "control": "original response adjustment; binary finetuned_vs_semantic",
+  "comparisons": 24,
+  "allocation_intervals": "95% paired participant-and-observed-seed bootstrap",
+  "binary_intervals": "95% paired participant bootstrap conditional on fitted models and items",
+  "sources": {
+    "results/giving_taking/response_adjustment/prior_paired_intervals.csv": "03a29a8fbc07a0c7c32472c830d8ab7f751c36757d99780eef291f2efbd543f0",
+    "results/giving_taking/response_adjustment/prior_metrics_by_seed.csv": "b8fdb5b18c4c2a6f579c7e3719a425dbe7f47e0319b56bfc4e6a1e339d9fb204",
+    "results/giving_taking/balanced_taking_20261029/response_adjustment_gains.csv": "3193a83daff3c9c8ab1d6e1f754473e6fae926239cb81fe2433c1f5ded6e6e9d",
+    "results/cao_anllo/followup_20261029/contrasts.csv": "59653661ceb4fad6a9eae8c9c99a822d2c6ff0772f43cc653a9ad8c4da8dbea0"
+  }
+}

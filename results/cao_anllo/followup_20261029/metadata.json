@@ -1,0 +1,102 @@
+{
+  "status": "complete_exploratory_cpu_followup",
+  "date": "2026-10-29",
+  "verified_runs": 81,
+  "script_sha256": "7be9d4052c9314a9bc3d2342c4fc8b9867a5b524a0d22f6bd1b97b90d4d8a372",
+  "collector_sha256": "f06a15930cd9bb1c3ca02dbf0af33f0f47274f9891845319d094caf46a3a8c7c",
+  "run_index_sha256": "80a0a92ae39ab799233d0862f53ecc98a2e2b1aa62bfb50e05a345460663921b",
+  "source_repo": "${WORKSPACE}/publication-bias-transfer-demo",
+  "input_hashes": "input_hashes.csv",
+  "baseline_hashes": [
+    {
+      "dataset": "anllo",
+      "verified_marker_sha256": "6a1426ac9078144ebd4d20e17b953b55c9f94728fdc7389026e5706142a6a843",
+      "candidate_probabilities_sha256": "75d9d6940987c1698b7f69dfecd654d976aa76fa19985e1e231c393e5d04b961",
+      "run_manifest_sha256": "24a53459206d9ae56191fa1ffc13ef099b423d325896e0e7549473c04c1d9f76"
+    },
+    {
+      "dataset": "cao",
+      "verified_marker_sha256": "a029a2061bd0317ac80db6377b033e2bcf534c18a1cc0d7e3d0a0f8560f86510",
+      "candidate_probabilities_sha256": "75816b881451cc40ebf6f89c36f32e53842a25f39084f076b84d9948ac0d2c1b",
+      "run_manifest_sha256": "8e14b066df88d2e85a5abc38cca5d7394cf2e3f5fe83fd6262dd47a77ed0c81d"
+    }
+  ],
+  "resamples": 4000,
+  "bootstrap_seed": 20261029,
+  "bootstrap_diagnostics": [
+    {
+      "scope": "heldout",
+      "dataset": "anllo",
+      "country": "china",
+      "n_unique_participants": 22,
+      "rejected_empty_subset_draws": 0
+    },
+    {
+      "scope": "heldout",
+      "dataset": "anllo",
+      "country": "us",
+      "n_unique_participants": 20,
+      "rejected_empty_subset_draws": 1
+    },
+    {
+      "scope": "heldout",
+      "dataset": "cao",
+      "country": "china",
+      "n_unique_participants": 70,
+      "rejected_empty_subset_draws": 0
+    },
+    {
+      "scope": "heldout",
+      "dataset": "cao",
+      "country": "us",
+      "n_unique_participants": 76,
+      "rejected_empty_subset_draws": 0
+    },
+    {
+      "scope": "all_retained",
+      "dataset": "anllo",
+      "country": "china",
+      "n_unique_participants": 49,
+      "rejected_empty_subset_draws": 0
+    },
+    {
+      "scope": "all_retained",
+      "dataset": "anllo",
+      "country": "us",
+      "n_unique_participants": 50,
+      "rejected_empty_subset_draws": 0
+    },
+    {
+      "scope": "all_retained",
+      "dataset": "cao",
+      "country": "china",
+      "n_unique_participants": 178,
+      "rejected_empty_subset_draws": 0
+    },
+    {
+      "scope": "all_retained",
+      "dataset": "cao",
+      "country": "us",
+      "n_unique_participants": 295,
+      "rejected_empty_subset_draws": 0
+    }
+  ],
+  "uncertainty": "Percentile 95% whole-participant bootstrap, stratified by country. A person's multiplicity is shared across overlapping seed test sets; each seed normalizes within its original test participants, then seeds average equally. Fixed fitted models, observed seeds, items, folds, and splits. No refitting; intervals exclude training-sample uncertainty and generalization to new items. Observed seed SD/min/max reported separately; three seeds do not establish training-run reliability. Empty seed-subset draws rejected.",
+  "aggregation": "Average repetitions within item, items within participant, participants within country, observed seeds equally. Frozen H1 uses all retained US/China participants; adaptation uses only held-out participants and stitched held-out items.",
+  "control": "Two offsets fitted only to the original verified training participants/items: semantic logit += delta_semantic + delta_position for ab; += delta_semantic - delta_position for ba. Minimize equal-item/equal-order training cross entropy + .001*(delta_semantic^2+delta_position^2)/4. Frozen probabilities are unchanged inputs. Both controls average probabilities across answer orders after adjustment. Position control added post hoc as a diagnostic; no hyperparameter tuning or evaluation-data fitting.",
+  "prediction_intervals": "No participant-bootstrap confidence intervals for model probability shifts: shared prompts yield fixed item probabilities independent of evaluated participant identity. Observed seed spread only.",
+  "multiplicity": "Intervals are exploratory pointwise intervals, not simultaneous or multiplicity-adjusted.",
+  "privacy": "Only aggregate scores, fit parameters and input hashes exported; no participant identifiers or responses written.",
+  "original_score_max_absolute_difference": 1.1102230246251565e-16,
+  "outputs": {
+    "score_intervals.csv": "bc6c3dd3645577e49109be3ef4e9e513ea0b2c17cd59ab1abdb4fd26431c61dc",
+    "contrasts.csv": "59653661ceb4fad6a9eae8c9c99a822d2c6ff0772f43cc653a9ad8c4da8dbea0",
+    "frozen_intervals.csv": "a62b570aa09fe23cbac6159d51598f8842e685bdf2a51fd4fb5dc9e9fca9cc48",
+    "frozen_contrasts.csv": "09ad51592b114a25ccf4e2031cfe4ab821949377b78c7d21c1b12552640bcbd0",
+    "human_rates.csv": "82526f063ab931f7a66d894b05c1e76bd30d7a4f26e6c9a98d1723a37e77a1bf",
+    "prediction_summary.csv": "3510b3811fc717308e7c3692de7148f65ef7a80154d87528b74b30c5511d4260",
+    "seed_metrics.csv": "c5c2d3a185816ca78f015d36ca91a38c8d5debd1f82f46a11d8bb58b09d1647d",
+    "control_fits.csv": "409d2511f1cea83c65e10b2fa49728bdf0a7112841bbc4ba0134698932d5faab",
+    "input_hashes.csv": "c7d456aec58fa89d044da71e2abd13b9de9af4c687190a2fc759206dc8765e3b"
+  }
+}

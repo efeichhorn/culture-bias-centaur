@@ -1,0 +1,5 @@
+task,Country,metric,contrast,estimate,ci_low,ci_high,method,seeds,resamples
+Giving,China,conditional_ll,centaur_minus_llama,-0.2156651172258736,-0.23725598770084513,-0.19354492911781657,shared_participant_fixed_evaluation_splits,3,4000
+Giving,United States,conditional_ll,centaur_minus_llama,-0.07159623900176654,-0.0991362661253853,-0.04338461377280455,shared_participant_fixed_evaluation_splits,3,4000
+Taking,China,conditional_ll,centaur_minus_llama,0.060424566966072527,0.043850263092387536,0.07756997678450019,shared_participant_fixed_evaluation_splits,1,4000
+Taking,United States,conditional_ll,centaur_minus_llama,0.06983954026092405,0.049456828113618165,0.08994314257395071,shared_participant_fixed_evaluation_splits,1,4000

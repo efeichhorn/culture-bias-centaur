@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Held-out-item and Giving-to-Taking transfer experiment for Centaur-70B.
 
-The fixed item folds are identical to the Minitaur experiment.  For each fold,
-the culture adapter is trained on 20 Giving target groups and evaluated on the
-five target groups that were excluded from adapter training.  The same adapter
-is also evaluated zero-shot on the corresponding Taking items.
+Each of five fixed folds trains an adapter on 20 Giving target groups and
+evaluates it on the five excluded groups. The same adapter is evaluated on
+the corresponding Taking items without further training.
 """
 
 from __future__ import annotations
@@ -93,7 +92,7 @@ def prepare_manifest(args: argparse.Namespace) -> None:
         "base_model": args.base_model,
         "centaur_adapter": args.centaur_adapter,
         "fold_definition": (
-            "The same fixed, semantically balanced five folds used for Minitaur; "
+            "Five fixed, semantically balanced folds, each holding out five targets; "
             "defined before inspecting Taking outcomes."
         ),
         "folds": {str(key): list(value) for key, value in ITEM_FOLDS.items()},

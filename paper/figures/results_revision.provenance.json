@@ -1,0 +1,21 @@
+{
+  "style": "tueplots via paper_plot_style.paper_style",
+  "figures": [
+    "frozen_sample_fit",
+    "answer_position_control"
+  ],
+  "taking_sample": "1329 per country, wave matched; see balanced Taking metadata",
+  "binary_intervals": "shared participant bootstrap, fixed fitted seeds and items",
+  "allocation_intervals": "shared participant and observed-seed bootstrap for adapter contrasts",
+  "sources": {
+    "results/cao_anllo/followup_20261029/contrasts.csv": "59653661ceb4fad6a9eae8c9c99a822d2c6ff0772f43cc653a9ad8c4da8dbea0",
+    "results/cao_anllo/followup_20261029/frozen_intervals.csv": "a62b570aa09fe23cbac6159d51598f8842e685bdf2a51fd4fb5dc9e9fca9cc48",
+    "results/cao_anllo/frozen_baseline_country_metrics.csv": "5c3317ab9e64d72c089b56cf6f4f94343ae26f1fe723e55ed8a9bed4e5840bf7",
+    "results/giving_taking/balanced_taking_20261029/frozen_sample_error.csv": "3079f5866a87cece2a652b8c0c47142e4029fa520a5954511ac21af42ba3296c",
+    "results/giving_taking/balanced_taking_20261029/response_adjustment_gains.csv": "3193a83daff3c9c8ab1d6e1f754473e6fae926239cb81fe2433c1f5ded6e6e9d",
+    "results/giving_taking/figure_inputs/frozen_sample_error.csv": "89c2f4e9284d174cf404bf22e9cce4c3e675ddf1fcb2bd8ebfb2d872edd63b04",
+    "results/giving_taking/frozen/metrics_summary.csv": "ff67bd32e6316626ad178bec3fe44398bc3a02609c8badc72933e02ed979595c",
+    "results/giving_taking/response_adjustment/prior_metrics_by_seed.csv": "b8fdb5b18c4c2a6f579c7e3719a425dbe7f47e0319b56bfc4e6a1e339d9fb204",
+    "results/giving_taking/response_adjustment/prior_paired_intervals.csv": "03a29a8fbc07a0c7c32472c830d8ab7f751c36757d99780eef291f2efbd543f0"
+  }
+}

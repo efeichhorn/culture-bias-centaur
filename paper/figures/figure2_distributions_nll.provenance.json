@@ -1,0 +1,65 @@
+{
+  "input_sha256": {
+    "response_probabilities.csv": "3f9f07d4aedc9f824ad1c303c41605c66915f4742be5dbeb8ac0ead938c98109",
+    "population_nll_gaps.csv": "71a45603fbbfccce31bd444003b65c61218a9e6c2cb34fde2a2009b6adf4cd1b",
+    "metadata.json": "19a1e2840fdcb3d24552be0bc0c4af3e87e82e6652c26cd05b5f87ef79061ee2"
+  },
+  "panels": {
+    "a": "Observed and predicted response distributions",
+    "b": "Population NLL gap"
+  },
+  "layout_inches": [
+    8.4,
+    3.95
+  ],
+  "risky_choice_items": [
+    {
+      "item_id": "8",
+      "group": "tradeoff",
+      "p_10": 0.25,
+      "p_1": 0.75
+    },
+    {
+      "item_id": "9",
+      "group": "tradeoff",
+      "p_10": 0.25,
+      "p_1": 1
+    },
+    {
+      "item_id": "10",
+      "group": "tradeoff",
+      "p_10": 0.5,
+      "p_1": 1
+    },
+    {
+      "item_id": "11",
+      "group": "tradeoff",
+      "p_10": 0.75,
+      "p_1": 1
+    },
+    {
+      "item_id": "6",
+      "group": "dominance",
+      "p_10": 0.25,
+      "p_1": 0.25
+    },
+    {
+      "item_id": "7",
+      "group": "dominance",
+      "p_10": 0.75,
+      "p_1": 0.25
+    },
+    {
+      "item_id": "5",
+      "group": "dominance",
+      "p_10": 0.75,
+      "p_1": 0.75
+    },
+    {
+      "item_id": "12",
+      "group": "dominance",
+      "p_10": 1,
+      "p_1": 1
+    }
+  ]
+}

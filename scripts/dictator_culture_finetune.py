@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Shared training targets and loss helpers for allocation models."""
 from __future__ import annotations
 
 import argparse
@@ -802,73 +803,3 @@ def summarize_and_bootstrap(args: argparse.Namespace) -> None:
     (run_dir / "culture_effects.json").write_text(
         json.dumps(observed, indent=2) + "\n", encoding="utf-8"
     )
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Wave-1 to Wave-2 culture-specific Giving fine-tuning pilot."
-    )
-    parser.add_argument(
-        "--stage", required=True, choices=["prepare", "train", "evaluate", "analyze"]
-    )
-    parser.add_argument("--condition", choices=CONDITIONS)
-    parser.add_argument("--behavior-path", required=True)
-    parser.add_argument("--group-path", required=True)
-    parser.add_argument("--corpus-dir")
-    parser.add_argument("--corpus-path")
-    parser.add_argument("--output-dir", required=True)
-    parser.add_argument(
-        "--base-result-dir",
-        default="../model_results/dictator_giving_base/marcelbinz_Llama-3.1-Minitaur-8B",
-    )
-    parser.add_argument(
-        "--model-name", default="marcelbinz/Llama-3.1-Minitaur-8B"
-    )
-    parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--culture-participants", type=int, default=500)
-    parser.add_argument("--pooled-per-culture", type=int, default=250)
-    parser.add_argument("--max-steps", type=int, default=100)
-    parser.add_argument(
-        "--training-objective",
-        choices=["distributional", "participant_rows"],
-        default="distributional",
-    )
-    parser.add_argument("--learning-rate", type=float, default=5e-5)
-    parser.add_argument("--warmup-ratio", type=float, default=0.03)
-    parser.add_argument("--weight-decay", type=float, default=0.01)
-    parser.add_argument("--batch-size", type=int, default=8)
-    parser.add_argument("--gradient-accumulation-steps", type=int, default=4)
-    parser.add_argument("--max-seq-length", type=int, default=768)
-    parser.add_argument("--lora-r", type=int, default=8)
-    parser.add_argument("--lora-alpha", type=int, default=16)
-    parser.add_argument("--lora-dropout", type=float, default=0.05)
-    parser.add_argument("--bf16", action=argparse.BooleanOptionalAction, default=True)
-    parser.add_argument("--attn-implementation", default="sdpa")
-    parser.add_argument("--generation-batch-size", type=int, default=8)
-    parser.add_argument("--bootstrap-resamples", type=int, default=1000)
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    if args.stage == "prepare":
-        prepare_corpora(
-            args.behavior_path,
-            args.group_path,
-            args.output_dir,
-            args.seed,
-            args.culture_participants,
-            args.pooled_per_culture,
-        )
-    elif args.stage == "train":
-        if not args.corpus_dir and not args.corpus_path:
-            raise ValueError("--corpus-dir or --corpus-path is required for training.")
-        train_condition(args)
-    elif args.stage == "evaluate":
-        evaluate_condition(args)
-    else:
-        summarize_and_bootstrap(args)
-
-
-if __name__ == "__main__":
-    main()

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
+"""Giving prompts, response loading, and candidate scoring helpers."""
 from __future__ import annotations
 
-import argparse
-import json
 import re
 import sys
 from pathlib import Path
@@ -19,8 +18,6 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.llm_generate import generate_completions
-from src.llm_model import device_for_eval, load_base_model, load_tokenizer
-from src.utils import ensure_dir
 from scripts.repair_wang_behavior_columns import ensure_not_mislabeled_source
 
 
@@ -476,107 +473,3 @@ def evaluate_against_humans(
                     }
                 )
     return pd.DataFrame(metric_rows), pd.DataFrame(human_item_rows)
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Evaluate a base causal LM on the 25-item US-China Giving battery."
-    )
-    parser.add_argument("--model-name", required=True)
-    parser.add_argument("--behavior-path", required=True)
-    parser.add_argument("--group-path", required=True)
-    parser.add_argument("--output-dir", required=True)
-    parser.add_argument("--generation-batch-size", type=int, default=8)
-    parser.add_argument("--no-generation", action="store_true")
-    parser.add_argument("--bf16", action=argparse.BooleanOptionalAction, default=True)
-    parser.add_argument("--attn-implementation", default="auto")
-    args = parser.parse_args()
-
-    output_dir = ensure_dir(args.output_dir)
-    giving, items = load_giving_data(args.behavior_path, args.group_path)
-
-    tokenizer = load_tokenizer(args.model_name)
-    model = load_base_model(args.model_name, args.bf16, args.attn_implementation)
-    device = device_for_eval()
-    model.to(device)
-    model.eval()
-
-    (
-        candidate_probabilities,
-        item_predictions,
-        invalid_token_probabilities,
-        aggregate_invalid_tokens,
-    ) = score_model(
-        model, tokenizer, device, items, args.model_name
-    )
-    candidate_probabilities.to_csv(output_dir / "candidate_probabilities.csv", index=False)
-    item_predictions.to_csv(output_dir / "item_predictions.csv", index=False)
-    invalid_token_probabilities.to_csv(
-        output_dir / "invalid_token_probabilities.csv", index=False
-    )
-    aggregate_invalid_tokens.to_csv(
-        output_dir / "aggregate_invalid_tokens.csv", index=False
-    )
-    item_predictions[["GroupNo", "item", "item_chinese", "prompt"]].to_csv(
-        output_dir / "prompt_manifest.csv", index=False
-    )
-
-    metrics, human_item_comparison = evaluate_against_humans(giving, candidate_probabilities)
-    metrics.to_csv(output_dir / "model_metrics.csv", index=False)
-    human_item_comparison.to_csv(output_dir / "human_item_comparison.csv", index=False)
-
-    generation_summary: dict[str, object] = {"generation_run": False}
-    if not args.no_generation:
-        generations = greedy_generations(
-            model,
-            tokenizer,
-            device,
-            item_predictions,
-            batch_size=args.generation_batch_size,
-        )
-        generations.to_csv(output_dir / "greedy_generations.csv", index=False)
-        generation_summary = {
-            "generation_run": True,
-            "valid_greedy_response_token_rate": float(generations["valid_response_token"].mean()),
-        }
-
-    wave2 = metrics[metrics["sample"].eq("Wave 2")].set_index("country")
-    alignment = float(
-        wave2.loc["China", "centaur_excess_nll_nats"]
-        - wave2.loc["United States", "centaur_excess_nll_nats"]
-    )
-    released_values = giving["Token"].to_numpy(dtype=float)
-    reconstructed_values = giving["TokenChoice"].to_numpy(dtype=float) * 5.0
-    metadata = {
-        "model_name": args.model_name,
-        "response_values": RESPONSE_VALUES,
-        "response_unit": "tokens_given_out_of_20",
-        "response_format": "prompt_ends_with_<<; score_response_value_token_only",
-        "stimulus_version": "source_faithful_US_Giving_questionnaire_with_Centaur_encoding",
-        "logprob_estimand": "full_vocabulary_teacher_forced_log_probability_of_observed_response_after_<<",
-        "distribution_estimand": "renormalized_over_21_source_response_values",
-        "released_data_scale": "Token column ranges from 0 to 100",
-        "released_to_source_mapping": "floor(Token/5 + 0.5), clipped to [0,20]",
-        "released_values_exactly_on_5_point_grid_rate": float(
-            np.mean(np.isclose(np.mod(released_values, 5.0), 0.0))
-        ),
-        "released_to_source_mean_absolute_reconstruction_error_points": float(
-            np.mean(np.abs(released_values - reconstructed_values))
-        ),
-        "primary_evaluation_sample": "Wave 2",
-        "wave2_centaur_excess_nll_china_minus_us": alignment,
-        "wave2_closer_culture": (
-            "United States" if alignment > 0 else "China" if alignment < 0 else "Tie"
-        ),
-        **generation_summary,
-    }
-    (Path(output_dir) / "run_metadata.json").write_text(
-        json.dumps(metadata, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
-    print(metrics.to_string(index=False), flush=True)
-    print(json.dumps(metadata, indent=2), flush=True)
-
-
-if __name__ == "__main__":
-    main()

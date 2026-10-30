@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-30",
+  "clean_package_check": {
+    "python": "3.10.11",
+    "platform": "macOS arm64",
+    "requirements": "Fresh virtual environment installed from requirements.txt",
+    "command": "make data analysis results figures test",
+    "exit_code": 0
+  },
+  "tests": {
+    "passed": 149,
+    "skipped": 3,
+    "skip_reason": "GPU/PyTorch-dependent tests require the training environment"
+  },
+  "data": {
+    "files": 2529,
+    "archive_sha256": "5659c40dbe1db52f8124ea5ad3407c737e9848709ba76803fcb95da33b15764c"
+  },
+  "reanalysis": {
+    "tables": 43,
+    "tolerance": 1e-10,
+    "max_absolute_difference": 2.9147240176996547e-12,
+    "details": "Run make analysis for build/reanalysis/verification.json"
+  },
+  "figure_pngs_identical_in_clean_package": {
+    "finetuning_pipeline": true,
+    "figure2_distributions_nll": true,
+    "population_effects_h2_h3": true,
+    "response_adjustment_comparison": true,
+    "frozen_sample_fit": true,
+    "answer_position_control": true
+  },
+  "paper": {
+    "command": "make paper",
+    "pages": 13,
+    "status": "compiled"
+  },
+  "gpu_training": "Not rerun during the repository check. Historical outputs for all 126 fits are included.",
+  "model_revisions": "Original records contain model IDs but no Hugging Face commit revisions.",
+  "source_preparation": {
+    "date": "2026-10-30",
+    "source_downloads_checked": 9,
+    "derived_files_identical": 176
+  }
+}

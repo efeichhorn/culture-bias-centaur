@@ -1,0 +1,7 @@
+task,population_contrast,metric,contrast,mean,ci_low,ci_high,method,seeds,resamples
+Taking,United States_minus_China,conditional_ll,centaur_minus_llama,0.009414973294851525,-0.018157355610368138,0.03487147189917813,shared_participant_fixed_seeds,1,4000
+Taking,United States_minus_China,conditional_ll,centaur_score,0.15115500306975482,0.12190697809661458,0.1800944308425539,shared_participant_fixed_seeds,1,4000
+Taking,United States_minus_China,conditional_ll,llama_score,0.1417400297749034,0.12006005419745044,0.16319982114638631,shared_participant_fixed_seeds,1,4000
+Taking,United States_minus_China,raw_response_ll,centaur_minus_llama,0.009414973294851525,-0.018157355610368395,0.03487147189917821,shared_participant_fixed_seeds,1,4000
+Taking,United States_minus_China,raw_response_ll,centaur_score,0.15115500306975527,0.1219069780966151,0.18009443084255566,shared_participant_fixed_seeds,1,4000
+Taking,United States_minus_China,raw_response_ll,llama_score,0.1417400297749034,0.12006005419744639,0.16319982114638062,shared_participant_fixed_seeds,1,4000
