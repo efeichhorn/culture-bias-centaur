@@ -1,2 +1,2 @@
-"""Publication-bias transfer demo package."""
+"""Shared model, data, and training helpers for the Centaur study."""
 

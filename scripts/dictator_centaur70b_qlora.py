@@ -2,9 +2,10 @@
 """Centaur-70B culture QLoRA experiment for the US--China dictator task.
 
 The frozen model is the released 4-bit Llama base plus the released Centaur
-adapter.  A second, zero-initialized LoRA adapter is the only trainable part.
-Training uses individual participant responses and masks the loss to the
-numeric response token, matching the response likelihood used at evaluation.
+adapter. A second, zero-initialized LoRA adapter is the only trainable part.
+By default, training uses each item's empirical response distribution and
+computes loss at the numeric response position. Participant-row training
+is also available.
 """
 
 from __future__ import annotations
