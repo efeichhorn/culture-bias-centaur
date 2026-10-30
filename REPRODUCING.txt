@@ -136,6 +136,14 @@ PYGROUPS
 
 ALLOCATION: CORPORA, THREE FROZEN REFERENCES AND 45 FITS
 
+Allocation training calls PEFT's prepare_model_for_kbit_training, which casts
+nonquantized weights to float32. The zero-step check verifies that adding the
+zero-initialized adapter changes answer probabilities by at most 1e-6 on five
+items in this training configuration. Final frozen and fine-tuned models are
+reloaded without this preparation and share the same evaluation configuration.
+The check does not establish equivalence between training and evaluation
+configurations. Binary tasks use the same preparation for both.
+
 for seed in 0 1 2; do
   corpus="$TRAIN_OUTPUT/corpora/seed$seed"
   python scripts/dictator_centaur70b_qlora.py --stage prepare \
@@ -264,4 +272,6 @@ make submission
 The submission ZIP contains code, prepared data, results and local manuscript
 sources. SHA256SUMS lists its files; a separate .zip.sha256 checks the ZIP.
 The packager verifies both the embedded data and each packaged file.
+Submit the compiled paper/main.pdf alongside the ZIP; the compiled paper is
+excluded from the archive.
 It does not upload files, submit coursework, or sync the manuscript to Overleaf.
