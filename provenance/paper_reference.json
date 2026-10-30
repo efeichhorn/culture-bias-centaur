@@ -2,7 +2,7 @@
   "project_url": "https://www.overleaf.com/project/6ada6357f0e9637a95c1b3eb",
   "title": "Sampling Bias in Foundation Models of Human Cognition",
   "source_download_date": "2026-10-30",
-  "export_verified_at_utc": "2026-10-30T22:07:04+00:00",
+  "export_verified_at_utc": "2026-10-30T22:18:22+00:00",
   "source_files_sha256": {
     "main.tex": "850bb37cf19a10d255ede8e6c5e48afdf0d20bca4d8284682e4a740f37a62858",
     "references.bib": "7fcd7dca688c576ec27eee20729c047d66760fe45fe4078055e84587e1dc418b",
@@ -10,12 +10,12 @@
     "acl_natbib.bst": "391788478ae013cc539e3e44681e22e8e0f6c4c44fee5af28244dd5ac6a4059b",
     "sections/abstract.tex": "3940bfa9cde13747d82bf3f5b938c49235de6fbd754ed662a205712e4b4b9eee",
     "sections/ai_usage.tex": "68802138ef28e4f3127bebdc2907ca7815eea9f895a79f777f9499e59d723406",
-    "sections/appendix_replication.tex": "4f2056352577ddc021698466deae525de0e50012be4337ebb9ab80787a645ee5",
+    "sections/appendix_replication.tex": "814e650c71df2e912ea6418e8911590d73ed3a1af9dc413fb49f79a6e4a6b4cf",
     "sections/discussion.tex": "ee711bef59d207c1cc7d36c72852416205212e1946ca43d73447a1d3eacac053",
     "sections/figure_pipeline.tex": "3933af855b77835eede476df1e3ee4f8b931ae1e2056a6ec4b5e5483da91835a",
-    "sections/introduction.tex": "13d2c5747d6f60eeef4304920e87d1ffce763c5527fcef7c37d1287e73cb45e9",
-    "sections/methods.tex": "36f375d06a04836b50db47471851394db4f4759e2bd42642116050dd5f4201cb",
-    "sections/results.tex": "5c1c76714b7b7005b6906dfe7a9eeac4f408eef94c6e5408d9535afb8d15937a",
+    "sections/introduction.tex": "60686c0633d5b10384fd32c1fc4cf1bbdd9b8fe5f82f26e6aab8b86c131a2259",
+    "sections/methods.tex": "c404c71ee2d9e4415b7a77369c3c81f803ded58d8ffe0892fd7a80f002924897",
+    "sections/results.tex": "f90536e88a36d149ae881f23ef310eacf451bafd00f72255ac516c2a2890d625",
     "figures/finetuning_pipeline.pdf": "075b7b3ed390158c25b1c36d6e2688d9a5afe4ed5e3401da6d28aa7339d74631",
     "figures/figure2_distributions_nll.pdf": "2cf7beef9a157cf3afe5e2951ba9fbd63bfc3a88caa7eb12e6a876afd00329ad",
     "figures/upload/population_effects_h2_h3.pdf": "e590e6bb745ca859e61fa66656cc3065c2605370b387d00d59018736501eef83",
@@ -32,10 +32,5 @@
     "frozen_sample_fit",
     "answer_position_control"
   ],
-  "compiled_overleaf_pdf_sha256": "78e4e2adb917b765565c85932b310a5d85acdb0b7d6e418a65beaa53392254ac",
-  "post_export_changes": [
-    "Moved the repository-link sentence from Appendix A.1 to a footnote in the Introduction."
-  ],
-  "post_export_verified_at_utc": "2026-10-30T22:13:21+00:00",
-  "verification": "Compiled repository and Overleaf PDFs match on all pages after whitespace and equivalent summation-glyph normalization; page-one repository footnote and hyperlink visually verified."
+  "compiled_overleaf_pdf_sha256": "67fae79e55d2b5c186d27477332df5e7fd8702d7c1af0e5aa426bf81f8a826be"
 }
