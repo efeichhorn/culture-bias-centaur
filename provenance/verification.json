@@ -30,6 +30,7 @@
     "frozen_sample_fit": true,
     "answer_position_control": true
   },
+  "bundled_font_check": "All six figures render with Matplotlib's STIXGeneral when system Times fonts are unavailable.",
   "paper": {
     "command": "make paper",
     "pages": 13,
