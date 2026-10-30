@@ -17,7 +17,8 @@ def paper_style(height: float, nrows: int = 1, ncols: int = 2) -> dict:
         usetex=False, family="serif", nrows=nrows, ncols=ncols,
     )
     style.update({
-        "font.serif": ["Times New Roman", "Times", "Nimbus Roman", "DejaVu Serif"],
+        # STIXGeneral ships with Matplotlib and has Times-like label widths.
+        "font.serif": ["Times New Roman", "Times", "Nimbus Roman", "STIXGeneral", "DejaVu Serif"],
         "figure.figsize": (6.3, height),
         "figure.constrained_layout.w_pad": .055,
         "figure.constrained_layout.h_pad": .055,
