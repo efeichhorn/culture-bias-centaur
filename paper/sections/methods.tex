@@ -6,7 +6,7 @@
 \subsection{Tasks}
 
 We used US and Chinese participant data from three studies with cross-cultural differences covering
-social allocation, categorization, and risky choice (see Figure \ref{fig:pipeline}, panel a for example items). We selected these studies because they use tasks similar to those in Centaur’s training data, were published after Llama 3.1’s pretraining cutoff, and were not included in Psych-101, Centaur’s original fine-tuning dataset. Table~\ref{tab:design} summarizes the samples and the items used
+social allocation, categorization, and risky choice (see Figure \ref{fig:pipeline}, panel a for example items). We selected these studies because they use tasks similar to those in Centaur’s training data, were published after Llama 3.1’s pretraining cutoff, and were not included in Psych-101, Centaur’s original fine-tuning dataset. Publication dates do not rule out pretraining exposure to earlier preprints, materials, or data. Table~\ref{tab:design} summarizes the samples and the items used
 for fine-tuning and evaluation.
 
 For social allocation, we used the giving and taking variants
@@ -43,9 +43,9 @@ which the larger payoff was less likely, and four dominance
 pairs, in which it was at least as likely as the smaller payoff.
 In each fold, we fine-tuned on six pairs and evaluated
 predictions on the remaining two (one tradeoff pair and one
-dominance pair). Note that cross-cultural differences were large for tradeoff pairs but small for dominance pairs (see Figure~\ref{fig:frozen}, panel a), allowing us to test whether population-specific fine-tuning captures this contrast. 
+dominance pair).
 
-\begin{table}[H]
+\begin{table*}[t]
 \centering
 \small
 \setlength{\tabcolsep}{5pt}
@@ -63,9 +63,9 @@ Study & Task &
 \citet{anllo2024preferences} & Risky choice & 34 & 8 & 6 & 2  \\
 \bottomrule
 \end{tabular}
-\caption{Fine-tuning and evaluation samples. }
+\caption{Fine-tuning and evaluation samples. Training counts are per model and seed, with pooled models using half from each country. Held-out participant counts are per country; splits vary by seed except for the fixed taking sample. Item counts are per fold; all items are evaluated across folds.}
 \label{tab:design}
-\end{table}
+\end{table*}
 
 
 
@@ -74,21 +74,18 @@ Study & Task &
 
 We fine-tuned Centaur-70B separately on US responses, Chinese responses, or an equal mix of both (pooled). Within each task, we matched the number of fine-tuning participants (Table~\ref{tab:design}), training items, and settings across conditions. The pooled condition drew half its participants from each country while keeping the same total sample size. We repeated fine-tuning with three random seeds per population condition and item fold, which varied participant sampling and splitting as well as adapter initialization and training. Item folds remained fixed across seeds. Test participants and test items were excluded from fine-tuning, and all responses from a participant were kept in the same partition.
 
-As in \citet{binz2025centaur}, we used rank-8 low-rank adaptation (LoRA) adapters on a base model quantized to 4-bit precision and applied the training loss only at human response positions. We trained only the additional rank-stabilized adapter, keeping the underlying Llama model and original Centaur adapter frozen. For each training item, we fitted the empirical distribution of participant responses by minimizing cross-entropy at the answer position, using probabilities normalized over the full vocabulary. For categorization and risky choice, both answer orders contributed equally to the loss. Appendix~\ref{app:replication} gives the data splits and training settings.
+As in \citet{binz2025centaur}, we used rank-8 low-rank adaptation (LoRA) adapters on a base model quantized to 4-bit precision and applied the training loss only at human response positions. We trained only the additional rank-stabilized adapter, keeping the underlying Llama model and original Centaur adapter frozen. For each training item, we fitted the model to the empirical distribution of participant responses by minimizing cross-entropy at the answer position, using probabilities normalized over the full vocabulary. For categorization and risky choice, both answer orders contributed equally to the loss. Appendix~\ref{app:replication} gives the data splits and training settings.
 
 \subsection{Evaluation}
 
-We evaluated the final checkpoints against frozen Centaur and base Llama 3.1 70B. All models received identical English prompts without country labels, previous responses, or feedback. Predictions used the probabilities of valid answer tokens, normalized over the 21 possible allocations (social allocation task) or two available choices (categorization and risky choice task). For categorization and risky choice, we averaged choice probabilities across both answer orders. We measured predictive performance using conditional negative log-likelihood (NLL). For an observed response $y$ to item $x$, we computed
+We evaluated the final checkpoints against frozen Centaur and base Llama 3.1 70B. All models received identical English prompts without country labels, previous responses, or feedback. Predictions used the probabilities of valid answer tokens, normalized over the 21 possible allocations (social allocation task) or two available choices (categorization and risky choice tasks). We measured predictive performance using conditional negative log-likelihood (NLL). For an observed response $y$ to item $x$, we computed
 \[
 \mathrm{NLL}(y,x) = -\ln q_{\theta}(y \mid x),
 \]
 where $q_{\theta}$ is the model probability normalized over valid
-answers. To reduce potential answer-order effects for binary choices, we evaluated each categorization and risky-choice item with the options in both orders and averaged the probability assigned to each option. Scores are reported in nats per response, where lower values indicate better prediction. We averaged trial-level losses within items, items within participants, and participants within each population.
+answers. To reduce potential answer-order effects for binary choices, we evaluated each categorization and risky-choice item with the options in both orders and averaged the probability assigned to each option. Scores are reported in nats per response, where lower values indicate better prediction. Trial-level losses were averaged within items, items within participants, and participants within each population.
+NLL was further compared between US and Chinese participants for frozen Centaur, and between frozen Centaur and base Llama within each population. For comparisons involving fine-tuned models, all models were evaluated on the same responses from participants and items held out from fine-tuning. Prediction shifts were also measured between US and Chinese adapters on identical held-out items. Shifts were averaged across items and seeds. For the task variant transfer analysis (from the giving to the taking variant in the social allocation task), we compared adapter shifts with the human US--China difference in mean tokens taken.
 
-We further compared NLL between US and Chinese participants for frozen Centaur, and between frozen Centaur and base Llama within each population. For comparisons involving fine-tuned models, all models were evaluated on the same responses from participants and items held out from fine-tuning. We also measured prediction shifts between US and Chinese adapters on identical held-out items. Shifts were averaged across items and seeds. For the task variant transfer analysis (from the giving to the taking variant in the social allocation task), we compared adapter shifts with the human US--China difference in mean tokens taken.
+Fine-tuning was also compared with a response adjustment of frozen Centaur's answer probabilities that learned response preferences shared across items from the same training data. This control tests whether fine-tuning improves predictions beyond adjusting general answer preferences, which can affect language-model performance \citep{zhao2021calibrate}. For social allocation, this adjustment was fitted on the giving variant and transferred unchanged to the taking variant. This means that positive values of adjustment NLL minus fine-tuned-model NLL favor fine-tuning.
 
-We also compared fine-tuning with a response adjustment of frozen Centaur's answer probabilities that learned response preferences shared across items from the same training data. For social allocation, this adjustment was fitted on the giving variant and transferred unchanged to the taking variant. This means that positive values of adjustment NLL minus fine-tuned-model NLL favor fine-tuning. 
-
-We computed 95\% confidence intervals by repeatedly resampling participants with replacement, keeping each participant’s responses together and using the same resampled participants for the models being compared. For allocation comparisons involving fine-tuned models, we also resampled the three seeds. For categorization and risky choice, we kept the trained models fixed and reported variation across seeds separately. Appendix~\ref{app:replication} provides the probability calculations, adjustment procedure, and bootstrap details.
-
-
+The 95\% confidence intervals were computed by repeatedly resampling participants with replacement, keeping each participant’s responses together and using the same resampled participants for the models being compared. For allocation comparisons involving fine-tuned models, we also resampled the three seeds. For categorization and risky choice, we kept the trained models fixed. Appendix~\ref{app:replication} provides the probability calculations, adjustment procedure, and bootstrap details.

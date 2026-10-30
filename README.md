@@ -1,4 +1,4 @@
-# Population Composition Changes Centaur's Predictions
+# Sampling Bias in Models of Human Cognition
 
 Code and data for comparing Centaur predictions after fine-tuning on US,
 Chinese, or equally pooled responses. The tasks are social allocation
@@ -47,8 +47,9 @@ source links, and extraction details.
 
 [REPRODUCING.txt](REPRODUCING.txt) gives the full analysis and GPU commands.
 The [Overleaf project](https://www.overleaf.com/project/6ada6357f0e9637a95c1b3eb)
-is the working paper. The local source was downloaded on 30 October 2026;
-changes here do not sync to Overleaf.
+is the working paper. This repository contains the final ACL-format source
+and figures exported on 30 October 2026. Export hashes are recorded in
+`provenance/paper_reference.json`; later edits do not sync automatically.
 
 ## Paper results
 
@@ -74,4 +75,5 @@ This creates `build/culture-bias-centaur-submission.zip` with code, data,
 results, and the local paper sources. It excludes environments, caches,
 model weights, and local build files. Nothing is uploaded or submitted.
 Use `make paper` to compile the local manuscript if LaTeX and `latexmk` are
-installed.
+installed. Submit the compiled `paper/main.pdf` alongside the ZIP; the ZIP
+contains manuscript sources and figure PDFs, but excludes the compiled paper.

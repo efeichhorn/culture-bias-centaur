@@ -13,20 +13,20 @@
 \usepackage{enumitem}
 \usepackage{float}
 \setlist[itemize]{leftmargin=*,itemsep=3pt,parsep=0pt,topsep=4pt}
-\title{Population Composition Changes Centaur's Predictions}
+\title{Sampling Bias in Models of Human Cognition} \author{Edward Eichhorn\Thanks{9 credits}\\6986773 \And Samuel Heinrich\footnotemark[1]\\6972178 \And Nicola Reichert\footnotemark[1]\\6981299}
 
 \begin{document}
-% One-column working notes; restore \maketitle for the submission draft.
-\onecolumn
-\raggedbottom
-\setlength{\titlebox}{2.3cm}
-\makeatletter
-\@maketitle\@thanks
-\makeatother
 
-\ifdefined\SubmissionDetails
-\begin{center}\small\SubmissionDetails\end{center}
-\fi
+
+
+
+
+\maketitle
+
+
+
+
+
 \begin{abstract}
 \input{sections/abstract}
 \end{abstract}
@@ -34,7 +34,7 @@
 \input{sections/methods}
 \input{sections/results}
 \input{sections/discussion}
-\bibliographystyle{acl_natbib}
-\bibliography{references}
-\input{sections/ai_usage}
-\clearpage\appendix\input{sections/appendix_replication}\end{document}
+\section*{Acknowledgments} We thank Robin Schimmelpfennig for helpful comments and the Center for Humans and Machines at the Max Planck Institute for Human Development for computational resources. \bibliographystyle{acl_natbib}
+\bibliography{references}\input{sections/ai_usage}
+
+\appendix\input{sections/appendix_replication}\end{document}

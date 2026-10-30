@@ -1,8 +1,8 @@
-\begin{figure}[H]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/finetuning_pipeline.pdf}
 \caption{Population-specific fine-tuning of Centaur.
 \textbf{a,} Example prompts for the giving variant of social allocation, categorization, and risky choice, with illustrative responses.
-\textbf{b,} Separate low-rank adapters are fitted to US, Chinese, or equally pooled responses. The base model and original Centaur adapter remain frozen, while one population adapter is active per model. Evaluation uses held-out participants and items from the trained task or for social allocation a new task variant from the same dataset, to test transfer of prediction shifts without further fine-tuning.}
+\textbf{b,} Separate low-rank adapters are fitted to US, Chinese, or equally pooled responses. The base model and original Centaur adapter remain frozen, while one population adapter is active per model. Evaluation uses held-out participants and items from the trained task or, for social allocation, a new task variant from the same dataset, to test transfer of prediction shifts without further fine-tuning.}
 \label{fig:pipeline}
-\end{figure}
+\end{figure*}

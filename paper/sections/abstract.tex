@@ -1,5 +1,1 @@
-\begin{itemize}
-\item Main question: whose behavior does Centaur predict best, and what changes when we fine-tune on different populations?
-\item Three datasets: the giving and taking variants of social allocation, categorization, and risky choice. Fine-tuning on US responses, Chinese responses, or an equal mix of both.
-\item Main finding: who we fine-tune on changes the predictions. Better predictive performance and a good match to human differences on a new task variant don't always follow.
-\end{itemize}
+Large language models fine-tuned on behavioral data have been proposed as foundation models of human cognition. However, sampling bias in the training data may limit whose behavior they represent. We fine-tune Centaur, one of these proposed models, on tasks with cross-cultural differences and find that changing the fine-tuning population changes predictions on held-out items in all tested datasets. Population-specific shifts also transfer to a new task variant excluded from fine-tuning. We therefore argue that population composition and the generalization of biases need to be tested before proposing models like Centaur as foundation models of human cognition or using them to generate scientific insights.

@@ -5,14 +5,14 @@
 
 Frozen Centaur predicted US responses more accurately than Chinese responses in social allocation (for both task variants), and categorization (Figure~\ref{fig:frozen}). The China-minus-US NLL differences were 0.347 nats for the giving variant (95\% CI [0.292, 0.405]), 0.151 for the taking variant [0.122, 0.180], and 0.123 for categorization. Across all eight risky-choice items, the China-minus-US NLL difference was $-0.026$ nats [$-0.054$, $0.001$], with the confidence interval including zero. Thus, the US advantage predicted by H1 was present in three comparisons but was not uniform across tasks.
 
-The comparison with base Llama also depended on the task and population. On categorization, Centaur reduced NLL by 0.081 nats for US responses [0.070, 0.091], but increased it by 0.036 nats for Chinese responses [0.020, 0.053]. On the giving variant, Centaur increased NLL for both populations, by 0.072 nats for US and 0.216 for Chinese responses. On the taking variant, it reduced NLL by 0.070 and 0.060 nats, respectively. The observed population differences therefore cannot be summarized by a single overall advantage of Centaur over Llama. Absolute NLLs are shown in Appendix~\ref{app:additional-results}. Also, in social allocation and categorization, the US prediction advantage was already present in base Llama and was larger in Centaur, suggesting that behavioral fine-tuning can amplify a pre-existing US prediction advantage. 
+The comparison with base Llama also depended on the task and population. On categorization, Centaur reduced NLL by 0.081 nats for US responses [0.070, 0.091], but increased it by 0.036 nats for Chinese responses [0.020, 0.053]. On the giving variant, Centaur increased NLL for both populations, by 0.072 nats for US and 0.216 for Chinese responses. On the taking variant, it reduced NLL by 0.070 and 0.060 nats, respectively. The observed population differences therefore cannot be summarized by a single overall advantage of Centaur over Llama. Absolute NLLs are shown in Appendix~\ref{app:additional-results}. Also, in social allocation and categorization, the US prediction advantage was already present in base Llama and was larger in Centaur, suggesting that behavioral fine-tuning can amplify a pre-existing US prediction advantage.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figure2_distributions_nll.pdf}
 \caption{Observed responses and population differences in predictive performance (H1). \textbf{a}, US and Chinese responses alongside Centaur and Llama predictions. Allocation distributions average over 25 targets; binary-task plots show item-specific choice probabilities. Risky choice includes all eight items; labels give the winning probabilities of the 10-point/1-point options. \textbf{b}, China-minus-US conditional NLL; positive values indicate lower NLL for US responses. Intervals are 95\% participant-bootstrap confidence intervals. Both panels use held-out participants in the giving variant, 1,329 participants per country in the taking variant matched within study wave, and all retained categorization and risky-choice participants.}
 \label{fig:frozen}
-\end{figure}
+\end{figure*}
 
 \subsection{H2: fine-tuning population changes held-out predictions}
 
@@ -22,34 +22,34 @@ Matching the fine-tuning and evaluation populations often improved prediction re
 
 
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/population_effects_h2_h3.pdf}
 \caption{Population-specific predictions within trained tasks (H2, a) and transfer from the giving to the taking variant of social allocation (H3, b). Each light line connects predictions for the same held-out item across US, pooled, and Chinese fine-tuning, averaging predictions across three seeds. The bold line and colored markers show the mean across items. Item spread describes variation across fixed stimuli, not sampling uncertainty. Predictions combine held-out items across folds and average both answer orders for binary tasks. The taking variant was excluded from fine-tuning; both social allocation variants use adapters fine-tuned on the giving variant. More tokens given and more tokens taken have opposite meanings for generosity.}
 \label{fig:population}
 \label{fig:transfer}
-\end{figure}
+\end{figure*}
 
-\clearpage
+
 \subsection{H3: prediction shifts transfer to a new task variant}
 
 The differences induced by fine-tuning on the giving variant of the social allocation task also appeared in the taking variant, which was excluded from fine-tuning and model selection (Figure~\ref{fig:transfer}). The US adapter predicted 1 more token taken than the Chinese adapter, with seed-specific differences ranging from 0.93 to 1.14 tokens. This supports H3's prediction of a transferred difference between adapters. The same numerical direction has different behavioral meanings in the two variants: more tokens given indicates greater generosity, whereas more tokens taken indicates less generosity. This suggests that the models carried over a tendency to choose higher numbers, rather than a preference to act more generously.
 
 The transferred difference also ran opposite to the human population difference: US participants took 0.86 fewer tokens in the combined sample (Appendix~\ref{app:additional-results}).
 
-Predictive performance nevertheless improved over frozen Centaur in all six comparisons on the taking variant. The US adapter achieved the lowest mean NLL for both populations, outperforming the Chinese adapter by 0.102 nats on US responses [0.088, 0.118] and 0.060 on Chinese responses [0.048, 0.071]. Improved prediction of individual responses therefore coexisted with poor recovery of the between-population difference.
+Predictive performance nevertheless improved over frozen Centaur in all six comparisons on the taking variant. The US adapter achieved the lowest mean NLL for both populations, outperforming the Chinese adapter by 0.102 nats on US responses [0.088, 0.118] and 0.060 on Chinese responses [0.048, 0.071]. Improved predictive performance therefore coexisted with poor recovery of the between-population difference.
 
 
 
 \subsection{H4: benefits beyond response adjustment depend on the task}
 
-Fine-tuning did not consistently outperform an item-independent response adjustment fitted to the same training responses (Figure~\ref{fig:adjustment}). For the giving variant of social allocation, the adjustment generally matched or exceeded fine-tuning: the US adapter scored 0.031 nats worse than its adjustment on US responses [0.012, 0.050], while the Chinese adapter showed no clear advantage over its adjustment on Chinese responses. The positive exception was Chinese fine-tuning evaluated on US responses in the giving variant. In contrast, all six comparisons on the taking variant favored fine-tuning over the corresponding adjustment fitted on the giving variant, with gains ranging from 0.015 to 0.209 nats. 
+Fine-tuning did not consistently outperform an item-independent response adjustment fitted to the same training responses (Figure~\ref{fig:adjustment}). For the giving variant of social allocation, the adjustment generally matched or exceeded fine-tuning: the US adapter scored 0.031 nats worse than its adjustment on US responses [0.012, 0.050], while the Chinese adapter showed no clear advantage over its adjustment on Chinese responses. The positive exception was Chinese fine-tuning evaluated on US responses in the giving variant. In contrast, all six comparisons on the taking variant favored fine-tuning over the corresponding adjustment fitted on the giving variant, with gains ranging from 0.015 to 0.209 nats.
 
 For categorization and risky-choice tradeoff pairs, gains over response adjustment were small or depended on the fine-tuning and evaluation populations. Thus, H4 received task- and population-dependent support: fine-tuning improved predictions beyond response adjustment in some comparisons, but not consistently across tasks and populations. This suggests that fine-tuning can learn useful patterns in people’s choices beyond a general preference for certain answers.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/response_adjustment_comparison.pdf}
 \caption{NLL gains over response adjustment (H4). Rows show tasks and columns show the evaluation populations. Points show adjustment NLL minus fine-tuned-model NLL; positive values favor fine-tuning. Each adapter is compared with an adjustment fitted to its own training sample. Both methods use giving-variant data for both social allocation variants, categorization data for categorization, and risky-choice data for tradeoff pairs. Intervals are 95\% paired participant-and-seed bootstrap intervals for allocation and paired participant-bootstrap intervals conditional on the fitted models for categorization and risky choice. The additional response adjustment with an answer-position parameter is shown in Appendix~\ref{app:additional-results}.}
 \label{fig:adjustment}
-\end{figure}
+\end{figure*}
