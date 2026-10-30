@@ -32,5 +32,10 @@
     "frozen_sample_fit",
     "answer_position_control"
   ],
-  "compiled_overleaf_pdf_sha256": "fedad083fab4ba7db31003d4ddc6c085d1c341e3cb1e615b3e521ac5f07e18e5"
+  "compiled_overleaf_pdf_sha256": "78e4e2adb917b765565c85932b310a5d85acdb0b7d6e418a65beaa53392254ac",
+  "post_export_changes": [
+    "Moved the repository-link sentence from Appendix A.1 to a footnote in the Introduction."
+  ],
+  "post_export_verified_at_utc": "2026-10-30T22:13:21+00:00",
+  "verification": "Compiled repository and Overleaf PDFs match on all pages after whitespace and equivalent summation-glyph normalization; page-one repository footnote and hyperlink visually verified."
 }
