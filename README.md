@@ -1,4 +1,4 @@
-# Sampling Bias in Models of Human Cognition
+# Sampling Bias in Foundation Models of Human Cognition
 
 Code and data for comparing Centaur predictions after fine-tuning on US,
 Chinese, or equally pooled responses. The tasks are social allocation

@@ -1,10 +1,10 @@
 {
   "project_url": "https://www.overleaf.com/project/6ada6357f0e9637a95c1b3eb",
-  "title": "Sampling Bias in Models of Human Cognition",
+  "title": "Sampling Bias in Foundation Models of Human Cognition",
   "source_download_date": "2026-10-30",
-  "export_verified_at_utc": "2026-10-30T22:00:53+00:00",
+  "export_verified_at_utc": "2026-10-30T22:07:04+00:00",
   "source_files_sha256": {
-    "main.tex": "12b4f3c6c29e09f136669f95c81b019e54e8b03ae95c16035fe841739ecbd723",
+    "main.tex": "850bb37cf19a10d255ede8e6c5e48afdf0d20bca4d8284682e4a740f37a62858",
     "references.bib": "7fcd7dca688c576ec27eee20729c047d66760fe45fe4078055e84587e1dc418b",
     "acl2023.sty": "bd5314dea983600457b3f6f3efc6cfef25080e7d669d1e369d1d28c9195945bb",
     "acl_natbib.bst": "391788478ae013cc539e3e44681e22e8e0f6c4c44fee5af28244dd5ac6a4059b",
@@ -14,7 +14,7 @@
     "sections/discussion.tex": "ee711bef59d207c1cc7d36c72852416205212e1946ca43d73447a1d3eacac053",
     "sections/figure_pipeline.tex": "3933af855b77835eede476df1e3ee4f8b931ae1e2056a6ec4b5e5483da91835a",
     "sections/introduction.tex": "13d2c5747d6f60eeef4304920e87d1ffce763c5527fcef7c37d1287e73cb45e9",
-    "sections/methods.tex": "f665a71c1561e6f4a9fc8a3cbd4808f57579e04344211f17b0e1848e8af7be25",
+    "sections/methods.tex": "36f375d06a04836b50db47471851394db4f4759e2bd42642116050dd5f4201cb",
     "sections/results.tex": "5c1c76714b7b7005b6906dfe7a9eeac4f408eef94c6e5408d9535afb8d15937a",
     "figures/finetuning_pipeline.pdf": "075b7b3ed390158c25b1c36d6e2688d9a5afe4ed5e3401da6d28aa7339d74631",
     "figures/figure2_distributions_nll.pdf": "2cf7beef9a157cf3afe5e2951ba9fbd63bfc3a88caa7eb12e6a876afd00329ad",
@@ -32,5 +32,5 @@
     "frozen_sample_fit",
     "answer_position_control"
   ],
-  "compiled_overleaf_pdf_sha256": "d2d4889f34ad4be4e42cabb613f5b39039ae42da00f4b248fe93ec881e3a59b5"
+  "compiled_overleaf_pdf_sha256": "fedad083fab4ba7db31003d4ddc6c085d1c341e3cb1e615b3e521ac5f07e18e5"
 }
