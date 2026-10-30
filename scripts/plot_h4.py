@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Plot H4 as paired NLL effects with 95% confidence intervals.
 
-Uses the same 24 comparisons as the revised manuscript figure. The default
-output is the canonical manuscript asset; use --output for a separate preview.
+Draws 24 comparisons. Use --output to choose where to save the figure.
 """
 from __future__ import annotations
 

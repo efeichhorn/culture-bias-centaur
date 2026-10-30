@@ -26,7 +26,7 @@
   ],
   "human_inset": "Qualitative Giving direction only: China below US in both source waves; curve positions and widths are illustrative.",
   "human_inset_source": "results/giving_taking/frozen/human_allocation_summary.csv",
-  "layout": "Tall common prompt, embedding, frozen weights, and frozen Centaur adapters; unchanged trainable adapter dimensions. Aligned Frozen and Trainable top brackets identify update status; lower Model weights and LoRA adapters brackets identify parameter type, including frozen Centaur LoRA. Dark output cards match the input. One population adapter is selected consistently across all layers.",
+  "layout": "Task prompts, frozen model components, trained population adapters, and evaluation.",
   "displayed_output": "Illustrative integer responses to the displayed farmer item; not recorded model predictions or population means.",
   "example_outputs_tokens": {
     "us": 8,

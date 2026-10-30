@@ -311,7 +311,7 @@ def draw(output: Path) -> None:
         if fitted_labels:
             provenance["fitted_labels"] = fitted_labels
 
-        provenance["layout"] = "Tall common prompt, embedding, frozen weights, and frozen Centaur adapters; unchanged trainable adapter dimensions. Aligned Frozen and Trainable top brackets identify update status; lower Model weights and LoRA adapters brackets identify parameter type, including frozen Centaur LoRA. Dark output cards match the input. One population adapter is selected consistently across all layers."
+        provenance["layout"] = "Task prompts, frozen model components, trained population adapters, and evaluation."
         provenance["displayed_output"] = "Illustrative integer responses to the displayed farmer item; not recorded model predictions or population means."
         provenance["example_outputs_tokens"] = example_outputs
 
