@@ -46,8 +46,7 @@ source links, and extraction details.
 | `paper/` | Downloaded manuscript source and reproduced figures |
 
 [REPRODUCING.txt](REPRODUCING.txt) gives the full analysis and GPU commands.
-The [Overleaf project]()
-is the working paper. This repository contains the final ACL-format source
+This repository contains the final ACL-format source
 and figures exported on 30 October 2026. Export hashes are recorded in
 `provenance/paper_reference.json`; later edits do not sync automatically.
 
