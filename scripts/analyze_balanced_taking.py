@@ -3,8 +3,8 @@
 
 Each country contributes 529 Wave 1 and 800 Wave 2 participants. Whole US
 participants are sampled once; all Chinese participants are retained. Selection
-is independent of responses and predictions. Only the private selection manifest
-contains participant identifiers; all versionable outputs are aggregates.
+is independent of responses and predictions. Coded participant keys are stored separately in the selection manifest,
+which is included in the prepared-data archive; analysis outputs are aggregates.
 """
 from __future__ import annotations
 
@@ -31,6 +31,20 @@ COUNTRIES = {0: "United States", 1: "China"}
 CONDITIONS = ["us", "pooled", "china"]
 WAVE_COUNTS = {3: 529, 4: 800}
 SOURCE_SHA = "65f8913600fddeae3ca99196c2b0e2db76f2bf2021e1b32f4419f954645a5ecd"
+
+
+def provenance_path(path: Path, workspace: Path) -> str:
+    """Keep provenance portable without exposing personal directory names."""
+    resolved = path.resolve()
+    for label, base in (("REPOSITORY", ROOT), ("WORKSPACE", workspace)):
+        try:
+            relative = resolved.relative_to(base.resolve())
+        except ValueError:
+            continue
+        return f"${{{label}}}" + (f"/{relative.as_posix()}" if relative.parts else "")
+    # Distinguish same-named external files without publishing their parent paths.
+    parent_id = hashlib.sha256(str(resolved.parent).encode()).hexdigest()[:16]
+    return f"${{EXTERNAL}}/{parent_id}/{resolved.name}"
 
 
 def sha(path: Path) -> str:
@@ -354,13 +368,13 @@ def run(args: argparse.Namespace) -> None:
     save(pd.DataFrame(validation), "unbalanced_reproduction_validation.csv")
     for name in ("analyze_balanced_taking.py", "analyze_dictator_corrected_baselines.py", "analyze_dictator_corrected_adapters.py", "audit_dictator_a1.py", "audit_dictator_response_prior.py", "dictator_item_holdout_transfer.py"):
         inputs.add(ROOT / "scripts" / name)
-    save(pd.DataFrame([dict(path=str(p.resolve()), sha256=sha(p), bytes=p.stat().st_size) for p in sorted(inputs)]), "input_provenance.csv")
+    save(pd.DataFrame([dict(path=provenance_path(p, args.workspace), sha256=sha(p), bytes=p.stat().st_size) for p in sorted(inputs)]), "input_provenance.csv")
     metadata = dict(
         status="complete_validated_balanced_taking_reanalysis", task="Taking; ancillary frozen H1 Giving contrasts",
         source_behavior_sha256=SOURCE_SHA, selection_seed=args.selection_seed,
         selection_algorithm="Sort unique Dataset/Nation/SubNo keys; NumPy default_rng; iterate Dataset/Nation strata in sorted order; sample without replacement only when available count exceeds target; keep whole participants.",
         numpy_version=np.__version__, pandas_version=pd.__version__,
-        selection_manifest=str(args.manifest.resolve()), selection_manifest_sha256=sha(args.manifest),
+        selection_manifest=provenance_path(args.manifest, args.workspace), selection_manifest_sha256=sha(args.manifest),
         participants_per_country=1329, wave_counts_per_country={"Wave 1": 529, "Wave 2": 800},
         sampling="US: select 529/546 in Wave 1 and 800/825 in Wave 2; China: retain all 529/800. Same people for every saved model, seed and human comparison.",
         seeds=[0,1,2], bootstrap_seed=args.bootstrap_seed, resamples=args.resamples,
@@ -370,8 +384,8 @@ def run(args: argparse.Namespace) -> None:
         population_predictions="Model predictions do not depend on evaluation participant; recomputed means equal saved preselection means. Human means and scores must use this manifest.",
         h1_giving="Frozen H1 Giving comparisons preserve the original three heldout participant splits (data_cache/dictator_centaur70b/seed*/participant_split_manifest.csv), with shared weights for overlapping test participants, fixed splits and fixed wave proportions. Original published means are reproduced before exporting intervals; Giving is not subsampled.",
         schemas="Taking-only replacements for results/giving_taking/{seed_metrics.csv,bootstrap_intervals.csv,figure_inputs/*,frozen/metrics_summary.csv,response_adjustment/prior_metrics_by_seed.csv,response_adjustment/prior_paired_intervals.csv}; original unbalanced outputs retained. *_score contrasts are log likelihood, not NLL. country_contrasts subtract China from US for the named outcome; own_minus_other names vary the matching adapter with test country.",
-        exploratory=True, models_retrained=False, private_data="Selected participant keys are saved only in ignored build/. No individual observations or scores are included in aggregate outputs.",
-        command=f"python scripts/analyze_balanced_taking.py --workspace {args.workspace} --output {output} --manifest {args.manifest} --selection-seed {args.selection_seed} --bootstrap-seed {args.bootstrap_seed} --resamples {args.resamples}",
+        exploratory=True, models_retrained=False, private_data="Coded participant keys are stored separately in the selection manifest, included in the prepared-data archive. Aggregate outputs contain no individual observations or scores.",
+        command=f'python scripts/analyze_balanced_taking.py --workspace "{provenance_path(args.workspace, args.workspace)}" --output "{provenance_path(output, args.workspace)}" --manifest "{provenance_path(args.manifest, args.workspace)}" --selection-seed {args.selection_seed} --bootstrap-seed {args.bootstrap_seed} --resamples {args.resamples}',
     )
     (output / "analysis_metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")
     shown = intervals.loc[intervals.metric.eq("conditional_ll") & intervals.method.eq("shared_participant_and_seed") & ~intervals.contrast.str.endswith("_score")]
@@ -381,7 +395,7 @@ def run(args: argparse.Namespace) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--workspace", type=Path, default=ROOT.parent)
+    parser.add_argument("--workspace", type=Path, default=ROOT / "data/workspace")
     parser.add_argument("--output", type=Path, default=ROOT / "results/giving_taking/balanced_taking_20261029")
     parser.add_argument("--manifest", type=Path, default=ROOT / "build/balanced_taking_20261029/selected_participants.csv")
     parser.add_argument("--selection-seed", type=int, default=20261029)

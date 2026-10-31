@@ -274,4 +274,3 @@ sources. SHA256SUMS lists its files; a separate .zip.sha256 checks the ZIP.
 The packager verifies both the embedded data and each packaged file.
 Submit the compiled paper/main.pdf alongside the ZIP; the compiled paper is
 excluded from the archive.
-It does not upload files, submit coursework, or sync the manuscript to Overleaf.

@@ -27,6 +27,20 @@ SAMPLES = ["Wave 1", "Wave 2", "Combined"]
 GROUPS = list(range(1, 26))
 
 
+def provenance_path(path: Path, workspace: Path) -> str:
+    """Keep provenance portable without exposing personal directory names."""
+    resolved = path.resolve()
+    for label, base in (("REPOSITORY", ROOT), ("WORKSPACE", workspace)):
+        try:
+            relative = resolved.relative_to(base.resolve())
+        except ValueError:
+            continue
+        return f"${{{label}}}" + (f"/{relative.as_posix()}" if relative.parts else "")
+    # Distinguish same-named external files without publishing their parent paths.
+    parent_id = hashlib.sha256(str(resolved.parent).encode()).hexdigest()[:16]
+    return f"${{EXTERNAL}}/{parent_id}/{resolved.name}"
+
+
 def combine_waves(waves: list[np.ndarray], counts: np.ndarray) -> np.ndarray:
     """Combine [draw, seed, target] waves using original within-seed counts."""
     counts = np.asarray(counts, dtype=float)
@@ -274,9 +288,9 @@ class Alignment:
                         uncertainty="95% percentile participant bootstrap, stratified by wave and country, shared participant multiplicities across targets and overlapping seed test splits. Fixed observed seed fits and target set. Combined retains original country/seed wave weights. Model dispersion is one SD across three fitted seeds, not a confidence interval.",
                         interval_scope="Summary correlation/RMSE intervals propagate only human sampling uncertainty, conditional on these fixed model predictions and 25 targets. No target-population or refitted-model inference.",
                         seeds=[0, 1, 2], bootstrap_seed=self.bootstrap_seed, bootstrap_resamples=self.resamples,
-                        manifest_path=str(self.taking_manifest) if self.taking_manifest else None,
+                        manifest_path=provenance_path(self.taking_manifest, self.workspace) if self.taking_manifest else None,
                         validation_checks=len(self.validation), maximum_validation_error=max(r["maximum_absolute_error"] for r in self.validation),
-                        input_sha256={str(p.relative_to(self.workspace)) if p.is_relative_to(self.workspace) else str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(self.inputs)})
+                        input_sha256={provenance_path(p, self.workspace): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(self.inputs)})
         (self.output / "population_gap_provenance.json").write_text(json.dumps(metadata, indent=2)+"\n")
         return pd.DataFrame(items), pd.DataFrame(summaries)
 

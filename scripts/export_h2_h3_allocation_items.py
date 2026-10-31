@@ -122,7 +122,7 @@ def export(workspace: Path, output: Path) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--workspace", type=Path, default=ROOT.parent)
+    parser.add_argument("--workspace", type=Path, default=ROOT / "data/workspace")
     parser.add_argument("--output", type=Path, default=ROOT / "results/giving_taking/followup_20261029/h2_h3_item_predictions.csv")
     args = parser.parse_args()
     export(args.workspace.resolve(), args.output.resolve())

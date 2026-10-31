@@ -14,7 +14,7 @@
   ],
   "bootstrap_seed": 20261029,
   "bootstrap_resamples": 4000,
-  "manifest_path": "/Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/build/balanced_taking_20261029/selected_participants.csv",
+  "manifest_path": "${REPOSITORY}/build/balanced_taking_20261029/selected_participants.csv",
   "validation_checks": 436,
   "maximum_validation_error": 5.329070518200751e-15,
   "input_sha256": {

@@ -46,9 +46,8 @@ source links, and extraction details.
 | `paper/` | Downloaded manuscript source and reproduced figures |
 
 [REPRODUCING.txt](REPRODUCING.txt) gives the full analysis and GPU commands.
-This repository contains the final ACL-format source
-and figures exported on 30 October 2026. Export hashes are recorded in
-`provenance/paper_reference.json`; later edits do not sync automatically.
+The manuscript source and figures are in `paper/`; original export hashes
+are recorded in `provenance/paper_reference.json`.
 
 ## Paper results
 
@@ -72,7 +71,7 @@ make submission
 
 This creates `build/culture-bias-centaur-submission.zip` with code, data,
 results, and the local paper sources. It excludes environments, caches,
-model weights, and local build files. Nothing is uploaded or submitted.
+model weights, and local build files.
 Use `make paper` to compile the local manuscript if LaTeX and `latexmk` are
 installed. Submit the compiled `paper/main.pdf` alongside the ZIP; the ZIP
 contains manuscript sources and figure PDFs, but excludes the compiled paper.

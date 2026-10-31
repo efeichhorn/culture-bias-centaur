@@ -6,7 +6,7 @@
   "selection_algorithm": "Sort unique Dataset/Nation/SubNo keys; NumPy default_rng; iterate Dataset/Nation strata in sorted order; sample without replacement only when available count exceeds target; keep whole participants.",
   "numpy_version": "2.3.5",
   "pandas_version": "2.2.3",
-  "selection_manifest": "/Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/build/balanced_taking_20261029/selected_participants.csv",
+  "selection_manifest": "${REPOSITORY}/build/balanced_taking_20261029/selected_participants.csv",
   "selection_manifest_sha256": "a29f05a06167e7d71aca5206649100b8c873a73e00cb1246333076f30825a435",
   "participants_per_country": 1329,
   "wave_counts_per_country": {
@@ -29,6 +29,6 @@
   "schemas": "Taking-only replacements for results/giving_taking/{seed_metrics.csv,bootstrap_intervals.csv,figure_inputs/*,frozen/metrics_summary.csv,response_adjustment/prior_metrics_by_seed.csv,response_adjustment/prior_paired_intervals.csv}; original unbalanced outputs retained. *_score contrasts are log likelihood, not NLL. country_contrasts subtract China from US for the named outcome; own_minus_other names vary the matching adapter with test country.",
   "exploratory": true,
   "models_retrained": false,
-  "private_data": "Selected participant keys are saved only in ignored build/. No individual observations or scores are included in aggregate outputs.",
-  "command": "python scripts/analyze_balanced_taking.py --workspace /Users/edwardeichhorn/Desktop/machine_replication --output /Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/results/giving_taking/balanced_taking_20261029 --manifest /Users/edwardeichhorn/Desktop/machine_replication/culture-bias-centaur/build/balanced_taking_20261029/selected_participants.csv --selection-seed 20261029 --bootstrap-seed 20261029 --resamples 4000"
+  "private_data": "Coded participant keys are stored separately in the selection manifest, included in the prepared-data archive. Aggregate outputs contain no individual observations or scores.",
+  "command": "python scripts/analyze_balanced_taking.py --workspace ${WORKSPACE} --output ${REPOSITORY}/results/giving_taking/balanced_taking_20261029 --manifest ${REPOSITORY}/build/balanced_taking_20261029/selected_participants.csv --selection-seed 20261029 --bootstrap-seed 20261029 --resamples 4000"
 }

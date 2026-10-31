@@ -295,7 +295,7 @@ def prediction_summaries(seed_metrics, predictions):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source-repo", type=Path, default=ROOT.parent / "publication-bias-transfer-demo")
+    parser.add_argument("--source-repo", type=Path, default=ROOT / "data/workspace/publication-bias-transfer-demo")
     parser.add_argument("--output", type=Path, default=ROOT / "results/cao_anllo/followup_20261029")
     parser.add_argument("--resamples", type=int, default=4000)
     parser.add_argument("--seed", type=int, default=20261029)
