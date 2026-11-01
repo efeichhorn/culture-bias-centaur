@@ -47,8 +47,8 @@ make analysis WORKSPACE=/path/to/workspace
 ORIGINAL DATA PREPARATION
 
 Use these steps to repeat preparation from the source studies. They are not
-needed for the saved-data reanalysis above. Keep original downloads outside
-the submission. The preparation scripts check source hashes.
+needed for the saved-data reanalysis above. The preparation scripts check
+source hashes.
 
 Allocation:
 export WANG_WORKSPACE="$PWD"
@@ -263,16 +263,3 @@ Set HF_HOME, VIPER_PYTHON_OVERLAY and VIPER_TRAIN_CONTAINER, then choose the
 account, partition, memory and GPU allocation for your cluster. Both runners
 validate outputs before marking a job complete. The portable commands above
 can run without Slurm or the original container.
-
-SUBMISSION ARCHIVE
-
-make submission
-
-This creates build/culture-bias-centaur-submission.zip with code, prepared data,
-results, and six reference figure PDFs. It excludes manuscript sources, templates,
-and duplicate figure formats. SHA256SUMS lists its files; a separate .zip.sha256
-checks the ZIP. The packager verifies the embedded data and each packaged file.
-Submit the paper separately.
-
-The full repository also retains manuscript sources. To compile them, use
-make paper with latexmk installed; these sources are not in the submission ZIP.

@@ -2,7 +2,7 @@ PYTHON ?= python
 WORKSPACE ?= data/workspace
 export MPLCONFIGDIR ?= $(CURDIR)/build/.matplotlib
 
-.PHONY: results data analysis followup figures test paper submission
+.PHONY: results data analysis figures test
 
 results:
 	$(PYTHON) scripts/reproduce_summary.py
@@ -13,8 +13,6 @@ data:
 analysis:
 	$(PYTHON) scripts/reproduce_analyses.py --workspace "$(WORKSPACE)"
 
-followup: analysis
-
 figures:
 	$(PYTHON) scripts/plot_finetuning_pipeline.py
 	$(PYTHON) scripts/plot_figure2_distributions_nll.py
@@ -24,9 +22,3 @@ figures:
 
 test:
 	$(PYTHON) -m pytest -q tests
-
-paper:
-	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
-
-submission:
-	$(PYTHON) scripts/package_submission.py
