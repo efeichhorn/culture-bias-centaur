@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package the paper's code, prepared data, results, and manuscript sources."""
+"""Package the paper's code, prepared data, results, and reference figures."""
 
 from __future__ import annotations
 
@@ -19,8 +19,11 @@ FOLDERS = {
     "designs": {".json", ".csv"},
     "results": {".csv", ".json", ".txt", ".md"},
     "provenance": {".csv", ".json", ".txt", ".md"},
-    "paper": {".tex", ".bib", ".sty", ".bst", ".pdf", ".png", ".svg", ".csv", ".json", ".txt"},
 }
+FIGURES = (
+    "finetuning_pipeline", "figure2_distributions_nll", "population_effects_h2_h3",
+    "response_adjustment_comparison", "frozen_sample_fit", "answer_position_control",
+)
 
 
 def submission_files(root: Path) -> list[Path]:
@@ -29,12 +32,14 @@ def submission_files(root: Path) -> list[Path]:
         "requirements-training.txt", ".gitignore", ".gitattributes",
         ".github/workflows/check.yml", "data/README.md", "data/paper_inputs.zip",
         "data/paper_inputs.manifest.json",
+        "paper/figures/assets/centaur.png", "paper/figures/assets/centaur-source.txt",
     )]
+    files.extend(root / f"paper/figures/{stem}.pdf" for stem in FIGURES)
     for folder, suffixes in FOLDERS.items():
         for path in (root / folder).rglob("*"):
             if not path.is_file() or path.suffix not in suffixes:
                 continue
-            if path.name in {"main.pdf", "submission_details.tex"}:
+            if path.relative_to(root).as_posix() == "provenance/paper_reference.json":
                 continue
             if any(part.startswith(".") or part == "__pycache__" for part in path.relative_to(root).parts):
                 continue
@@ -51,10 +56,6 @@ def package(root: Path, output: Path) -> int:
     prepare(root / "data/paper_inputs.zip", root / "data/paper_inputs.manifest.json",
             root / "data/workspace", verify_only=True)
     files = submission_files(root)
-    for stem in ("finetuning_pipeline", "figure2_distributions_nll", "population_effects_h2_h3",
-                 "response_adjustment_comparison", "frozen_sample_fit", "answer_position_control"):
-        if root / f"paper/figures/{stem}.pdf" not in files:
-            raise FileNotFoundError(f"Missing {stem}.pdf; run make figures first")
     output.parent.mkdir(parents=True, exist_ok=True)
     sums = []
     with ZipFile(output, "w", compression=ZIP_DEFLATED) as archive:

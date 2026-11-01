@@ -264,13 +264,15 @@ account, partition, memory and GPU allocation for your cluster. Both runners
 validate outputs before marking a job complete. The portable commands above
 can run without Slurm or the original container.
 
-PAPER AND SUBMISSION ARCHIVE
+SUBMISSION ARCHIVE
 
-make paper       # requires latexmk and the LaTeX packages used in paper/main.tex
 make submission
 
-The submission ZIP contains code, prepared data, results and local manuscript
-sources. SHA256SUMS lists its files; a separate .zip.sha256 checks the ZIP.
-The packager verifies both the embedded data and each packaged file.
-Submit the compiled paper/main.pdf alongside the ZIP; the compiled paper is
-excluded from the archive.
+This creates build/culture-bias-centaur-submission.zip with code, prepared data,
+results, and six reference figure PDFs. It excludes manuscript sources, templates,
+and duplicate figure formats. SHA256SUMS lists its files; a separate .zip.sha256
+checks the ZIP. The packager verifies the embedded data and each packaged file.
+Submit the paper separately.
+
+The full repository also retains manuscript sources. To compile them, use
+make paper with latexmk installed; these sources are not in the submission ZIP.
